@@ -1,5 +1,15 @@
-ul.collapsible{
+.main-section.test
+{
+
+
   ul.collapsible{
-    margin: 0;
+    ul.collapsible{
+      margin: 0;
+      padding-left: 45px;
+      //Use to change color
+      /*@extend .blue, .lighten-4;*/
+    }
   }
+
+
 }

@@ -9394,7 +9394,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     margin-bottom: 5em;
   }
 }
-/* line 2, ../materialize-src/sass/modules/_test.scss */
-ul.collapsible ul.collapsible {
+/* line 6, ../materialize-src/sass/modules/_test.scss */
+.main-section.test ul.collapsible ul.collapsible {
   margin: 0;
+  padding-left: 45px;
+  /*@extend .blue, .lighten-4;*/
 }
