@@ -6,7 +6,9 @@
 
     .collapsible-header{
       border-bottom: none;
+      cursor: default;
       &.expandable:hover{
+        cursor: pointer;
         @extend .grey, .lighten-3;
       }
     }

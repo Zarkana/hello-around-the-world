@@ -401,10 +401,6 @@ if (jQuery) {
           object.parent().removeClass('active');
         }
         if (object.parent().hasClass('active')){
-          if(object.context.className === 'lever')
-          {
-            debugger;
-          }
           object.siblings('.collapsible-body').stop(true,false).slideDown({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '');}});
         }
         else{
