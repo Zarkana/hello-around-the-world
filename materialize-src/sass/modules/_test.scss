@@ -1,15 +1,34 @@
 .main-section.test
 {
 
+  .test-list{
+    user-select: none;
 
-  ul.collapsible{
+    .collapsible-header{
+      border-bottom: none;
+      &.expandable:hover{
+        @extend .grey, .lighten-3;
+      }
+    }
+
     ul.collapsible{
+      position: relative;
+    }
+
+    .sub-menu{
       margin: 0;
-      padding-left: 45px;
+      .collapsible-header{
+        @extend .grey, .lighten-5;
+      }
+      //box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.99), 0 1px 5px 0 rgba(0, 0, 0, 0.99), 0 3px 1px -2px rgba(0, 0, 0, 0.99);
       //Use to change color
       /*@extend .blue, .lighten-4;*/
     }
+
+  .switch{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+    }
   }
-
-
 }

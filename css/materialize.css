@@ -9,7 +9,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.materialize-red.lighten-5 {
+.materialize-red.lighten-5, .main-section.test .test-list .sub-menu .materialize-red.collapsible-header {
   background-color: #fdeaeb !important;
 }
 
@@ -29,7 +29,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.materialize-red.lighten-3 {
+.materialize-red.lighten-3, .main-section.test .test-list .materialize-red.collapsible-header.expandable:hover {
   background-color: #f3989b !important;
 }
 
@@ -109,7 +109,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.red.lighten-5 {
+.red.lighten-5, .main-section.test .test-list .sub-menu .red.collapsible-header {
   background-color: #FFEBEE !important;
 }
 
@@ -129,7 +129,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.red.lighten-3 {
+.red.lighten-3, .main-section.test .test-list .red.collapsible-header.expandable:hover {
   background-color: #EF9A9A !important;
 }
 
@@ -249,7 +249,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.pink.lighten-5 {
+.pink.lighten-5, .main-section.test .test-list .sub-menu .pink.collapsible-header {
   background-color: #fce4ec !important;
 }
 
@@ -269,7 +269,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.pink.lighten-3 {
+.pink.lighten-3, .main-section.test .test-list .pink.collapsible-header.expandable:hover {
   background-color: #f48fb1 !important;
 }
 
@@ -389,7 +389,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.purple.lighten-5 {
+.purple.lighten-5, .main-section.test .test-list .sub-menu .purple.collapsible-header {
   background-color: #f3e5f5 !important;
 }
 
@@ -409,7 +409,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.purple.lighten-3 {
+.purple.lighten-3, .main-section.test .test-list .purple.collapsible-header.expandable:hover {
   background-color: #ce93d8 !important;
 }
 
@@ -529,7 +529,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.deep-purple.lighten-5 {
+.deep-purple.lighten-5, .main-section.test .test-list .sub-menu .deep-purple.collapsible-header {
   background-color: #ede7f6 !important;
 }
 
@@ -549,7 +549,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.deep-purple.lighten-3 {
+.deep-purple.lighten-3, .main-section.test .test-list .deep-purple.collapsible-header.expandable:hover {
   background-color: #b39ddb !important;
 }
 
@@ -669,7 +669,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.indigo.lighten-5 {
+.indigo.lighten-5, .main-section.test .test-list .sub-menu .indigo.collapsible-header {
   background-color: #e8eaf6 !important;
 }
 
@@ -689,7 +689,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.indigo.lighten-3 {
+.indigo.lighten-3, .main-section.test .test-list .indigo.collapsible-header.expandable:hover {
   background-color: #9fa8da !important;
 }
 
@@ -809,7 +809,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.blue.lighten-5 {
+.blue.lighten-5, .main-section.test .test-list .sub-menu .blue.collapsible-header {
   background-color: #E3F2FD !important;
 }
 
@@ -829,7 +829,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.blue.lighten-3 {
+.blue.lighten-3, .main-section.test .test-list .blue.collapsible-header.expandable:hover {
   background-color: #90CAF9 !important;
 }
 
@@ -949,7 +949,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.light-blue.lighten-5 {
+.light-blue.lighten-5, .main-section.test .test-list .sub-menu .light-blue.collapsible-header {
   background-color: #e1f5fe !important;
 }
 
@@ -969,7 +969,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.light-blue.lighten-3 {
+.light-blue.lighten-3, .main-section.test .test-list .light-blue.collapsible-header.expandable:hover {
   background-color: #81d4fa !important;
 }
 
@@ -1089,7 +1089,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.cyan.lighten-5 {
+.cyan.lighten-5, .main-section.test .test-list .sub-menu .cyan.collapsible-header {
   background-color: #e0f7fa !important;
 }
 
@@ -1109,7 +1109,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.cyan.lighten-3 {
+.cyan.lighten-3, .main-section.test .test-list .cyan.collapsible-header.expandable:hover {
   background-color: #80deea !important;
 }
 
@@ -1229,7 +1229,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.teal.lighten-5 {
+.teal.lighten-5, .main-section.test .test-list .sub-menu .teal.collapsible-header {
   background-color: #e0f2f1 !important;
 }
 
@@ -1249,7 +1249,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.teal.lighten-3 {
+.teal.lighten-3, .main-section.test .test-list .teal.collapsible-header.expandable:hover {
   background-color: #80cbc4 !important;
 }
 
@@ -1369,7 +1369,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.green.lighten-5 {
+.green.lighten-5, .main-section.test .test-list .sub-menu .green.collapsible-header {
   background-color: #E8F5E9 !important;
 }
 
@@ -1389,7 +1389,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.green.lighten-3 {
+.green.lighten-3, .main-section.test .test-list .green.collapsible-header.expandable:hover {
   background-color: #A5D6A7 !important;
 }
 
@@ -1509,7 +1509,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.light-green.lighten-5 {
+.light-green.lighten-5, .main-section.test .test-list .sub-menu .light-green.collapsible-header {
   background-color: #f1f8e9 !important;
 }
 
@@ -1529,7 +1529,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.light-green.lighten-3 {
+.light-green.lighten-3, .main-section.test .test-list .light-green.collapsible-header.expandable:hover {
   background-color: #c5e1a5 !important;
 }
 
@@ -1649,7 +1649,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.lime.lighten-5 {
+.lime.lighten-5, .main-section.test .test-list .sub-menu .lime.collapsible-header {
   background-color: #f9fbe7 !important;
 }
 
@@ -1669,7 +1669,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.lime.lighten-3 {
+.lime.lighten-3, .main-section.test .test-list .lime.collapsible-header.expandable:hover {
   background-color: #e6ee9c !important;
 }
 
@@ -1789,7 +1789,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.yellow.lighten-5 {
+.yellow.lighten-5, .main-section.test .test-list .sub-menu .yellow.collapsible-header {
   background-color: #fffde7 !important;
 }
 
@@ -1809,7 +1809,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.yellow.lighten-3 {
+.yellow.lighten-3, .main-section.test .test-list .yellow.collapsible-header.expandable:hover {
   background-color: #fff59d !important;
 }
 
@@ -1929,7 +1929,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.amber.lighten-5 {
+.amber.lighten-5, .main-section.test .test-list .sub-menu .amber.collapsible-header {
   background-color: #fff8e1 !important;
 }
 
@@ -1949,7 +1949,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.amber.lighten-3 {
+.amber.lighten-3, .main-section.test .test-list .amber.collapsible-header.expandable:hover {
   background-color: #ffe082 !important;
 }
 
@@ -2069,7 +2069,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.orange.lighten-5 {
+.orange.lighten-5, .main-section.test .test-list .sub-menu .orange.collapsible-header {
   background-color: #fff3e0 !important;
 }
 
@@ -2089,7 +2089,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.orange.lighten-3 {
+.orange.lighten-3, .main-section.test .test-list .orange.collapsible-header.expandable:hover {
   background-color: #ffcc80 !important;
 }
 
@@ -2209,7 +2209,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.deep-orange.lighten-5 {
+.deep-orange.lighten-5, .main-section.test .test-list .sub-menu .deep-orange.collapsible-header {
   background-color: #fbe9e7 !important;
 }
 
@@ -2229,7 +2229,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.deep-orange.lighten-3 {
+.deep-orange.lighten-3, .main-section.test .test-list .deep-orange.collapsible-header.expandable:hover {
   background-color: #ffab91 !important;
 }
 
@@ -2349,7 +2349,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.brown.lighten-5 {
+.brown.lighten-5, .main-section.test .test-list .sub-menu .brown.collapsible-header {
   background-color: #efebe9 !important;
 }
 
@@ -2369,7 +2369,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.brown.lighten-3 {
+.brown.lighten-3, .main-section.test .test-list .brown.collapsible-header.expandable:hover {
   background-color: #bcaaa4 !important;
 }
 
@@ -2449,7 +2449,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.blue-grey.lighten-5 {
+.blue-grey.lighten-5, .main-section.test .test-list .sub-menu .blue-grey.collapsible-header {
   background-color: #eceff1 !important;
 }
 
@@ -2469,7 +2469,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.blue-grey.lighten-3 {
+.blue-grey.lighten-3, .main-section.test .test-list .blue-grey.collapsible-header.expandable:hover {
   background-color: #b0bec5 !important;
 }
 
@@ -2539,7 +2539,7 @@
 }
 
 /* line 370, ../materialize-src/sass/components/_color.scss */
-.grey {
+.grey, .main-section.test .test-list .collapsible-header.expandable:hover, .main-section.test .test-list .sub-menu .collapsible-header {
   background-color: #9e9e9e !important;
 }
 
@@ -2549,7 +2549,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.lighten-5 {
+.grey.lighten-5, .main-section.test .test-list .lighten-5.collapsible-header.expandable:hover, .main-section.test .test-list .sub-menu .collapsible-header.expandable:hover, .main-section.test .test-list .sub-menu .collapsible-header {
   background-color: #fafafa !important;
 }
 
@@ -2559,7 +2559,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.lighten-4 {
+.grey.lighten-4, .main-section.test .test-list .lighten-4.collapsible-header.expandable:hover, .main-section.test .test-list .sub-menu .lighten-4.collapsible-header {
   background-color: #f5f5f5 !important;
 }
 
@@ -2569,7 +2569,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.lighten-3 {
+.grey.lighten-3, .main-section.test .test-list .collapsible-header.expandable:hover, .main-section.test .test-list .sub-menu .lighten-3.collapsible-header {
   background-color: #eeeeee !important;
 }
 
@@ -2579,7 +2579,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.lighten-2 {
+.grey.lighten-2, .main-section.test .test-list .lighten-2.collapsible-header.expandable:hover, .main-section.test .test-list .sub-menu .lighten-2.collapsible-header {
   background-color: #e0e0e0 !important;
 }
 
@@ -2589,7 +2589,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.lighten-1 {
+.grey.lighten-1, .main-section.test .test-list .lighten-1.collapsible-header.expandable:hover, .main-section.test .test-list .sub-menu .lighten-1.collapsible-header {
   background-color: #bdbdbd !important;
 }
 
@@ -2599,7 +2599,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.darken-1 {
+.grey.darken-1, .main-section.test .test-list .darken-1.collapsible-header.expandable:hover, .main-section.test .test-list .sub-menu .darken-1.collapsible-header {
   background-color: #757575 !important;
 }
 
@@ -2609,7 +2609,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.darken-2 {
+.grey.darken-2, .main-section.test .test-list .darken-2.collapsible-header.expandable:hover, .main-section.test .test-list .sub-menu .darken-2.collapsible-header {
   background-color: #616161 !important;
 }
 
@@ -2619,7 +2619,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.darken-3 {
+.grey.darken-3, .main-section.test .test-list .darken-3.collapsible-header.expandable:hover, .main-section.test .test-list .sub-menu .darken-3.collapsible-header {
   background-color: #424242 !important;
 }
 
@@ -2629,7 +2629,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.darken-4 {
+.grey.darken-4, .main-section.test .test-list .darken-4.collapsible-header.expandable:hover, .main-section.test .test-list .sub-menu .darken-4.collapsible-header {
   background-color: #212121 !important;
 }
 
@@ -9394,9 +9394,46 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     margin-bottom: 5em;
   }
 }
-/* line 6, ../materialize-src/sass/modules/_test.scss */
-.main-section.test ul.collapsible ul.collapsible {
+/* line 4, ../materialize-src/sass/modules/_test.scss */
+.main-section.test .test-list {
+  user-select: none;
+}
+/* line 7, ../materialize-src/sass/modules/_test.scss */
+.main-section.test .test-list .collapsible-header {
+  border-bottom: none;
+}
+/* line 14, ../materialize-src/sass/modules/_test.scss */
+.main-section.test .test-list ul.collapsible {
+  position: relative;
+}
+/* line 18, ../materialize-src/sass/modules/_test.scss */
+.main-section.test .test-list .sub-menu {
   margin: 0;
-  padding-left: 45px;
   /*@extend .blue, .lighten-4;*/
+}
+/* line 28, ../materialize-src/sass/modules/_test.scss */
+.main-section.test .test-list .switch {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+/* line 5, ../materialize-src/sass/modules/_layout.scss */
+html {
+  height: 100%;
+}
+
+/* line 9, ../materialize-src/sass/modules/_layout.scss */
+body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+}
+
+/* line 15, ../materialize-src/sass/modules/_layout.scss */
+.page-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }

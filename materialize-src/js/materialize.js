@@ -401,10 +401,16 @@ if (jQuery) {
           object.parent().removeClass('active');
         }
         if (object.parent().hasClass('active')){
+          if(object.context.className === 'lever')
+          {
+            debugger;
+          }
           object.siblings('.collapsible-body').stop(true,false).slideDown({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '');}});
         }
         else{
-          object.siblings('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '');}});
+          if(object.context.className !== 'lever')
+            object.siblings('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '');}});
+
         }
 
         $panel_headers.not(object).removeClass('active').parent().removeClass('active');
@@ -499,10 +505,16 @@ if (jQuery) {
         if (isChildrenOfPanelHeader(element)) {
           element = getPanelHeader(element);
         }
+        // if(element.context.className == "lever")
+        // {
+        //   //return 0;
+        // }
+        // else {
+          element.toggleClass('active');
+          collapsibleOpen(element);
+        // }
 
-        element.toggleClass('active');
 
-        collapsibleOpen(element);
       });
 
 
