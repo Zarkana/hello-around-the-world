@@ -59,17 +59,26 @@
   }
 }
 
-@media (max-width: 575px)
+@media (max-width: 600px)
 {
   .left-header, .right-header,input[type=text].select-dropdown{
     font-size: 1.7rem !important;
   }
+
+  .test-header{
+    width: 90%;
+    margin-left: 0;
+  }
+
 }
 
 @media (max-width: 480px)
 {
   .left-header, .right-header,input[type=text].select-dropdown{
     font-size: 1.5rem !important;
+  }
+  #logo-container{
+    font-size: 1.5rem;
   }
 }
 
@@ -79,7 +88,7 @@
     font-size: 1.2rem !important;
   }
   #logo-container{
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 }
 

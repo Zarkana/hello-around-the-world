@@ -6,15 +6,32 @@
     <div class="input-field right-header">
       <select>
         <option value="" disabled selected>What?</option>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
+        <option value="java">Java</option>
+        <option value="c">C</option>
+        <option value="c++">C++</option>
+        <option value="python">Python</option>
+        <option value="vb">VB</option>
+        <option value="c#">C#</option>
+        <option value="php">PHP</option>
+        <option value="javascript">JavaScript</option>
+        <option value="ruby">Ruby</option>
+        <option value="assembly">Assembly</option>
+        <option value="perl">Perl</option>
+        <option value="go">Go</option>
+        <option value="swift">Swift</option>
+        <option value="objective-c">Objective-C</option>
+        <option value="r">R</option>
+        <option value="matlab">MATLAB</option>
+        <option value="groovy">Groovy</option>
+        <option value="d">D</option>
+        <option value="haskell">Haskell</option>
+        <option value="pseduo">Pseudo</option>
       </select>
     </div>
 </h2>
 
 <div class="row center test-list">
-  <div class="col s6 offset-s3">
+  <div class="col s12 m8 offset-m2">
     <ul class="collapsible" data-collapsible="accordion">
       <li>
         <div class="collapsible-header">

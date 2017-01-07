@@ -9448,52 +9448,63 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     font-size: 2rem !important;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 600px) {
   /* line 64, ../materialize-src/sass/modules/_test.scss */
   .left-header, .right-header, input[type=text].select-dropdown {
     font-size: 1.7rem !important;
   }
+
+  /* line 68, ../materialize-src/sass/modules/_test.scss */
+  .test-header {
+    width: 90%;
+    margin-left: 0;
+  }
 }
 @media (max-width: 480px) {
-  /* line 71, ../materialize-src/sass/modules/_test.scss */
+  /* line 77, ../materialize-src/sass/modules/_test.scss */
   .left-header, .right-header, input[type=text].select-dropdown {
     font-size: 1.5rem !important;
   }
+
+  /* line 80, ../materialize-src/sass/modules/_test.scss */
+  #logo-container {
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 420px) {
-  /* line 78, ../materialize-src/sass/modules/_test.scss */
+  /* line 87, ../materialize-src/sass/modules/_test.scss */
   .left-header, .right-header, input[type=text].select-dropdown {
     font-size: 1.2rem !important;
   }
 
-  /* line 81, ../materialize-src/sass/modules/_test.scss */
+  /* line 90, ../materialize-src/sass/modules/_test.scss */
   #logo-container {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 }
-/* line 88, ../materialize-src/sass/modules/_test.scss */
+/* line 97, ../materialize-src/sass/modules/_test.scss */
 .test-list {
   user-select: none;
 }
-/* line 91, ../materialize-src/sass/modules/_test.scss */
+/* line 100, ../materialize-src/sass/modules/_test.scss */
 .test-list .collapsible-header {
   border-bottom: none;
   cursor: default;
 }
-/* line 96, ../materialize-src/sass/modules/_test.scss */
+/* line 105, ../materialize-src/sass/modules/_test.scss */
 .test-list .expandable .collapsible-header:hover {
   cursor: pointer;
 }
-/* line 101, ../materialize-src/sass/modules/_test.scss */
+/* line 110, ../materialize-src/sass/modules/_test.scss */
 .test-list ul.collapsible {
   position: relative;
 }
-/* line 105, ../materialize-src/sass/modules/_test.scss */
+/* line 114, ../materialize-src/sass/modules/_test.scss */
 .test-list .sub-menu {
   margin: 0;
   /*@extend .blue, .lighten-4;*/
 }
-/* line 115, ../materialize-src/sass/modules/_test.scss */
+/* line 124, ../materialize-src/sass/modules/_test.scss */
 .test-list .switch {
   display: inline-block;
   position: absolute;

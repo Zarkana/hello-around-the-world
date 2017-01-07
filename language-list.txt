@@ -9,7 +9,6 @@ Javascript
 Ruby
 Assembly
 Perl
-Python
 Go
 Swift
 Objective-C
