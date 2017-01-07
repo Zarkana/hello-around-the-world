@@ -401,13 +401,11 @@ if (jQuery) {
           object.parent().removeClass('active');
         }
         if (object.parent().hasClass('active')){
-          debugger;
           if(object.context.className !== 'lever')
             object.siblings('.collapsible-body').stop(true,false).slideDown({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '');}});
         }
         else
         {
-          debugger;
           if(object.context.className !== 'lever')
             object.siblings('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '');}});
         }
