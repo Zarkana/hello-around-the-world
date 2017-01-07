@@ -63,6 +63,9 @@
   .left-header, .right-header,input[type=text].select-dropdown{
     font-size: 2rem !important;
   }
+  .test-header .right-header{
+    padding-left: 5px;
+  }
 }
 
 @media (max-width: 600px)
