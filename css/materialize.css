@@ -4975,13 +4975,13 @@ html {
 }
 
 /* line 25, ../materialize-src/sass/components/_typography.scss */
-h1, h2, .test-header .input-field input[type=text].select-dropdown, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   line-height: 1.1;
 }
 
 /* line 31, ../materialize-src/sass/components/_typography.scss */
-h1 a, h2 a, .test-header .input-field input[type=text].select-dropdown a, h3 a, h4 a, h5 a, h6 a {
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-weight: inherit;
 }
 
@@ -4993,7 +4993,7 @@ h1 {
 }
 
 /* line 33, ../materialize-src/sass/components/_typography.scss */
-h2, .test-header .input-field input[type=text].select-dropdown {
+h2 {
   font-size: 3.56rem;
   line-height: 110%;
   margin: 1.78rem 0 1.424rem 0;
@@ -6084,7 +6084,7 @@ button.btn-floating {
   }
 }
 /* line 22, ../materialize-src/sass/components/_modal.scss */
-.modal h1, .modal h2, .modal .test-header .input-field input[type=text].select-dropdown, .test-header .input-field .modal input[type=text].select-dropdown, .modal h3, .modal h4 {
+.modal h1, .modal h2, .modal h3, .modal h4 {
   margin-top: 0;
 }
 /* line 26, ../materialize-src/sass/components/_modal.scss */
@@ -8520,7 +8520,7 @@ input[type=range]:focus::-ms-fill-upper {
   left: 0;
 }
 /* line 27, ../materialize-src/sass/components/_carousel.scss */
-.carousel.carousel-slider .carousel-item h2, .carousel.carousel-slider .carousel-item .test-header .input-field input[type=text].select-dropdown, .test-header .input-field .carousel.carousel-slider .carousel-item input[type=text].select-dropdown {
+.carousel.carousel-slider .carousel-item h2 {
   font-size: 24px;
   font-weight: 500;
   line-height: 32px;
@@ -9394,129 +9394,61 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     margin-bottom: 5em;
   }
 }
-/* line 2, ../materialize-src/sass/modules/_test.scss */
-.test-header {
-  width: 70%;
-  margin-left: 15%;
-  display: inline-block;
-  margin-top: 3rem;
+/* line 1, ../materialize-src/sass/modules/_test.scss */
+#width_tmp_select {
+  width: auto;
 }
-/* line 8, ../materialize-src/sass/modules/_test.scss */
-.test-header .left-header {
-  display: inline;
+
+/* line 5, ../materialize-src/sass/modules/_test.scss */
+.test-menu {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 50px;
+}
+/* line 9, ../materialize-src/sass/modules/_test.scss */
+.test-menu p, .test-menu .select-wrapper {
   float: left;
-  white-space: nowrap;
-  text-align: right;
-  width: 60%;
-}
-/* line 16, ../materialize-src/sass/modules/_test.scss */
-.test-header .right-header {
-  display: inline;
-  float: left;
-  padding-left: 15px;
-  width: 40%;
-}
-/* line 26, ../materialize-src/sass/modules/_test.scss */
-.test-header .input-field {
   margin: 0;
 }
+/* line 12, ../materialize-src/sass/modules/_test.scss */
+.test-menu p .select-dropdown, .test-menu .select-wrapper .select-dropdown {
+  font-size: 2rem;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+/* line 18, ../materialize-src/sass/modules/_test.scss */
+.test-menu #language-select {
+  margin: 0 auto;
+  display: inline-block;
+}
+/* line 23, ../materialize-src/sass/modules/_test.scss */
+.test-menu .dropdown-content.select-dropdown {
+  max-height: 450px;
+}
+
 /* line 28, ../materialize-src/sass/modules/_test.scss */
-.test-header .input-field input[type=text].select-dropdown {
-  display: inline-block;
-  margin: 0;
-}
-
-/* line 36, ../materialize-src/sass/modules/_test.scss */
-.dropdown-content {
-  max-height: 400px;
-}
-
-@media (max-width: 1475px) {
-  /* line 42, ../materialize-src/sass/modules/_test.scss */
-  .left-header, .right-header, input[type=text].select-dropdown {
-    font-size: 3rem !important;
-  }
-}
-@media (max-width: 1180px) {
-  /* line 49, ../materialize-src/sass/modules/_test.scss */
-  .left-header, .right-header, input[type=text].select-dropdown {
-    font-size: 2.75rem !important;
-  }
-}
-@media (max-width: 1050px) {
-  /* line 56, ../materialize-src/sass/modules/_test.scss */
-  .left-header, .right-header, input[type=text].select-dropdown {
-    font-size: 2.25rem !important;
-  }
-}
-@media (max-width: 680px) {
-  /* line 63, ../materialize-src/sass/modules/_test.scss */
-  .left-header, .right-header, input[type=text].select-dropdown {
-    font-size: 2rem !important;
-  }
-
-  /* line 66, ../materialize-src/sass/modules/_test.scss */
-  .test-header .right-header {
-    padding-left: 5px;
-  }
-}
-@media (max-width: 600px) {
-  /* line 73, ../materialize-src/sass/modules/_test.scss */
-  .left-header, .right-header, input[type=text].select-dropdown {
-    font-size: 1.7rem !important;
-  }
-
-  /* line 77, ../materialize-src/sass/modules/_test.scss */
-  .test-header {
-    width: 90%;
-    margin-left: 0;
-  }
-}
-@media (max-width: 480px) {
-  /* line 86, ../materialize-src/sass/modules/_test.scss */
-  .left-header, .right-header, input[type=text].select-dropdown {
-    font-size: 1.5rem !important;
-  }
-
-  /* line 89, ../materialize-src/sass/modules/_test.scss */
-  #logo-container {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 420px) {
-  /* line 96, ../materialize-src/sass/modules/_test.scss */
-  .left-header, .right-header, input[type=text].select-dropdown {
-    font-size: 1.2rem !important;
-  }
-
-  /* line 99, ../materialize-src/sass/modules/_test.scss */
-  #logo-container {
-    font-size: 1.25rem;
-  }
-}
-/* line 105, ../materialize-src/sass/modules/_test.scss */
 .test-list {
   user-select: none;
 }
-/* line 108, ../materialize-src/sass/modules/_test.scss */
+/* line 31, ../materialize-src/sass/modules/_test.scss */
 .test-list .collapsible-header {
   border-bottom: none;
   cursor: default;
 }
-/* line 113, ../materialize-src/sass/modules/_test.scss */
+/* line 36, ../materialize-src/sass/modules/_test.scss */
 .test-list .expandable.collapsible-header:hover {
   cursor: pointer;
 }
-/* line 118, ../materialize-src/sass/modules/_test.scss */
+/* line 41, ../materialize-src/sass/modules/_test.scss */
 .test-list ul.collapsible {
   position: relative;
 }
-/* line 122, ../materialize-src/sass/modules/_test.scss */
+/* line 45, ../materialize-src/sass/modules/_test.scss */
 .test-list .sub-menu {
   margin: 0;
   /*@extend .blue, .lighten-4;*/
 }
-/* line 132, ../materialize-src/sass/modules/_test.scss */
+/* line 55, ../materialize-src/sass/modules/_test.scss */
 .test-list .switch {
   display: inline-block;
   position: absolute;

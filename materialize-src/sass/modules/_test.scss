@@ -1,106 +1,29 @@
+#width_tmp_select{
+  width: auto;
+}
 
-.test-header{
-  width: 70%;
-  margin-left: 15%;
-  display: inline-block;
-  margin-top: 3rem;
-
-  .left-header{
-    display:inline;
+.test-menu{
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 50px;
+  p, .select-wrapper{
     float:left;
-    white-space: nowrap;
-    text-align: right;
-    width: 60%;
-  }
-
-  .right-header{
-    display:inline;
-    float:left;
-    padding-left: 15px;
-    width: 40%;
-  }
-
-  .select-wrapper{
-  }
-
-  .input-field{
     margin: 0;
-    input[type=text].select-dropdown{
-      display: inline-block;
-      margin: 0;
-      @extend h2;
+    .select-dropdown{
+      font-size: 2rem;
+      margin-bottom: 0;
+      margin-left: 10px;
     }
   }
-}
+  #language-select{
+    margin: 0 auto;
+    display: inline-block;
+  }
 
-.dropdown-content{
-  max-height: 400px;
-}
-
-@media (max-width: 1475px)
-{
-  .left-header, .right-header,input[type=text].select-dropdown{
-    font-size: 3rem !important;
+  .dropdown-content.select-dropdown{
+    max-height: 450px;
   }
 }
-
-@media (max-width: 1180px)
-{
-  .left-header, .right-header,input[type=text].select-dropdown{
-    font-size: 2.75rem !important;
-  }
-}
-
-@media (max-width: 1050px)
-{
-  .left-header, .right-header,input[type=text].select-dropdown{
-    font-size: 2.25rem !important;
-  }
-}
-
-@media (max-width: 680px)
-{
-  .left-header, .right-header,input[type=text].select-dropdown{
-    font-size: 2rem !important;
-  }
-  .test-header .right-header{
-    padding-left: 5px;
-  }
-}
-
-@media (max-width: 600px)
-{
-  .left-header, .right-header,input[type=text].select-dropdown{
-    font-size: 1.7rem !important;
-  }
-
-  .test-header{
-    width: 90%;
-    margin-left: 0;
-  }
-
-}
-
-@media (max-width: 480px)
-{
-  .left-header, .right-header,input[type=text].select-dropdown{
-    font-size: 1.5rem !important;
-  }
-  #logo-container{
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 420px)
-{
-  .left-header, .right-header,input[type=text].select-dropdown{
-    font-size: 1.2rem !important;
-  }
-  #logo-container{
-    font-size: 1.25rem;
-  }
-}
-
 
 .test-list{
   user-select: none;
@@ -129,9 +52,9 @@
     /*@extend .blue, .lighten-4;*/
   }
 
-.switch{
-      display: inline-block;
-      position: absolute;
-      right: 0;
-  }
+  .switch{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+    }
 }

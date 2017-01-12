@@ -1,4 +1,4 @@
-
+<!--
 <h2 class="header center light-blue-text text-lighten-1 test-header">
     <div class="left-header">
       Testing Yourself in
@@ -28,8 +28,41 @@
         <option value="pseduo">Pseudo</option>
       </select>
     </div>
-</h2>
+</h2> -->
 
+<div class="row center test-list">
+  <div class="header light-blue-text col s12 m8 offset-m2 test-menu">
+    <div id="language-select">
+      <p>Testing yourself in </p>
+      <select class="materialize-select">
+        <option value="" disabled selected>What?</option>
+        <option value="java">Java</option>
+        <option value="c">C</option>
+        <option value="c++">C++</option>
+        <option value="python">Python</option>
+        <option value="vb">VB</option>
+        <option value="c#">C#</option>
+        <option value="php">PHP</option>
+        <option value="javascript">JavaScript</option>
+        <option value="ruby">Ruby</option>
+        <option value="assembly">Assembly</option>
+        <option value="perl">Perl</option>
+        <option value="go">Go</option>
+        <option value="swift">Swift</option>
+        <option value="objective-c">Objective-C</option>
+        <option value="r">R</option>
+        <option value="matlab">MATLAB</option>
+        <option value="groovy">Groovy</option>
+        <option value="d">D</option>
+        <option value="haskell">Haskell</option>
+        <option value="pseduo">Pseudo</option>
+      </select>
+    </div>
+    <select id="width_tmp_select">
+      <option id="width_tmp_option"></option>
+    </select>    
+  </div>
+</div>
 <div class="row center test-list">
   <div class="col s12 m8 offset-m2">
     <ul class="collapsible" data-collapsible="accordion">
