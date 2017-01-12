@@ -102,7 +102,6 @@
 }
 
 
-
 .test-list{
   user-select: none;
 
@@ -111,7 +110,7 @@
     cursor: default;
   }
 
-  .expandable .collapsible-header:hover{
+  .expandable.collapsible-header:hover{
     cursor: pointer;
     @extend .grey, .lighten-3;
   }

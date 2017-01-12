@@ -29,7 +29,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.materialize-red.lighten-3, .test-list .expandable .materialize-red.collapsible-header:hover {
+.materialize-red.lighten-3, .test-list .materialize-red.expandable.collapsible-header:hover {
   background-color: #f3989b !important;
 }
 
@@ -129,7 +129,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.red.lighten-3, .test-list .expandable .red.collapsible-header:hover {
+.red.lighten-3, .test-list .red.expandable.collapsible-header:hover {
   background-color: #EF9A9A !important;
 }
 
@@ -269,7 +269,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.pink.lighten-3, .test-list .expandable .pink.collapsible-header:hover {
+.pink.lighten-3, .test-list .pink.expandable.collapsible-header:hover {
   background-color: #f48fb1 !important;
 }
 
@@ -409,7 +409,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.purple.lighten-3, .test-list .expandable .purple.collapsible-header:hover {
+.purple.lighten-3, .test-list .purple.expandable.collapsible-header:hover {
   background-color: #ce93d8 !important;
 }
 
@@ -549,7 +549,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.deep-purple.lighten-3, .test-list .expandable .deep-purple.collapsible-header:hover {
+.deep-purple.lighten-3, .test-list .deep-purple.expandable.collapsible-header:hover {
   background-color: #b39ddb !important;
 }
 
@@ -689,7 +689,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.indigo.lighten-3, .test-list .expandable .indigo.collapsible-header:hover {
+.indigo.lighten-3, .test-list .indigo.expandable.collapsible-header:hover {
   background-color: #9fa8da !important;
 }
 
@@ -829,7 +829,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.blue.lighten-3, .test-list .expandable .blue.collapsible-header:hover {
+.blue.lighten-3, .test-list .blue.expandable.collapsible-header:hover {
   background-color: #90CAF9 !important;
 }
 
@@ -969,7 +969,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.light-blue.lighten-3, .test-list .expandable .light-blue.collapsible-header:hover {
+.light-blue.lighten-3, .test-list .light-blue.expandable.collapsible-header:hover {
   background-color: #81d4fa !important;
 }
 
@@ -1109,7 +1109,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.cyan.lighten-3, .test-list .expandable .cyan.collapsible-header:hover {
+.cyan.lighten-3, .test-list .cyan.expandable.collapsible-header:hover {
   background-color: #80deea !important;
 }
 
@@ -1249,7 +1249,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.teal.lighten-3, .test-list .expandable .teal.collapsible-header:hover {
+.teal.lighten-3, .test-list .teal.expandable.collapsible-header:hover {
   background-color: #80cbc4 !important;
 }
 
@@ -1389,7 +1389,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.green.lighten-3, .test-list .expandable .green.collapsible-header:hover {
+.green.lighten-3, .test-list .green.expandable.collapsible-header:hover {
   background-color: #A5D6A7 !important;
 }
 
@@ -1529,7 +1529,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.light-green.lighten-3, .test-list .expandable .light-green.collapsible-header:hover {
+.light-green.lighten-3, .test-list .light-green.expandable.collapsible-header:hover {
   background-color: #c5e1a5 !important;
 }
 
@@ -1669,7 +1669,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.lime.lighten-3, .test-list .expandable .lime.collapsible-header:hover {
+.lime.lighten-3, .test-list .lime.expandable.collapsible-header:hover {
   background-color: #e6ee9c !important;
 }
 
@@ -1809,7 +1809,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.yellow.lighten-3, .test-list .expandable .yellow.collapsible-header:hover {
+.yellow.lighten-3, .test-list .yellow.expandable.collapsible-header:hover {
   background-color: #fff59d !important;
 }
 
@@ -1949,7 +1949,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.amber.lighten-3, .test-list .expandable .amber.collapsible-header:hover {
+.amber.lighten-3, .test-list .amber.expandable.collapsible-header:hover {
   background-color: #ffe082 !important;
 }
 
@@ -2089,7 +2089,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.orange.lighten-3, .test-list .expandable .orange.collapsible-header:hover {
+.orange.lighten-3, .test-list .orange.expandable.collapsible-header:hover {
   background-color: #ffcc80 !important;
 }
 
@@ -2229,7 +2229,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.deep-orange.lighten-3, .test-list .expandable .deep-orange.collapsible-header:hover {
+.deep-orange.lighten-3, .test-list .deep-orange.expandable.collapsible-header:hover {
   background-color: #ffab91 !important;
 }
 
@@ -2369,7 +2369,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.brown.lighten-3, .test-list .expandable .brown.collapsible-header:hover {
+.brown.lighten-3, .test-list .brown.expandable.collapsible-header:hover {
   background-color: #bcaaa4 !important;
 }
 
@@ -2469,7 +2469,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.blue-grey.lighten-3, .test-list .expandable .blue-grey.collapsible-header:hover {
+.blue-grey.lighten-3, .test-list .blue-grey.expandable.collapsible-header:hover {
   background-color: #b0bec5 !important;
 }
 
@@ -2539,7 +2539,7 @@
 }
 
 /* line 370, ../materialize-src/sass/components/_color.scss */
-.grey, .test-list .expandable .collapsible-header:hover, .test-list .sub-menu .collapsible-header {
+.grey, .test-list .expandable.collapsible-header:hover, .test-list .sub-menu .collapsible-header {
   background-color: #9e9e9e !important;
 }
 
@@ -2549,7 +2549,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.lighten-5, .test-list .expandable .lighten-5.collapsible-header:hover, .test-list .expandable .sub-menu .collapsible-header:hover, .test-list .sub-menu .expandable .collapsible-header:hover, .test-list .sub-menu .collapsible-header {
+.grey.lighten-5, .test-list .lighten-5.expandable.collapsible-header:hover, .test-list .sub-menu .expandable.collapsible-header:hover, .test-list .sub-menu .collapsible-header {
   background-color: #fafafa !important;
 }
 
@@ -2559,7 +2559,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.lighten-4, .test-list .expandable .lighten-4.collapsible-header:hover, .test-list .sub-menu .lighten-4.collapsible-header {
+.grey.lighten-4, .test-list .lighten-4.expandable.collapsible-header:hover, .test-list .sub-menu .lighten-4.collapsible-header {
   background-color: #f5f5f5 !important;
 }
 
@@ -2569,7 +2569,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.lighten-3, .test-list .expandable .collapsible-header:hover, .test-list .sub-menu .lighten-3.collapsible-header {
+.grey.lighten-3, .test-list .expandable.collapsible-header:hover, .test-list .sub-menu .lighten-3.collapsible-header {
   background-color: #eeeeee !important;
 }
 
@@ -2579,7 +2579,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.lighten-2, .test-list .expandable .lighten-2.collapsible-header:hover, .test-list .sub-menu .lighten-2.collapsible-header {
+.grey.lighten-2, .test-list .lighten-2.expandable.collapsible-header:hover, .test-list .sub-menu .lighten-2.collapsible-header {
   background-color: #e0e0e0 !important;
 }
 
@@ -2589,7 +2589,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.lighten-1, .test-list .expandable .lighten-1.collapsible-header:hover, .test-list .sub-menu .lighten-1.collapsible-header {
+.grey.lighten-1, .test-list .lighten-1.expandable.collapsible-header:hover, .test-list .sub-menu .lighten-1.collapsible-header {
   background-color: #bdbdbd !important;
 }
 
@@ -2599,7 +2599,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.darken-1, .test-list .expandable .darken-1.collapsible-header:hover, .test-list .sub-menu .darken-1.collapsible-header {
+.grey.darken-1, .test-list .darken-1.expandable.collapsible-header:hover, .test-list .sub-menu .darken-1.collapsible-header {
   background-color: #757575 !important;
 }
 
@@ -2609,7 +2609,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.darken-2, .test-list .expandable .darken-2.collapsible-header:hover, .test-list .sub-menu .darken-2.collapsible-header {
+.grey.darken-2, .test-list .darken-2.expandable.collapsible-header:hover, .test-list .sub-menu .darken-2.collapsible-header {
   background-color: #616161 !important;
 }
 
@@ -2619,7 +2619,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.darken-3, .test-list .expandable .darken-3.collapsible-header:hover, .test-list .sub-menu .darken-3.collapsible-header {
+.grey.darken-3, .test-list .darken-3.expandable.collapsible-header:hover, .test-list .sub-menu .darken-3.collapsible-header {
   background-color: #424242 !important;
 }
 
@@ -2629,7 +2629,7 @@
 }
 
 /* line 378, ../materialize-src/sass/components/_color.scss */
-.grey.darken-4, .test-list .expandable .darken-4.collapsible-header:hover, .test-list .sub-menu .darken-4.collapsible-header {
+.grey.darken-4, .test-list .darken-4.expandable.collapsible-header:hover, .test-list .sub-menu .darken-4.collapsible-header {
   background-color: #212121 !important;
 }
 
@@ -9494,29 +9494,29 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     font-size: 1.25rem;
   }
 }
-/* line 106, ../materialize-src/sass/modules/_test.scss */
+/* line 105, ../materialize-src/sass/modules/_test.scss */
 .test-list {
   user-select: none;
 }
-/* line 109, ../materialize-src/sass/modules/_test.scss */
+/* line 108, ../materialize-src/sass/modules/_test.scss */
 .test-list .collapsible-header {
   border-bottom: none;
   cursor: default;
 }
-/* line 114, ../materialize-src/sass/modules/_test.scss */
-.test-list .expandable .collapsible-header:hover {
+/* line 113, ../materialize-src/sass/modules/_test.scss */
+.test-list .expandable.collapsible-header:hover {
   cursor: pointer;
 }
-/* line 119, ../materialize-src/sass/modules/_test.scss */
+/* line 118, ../materialize-src/sass/modules/_test.scss */
 .test-list ul.collapsible {
   position: relative;
 }
-/* line 123, ../materialize-src/sass/modules/_test.scss */
+/* line 122, ../materialize-src/sass/modules/_test.scss */
 .test-list .sub-menu {
   margin: 0;
   /*@extend .blue, .lighten-4;*/
 }
-/* line 133, ../materialize-src/sass/modules/_test.scss */
+/* line 132, ../materialize-src/sass/modules/_test.scss */
 .test-list .switch {
   display: inline-block;
   position: absolute;
