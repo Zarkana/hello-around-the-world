@@ -9424,31 +9424,32 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 /* line 23, ../materialize-src/sass/modules/_test.scss */
 .test-menu .dropdown-content.select-dropdown {
   max-height: 450px;
+  min-width: 150px;
 }
 
-/* line 28, ../materialize-src/sass/modules/_test.scss */
+/* line 29, ../materialize-src/sass/modules/_test.scss */
 .test-list {
   user-select: none;
 }
-/* line 31, ../materialize-src/sass/modules/_test.scss */
+/* line 32, ../materialize-src/sass/modules/_test.scss */
 .test-list .collapsible-header {
   border-bottom: none;
   cursor: default;
 }
-/* line 36, ../materialize-src/sass/modules/_test.scss */
+/* line 37, ../materialize-src/sass/modules/_test.scss */
 .test-list .expandable.collapsible-header:hover {
   cursor: pointer;
 }
-/* line 41, ../materialize-src/sass/modules/_test.scss */
+/* line 42, ../materialize-src/sass/modules/_test.scss */
 .test-list ul.collapsible {
   position: relative;
 }
-/* line 45, ../materialize-src/sass/modules/_test.scss */
+/* line 46, ../materialize-src/sass/modules/_test.scss */
 .test-list .sub-menu {
   margin: 0;
   /*@extend .blue, .lighten-4;*/
 }
-/* line 55, ../materialize-src/sass/modules/_test.scss */
+/* line 56, ../materialize-src/sass/modules/_test.scss */
 .test-list .switch {
   display: inline-block;
   position: absolute;

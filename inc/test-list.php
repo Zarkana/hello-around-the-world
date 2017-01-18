@@ -55,12 +55,12 @@
         <option value="groovy">Groovy</option>
         <option value="d">D</option>
         <option value="haskell">Haskell</option>
-        <option value="pseduo">Pseudo</option>
+        <option value="pseduo">Pseudocode</option>
       </select>
     </div>
     <select id="width_tmp_select">
       <option id="width_tmp_option"></option>
-    </select>    
+    </select>
   </div>
 </div>
 <div class="row center test-list">
