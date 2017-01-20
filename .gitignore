@@ -1,0 +1,11 @@
+public
+.tmp
+materialize-src/.sass-cache
+.idea
+client/bower_components
+dist
+/server/config/local.env.js
+
+# Ignore docs files
+app/assets/.sass-cache
+app/assets/.sass-cache/*
