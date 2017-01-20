@@ -8,9 +8,6 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'materialize' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-
 
       <!-- CSS  -->
       <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -34,7 +31,6 @@
     <div class="section no-pad-bot main-section test" id="index-banner">
       <div class="container" id="content">
 
-
           <%= yield %>
 
       </div>
@@ -49,10 +45,14 @@
     </footer>
 
     <!--  Scripts-->
-    <%= javascript_include_tag 'application' %>
+
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="materialize-src/js/materialize.js"></script>
+    <!-- <script src="materialize-src/js/materialize.js"></script>
     <script src="materialize-src/js/init.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js"></script> -->
+    <!-- <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> -->
+    <%= javascript_include_tag 'materialize' %>
+    <%= javascript_include_tag 'init' %>
+    <%= javascript_include_tag 'main' %>
   </body>
 </html>
