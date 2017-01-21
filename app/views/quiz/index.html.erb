@@ -1,143 +1,146 @@
-<div class="row center quiz-list">
-  <div class="header light-blue-text col s12 m8 offset-m2 quiz-menu">
-    <div id="language-select">
-      <p>Quizing yourself in </p>
-      <select class="materialize-select">
-        <%= render "quiz/quiz-list.html.erb" %>
+<div class="container quiz" id="content">
+
+  <div class="row center quiz-list">
+    <div class="header light-blue-text col s12 m8 offset-m2 quiz-menu">
+      <div id="language-select">
+        <p>Quizing yourself in </p>
+        <select class="materialize-select">
+          <%= render "quiz/quiz-list.html.erb" %>
+        </select>
+      </div>
+      <select id="width_tmp_select">
+        <option id="width_tmp_option"></option>
       </select>
     </div>
-    <select id="width_tmp_select">
-      <option id="width_tmp_option"></option>
-    </select>
   </div>
-</div>
-<div class="row center quiz-list">
-  <div class="col s12 m8 offset-m2">
-    <ul class="collapsible" data-collapsible="accordion">
-      <li>
-        <div class="collapsible-header">
-          Hello World!
-          <div class="switch">
-            <label>
-              <input checked type="checkbox">
-              <span class="lever"></span>
-            </label>
+  <div class="row center quiz-list">
+    <div class="col s12 m8 offset-m2">
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header">
+            Hello World!
+            <div class="switch">
+              <label>
+                <input checked type="checkbox">
+                <span class="lever"></span>
+              </label>
+            </div>
           </div>
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header expandable">
-          Algorithms - Sorting
-          <div class="switch">
-            <label>
-              <input checked type="checkbox">
-              <span class="lever"></span>
-            </label>
+        </li>
+        <li>
+          <div class="collapsible-header expandable">
+            Algorithms - Sorting
+            <div class="switch">
+              <label>
+                <input checked type="checkbox">
+                <span class="lever"></span>
+              </label>
+            </div>
           </div>
-        </div>
-        <div class="collapsible-body">
-          <ul class="collapsible sub-menu" data-collapsible="accordion">
-            <li>
-              <div class="collapsible-header">
-                Bubble Sort
-                <div class="switch">
-                  <label>
-                    <input checked type="checkbox">
-                    <span class="lever"></span>
-                  </label>
+          <div class="collapsible-body">
+            <ul class="collapsible sub-menu" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header">
+                  Bubble Sort
+                  <div class="switch">
+                    <label>
+                      <input checked type="checkbox">
+                      <span class="lever"></span>
+                    </label>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header">
-                Merge Sort
-                <div class="switch">
-                  <label>
-                    <input checked type="checkbox">
-                    <span class="lever"></span>
-                  </label>
+              </li>
+              <li>
+                <div class="collapsible-header">
+                  Merge Sort
+                  <div class="switch">
+                    <label>
+                      <input checked type="checkbox">
+                      <span class="lever"></span>
+                    </label>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header">
-                Heapsort
-                <div class="switch">
-                  <label>
-                    <input checked type="checkbox">
-                    <span class="lever"></span>
-                  </label>
+              </li>
+              <li>
+                <div class="collapsible-header">
+                  Heapsort
+                  <div class="switch">
+                    <label>
+                      <input checked type="checkbox">
+                      <span class="lever"></span>
+                    </label>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header">
-                Insertion Sort
-                <div class="switch">
-                  <label>
-                    <input checked type="checkbox">
-                    <span class="lever"></span>
-                  </label>
+              </li>
+              <li>
+                <div class="collapsible-header">
+                  Insertion Sort
+                  <div class="switch">
+                    <label>
+                      <input checked type="checkbox">
+                      <span class="lever"></span>
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <div class="collapsible-header">
-                Selection Sort
-                <div class="switch">
-                  <label>
-                    <input checked type="checkbox">
-                    <span class="lever"></span>
-                  </label>
+                <div class="collapsible-header">
+                  Selection Sort
+                  <div class="switch">
+                    <label>
+                      <input checked type="checkbox">
+                      <span class="lever"></span>
+                    </label>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header expandable">
-          Algorithms - Search
-          <div class="switch">
-            <label>
-              <input checked type="checkbox">
-              <span class="lever"></span>
-            </label>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="collapsible-body">
-          <ul class="collapsible sub-menu" data-collapsible="accordion">
-            <li>
-              <div class="collapsible-header">
-                Linear Search
-                <div class="switch">
-                  <label>
-                    <input checked type="checkbox">
-                    <span class="lever"></span>
-                  </label>
+        </li>
+        <li>
+          <div class="collapsible-header expandable">
+            Algorithms - Search
+            <div class="switch">
+              <label>
+                <input checked type="checkbox">
+                <span class="lever"></span>
+              </label>
+            </div>
+          </div>
+          <div class="collapsible-body">
+            <ul class="collapsible sub-menu" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header">
+                  Linear Search
+                  <div class="switch">
+                    <label>
+                      <input checked type="checkbox">
+                      <span class="lever"></span>
+                    </label>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header">
-                Binary Search
-                <div class="switch">
-                  <label>
-                    <input checked type="checkbox">
-                    <span class="lever"></span>
-                  </label>
+              </li>
+              <li>
+                <div class="collapsible-header">
+                  Binary Search
+                  <div class="switch">
+                    <label>
+                      <input checked type="checkbox">
+                      <span class="lever"></span>
+                    </label>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <!--<li>
-        <div class="collapsible-header">Web Development</div>
-        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-      </li>-->
-    </ul>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!--<li>
+          <div class="collapsible-header">Web Development</div>
+          <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+        </li>-->
+      </ul>
+    </div>
   </div>
+  <div class="row center">
+    <%= link_to 'Begin!', {controller: 'quiz', action: 'question'}, :id => 'download-button', :class => 'btn-large waves-effect waves-light blue'  %>
+  </div>
+  <br><br>
 </div>
-<div class="row center">
-  <%= link_to 'Begin!', {controller: 'quiz', action: 'question'}, :id => 'download-button', :class => 'btn-large waves-effect waves-light blue'  %>
-</div>
-<br><br>
