@@ -19,7 +19,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.materialize-red.lighten-4 {
+.materialize-red.lighten-4, .question-navigation.buttons .pagination .materialize-red.circle {
   background-color: #f8c1c3 !important;
 }
 
@@ -39,7 +39,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.materialize-red.lighten-2 {
+.materialize-red.lighten-2, .question-navigation.buttons .pagination li.materialize-red.active {
   background-color: #ee6e73 !important;
 }
 
@@ -49,7 +49,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.materialize-red.lighten-1 {
+.materialize-red.lighten-1, .question-navigation.buttons .pagination li.materialize-red:hover {
   background-color: #ea454b !important;
 }
 
@@ -119,7 +119,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.lighten-4 {
+.red.lighten-4, .question-navigation.buttons .pagination .red.circle {
   background-color: #FFCDD2 !important;
 }
 
@@ -139,7 +139,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.lighten-2 {
+.red.lighten-2, .question-navigation.buttons .pagination li.red.active {
   background-color: #E57373 !important;
 }
 
@@ -149,7 +149,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.lighten-1 {
+.red.lighten-1, .question-navigation.buttons .pagination li.red:hover {
   background-color: #EF5350 !important;
 }
 
@@ -259,7 +259,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.pink.lighten-4 {
+.pink.lighten-4, .question-navigation.buttons .pagination .pink.circle {
   background-color: #f8bbd0 !important;
 }
 
@@ -279,7 +279,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.pink.lighten-2 {
+.pink.lighten-2, .question-navigation.buttons .pagination li.pink.active {
   background-color: #f06292 !important;
 }
 
@@ -289,7 +289,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.pink.lighten-1 {
+.pink.lighten-1, .question-navigation.buttons .pagination li.pink:hover {
   background-color: #ec407a !important;
 }
 
@@ -399,7 +399,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.purple.lighten-4 {
+.purple.lighten-4, .question-navigation.buttons .pagination .purple.circle {
   background-color: #e1bee7 !important;
 }
 
@@ -419,7 +419,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.purple.lighten-2 {
+.purple.lighten-2, .question-navigation.buttons .pagination li.purple.active {
   background-color: #ba68c8 !important;
 }
 
@@ -429,7 +429,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.purple.lighten-1 {
+.purple.lighten-1, .question-navigation.buttons .pagination li.purple:hover {
   background-color: #ab47bc !important;
 }
 
@@ -539,7 +539,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-purple.lighten-4 {
+.deep-purple.lighten-4, .question-navigation.buttons .pagination .deep-purple.circle {
   background-color: #d1c4e9 !important;
 }
 
@@ -559,7 +559,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-purple.lighten-2 {
+.deep-purple.lighten-2, .question-navigation.buttons .pagination li.deep-purple.active {
   background-color: #9575cd !important;
 }
 
@@ -569,7 +569,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-purple.lighten-1 {
+.deep-purple.lighten-1, .question-navigation.buttons .pagination li.deep-purple:hover {
   background-color: #7e57c2 !important;
 }
 
@@ -679,7 +679,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.indigo.lighten-4 {
+.indigo.lighten-4, .question-navigation.buttons .pagination .indigo.circle {
   background-color: #c5cae9 !important;
 }
 
@@ -699,7 +699,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.indigo.lighten-2 {
+.indigo.lighten-2, .question-navigation.buttons .pagination li.indigo.active {
   background-color: #7986cb !important;
 }
 
@@ -709,7 +709,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.indigo.lighten-1 {
+.indigo.lighten-1, .question-navigation.buttons .pagination li.indigo:hover {
   background-color: #5c6bc0 !important;
 }
 
@@ -799,7 +799,7 @@
 }
 
 /* line 370, ../assets/sass/components/_color.scss */
-.blue {
+.blue, .question-navigation.buttons .pagination .circle {
   background-color: #2196F3 !important;
 }
 
@@ -809,7 +809,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-5, .quiz-list .sub-menu .blue.collapsible-header {
+.blue.lighten-5, .question-navigation.buttons .pagination .lighten-5.circle, .question-navigation.buttons .pagination .quiz-list .sub-menu .circle.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination .circle.collapsible-header, .quiz-list .sub-menu .blue.collapsible-header {
   background-color: #E3F2FD !important;
 }
 
@@ -819,7 +819,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-4 {
+.blue.lighten-4, .question-navigation.buttons .pagination .circle {
   background-color: #BBDEFB !important;
 }
 
@@ -829,7 +829,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-3, .quiz-list .blue.expandable.collapsible-header:hover {
+.blue.lighten-3, .question-navigation.buttons .pagination .lighten-3.circle, .question-navigation.buttons .pagination .quiz-list .circle.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination .circle.expandable.collapsible-header:hover, .quiz-list .blue.expandable.collapsible-header:hover {
   background-color: #90CAF9 !important;
 }
 
@@ -839,7 +839,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-2 {
+.blue.lighten-2, .question-navigation.buttons .pagination .lighten-2.circle, .question-navigation.buttons .pagination li.circle.active, .question-navigation.buttons .pagination li.blue.active {
   background-color: #64B5F6 !important;
 }
 
@@ -849,7 +849,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-1 {
+.blue.lighten-1, .question-navigation.buttons .pagination .lighten-1.circle, .question-navigation.buttons .pagination li.circle:hover, .question-navigation.buttons .pagination li.blue:hover {
   background-color: #42A5F5 !important;
 }
 
@@ -859,7 +859,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.darken-1 {
+.blue.darken-1, .question-navigation.buttons .pagination .darken-1.circle {
   background-color: #1E88E5 !important;
 }
 
@@ -869,7 +869,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.darken-2 {
+.blue.darken-2, .question-navigation.buttons .pagination .darken-2.circle {
   background-color: #1976D2 !important;
 }
 
@@ -879,7 +879,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.darken-3 {
+.blue.darken-3, .question-navigation.buttons .pagination .darken-3.circle {
   background-color: #1565C0 !important;
 }
 
@@ -889,7 +889,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.darken-4 {
+.blue.darken-4, .question-navigation.buttons .pagination .darken-4.circle {
   background-color: #0D47A1 !important;
 }
 
@@ -899,7 +899,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.accent-1 {
+.blue.accent-1, .question-navigation.buttons .pagination .accent-1.circle {
   background-color: #82B1FF !important;
 }
 
@@ -909,7 +909,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.accent-2 {
+.blue.accent-2, .question-navigation.buttons .pagination .accent-2.circle {
   background-color: #448AFF !important;
 }
 
@@ -919,7 +919,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.accent-3 {
+.blue.accent-3, .question-navigation.buttons .pagination .accent-3.circle {
   background-color: #2979FF !important;
 }
 
@@ -929,7 +929,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.accent-4 {
+.blue.accent-4, .question-navigation.buttons .pagination .accent-4.circle {
   background-color: #2962FF !important;
 }
 
@@ -959,7 +959,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-blue.lighten-4 {
+.light-blue.lighten-4, .question-navigation.buttons .pagination .light-blue.circle {
   background-color: #b3e5fc !important;
 }
 
@@ -979,7 +979,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-blue.lighten-2 {
+.light-blue.lighten-2, .question-navigation.buttons .pagination li.light-blue.active {
   background-color: #4fc3f7 !important;
 }
 
@@ -989,7 +989,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-blue.lighten-1 {
+.light-blue.lighten-1, .question-navigation.buttons .pagination li.light-blue:hover {
   background-color: #29b6f6 !important;
 }
 
@@ -1099,7 +1099,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.cyan.lighten-4 {
+.cyan.lighten-4, .question-navigation.buttons .pagination .cyan.circle {
   background-color: #b2ebf2 !important;
 }
 
@@ -1119,7 +1119,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.cyan.lighten-2 {
+.cyan.lighten-2, .question-navigation.buttons .pagination li.cyan.active {
   background-color: #4dd0e1 !important;
 }
 
@@ -1129,7 +1129,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.cyan.lighten-1 {
+.cyan.lighten-1, .question-navigation.buttons .pagination li.cyan:hover {
   background-color: #26c6da !important;
 }
 
@@ -1239,7 +1239,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.teal.lighten-4 {
+.teal.lighten-4, .question-navigation.buttons .pagination .teal.circle {
   background-color: #b2dfdb !important;
 }
 
@@ -1259,7 +1259,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.teal.lighten-2 {
+.teal.lighten-2, .question-navigation.buttons .pagination li.teal.active {
   background-color: #4db6ac !important;
 }
 
@@ -1269,7 +1269,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.teal.lighten-1 {
+.teal.lighten-1, .question-navigation.buttons .pagination li.teal:hover {
   background-color: #26a69a !important;
 }
 
@@ -1379,7 +1379,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.green.lighten-4 {
+.green.lighten-4, .question-navigation.buttons .pagination .green.circle {
   background-color: #C8E6C9 !important;
 }
 
@@ -1399,7 +1399,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.green.lighten-2 {
+.green.lighten-2, .question-navigation.buttons .pagination li.green.active {
   background-color: #81C784 !important;
 }
 
@@ -1409,7 +1409,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.green.lighten-1 {
+.green.lighten-1, .question-navigation.buttons .pagination li.green:hover {
   background-color: #66BB6A !important;
 }
 
@@ -1519,7 +1519,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-green.lighten-4 {
+.light-green.lighten-4, .question-navigation.buttons .pagination .light-green.circle {
   background-color: #dcedc8 !important;
 }
 
@@ -1539,7 +1539,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-green.lighten-2 {
+.light-green.lighten-2, .question-navigation.buttons .pagination li.light-green.active {
   background-color: #aed581 !important;
 }
 
@@ -1549,7 +1549,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-green.lighten-1 {
+.light-green.lighten-1, .question-navigation.buttons .pagination li.light-green:hover {
   background-color: #9ccc65 !important;
 }
 
@@ -1659,7 +1659,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.lime.lighten-4 {
+.lime.lighten-4, .question-navigation.buttons .pagination .lime.circle {
   background-color: #f0f4c3 !important;
 }
 
@@ -1679,7 +1679,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.lime.lighten-2 {
+.lime.lighten-2, .question-navigation.buttons .pagination li.lime.active {
   background-color: #dce775 !important;
 }
 
@@ -1689,7 +1689,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.lime.lighten-1 {
+.lime.lighten-1, .question-navigation.buttons .pagination li.lime:hover {
   background-color: #d4e157 !important;
 }
 
@@ -1799,7 +1799,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.yellow.lighten-4 {
+.yellow.lighten-4, .question-navigation.buttons .pagination .yellow.circle {
   background-color: #fff9c4 !important;
 }
 
@@ -1819,7 +1819,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.yellow.lighten-2 {
+.yellow.lighten-2, .question-navigation.buttons .pagination li.yellow.active {
   background-color: #fff176 !important;
 }
 
@@ -1829,7 +1829,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.yellow.lighten-1 {
+.yellow.lighten-1, .question-navigation.buttons .pagination li.yellow:hover {
   background-color: #ffee58 !important;
 }
 
@@ -1939,7 +1939,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.amber.lighten-4 {
+.amber.lighten-4, .question-navigation.buttons .pagination .amber.circle {
   background-color: #ffecb3 !important;
 }
 
@@ -1959,7 +1959,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.amber.lighten-2 {
+.amber.lighten-2, .question-navigation.buttons .pagination li.amber.active {
   background-color: #ffd54f !important;
 }
 
@@ -1969,7 +1969,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.amber.lighten-1 {
+.amber.lighten-1, .question-navigation.buttons .pagination li.amber:hover {
   background-color: #ffca28 !important;
 }
 
@@ -2079,7 +2079,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.orange.lighten-4 {
+.orange.lighten-4, .question-navigation.buttons .pagination .orange.circle {
   background-color: #ffe0b2 !important;
 }
 
@@ -2099,7 +2099,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.orange.lighten-2 {
+.orange.lighten-2, .question-navigation.buttons .pagination li.orange.active {
   background-color: #ffb74d !important;
 }
 
@@ -2109,7 +2109,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.orange.lighten-1 {
+.orange.lighten-1, .question-navigation.buttons .pagination li.orange:hover {
   background-color: #ffa726 !important;
 }
 
@@ -2219,7 +2219,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-orange.lighten-4 {
+.deep-orange.lighten-4, .question-navigation.buttons .pagination .deep-orange.circle {
   background-color: #ffccbc !important;
 }
 
@@ -2239,7 +2239,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-orange.lighten-2 {
+.deep-orange.lighten-2, .question-navigation.buttons .pagination li.deep-orange.active {
   background-color: #ff8a65 !important;
 }
 
@@ -2249,7 +2249,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-orange.lighten-1 {
+.deep-orange.lighten-1, .question-navigation.buttons .pagination li.deep-orange:hover {
   background-color: #ff7043 !important;
 }
 
@@ -2359,7 +2359,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.brown.lighten-4 {
+.brown.lighten-4, .question-navigation.buttons .pagination .brown.circle {
   background-color: #d7ccc8 !important;
 }
 
@@ -2379,7 +2379,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.brown.lighten-2 {
+.brown.lighten-2, .question-navigation.buttons .pagination li.brown.active {
   background-color: #a1887f !important;
 }
 
@@ -2389,7 +2389,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.brown.lighten-1 {
+.brown.lighten-1, .question-navigation.buttons .pagination li.brown:hover {
   background-color: #8d6e63 !important;
 }
 
@@ -2459,7 +2459,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue-grey.lighten-4 {
+.blue-grey.lighten-4, .question-navigation.buttons .pagination .blue-grey.circle {
   background-color: #cfd8dc !important;
 }
 
@@ -2479,7 +2479,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue-grey.lighten-2 {
+.blue-grey.lighten-2, .question-navigation.buttons .pagination li.blue-grey.active {
   background-color: #90a4ae !important;
 }
 
@@ -2489,7 +2489,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue-grey.lighten-1 {
+.blue-grey.lighten-1, .question-navigation.buttons .pagination li.blue-grey:hover {
   background-color: #78909c !important;
 }
 
@@ -2559,7 +2559,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-4, .quiz-list .lighten-4.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-4.collapsible-header {
+.grey.lighten-4, .question-navigation.buttons .pagination .grey.circle, .question-navigation.buttons .pagination .quiz-list .circle.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination .circle.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu .circle.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination .circle.collapsible-header, .quiz-list .lighten-4.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-4.collapsible-header {
   background-color: #f5f5f5 !important;
 }
 
@@ -2579,7 +2579,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-2, .quiz-list .lighten-2.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-2.collapsible-header {
+.grey.lighten-2, .question-navigation.buttons .pagination li.grey.active, .question-navigation.buttons .pagination .quiz-list li.active.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination li.active.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu li.active.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination li.active.collapsible-header, .quiz-list .lighten-2.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-2.collapsible-header {
   background-color: #e0e0e0 !important;
 }
 
@@ -2589,7 +2589,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-1, .quiz-list .lighten-1.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-1.collapsible-header {
+.grey.lighten-1, .question-navigation.buttons .pagination li.grey:hover, .question-navigation.buttons .pagination .quiz-list li.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination li.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu li.collapsible-header:hover, .quiz-list .sub-menu .question-navigation.buttons .pagination li.collapsible-header:hover, .quiz-list .lighten-1.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-1.collapsible-header {
   background-color: #bdbdbd !important;
 }
 
@@ -9401,92 +9401,111 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 /* line 6, ../assets/sass/modules/_quiz.scss */
 #question-header {
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
-/* line 9, ../assets/sass/modules/_quiz.scss */
+/* line 10, ../assets/sass/modules/_quiz.scss */
 #question-header p {
   float: none;
 }
 
-/* line 14, ../assets/sass/modules/_quiz.scss */
+/* line 15, ../assets/sass/modules/_quiz.scss */
 #width_tmp_select {
   width: auto;
 }
 
-/* line 18, ../assets/sass/modules/_quiz.scss */
+/* line 19, ../assets/sass/modules/_quiz.scss */
 .quiz-menu {
   font-size: 2rem;
   text-align: center;
   margin-top: 60px;
 }
-/* line 22, ../assets/sass/modules/_quiz.scss */
+/* line 23, ../assets/sass/modules/_quiz.scss */
 .quiz-menu p, .quiz-menu .select-wrapper {
   float: left;
   margin: 0;
 }
-/* line 25, ../assets/sass/modules/_quiz.scss */
+/* line 26, ../assets/sass/modules/_quiz.scss */
 .quiz-menu p .select-dropdown, .quiz-menu .select-wrapper .select-dropdown {
   font-size: 2rem;
   margin-bottom: 10px;
   margin-left: 10px;
 }
-/* line 32, ../assets/sass/modules/_quiz.scss */
+/* line 33, ../assets/sass/modules/_quiz.scss */
 .quiz-menu #language-select {
   margin: 0 auto;
   display: inline-block;
 }
-/* line 37, ../assets/sass/modules/_quiz.scss */
+/* line 38, ../assets/sass/modules/_quiz.scss */
 .quiz-menu .dropdown-content.select-dropdown {
   max-height: 450px;
   min-width: 150px;
 }
 
-/* line 43, ../assets/sass/modules/_quiz.scss */
+/* line 44, ../assets/sass/modules/_quiz.scss */
 .quiz #editor-parent {
   position: relative;
   max-width: 65%;
   margin: 0 auto;
-  height: 650px;
+  height: 500px;
 }
-/* line 48, ../assets/sass/modules/_quiz.scss */
+/* line 49, ../assets/sass/modules/_quiz.scss */
 .quiz #editor-parent #editor {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 500px;
+  height: 100%;
 }
 @media (max-width: 960px) {
-  /* line 59, ../assets/sass/modules/_quiz.scss */
+  /* line 60, ../assets/sass/modules/_quiz.scss */
   .quiz #editor-parent {
     max-width: 100%;
   }
 }
 
-/* line 66, ../assets/sass/modules/_quiz.scss */
+/* line 67, ../assets/sass/modules/_quiz.scss */
+.question-navigation.buttons {
+  text-align: center;
+  margin-top: 35px;
+}
+/* line 72, ../assets/sass/modules/_quiz.scss */
+.question-navigation.buttons .pagination .circle {
+  border-radius: 20px;
+  height: 15px;
+  width: 15px;
+  margin-top: 7px;
+}
+
+/* line 91, ../assets/sass/modules/_quiz.scss */
+#save-modal {
+  width: 25%;
+}
+
+/* line 95, ../assets/sass/modules/_quiz.scss */
 .quiz-list {
   user-select: none;
 }
-/* line 69, ../assets/sass/modules/_quiz.scss */
+/* line 98, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header {
   border-bottom: none;
   cursor: default;
 }
-/* line 74, ../assets/sass/modules/_quiz.scss */
+/* line 103, ../assets/sass/modules/_quiz.scss */
 .quiz-list .expandable.collapsible-header:hover {
   cursor: pointer;
 }
-/* line 79, ../assets/sass/modules/_quiz.scss */
+/* line 108, ../assets/sass/modules/_quiz.scss */
 .quiz-list ul.collapsible {
   position: relative;
 }
-/* line 83, ../assets/sass/modules/_quiz.scss */
+/* line 112, ../assets/sass/modules/_quiz.scss */
 .quiz-list .sub-menu {
   margin: 0;
   /*@extend .blue, .lighten-4;*/
 }
-/* line 93, ../assets/sass/modules/_quiz.scss */
+/* line 122, ../assets/sass/modules/_quiz.scss */
 .quiz-list .switch {
   display: inline-block;
   position: absolute;

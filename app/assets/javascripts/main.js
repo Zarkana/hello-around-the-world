@@ -5,6 +5,12 @@ $(document).ready(function() {
   var resizing_select = "#language-select .select-wrapper";
   var temp_select = "#width_tmp_select";
 
+  //Instantiates modal menu
+  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  $('.modal').modal({
+    opacity: .1
+  });
+
   //Call once to initialize size
   resizeSelect(resizing_select, temp_select);
 
@@ -30,4 +36,25 @@ $(document).ready(function() {
     //set the visible select to now use the new width
     $(resizing_select).width(new_size);
   }
+
+  var ctrlDown = false,
+      ctrlKey = 17,
+      sKey = 83,
+      cmdKey = 91,
+      vKey = 86,
+      cKey = 67;
+
+  $(document).keydown(function(e) {
+      if (e.keyCode == ctrlKey || e.keyCode == cmdKey) ctrlDown = true;
+  }).keyup(function(e) {
+      if (e.keyCode == ctrlKey || e.keyCode == cmdKey) ctrlDown = false;
+  });
+
+  $(document).keydown(function(e) {
+      if (ctrlDown && e.keyCode == sKey)
+      {
+        $('#save-modal').modal('open');
+        return false;
+      }
+  });
 });
