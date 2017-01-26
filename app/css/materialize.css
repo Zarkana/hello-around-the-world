@@ -9512,6 +9512,23 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   right: 0;
 }
 
+/* line 5, ../assets/sass/modules/_study.scss */
+.container.study .study-section h3 {
+  font-size: 1.70rem;
+}
+@media (max-width: 992) {
+  /* line 10, ../assets/sass/modules/_study.scss */
+  .container.study .study-section h3 {
+    font-size: 1.40rem;
+  }
+}
+@media (max-width: 600) {
+  /* line 16, ../assets/sass/modules/_study.scss */
+  .container.study .study-section h3 {
+    font-size: 1.70rem;
+  }
+}
+
 /* line 5, ../assets/sass/modules/_layout.scss */
 html {
   height: 100%;
@@ -9531,4 +9548,8 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+@media (max-width: 992) {
+  font-size: 1.80rem;
 }

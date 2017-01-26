@@ -24,3 +24,8 @@ body{
 .display-select{
 
 }
+
+// At < 993
+@media (max-width: 992){
+  font-size: 1.80rem;
+}
