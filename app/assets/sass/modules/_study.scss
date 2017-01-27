@@ -1,21 +1,41 @@
 .container.study{
-
-  .study-section{
-
-    h3{
-      font-size: 1.70rem;
-    }
-    // At <= 992
-    @media (max-width: 992){
-      h3{
-        font-size: 1.40rem;
+  margin-top: 50px;
+  .study-collection-parent{
+      padding: 0;
+      .collection{
+        margin: 0;
+        border: 0;
       }
-    }
-    // At <= 600
-    @media (max-width: 600){
+  }
+
+
+  .study-content-parent{
+    padding: 0;
+    border: 1px solid #f1edea;
+    @extend .grey, .lighten-5;
+    .header{
+      @extend .grey, .lighten-4;
+      padding: 0;
+      border-bottom: 1px solid #f1edea;
       h3{
         font-size: 1.70rem;
       }
+      // At <= 992
+      @media (max-width: 992){
+        h3{
+          font-size: 1.40rem;
+        }
+      }
+      // At <= 600
+      @media (max-width: 600){
+        h3{
+          font-size: 1.70rem;
+        }
+      }
+    }
+    .study-content{
+      padding: 20px 5% 20px 5%;
     }
   }
+
 }
