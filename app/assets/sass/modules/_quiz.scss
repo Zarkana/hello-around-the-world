@@ -2,6 +2,7 @@
 .quiz.container{
   //used to allow for ace editor to take full width of screen at lower sizes
   width:100%;
+
 }
 #question-header{
   margin-top: 30px;
@@ -43,8 +44,6 @@
 .quiz{
   #editor-parent{
     position: relative;
-    max-width: 65%;
-    margin: 0 auto;
     height: 500px;
     #editor {
         position: absolute;
@@ -87,6 +86,13 @@
 
   }
 }
+
+#question-answer, #question-attempt{
+  height:450px;
+  border: 1px solid #f1edea;
+  @extend .grey, .lighten-5;
+}
+
 
 #save-modal{
   width: 25%;

@@ -9,7 +9,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.materialize-red.lighten-5, .quiz-list .sub-menu .materialize-red.collapsible-header, .container.study .materialize-red.study-content-parent {
+.materialize-red.lighten-5, .materialize-red#question-answer, .materialize-red#question-attempt, .quiz-list .sub-menu .materialize-red.collapsible-header, .container.study .materialize-red.study-content-parent {
   background-color: #fdeaeb !important;
 }
 
@@ -109,7 +109,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.lighten-5, .quiz-list .sub-menu .red.collapsible-header, .container.study .red.study-content-parent {
+.red.lighten-5, .red#question-answer, .red#question-attempt, .quiz-list .sub-menu .red.collapsible-header, .container.study .red.study-content-parent {
   background-color: #FFEBEE !important;
 }
 
@@ -249,7 +249,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.pink.lighten-5, .quiz-list .sub-menu .pink.collapsible-header, .container.study .pink.study-content-parent {
+.pink.lighten-5, .pink#question-answer, .pink#question-attempt, .quiz-list .sub-menu .pink.collapsible-header, .container.study .pink.study-content-parent {
   background-color: #fce4ec !important;
 }
 
@@ -389,7 +389,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.purple.lighten-5, .quiz-list .sub-menu .purple.collapsible-header, .container.study .purple.study-content-parent {
+.purple.lighten-5, .purple#question-answer, .purple#question-attempt, .quiz-list .sub-menu .purple.collapsible-header, .container.study .purple.study-content-parent {
   background-color: #f3e5f5 !important;
 }
 
@@ -529,7 +529,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-purple.lighten-5, .quiz-list .sub-menu .deep-purple.collapsible-header, .container.study .deep-purple.study-content-parent {
+.deep-purple.lighten-5, .deep-purple#question-answer, .deep-purple#question-attempt, .quiz-list .sub-menu .deep-purple.collapsible-header, .container.study .deep-purple.study-content-parent {
   background-color: #ede7f6 !important;
 }
 
@@ -669,7 +669,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.indigo.lighten-5, .quiz-list .sub-menu .indigo.collapsible-header, .container.study .indigo.study-content-parent {
+.indigo.lighten-5, .indigo#question-answer, .indigo#question-attempt, .quiz-list .sub-menu .indigo.collapsible-header, .container.study .indigo.study-content-parent {
   background-color: #e8eaf6 !important;
 }
 
@@ -809,7 +809,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-5, .question-navigation.buttons .pagination .lighten-5.circle, .question-navigation.buttons .pagination .quiz-list .sub-menu .circle.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination .circle.collapsible-header, .question-navigation.buttons .pagination .container.study .circle.study-content-parent, .container.study .question-navigation.buttons .pagination .circle.study-content-parent, .quiz-list .sub-menu .blue.collapsible-header, .container.study .blue.study-content-parent {
+.blue.lighten-5, .question-navigation.buttons .pagination .lighten-5.circle, .question-navigation.buttons .pagination .circle#question-answer, .question-navigation.buttons .pagination .circle#question-attempt, .question-navigation.buttons .pagination .quiz-list .sub-menu .circle.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination .circle.collapsible-header, .question-navigation.buttons .pagination .container.study .circle.study-content-parent, .container.study .question-navigation.buttons .pagination .circle.study-content-parent, .blue#question-answer, .blue#question-attempt, .quiz-list .sub-menu .blue.collapsible-header, .container.study .blue.study-content-parent {
   background-color: #E3F2FD !important;
 }
 
@@ -949,7 +949,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-blue.lighten-5, .quiz-list .sub-menu .light-blue.collapsible-header, .container.study .light-blue.study-content-parent {
+.light-blue.lighten-5, .light-blue#question-answer, .light-blue#question-attempt, .quiz-list .sub-menu .light-blue.collapsible-header, .container.study .light-blue.study-content-parent {
   background-color: #e1f5fe !important;
 }
 
@@ -1089,7 +1089,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.cyan.lighten-5, .quiz-list .sub-menu .cyan.collapsible-header, .container.study .cyan.study-content-parent {
+.cyan.lighten-5, .cyan#question-answer, .cyan#question-attempt, .quiz-list .sub-menu .cyan.collapsible-header, .container.study .cyan.study-content-parent {
   background-color: #e0f7fa !important;
 }
 
@@ -1229,7 +1229,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.teal.lighten-5, .quiz-list .sub-menu .teal.collapsible-header, .container.study .teal.study-content-parent {
+.teal.lighten-5, .teal#question-answer, .teal#question-attempt, .quiz-list .sub-menu .teal.collapsible-header, .container.study .teal.study-content-parent {
   background-color: #e0f2f1 !important;
 }
 
@@ -1369,7 +1369,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.green.lighten-5, .quiz-list .sub-menu .green.collapsible-header, .container.study .green.study-content-parent {
+.green.lighten-5, .green#question-answer, .green#question-attempt, .quiz-list .sub-menu .green.collapsible-header, .container.study .green.study-content-parent {
   background-color: #E8F5E9 !important;
 }
 
@@ -1509,7 +1509,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-green.lighten-5, .quiz-list .sub-menu .light-green.collapsible-header, .container.study .light-green.study-content-parent {
+.light-green.lighten-5, .light-green#question-answer, .light-green#question-attempt, .quiz-list .sub-menu .light-green.collapsible-header, .container.study .light-green.study-content-parent {
   background-color: #f1f8e9 !important;
 }
 
@@ -1649,7 +1649,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.lime.lighten-5, .quiz-list .sub-menu .lime.collapsible-header, .container.study .lime.study-content-parent {
+.lime.lighten-5, .lime#question-answer, .lime#question-attempt, .quiz-list .sub-menu .lime.collapsible-header, .container.study .lime.study-content-parent {
   background-color: #f9fbe7 !important;
 }
 
@@ -1789,7 +1789,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.yellow.lighten-5, .quiz-list .sub-menu .yellow.collapsible-header, .container.study .yellow.study-content-parent {
+.yellow.lighten-5, .yellow#question-answer, .yellow#question-attempt, .quiz-list .sub-menu .yellow.collapsible-header, .container.study .yellow.study-content-parent {
   background-color: #fffde7 !important;
 }
 
@@ -1929,7 +1929,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.amber.lighten-5, .quiz-list .sub-menu .amber.collapsible-header, .container.study .amber.study-content-parent {
+.amber.lighten-5, .amber#question-answer, .amber#question-attempt, .quiz-list .sub-menu .amber.collapsible-header, .container.study .amber.study-content-parent {
   background-color: #fff8e1 !important;
 }
 
@@ -2069,7 +2069,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.orange.lighten-5, .quiz-list .sub-menu .orange.collapsible-header, .container.study .orange.study-content-parent {
+.orange.lighten-5, .orange#question-answer, .orange#question-attempt, .quiz-list .sub-menu .orange.collapsible-header, .container.study .orange.study-content-parent {
   background-color: #fff3e0 !important;
 }
 
@@ -2209,7 +2209,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-orange.lighten-5, .quiz-list .sub-menu .deep-orange.collapsible-header, .container.study .deep-orange.study-content-parent {
+.deep-orange.lighten-5, .deep-orange#question-answer, .deep-orange#question-attempt, .quiz-list .sub-menu .deep-orange.collapsible-header, .container.study .deep-orange.study-content-parent {
   background-color: #fbe9e7 !important;
 }
 
@@ -2349,7 +2349,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.brown.lighten-5, .quiz-list .sub-menu .brown.collapsible-header, .container.study .brown.study-content-parent {
+.brown.lighten-5, .brown#question-answer, .brown#question-attempt, .quiz-list .sub-menu .brown.collapsible-header, .container.study .brown.study-content-parent {
   background-color: #efebe9 !important;
 }
 
@@ -2449,7 +2449,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue-grey.lighten-5, .quiz-list .sub-menu .blue-grey.collapsible-header, .container.study .blue-grey.study-content-parent {
+.blue-grey.lighten-5, .blue-grey#question-answer, .blue-grey#question-attempt, .quiz-list .sub-menu .blue-grey.collapsible-header, .container.study .blue-grey.study-content-parent {
   background-color: #eceff1 !important;
 }
 
@@ -2539,7 +2539,7 @@
 }
 
 /* line 370, ../assets/sass/components/_color.scss */
-.grey, .quiz-list .expandable.collapsible-header:hover, .quiz-list .sub-menu .collapsible-header, .container.study .study-content-parent, .container.study .study-content-parent .header {
+.grey, #question-answer, #question-attempt, .quiz-list .expandable.collapsible-header:hover, .quiz-list .sub-menu .collapsible-header, .container.study .study-content-parent, .container.study .study-content-parent .header {
   background-color: #9e9e9e !important;
 }
 
@@ -2549,7 +2549,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-5, .quiz-list .lighten-5.expandable.collapsible-header:hover, .quiz-list .sub-menu .expandable.collapsible-header:hover, .quiz-list .container.study .expandable.collapsible-header.study-content-parent:hover, .container.study .quiz-list .expandable.collapsible-header.study-content-parent:hover, .quiz-list .sub-menu .collapsible-header, .container.study .study-content-parent, .container.study .study-content-parent .lighten-5.header, .container.study .study-content-parent .quiz-list .sub-menu .header.collapsible-header, .quiz-list .sub-menu .container.study .study-content-parent .header.collapsible-header, .container.study .study-content-parent .header.study-content-parent {
+.grey.lighten-5, #question-answer, #question-attempt, .quiz-list .lighten-5.expandable.collapsible-header:hover, .quiz-list .sub-menu .expandable.collapsible-header:hover, .quiz-list .container.study .expandable.collapsible-header.study-content-parent:hover, .container.study .quiz-list .expandable.collapsible-header.study-content-parent:hover, .quiz-list .sub-menu .collapsible-header, .container.study .study-content-parent, .container.study .study-content-parent .lighten-5.header, .container.study .study-content-parent .quiz-list .sub-menu .header.collapsible-header, .quiz-list .sub-menu .container.study .study-content-parent .header.collapsible-header, .container.study .study-content-parent .header.study-content-parent {
   background-color: #fafafa !important;
 }
 
@@ -2559,7 +2559,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-4, .question-navigation.buttons .pagination .grey.circle, .question-navigation.buttons .pagination .quiz-list .circle.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination .circle.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu .circle.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination .circle.collapsible-header, .question-navigation.buttons .pagination .container.study .circle.study-content-parent, .container.study .question-navigation.buttons .pagination .circle.study-content-parent, .quiz-list .lighten-4.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-4.collapsible-header, .container.study .lighten-4.study-content-parent, .container.study .study-content-parent .header {
+.grey.lighten-4, .question-navigation.buttons .pagination .grey.circle, .question-navigation.buttons .pagination .circle#question-answer, .question-navigation.buttons .pagination .circle#question-attempt, .question-navigation.buttons .pagination .quiz-list .circle.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination .circle.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu .circle.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination .circle.collapsible-header, .question-navigation.buttons .pagination .container.study .circle.study-content-parent, .container.study .question-navigation.buttons .pagination .circle.study-content-parent, .lighten-4#question-answer, .container.study .study-content-parent #question-answer.header, .lighten-4#question-attempt, .container.study .study-content-parent #question-attempt.header, .quiz-list .lighten-4.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-4.collapsible-header, .container.study .lighten-4.study-content-parent, .container.study .study-content-parent .header {
   background-color: #f5f5f5 !important;
 }
 
@@ -2569,7 +2569,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-3, .quiz-list .expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-3.collapsible-header, .container.study .lighten-3.study-content-parent, .container.study .study-content-parent .lighten-3.header {
+.grey.lighten-3, .lighten-3#question-answer, .quiz-list #question-answer.expandable.collapsible-header:hover, .lighten-3#question-attempt, .quiz-list #question-attempt.expandable.collapsible-header:hover, .quiz-list .expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-3.collapsible-header, .container.study .lighten-3.study-content-parent, .container.study .study-content-parent .lighten-3.header {
   background-color: #eeeeee !important;
 }
 
@@ -2579,7 +2579,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-2, .question-navigation.buttons .pagination li.grey.active, .question-navigation.buttons .pagination .quiz-list li.active.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination li.active.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu li.active.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination li.active.collapsible-header, .question-navigation.buttons .pagination .container.study li.active.study-content-parent, .container.study .question-navigation.buttons .pagination li.active.study-content-parent, .question-navigation.buttons .pagination .container.study .study-content-parent li.active.header, .container.study .study-content-parent .question-navigation.buttons .pagination li.active.header, .quiz-list .lighten-2.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-2.collapsible-header, .container.study .lighten-2.study-content-parent, .container.study .study-content-parent .lighten-2.header {
+.grey.lighten-2, .question-navigation.buttons .pagination li.grey.active, .question-navigation.buttons .pagination li.active#question-answer, .question-navigation.buttons .pagination li.active#question-attempt, .question-navigation.buttons .pagination .quiz-list li.active.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination li.active.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu li.active.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination li.active.collapsible-header, .question-navigation.buttons .pagination .container.study li.active.study-content-parent, .container.study .question-navigation.buttons .pagination li.active.study-content-parent, .question-navigation.buttons .pagination .container.study .study-content-parent li.active.header, .container.study .study-content-parent .question-navigation.buttons .pagination li.active.header, .lighten-2#question-answer, .lighten-2#question-attempt, .quiz-list .lighten-2.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-2.collapsible-header, .container.study .lighten-2.study-content-parent, .container.study .study-content-parent .lighten-2.header {
   background-color: #e0e0e0 !important;
 }
 
@@ -2589,7 +2589,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-1, .question-navigation.buttons .pagination li.grey:hover, .question-navigation.buttons .pagination .quiz-list li.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination li.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu li.collapsible-header:hover, .quiz-list .sub-menu .question-navigation.buttons .pagination li.collapsible-header:hover, .question-navigation.buttons .pagination .container.study li.study-content-parent:hover, .container.study .question-navigation.buttons .pagination li.study-content-parent:hover, .question-navigation.buttons .pagination .container.study .study-content-parent li.header:hover, .container.study .study-content-parent .question-navigation.buttons .pagination li.header:hover, .quiz-list .lighten-1.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-1.collapsible-header, .container.study .lighten-1.study-content-parent, .container.study .study-content-parent .lighten-1.header {
+.grey.lighten-1, .question-navigation.buttons .pagination li.grey:hover, .question-navigation.buttons .pagination li#question-answer:hover, .question-navigation.buttons .pagination li#question-attempt:hover, .question-navigation.buttons .pagination .quiz-list li.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination li.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu li.collapsible-header:hover, .quiz-list .sub-menu .question-navigation.buttons .pagination li.collapsible-header:hover, .question-navigation.buttons .pagination .container.study li.study-content-parent:hover, .container.study .question-navigation.buttons .pagination li.study-content-parent:hover, .question-navigation.buttons .pagination .container.study .study-content-parent li.header:hover, .container.study .study-content-parent .question-navigation.buttons .pagination li.header:hover, .lighten-1#question-answer, .lighten-1#question-attempt, .quiz-list .lighten-1.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-1.collapsible-header, .container.study .lighten-1.study-content-parent, .container.study .study-content-parent .lighten-1.header {
   background-color: #bdbdbd !important;
 }
 
@@ -2599,7 +2599,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.darken-1, .quiz-list .darken-1.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-1.collapsible-header, .container.study .darken-1.study-content-parent, .container.study .study-content-parent .darken-1.header {
+.grey.darken-1, .darken-1#question-answer, .darken-1#question-attempt, .quiz-list .darken-1.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-1.collapsible-header, .container.study .darken-1.study-content-parent, .container.study .study-content-parent .darken-1.header {
   background-color: #757575 !important;
 }
 
@@ -2609,7 +2609,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.darken-2, .quiz-list .darken-2.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-2.collapsible-header, .container.study .darken-2.study-content-parent, .container.study .study-content-parent .darken-2.header {
+.grey.darken-2, .darken-2#question-answer, .darken-2#question-attempt, .quiz-list .darken-2.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-2.collapsible-header, .container.study .darken-2.study-content-parent, .container.study .study-content-parent .darken-2.header {
   background-color: #616161 !important;
 }
 
@@ -2619,7 +2619,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.darken-3, .quiz-list .darken-3.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-3.collapsible-header, .container.study .darken-3.study-content-parent, .container.study .study-content-parent .darken-3.header {
+.grey.darken-3, .darken-3#question-answer, .darken-3#question-attempt, .quiz-list .darken-3.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-3.collapsible-header, .container.study .darken-3.study-content-parent, .container.study .study-content-parent .darken-3.header {
   background-color: #424242 !important;
 }
 
@@ -2629,7 +2629,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.darken-4, .quiz-list .darken-4.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-4.collapsible-header, .container.study .darken-4.study-content-parent, .container.study .study-content-parent .darken-4.header {
+.grey.darken-4, .darken-4#question-answer, .darken-4#question-attempt, .quiz-list .darken-4.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-4.collapsible-header, .container.study .darken-4.study-content-parent, .container.study .study-content-parent .darken-4.header {
   background-color: #212121 !important;
 }
 
@@ -9399,57 +9399,55 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   width: 100%;
 }
 
-/* line 6, ../assets/sass/modules/_quiz.scss */
+/* line 7, ../assets/sass/modules/_quiz.scss */
 #question-header {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-/* line 10, ../assets/sass/modules/_quiz.scss */
+/* line 11, ../assets/sass/modules/_quiz.scss */
 #question-header p {
   float: none;
 }
 
-/* line 15, ../assets/sass/modules/_quiz.scss */
+/* line 16, ../assets/sass/modules/_quiz.scss */
 #width_tmp_select {
   width: auto;
 }
 
-/* line 19, ../assets/sass/modules/_quiz.scss */
+/* line 20, ../assets/sass/modules/_quiz.scss */
 .quiz-menu {
   font-size: 2rem;
   text-align: center;
   margin-top: 60px;
 }
-/* line 23, ../assets/sass/modules/_quiz.scss */
+/* line 24, ../assets/sass/modules/_quiz.scss */
 .quiz-menu p, .quiz-menu .select-wrapper {
   float: left;
   margin: 0;
 }
-/* line 26, ../assets/sass/modules/_quiz.scss */
+/* line 27, ../assets/sass/modules/_quiz.scss */
 .quiz-menu p .select-dropdown, .quiz-menu .select-wrapper .select-dropdown {
   font-size: 2rem;
   margin-bottom: 10px;
   margin-left: 10px;
 }
-/* line 33, ../assets/sass/modules/_quiz.scss */
+/* line 34, ../assets/sass/modules/_quiz.scss */
 .quiz-menu #language-select {
   margin: 0 auto;
   display: inline-block;
 }
-/* line 38, ../assets/sass/modules/_quiz.scss */
+/* line 39, ../assets/sass/modules/_quiz.scss */
 .quiz-menu .dropdown-content.select-dropdown {
   max-height: 450px;
   min-width: 150px;
 }
 
-/* line 44, ../assets/sass/modules/_quiz.scss */
+/* line 45, ../assets/sass/modules/_quiz.scss */
 .quiz #editor-parent {
   position: relative;
-  max-width: 65%;
-  margin: 0 auto;
   height: 500px;
 }
-/* line 49, ../assets/sass/modules/_quiz.scss */
+/* line 48, ../assets/sass/modules/_quiz.scss */
 .quiz #editor-parent #editor {
   position: absolute;
   top: 0;
@@ -9459,18 +9457,18 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   height: 100%;
 }
 @media (max-width: 960px) {
-  /* line 60, ../assets/sass/modules/_quiz.scss */
+  /* line 59, ../assets/sass/modules/_quiz.scss */
   .quiz #editor-parent {
     max-width: 100%;
   }
 }
 
-/* line 67, ../assets/sass/modules/_quiz.scss */
+/* line 66, ../assets/sass/modules/_quiz.scss */
 .question-navigation.buttons {
   text-align: center;
   margin-top: 35px;
 }
-/* line 72, ../assets/sass/modules/_quiz.scss */
+/* line 71, ../assets/sass/modules/_quiz.scss */
 .question-navigation.buttons .pagination .circle {
   border-radius: 20px;
   height: 15px;
@@ -9478,34 +9476,40 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   margin-top: 7px;
 }
 
-/* line 91, ../assets/sass/modules/_quiz.scss */
+/* line 90, ../assets/sass/modules/_quiz.scss */
+#question-answer, #question-attempt {
+  height: 450px;
+  border: 1px solid #f1edea;
+}
+
+/* line 97, ../assets/sass/modules/_quiz.scss */
 #save-modal {
   width: 25%;
 }
 
-/* line 95, ../assets/sass/modules/_quiz.scss */
+/* line 101, ../assets/sass/modules/_quiz.scss */
 .quiz-list {
   user-select: none;
 }
-/* line 98, ../assets/sass/modules/_quiz.scss */
+/* line 104, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header {
   border-bottom: none;
   cursor: default;
 }
-/* line 103, ../assets/sass/modules/_quiz.scss */
+/* line 109, ../assets/sass/modules/_quiz.scss */
 .quiz-list .expandable.collapsible-header:hover {
   cursor: pointer;
 }
-/* line 108, ../assets/sass/modules/_quiz.scss */
+/* line 114, ../assets/sass/modules/_quiz.scss */
 .quiz-list ul.collapsible {
   position: relative;
 }
-/* line 112, ../assets/sass/modules/_quiz.scss */
+/* line 118, ../assets/sass/modules/_quiz.scss */
 .quiz-list .sub-menu {
   margin: 0;
   /*@extend .blue, .lighten-4;*/
 }
-/* line 122, ../assets/sass/modules/_quiz.scss */
+/* line 128, ../assets/sass/modules/_quiz.scss */
 .quiz-list .switch {
   display: inline-block;
   position: absolute;
@@ -9539,19 +9543,25 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .container.study .study-content-parent .header h3 {
   font-size: 1.70rem;
 }
+@media (max-width: 600px) {
+  /* line 24, ../assets/sass/modules/_study.scss */
+  .container.study .study-content-parent .header h3 {
+    font-size: 1.50rem;
+  }
+}
 @media (max-width: 992) {
-  /* line 25, ../assets/sass/modules/_study.scss */
+  /* line 30, ../assets/sass/modules/_study.scss */
   .container.study .study-content-parent .header h3 {
     font-size: 1.40rem;
   }
 }
 @media (max-width: 600) {
-  /* line 31, ../assets/sass/modules/_study.scss */
+  /* line 36, ../assets/sass/modules/_study.scss */
   .container.study .study-content-parent .header h3 {
     font-size: 1.70rem;
   }
 }
-/* line 36, ../assets/sass/modules/_study.scss */
+/* line 41, ../assets/sass/modules/_study.scss */
 .container.study .study-content-parent .study-content {
   padding: 20px 5% 20px 5%;
 }
@@ -9577,6 +9587,13 @@ body {
   left: 0;
 }
 
-@media (max-width: 992) {
-  font-size: 1.80rem;
+/* line 28, ../assets/sass/modules/_layout.scss */
+.nav-wrapper .button-collapse {
+  margin-left: 0;
+}
+@media (max-width: 600px) {
+  /* line 40, ../assets/sass/modules/_layout.scss */
+  .nav-wrapper #logo-container {
+    font-size: 1.30rem;
+  }
 }

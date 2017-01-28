@@ -20,6 +20,11 @@
       h3{
         font-size: 1.70rem;
       }
+      @media (max-width: 600px){
+        h3{
+          font-size: 1.50rem;
+        }
+      }
       // At <= 992
       @media (max-width: 992){
         h3{
