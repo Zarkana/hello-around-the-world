@@ -8,7 +8,8 @@
   margin-top: 30px;
   margin-bottom: 20px;
   //used to make the header not be floating
-  p {
+  h2 {
+    font-size: 2rem;
     float: none;
   }
 }
@@ -42,7 +43,7 @@
   }
 }
 .quiz{
-  #editor-parent{
+  #quiz-editor-parent{
     position: relative;
     height: 500px;
     #editor {
@@ -54,9 +55,22 @@
         height: 100%;
     }
   }
+  #answer-editor-parent, #attempt-editor-parent{
+    position: relative;
+    height: calc(100% - 48px);
+    #answer-editor, #attempt-editor{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+  }
   @media (max-width: 960px)
   {
     #editor-parent{
+      //TODO: Could be done with grid system?
       max-width: 100%;
     }
   }
@@ -88,13 +102,27 @@
 }
 
 #question-answer, #question-attempt{
+  // Style the answer and attempt section headers
   height:450px;
   border: 1px solid #f1edea;
+  padding: 0;
   @extend .grey, .lighten-5;
+  .header{
+    border-bottom: 1px solid #f1edea;
+    padding: 0;
+    h3{
+      font-size: 1.4rem;
+      margin: 12px 0 12px 0;
+    }
+  }
+  .content{
+    padding: 10px 25px 10px 25px;
+  }
 }
 
 
 #save-modal{
+  //Style the save modal
   width: 25%;
 }
 

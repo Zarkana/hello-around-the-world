@@ -1,11 +1,29 @@
 <div class="container quiz" id="content">
   <div class="row">
     <div id="question-header" class="header light-blue-text col s12 m8 offset-m2 quiz-menu">
-      <p>Hello World! in Java</p>
+      <h2>Hello World! in Java</h2>
     </div>
-    <div id="question-attempt" class=" col s12 m6 l5 offset-l1 z-depth-2">
+    <div id="question-attempt" class=" col s12 m6 z-depth-2">
+      <div class="header grey-text col s12">
+          <h3 id="study-title" class="center-align">Attempt</h3>
+      </div>
+      <div id="answer-editor-parent" class="content col s12">
+        <div id="answer-editor">function foo(items) {
+            var x = "All this is syntax highlighted";
+            return x;
+        }</div>
+      </div>
     </div>
-    <div id="question-answer" class=" col s12 m6 l5 z-depth-2">
+    <div id="question-answer" class=" col s12 m6 z-depth-2">
+      <div class="header grey-text col s12">
+          <h3 id="study-title" class="center-align">Answer</h3>
+      </div>
+      <div id="attempt-editor-parent" class="content col s12">
+        <div id="attempt-editor">function foo(items) {
+            var x = "All this is syntax highlighted";
+            return x;
+        }</div>
+      </div>
     </div>
     <div class="question-navigation buttons col s12">
       <ul class="pagination">
@@ -22,3 +40,21 @@
     </div>
   </div>
 </div>
+<script src="https://cdn.jsdelivr.net/ace/1.2.6/min/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var attemptEditor = ace.edit("attempt-editor");
+    //attemptEditor.setTheme("ace/theme/monokai");
+    attemptEditor.setTheme("ace/theme/dawn");
+    attemptEditor.getSession().setMode("ace/mode/javascript");
+    //Remove comment to disable editing
+    //attemptEditor.setReadOnly(true);
+
+    var answerEditor = ace.edit("answer-editor");
+    //answerEditor.setTheme("ace/theme/monokai");
+    answerEditor.setTheme("ace/theme/dawn");
+    answerEditor.getSession().setMode("ace/mode/javascript");
+    //Remove comment to disable editing
+    //answerEditor.setReadOnly(true);
+
+
+</script>
