@@ -9,7 +9,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.materialize-red.lighten-5, .materialize-red#question-answer, .materialize-red#question-attempt, .quiz-list .sub-menu .materialize-red.collapsible-header, .container.study .materialize-red.study-content-parent {
+.materialize-red.lighten-5, .materialize-red#question-answer, .materialize-red#question-attempt, .quiz-list .sub-menu .materialize-red.collapsible-header, .container.study .materialize-red.study-content-parent, .materialize-red.section-header {
   background-color: #fdeaeb !important;
 }
 
@@ -19,7 +19,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.materialize-red.lighten-4, .question-navigation.buttons .pagination .materialize-red.circle, .container.study .study-content-parent .materialize-red.header {
+.materialize-red.lighten-4, .question-navigation.buttons .pagination .materialize-red.circle, .container.study .study-content-parent .materialize-red.header-section-container {
   background-color: #f8c1c3 !important;
 }
 
@@ -109,7 +109,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.lighten-5, .red#question-answer, .red#question-attempt, .quiz-list .sub-menu .red.collapsible-header, .container.study .red.study-content-parent {
+.red.lighten-5, .red#question-answer, .red#question-attempt, .quiz-list .sub-menu .red.collapsible-header, .container.study .red.study-content-parent, .red.section-header {
   background-color: #FFEBEE !important;
 }
 
@@ -119,7 +119,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.lighten-4, .question-navigation.buttons .pagination .red.circle, .container.study .study-content-parent .red.header {
+.red.lighten-4, .question-navigation.buttons .pagination .red.circle, .container.study .study-content-parent .red.header-section-container {
   background-color: #FFCDD2 !important;
 }
 
@@ -249,7 +249,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.pink.lighten-5, .pink#question-answer, .pink#question-attempt, .quiz-list .sub-menu .pink.collapsible-header, .container.study .pink.study-content-parent {
+.pink.lighten-5, .pink#question-answer, .pink#question-attempt, .quiz-list .sub-menu .pink.collapsible-header, .container.study .pink.study-content-parent, .pink.section-header {
   background-color: #fce4ec !important;
 }
 
@@ -259,7 +259,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.pink.lighten-4, .question-navigation.buttons .pagination .pink.circle, .container.study .study-content-parent .pink.header {
+.pink.lighten-4, .question-navigation.buttons .pagination .pink.circle, .container.study .study-content-parent .pink.header-section-container {
   background-color: #f8bbd0 !important;
 }
 
@@ -389,7 +389,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.purple.lighten-5, .purple#question-answer, .purple#question-attempt, .quiz-list .sub-menu .purple.collapsible-header, .container.study .purple.study-content-parent {
+.purple.lighten-5, .purple#question-answer, .purple#question-attempt, .quiz-list .sub-menu .purple.collapsible-header, .container.study .purple.study-content-parent, .purple.section-header {
   background-color: #f3e5f5 !important;
 }
 
@@ -399,7 +399,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.purple.lighten-4, .question-navigation.buttons .pagination .purple.circle, .container.study .study-content-parent .purple.header {
+.purple.lighten-4, .question-navigation.buttons .pagination .purple.circle, .container.study .study-content-parent .purple.header-section-container {
   background-color: #e1bee7 !important;
 }
 
@@ -529,7 +529,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-purple.lighten-5, .deep-purple#question-answer, .deep-purple#question-attempt, .quiz-list .sub-menu .deep-purple.collapsible-header, .container.study .deep-purple.study-content-parent {
+.deep-purple.lighten-5, .deep-purple#question-answer, .deep-purple#question-attempt, .quiz-list .sub-menu .deep-purple.collapsible-header, .container.study .deep-purple.study-content-parent, .deep-purple.section-header {
   background-color: #ede7f6 !important;
 }
 
@@ -539,7 +539,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-purple.lighten-4, .question-navigation.buttons .pagination .deep-purple.circle, .container.study .study-content-parent .deep-purple.header {
+.deep-purple.lighten-4, .question-navigation.buttons .pagination .deep-purple.circle, .container.study .study-content-parent .deep-purple.header-section-container {
   background-color: #d1c4e9 !important;
 }
 
@@ -669,7 +669,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.indigo.lighten-5, .indigo#question-answer, .indigo#question-attempt, .quiz-list .sub-menu .indigo.collapsible-header, .container.study .indigo.study-content-parent {
+.indigo.lighten-5, .indigo#question-answer, .indigo#question-attempt, .quiz-list .sub-menu .indigo.collapsible-header, .container.study .indigo.study-content-parent, .indigo.section-header {
   background-color: #e8eaf6 !important;
 }
 
@@ -679,7 +679,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.indigo.lighten-4, .question-navigation.buttons .pagination .indigo.circle, .container.study .study-content-parent .indigo.header {
+.indigo.lighten-4, .question-navigation.buttons .pagination .indigo.circle, .container.study .study-content-parent .indigo.header-section-container {
   background-color: #c5cae9 !important;
 }
 
@@ -809,7 +809,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-5, .question-navigation.buttons .pagination .lighten-5.circle, .question-navigation.buttons .pagination .circle#question-answer, .question-navigation.buttons .pagination .circle#question-attempt, .question-navigation.buttons .pagination .quiz-list .sub-menu .circle.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination .circle.collapsible-header, .question-navigation.buttons .pagination .container.study .circle.study-content-parent, .container.study .question-navigation.buttons .pagination .circle.study-content-parent, .blue#question-answer, .blue#question-attempt, .quiz-list .sub-menu .blue.collapsible-header, .container.study .blue.study-content-parent {
+.blue.lighten-5, .question-navigation.buttons .pagination .lighten-5.circle, .question-navigation.buttons .pagination .circle#question-answer, .question-navigation.buttons .pagination .circle#question-attempt, .question-navigation.buttons .pagination .quiz-list .sub-menu .circle.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination .circle.collapsible-header, .question-navigation.buttons .pagination .container.study .circle.study-content-parent, .container.study .question-navigation.buttons .pagination .circle.study-content-parent, .question-navigation.buttons .pagination .circle.section-header, .blue#question-answer, .blue#question-attempt, .quiz-list .sub-menu .blue.collapsible-header, .container.study .blue.study-content-parent, .blue.section-header {
   background-color: #E3F2FD !important;
 }
 
@@ -819,7 +819,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-4, .question-navigation.buttons .pagination .circle, .container.study .study-content-parent .blue.header {
+.blue.lighten-4, .question-navigation.buttons .pagination .circle, .container.study .study-content-parent .blue.header-section-container {
   background-color: #BBDEFB !important;
 }
 
@@ -944,27 +944,27 @@
 }
 
 /* line 373, ../assets/sass/components/_color.scss */
-.light-blue-text {
+.light-blue-text, .section-header {
   color: #03a9f4 !important;
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-blue.lighten-5, .light-blue#question-answer, .light-blue#question-attempt, .quiz-list .sub-menu .light-blue.collapsible-header, .container.study .light-blue.study-content-parent {
+.light-blue.lighten-5, .light-blue#question-answer, .light-blue#question-attempt, .quiz-list .sub-menu .light-blue.collapsible-header, .container.study .light-blue.study-content-parent, .light-blue.section-header {
   background-color: #e1f5fe !important;
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.light-blue-text.text-lighten-5 {
+.light-blue-text.text-lighten-5, .text-lighten-5.section-header {
   color: #e1f5fe !important;
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-blue.lighten-4, .question-navigation.buttons .pagination .light-blue.circle, .container.study .study-content-parent .light-blue.header {
+.light-blue.lighten-4, .question-navigation.buttons .pagination .light-blue.circle, .container.study .study-content-parent .light-blue.header-section-container {
   background-color: #b3e5fc !important;
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.light-blue-text.text-lighten-4 {
+.light-blue-text.text-lighten-4, .text-lighten-4.section-header {
   color: #b3e5fc !important;
 }
 
@@ -974,7 +974,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.light-blue-text.text-lighten-3 {
+.light-blue-text.text-lighten-3, .text-lighten-3.section-header {
   color: #81d4fa !important;
 }
 
@@ -984,7 +984,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.light-blue-text.text-lighten-2 {
+.light-blue-text.text-lighten-2, .text-lighten-2.section-header {
   color: #4fc3f7 !important;
 }
 
@@ -994,7 +994,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.light-blue-text.text-lighten-1 {
+.light-blue-text.text-lighten-1, .text-lighten-1.section-header {
   color: #29b6f6 !important;
 }
 
@@ -1004,7 +1004,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.light-blue-text.text-darken-1 {
+.light-blue-text.text-darken-1, .text-darken-1.section-header {
   color: #039be5 !important;
 }
 
@@ -1014,7 +1014,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.light-blue-text.text-darken-2 {
+.light-blue-text.text-darken-2, .text-darken-2.section-header {
   color: #0288d1 !important;
 }
 
@@ -1024,7 +1024,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.light-blue-text.text-darken-3 {
+.light-blue-text.text-darken-3, .text-darken-3.section-header {
   color: #0277bd !important;
 }
 
@@ -1034,7 +1034,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.light-blue-text.text-darken-4 {
+.light-blue-text.text-darken-4, .text-darken-4.section-header {
   color: #01579b !important;
 }
 
@@ -1044,7 +1044,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.light-blue-text.text-accent-1 {
+.light-blue-text.text-accent-1, .text-accent-1.section-header {
   color: #80d8ff !important;
 }
 
@@ -1054,7 +1054,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.light-blue-text.text-accent-2 {
+.light-blue-text.text-accent-2, .text-accent-2.section-header {
   color: #40c4ff !important;
 }
 
@@ -1064,7 +1064,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.light-blue-text.text-accent-3 {
+.light-blue-text.text-accent-3, .text-accent-3.section-header {
   color: #00b0ff !important;
 }
 
@@ -1074,7 +1074,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.light-blue-text.text-accent-4 {
+.light-blue-text.text-accent-4, .text-accent-4.section-header {
   color: #0091ea !important;
 }
 
@@ -1089,7 +1089,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.cyan.lighten-5, .cyan#question-answer, .cyan#question-attempt, .quiz-list .sub-menu .cyan.collapsible-header, .container.study .cyan.study-content-parent {
+.cyan.lighten-5, .cyan#question-answer, .cyan#question-attempt, .quiz-list .sub-menu .cyan.collapsible-header, .container.study .cyan.study-content-parent, .cyan.section-header {
   background-color: #e0f7fa !important;
 }
 
@@ -1099,7 +1099,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.cyan.lighten-4, .question-navigation.buttons .pagination .cyan.circle, .container.study .study-content-parent .cyan.header {
+.cyan.lighten-4, .question-navigation.buttons .pagination .cyan.circle, .container.study .study-content-parent .cyan.header-section-container {
   background-color: #b2ebf2 !important;
 }
 
@@ -1229,7 +1229,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.teal.lighten-5, .teal#question-answer, .teal#question-attempt, .quiz-list .sub-menu .teal.collapsible-header, .container.study .teal.study-content-parent {
+.teal.lighten-5, .teal#question-answer, .teal#question-attempt, .quiz-list .sub-menu .teal.collapsible-header, .container.study .teal.study-content-parent, .teal.section-header {
   background-color: #e0f2f1 !important;
 }
 
@@ -1239,7 +1239,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.teal.lighten-4, .question-navigation.buttons .pagination .teal.circle, .container.study .study-content-parent .teal.header {
+.teal.lighten-4, .question-navigation.buttons .pagination .teal.circle, .container.study .study-content-parent .teal.header-section-container {
   background-color: #b2dfdb !important;
 }
 
@@ -1369,7 +1369,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.green.lighten-5, .green#question-answer, .green#question-attempt, .quiz-list .sub-menu .green.collapsible-header, .container.study .green.study-content-parent {
+.green.lighten-5, .green#question-answer, .green#question-attempt, .quiz-list .sub-menu .green.collapsible-header, .container.study .green.study-content-parent, .green.section-header {
   background-color: #E8F5E9 !important;
 }
 
@@ -1379,7 +1379,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.green.lighten-4, .question-navigation.buttons .pagination .green.circle, .container.study .study-content-parent .green.header {
+.green.lighten-4, .question-navigation.buttons .pagination .green.circle, .container.study .study-content-parent .green.header-section-container {
   background-color: #C8E6C9 !important;
 }
 
@@ -1509,7 +1509,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-green.lighten-5, .light-green#question-answer, .light-green#question-attempt, .quiz-list .sub-menu .light-green.collapsible-header, .container.study .light-green.study-content-parent {
+.light-green.lighten-5, .light-green#question-answer, .light-green#question-attempt, .quiz-list .sub-menu .light-green.collapsible-header, .container.study .light-green.study-content-parent, .light-green.section-header {
   background-color: #f1f8e9 !important;
 }
 
@@ -1519,7 +1519,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-green.lighten-4, .question-navigation.buttons .pagination .light-green.circle, .container.study .study-content-parent .light-green.header {
+.light-green.lighten-4, .question-navigation.buttons .pagination .light-green.circle, .container.study .study-content-parent .light-green.header-section-container {
   background-color: #dcedc8 !important;
 }
 
@@ -1649,7 +1649,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.lime.lighten-5, .lime#question-answer, .lime#question-attempt, .quiz-list .sub-menu .lime.collapsible-header, .container.study .lime.study-content-parent {
+.lime.lighten-5, .lime#question-answer, .lime#question-attempt, .quiz-list .sub-menu .lime.collapsible-header, .container.study .lime.study-content-parent, .lime.section-header {
   background-color: #f9fbe7 !important;
 }
 
@@ -1659,7 +1659,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.lime.lighten-4, .question-navigation.buttons .pagination .lime.circle, .container.study .study-content-parent .lime.header {
+.lime.lighten-4, .question-navigation.buttons .pagination .lime.circle, .container.study .study-content-parent .lime.header-section-container {
   background-color: #f0f4c3 !important;
 }
 
@@ -1789,7 +1789,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.yellow.lighten-5, .yellow#question-answer, .yellow#question-attempt, .quiz-list .sub-menu .yellow.collapsible-header, .container.study .yellow.study-content-parent {
+.yellow.lighten-5, .yellow#question-answer, .yellow#question-attempt, .quiz-list .sub-menu .yellow.collapsible-header, .container.study .yellow.study-content-parent, .yellow.section-header {
   background-color: #fffde7 !important;
 }
 
@@ -1799,7 +1799,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.yellow.lighten-4, .question-navigation.buttons .pagination .yellow.circle, .container.study .study-content-parent .yellow.header {
+.yellow.lighten-4, .question-navigation.buttons .pagination .yellow.circle, .container.study .study-content-parent .yellow.header-section-container {
   background-color: #fff9c4 !important;
 }
 
@@ -1929,7 +1929,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.amber.lighten-5, .amber#question-answer, .amber#question-attempt, .quiz-list .sub-menu .amber.collapsible-header, .container.study .amber.study-content-parent {
+.amber.lighten-5, .amber#question-answer, .amber#question-attempt, .quiz-list .sub-menu .amber.collapsible-header, .container.study .amber.study-content-parent, .amber.section-header {
   background-color: #fff8e1 !important;
 }
 
@@ -1939,7 +1939,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.amber.lighten-4, .question-navigation.buttons .pagination .amber.circle, .container.study .study-content-parent .amber.header {
+.amber.lighten-4, .question-navigation.buttons .pagination .amber.circle, .container.study .study-content-parent .amber.header-section-container {
   background-color: #ffecb3 !important;
 }
 
@@ -2069,7 +2069,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.orange.lighten-5, .orange#question-answer, .orange#question-attempt, .quiz-list .sub-menu .orange.collapsible-header, .container.study .orange.study-content-parent {
+.orange.lighten-5, .orange#question-answer, .orange#question-attempt, .quiz-list .sub-menu .orange.collapsible-header, .container.study .orange.study-content-parent, .orange.section-header {
   background-color: #fff3e0 !important;
 }
 
@@ -2079,7 +2079,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.orange.lighten-4, .question-navigation.buttons .pagination .orange.circle, .container.study .study-content-parent .orange.header {
+.orange.lighten-4, .question-navigation.buttons .pagination .orange.circle, .container.study .study-content-parent .orange.header-section-container {
   background-color: #ffe0b2 !important;
 }
 
@@ -2209,7 +2209,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-orange.lighten-5, .deep-orange#question-answer, .deep-orange#question-attempt, .quiz-list .sub-menu .deep-orange.collapsible-header, .container.study .deep-orange.study-content-parent {
+.deep-orange.lighten-5, .deep-orange#question-answer, .deep-orange#question-attempt, .quiz-list .sub-menu .deep-orange.collapsible-header, .container.study .deep-orange.study-content-parent, .deep-orange.section-header {
   background-color: #fbe9e7 !important;
 }
 
@@ -2219,7 +2219,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-orange.lighten-4, .question-navigation.buttons .pagination .deep-orange.circle, .container.study .study-content-parent .deep-orange.header {
+.deep-orange.lighten-4, .question-navigation.buttons .pagination .deep-orange.circle, .container.study .study-content-parent .deep-orange.header-section-container {
   background-color: #ffccbc !important;
 }
 
@@ -2349,7 +2349,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.brown.lighten-5, .brown#question-answer, .brown#question-attempt, .quiz-list .sub-menu .brown.collapsible-header, .container.study .brown.study-content-parent {
+.brown.lighten-5, .brown#question-answer, .brown#question-attempt, .quiz-list .sub-menu .brown.collapsible-header, .container.study .brown.study-content-parent, .brown.section-header {
   background-color: #efebe9 !important;
 }
 
@@ -2359,7 +2359,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.brown.lighten-4, .question-navigation.buttons .pagination .brown.circle, .container.study .study-content-parent .brown.header {
+.brown.lighten-4, .question-navigation.buttons .pagination .brown.circle, .container.study .study-content-parent .brown.header-section-container {
   background-color: #d7ccc8 !important;
 }
 
@@ -2449,7 +2449,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue-grey.lighten-5, .blue-grey#question-answer, .blue-grey#question-attempt, .quiz-list .sub-menu .blue-grey.collapsible-header, .container.study .blue-grey.study-content-parent {
+.blue-grey.lighten-5, .blue-grey#question-answer, .blue-grey#question-attempt, .quiz-list .sub-menu .blue-grey.collapsible-header, .container.study .blue-grey.study-content-parent, .blue-grey.section-header {
   background-color: #eceff1 !important;
 }
 
@@ -2459,7 +2459,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue-grey.lighten-4, .question-navigation.buttons .pagination .blue-grey.circle, .container.study .study-content-parent .blue-grey.header {
+.blue-grey.lighten-4, .question-navigation.buttons .pagination .blue-grey.circle, .container.study .study-content-parent .blue-grey.header-section-container {
   background-color: #cfd8dc !important;
 }
 
@@ -2539,7 +2539,7 @@
 }
 
 /* line 370, ../assets/sass/components/_color.scss */
-.grey, #question-answer, #question-attempt, .quiz-list .expandable.collapsible-header:hover, .quiz-list .sub-menu .collapsible-header, .container.study .study-content-parent, .container.study .study-content-parent .header {
+.grey, #question-answer, #question-attempt, .quiz-list .expandable.collapsible-header:hover, .quiz-list .sub-menu .collapsible-header, .container.study .study-content-parent, .container.study .study-content-parent .header-section-container {
   background-color: #9e9e9e !important;
 }
 
@@ -2549,7 +2549,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-5, #question-answer, #question-attempt, .quiz-list .lighten-5.expandable.collapsible-header:hover, .quiz-list .sub-menu .expandable.collapsible-header:hover, .quiz-list .container.study .expandable.collapsible-header.study-content-parent:hover, .container.study .quiz-list .expandable.collapsible-header.study-content-parent:hover, .quiz-list .sub-menu .collapsible-header, .container.study .study-content-parent, .container.study .study-content-parent .lighten-5.header, .container.study .study-content-parent .quiz-list .sub-menu .header.collapsible-header, .quiz-list .sub-menu .container.study .study-content-parent .header.collapsible-header, .container.study .study-content-parent .header.study-content-parent {
+.grey.lighten-5, #question-answer, #question-attempt, .quiz-list .lighten-5.expandable.collapsible-header:hover, .quiz-list .sub-menu .expandable.collapsible-header:hover, .quiz-list .container.study .expandable.collapsible-header.study-content-parent:hover, .container.study .quiz-list .expandable.collapsible-header.study-content-parent:hover, .quiz-list .expandable.collapsible-header.section-header:hover, .quiz-list .sub-menu .collapsible-header, .container.study .study-content-parent, .container.study .study-content-parent .lighten-5.header-section-container, .container.study .study-content-parent .quiz-list .sub-menu .header-section-container.collapsible-header, .quiz-list .sub-menu .container.study .study-content-parent .header-section-container.collapsible-header, .container.study .study-content-parent .header-section-container.study-content-parent, .container.study .study-content-parent .header-section-container.section-header, .grey.section-header {
   background-color: #fafafa !important;
 }
 
@@ -2559,7 +2559,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-4, .question-navigation.buttons .pagination .grey.circle, .question-navigation.buttons .pagination .circle#question-answer, .question-navigation.buttons .pagination .circle#question-attempt, .question-navigation.buttons .pagination .quiz-list .circle.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination .circle.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu .circle.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination .circle.collapsible-header, .question-navigation.buttons .pagination .container.study .circle.study-content-parent, .container.study .question-navigation.buttons .pagination .circle.study-content-parent, .lighten-4#question-answer, .container.study .study-content-parent #question-answer.header, .lighten-4#question-attempt, .container.study .study-content-parent #question-attempt.header, .quiz-list .lighten-4.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-4.collapsible-header, .container.study .lighten-4.study-content-parent, .container.study .study-content-parent .header {
+.grey.lighten-4, .question-navigation.buttons .pagination .grey.circle, .question-navigation.buttons .pagination .circle#question-answer, .question-navigation.buttons .pagination .circle#question-attempt, .question-navigation.buttons .pagination .quiz-list .circle.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination .circle.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu .circle.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination .circle.collapsible-header, .question-navigation.buttons .pagination .container.study .circle.study-content-parent, .container.study .question-navigation.buttons .pagination .circle.study-content-parent, .lighten-4#question-answer, .container.study .study-content-parent #question-answer.header-section-container, .lighten-4#question-attempt, .container.study .study-content-parent #question-attempt.header-section-container, .quiz-list .lighten-4.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-4.collapsible-header, .container.study .lighten-4.study-content-parent, .container.study .study-content-parent .header-section-container {
   background-color: #f5f5f5 !important;
 }
 
@@ -2569,7 +2569,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-3, .lighten-3#question-answer, .quiz-list #question-answer.expandable.collapsible-header:hover, .lighten-3#question-attempt, .quiz-list #question-attempt.expandable.collapsible-header:hover, .quiz-list .expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-3.collapsible-header, .container.study .lighten-3.study-content-parent, .container.study .study-content-parent .lighten-3.header {
+.grey.lighten-3, .lighten-3#question-answer, .quiz-list #question-answer.expandable.collapsible-header:hover, .lighten-3#question-attempt, .quiz-list #question-attempt.expandable.collapsible-header:hover, .quiz-list .expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-3.collapsible-header, .container.study .lighten-3.study-content-parent, .container.study .study-content-parent .lighten-3.header-section-container {
   background-color: #eeeeee !important;
 }
 
@@ -2579,7 +2579,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-2, .question-navigation.buttons .pagination li.grey.active, .question-navigation.buttons .pagination li.active#question-answer, .question-navigation.buttons .pagination li.active#question-attempt, .question-navigation.buttons .pagination .quiz-list li.active.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination li.active.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu li.active.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination li.active.collapsible-header, .question-navigation.buttons .pagination .container.study li.active.study-content-parent, .container.study .question-navigation.buttons .pagination li.active.study-content-parent, .question-navigation.buttons .pagination .container.study .study-content-parent li.active.header, .container.study .study-content-parent .question-navigation.buttons .pagination li.active.header, .lighten-2#question-answer, .lighten-2#question-attempt, .quiz-list .lighten-2.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-2.collapsible-header, .container.study .lighten-2.study-content-parent, .container.study .study-content-parent .lighten-2.header {
+.grey.lighten-2, .question-navigation.buttons .pagination li.grey.active, .question-navigation.buttons .pagination li.active#question-answer, .question-navigation.buttons .pagination li.active#question-attempt, .question-navigation.buttons .pagination .quiz-list li.active.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination li.active.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu li.active.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination li.active.collapsible-header, .question-navigation.buttons .pagination .container.study li.active.study-content-parent, .container.study .question-navigation.buttons .pagination li.active.study-content-parent, .question-navigation.buttons .pagination .container.study .study-content-parent li.active.header-section-container, .container.study .study-content-parent .question-navigation.buttons .pagination li.active.header-section-container, .lighten-2#question-answer, .lighten-2#question-attempt, .quiz-list .lighten-2.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-2.collapsible-header, .container.study .lighten-2.study-content-parent, .container.study .study-content-parent .lighten-2.header-section-container {
   background-color: #e0e0e0 !important;
 }
 
@@ -2589,7 +2589,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-1, .question-navigation.buttons .pagination li.grey:hover, .question-navigation.buttons .pagination li#question-answer:hover, .question-navigation.buttons .pagination li#question-attempt:hover, .question-navigation.buttons .pagination .quiz-list li.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination li.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu li.collapsible-header:hover, .quiz-list .sub-menu .question-navigation.buttons .pagination li.collapsible-header:hover, .question-navigation.buttons .pagination .container.study li.study-content-parent:hover, .container.study .question-navigation.buttons .pagination li.study-content-parent:hover, .question-navigation.buttons .pagination .container.study .study-content-parent li.header:hover, .container.study .study-content-parent .question-navigation.buttons .pagination li.header:hover, .lighten-1#question-answer, .lighten-1#question-attempt, .quiz-list .lighten-1.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-1.collapsible-header, .container.study .lighten-1.study-content-parent, .container.study .study-content-parent .lighten-1.header {
+.grey.lighten-1, .question-navigation.buttons .pagination li.grey:hover, .question-navigation.buttons .pagination li#question-answer:hover, .question-navigation.buttons .pagination li#question-attempt:hover, .question-navigation.buttons .pagination .quiz-list li.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination li.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu li.collapsible-header:hover, .quiz-list .sub-menu .question-navigation.buttons .pagination li.collapsible-header:hover, .question-navigation.buttons .pagination .container.study li.study-content-parent:hover, .container.study .question-navigation.buttons .pagination li.study-content-parent:hover, .question-navigation.buttons .pagination .container.study .study-content-parent li.header-section-container:hover, .container.study .study-content-parent .question-navigation.buttons .pagination li.header-section-container:hover, .lighten-1#question-answer, .lighten-1#question-attempt, .quiz-list .lighten-1.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-1.collapsible-header, .container.study .lighten-1.study-content-parent, .container.study .study-content-parent .lighten-1.header-section-container {
   background-color: #bdbdbd !important;
 }
 
@@ -2599,7 +2599,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.darken-1, .darken-1#question-answer, .darken-1#question-attempt, .quiz-list .darken-1.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-1.collapsible-header, .container.study .darken-1.study-content-parent, .container.study .study-content-parent .darken-1.header {
+.grey.darken-1, .darken-1#question-answer, .darken-1#question-attempt, .quiz-list .darken-1.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-1.collapsible-header, .container.study .darken-1.study-content-parent, .container.study .study-content-parent .darken-1.header-section-container {
   background-color: #757575 !important;
 }
 
@@ -2609,7 +2609,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.darken-2, .darken-2#question-answer, .darken-2#question-attempt, .quiz-list .darken-2.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-2.collapsible-header, .container.study .darken-2.study-content-parent, .container.study .study-content-parent .darken-2.header {
+.grey.darken-2, .darken-2#question-answer, .darken-2#question-attempt, .quiz-list .darken-2.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-2.collapsible-header, .container.study .darken-2.study-content-parent, .container.study .study-content-parent .darken-2.header-section-container {
   background-color: #616161 !important;
 }
 
@@ -2619,7 +2619,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.darken-3, .darken-3#question-answer, .darken-3#question-attempt, .quiz-list .darken-3.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-3.collapsible-header, .container.study .darken-3.study-content-parent, .container.study .study-content-parent .darken-3.header {
+.grey.darken-3, .darken-3#question-answer, .darken-3#question-attempt, .quiz-list .darken-3.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-3.collapsible-header, .container.study .darken-3.study-content-parent, .container.study .study-content-parent .darken-3.header-section-container {
   background-color: #424242 !important;
 }
 
@@ -2629,7 +2629,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.darken-4, .darken-4#question-answer, .darken-4#question-attempt, .quiz-list .darken-4.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-4.collapsible-header, .container.study .darken-4.study-content-parent, .container.study .study-content-parent .darken-4.header {
+.grey.darken-4, .darken-4#question-answer, .darken-4#question-attempt, .quiz-list .darken-4.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-4.collapsible-header, .container.study .darken-4.study-content-parent, .container.study .study-content-parent .darken-4.header-section-container {
   background-color: #212121 !important;
 }
 
@@ -9394,61 +9394,23 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     margin-bottom: 5em;
   }
 }
-/* line 2, ../assets/sass/modules/_quiz.scss */
+/* line 1, ../assets/sass/modules/_quiz.scss */
 .quiz.container {
   width: 100%;
+  padding-top: 15px;
 }
 
-/* line 7, ../assets/sass/modules/_quiz.scss */
-#question-header {
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-/* line 11, ../assets/sass/modules/_quiz.scss */
-#question-header h2 {
-  font-size: 2rem;
-  float: none;
-}
-
-/* line 17, ../assets/sass/modules/_quiz.scss */
+/* line 8, ../assets/sass/modules/_quiz.scss */
 #width_tmp_select {
   width: auto;
 }
 
-/* line 21, ../assets/sass/modules/_quiz.scss */
-.quiz-menu {
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 60px;
-}
-/* line 25, ../assets/sass/modules/_quiz.scss */
-.quiz-menu p, .quiz-menu .select-wrapper {
-  float: left;
-  margin: 0;
-}
-/* line 28, ../assets/sass/modules/_quiz.scss */
-.quiz-menu p .select-dropdown, .quiz-menu .select-wrapper .select-dropdown {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  margin-left: 10px;
-}
-/* line 35, ../assets/sass/modules/_quiz.scss */
-.quiz-menu #language-select {
-  margin: 0 auto;
-  display: inline-block;
-}
-/* line 40, ../assets/sass/modules/_quiz.scss */
-.quiz-menu .dropdown-content.select-dropdown {
-  max-height: 450px;
-  min-width: 150px;
-}
-
-/* line 46, ../assets/sass/modules/_quiz.scss */
+/* line 13, ../assets/sass/modules/_quiz.scss */
 .quiz #quiz-editor-parent {
   position: relative;
   height: 500px;
 }
-/* line 49, ../assets/sass/modules/_quiz.scss */
+/* line 16, ../assets/sass/modules/_quiz.scss */
 .quiz #quiz-editor-parent #editor {
   position: absolute;
   top: 0;
@@ -9457,12 +9419,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   width: 100%;
   height: 100%;
 }
-/* line 58, ../assets/sass/modules/_quiz.scss */
+/* line 25, ../assets/sass/modules/_quiz.scss */
 .quiz #answer-editor-parent, .quiz #attempt-editor-parent {
   position: relative;
   height: calc(100% - 48px);
 }
-/* line 61, ../assets/sass/modules/_quiz.scss */
+/* line 28, ../assets/sass/modules/_quiz.scss */
 .quiz #answer-editor-parent #answer-editor, .quiz #answer-editor-parent #attempt-editor, .quiz #attempt-editor-parent #answer-editor, .quiz #attempt-editor-parent #attempt-editor {
   position: absolute;
   top: 0;
@@ -9472,18 +9434,18 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   height: 100%;
 }
 @media (max-width: 960px) {
-  /* line 72, ../assets/sass/modules/_quiz.scss */
+  /* line 39, ../assets/sass/modules/_quiz.scss */
   .quiz #editor-parent {
     max-width: 100%;
   }
 }
 
-/* line 80, ../assets/sass/modules/_quiz.scss */
+/* line 46, ../assets/sass/modules/_quiz.scss */
 .question-navigation.buttons {
   text-align: center;
   margin-top: 35px;
 }
-/* line 85, ../assets/sass/modules/_quiz.scss */
+/* line 51, ../assets/sass/modules/_quiz.scss */
 .question-navigation.buttons .pagination .circle {
   border-radius: 20px;
   height: 15px;
@@ -9491,55 +9453,58 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   margin-top: 7px;
 }
 
-/* line 104, ../assets/sass/modules/_quiz.scss */
+/* line 70, ../assets/sass/modules/_quiz.scss */
 #question-answer, #question-attempt {
   height: 450px;
   border: 1px solid #f1edea;
   padding: 0;
 }
-/* line 110, ../assets/sass/modules/_quiz.scss */
-#question-answer .header, #question-attempt .header {
+/* line 77, ../assets/sass/modules/_quiz.scss */
+#question-answer .section-header-container, #question-attempt .section-header-container {
   border-bottom: 1px solid #f1edea;
   padding: 0;
 }
-/* line 113, ../assets/sass/modules/_quiz.scss */
-#question-answer .header h3, #question-attempt .header h3 {
-  font-size: 1.4rem;
-  margin: 12px 0 12px 0;
+/* line 80, ../assets/sass/modules/_quiz.scss */
+#question-answer .section-header-container .section-header, #question-attempt .section-header-container .section-header {
+  margin: 10px 0 10px 0;
 }
-/* line 118, ../assets/sass/modules/_quiz.scss */
+/* line 84, ../assets/sass/modules/_quiz.scss */
 #question-answer .content, #question-attempt .content {
   padding: 10px 25px 10px 25px;
 }
 
-/* line 124, ../assets/sass/modules/_quiz.scss */
+/* line 90, ../assets/sass/modules/_quiz.scss */
 #save-modal {
   width: 25%;
 }
 
-/* line 129, ../assets/sass/modules/_quiz.scss */
+/* line 95, ../assets/sass/modules/_quiz.scss */
 .quiz-list {
   user-select: none;
 }
-/* line 132, ../assets/sass/modules/_quiz.scss */
+/* line 99, ../assets/sass/modules/_quiz.scss */
+.quiz-list .section-header .select-dropdown {
+  font-size: 2.5rem;
+}
+/* line 104, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header {
   border-bottom: none;
   cursor: default;
 }
-/* line 137, ../assets/sass/modules/_quiz.scss */
+/* line 109, ../assets/sass/modules/_quiz.scss */
 .quiz-list .expandable.collapsible-header:hover {
   cursor: pointer;
 }
-/* line 142, ../assets/sass/modules/_quiz.scss */
+/* line 114, ../assets/sass/modules/_quiz.scss */
 .quiz-list ul.collapsible {
   position: relative;
 }
-/* line 146, ../assets/sass/modules/_quiz.scss */
+/* line 118, ../assets/sass/modules/_quiz.scss */
 .quiz-list .sub-menu {
   margin: 0;
   /*@extend .blue, .lighten-4;*/
 }
-/* line 156, ../assets/sass/modules/_quiz.scss */
+/* line 128, ../assets/sass/modules/_quiz.scss */
 .quiz-list .switch {
   display: inline-block;
   position: absolute;
@@ -9559,39 +9524,34 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   margin: 0;
   border: 0;
 }
-/* line 12, ../assets/sass/modules/_study.scss */
+/* line 11, ../assets/sass/modules/_study.scss */
 .container.study .study-content-parent {
   padding: 0;
   border: 1px solid #f1edea;
 }
-/* line 16, ../assets/sass/modules/_study.scss */
-.container.study .study-content-parent .header {
+/* line 15, ../assets/sass/modules/_study.scss */
+.container.study .study-content-parent .header-section-container {
   padding: 0;
   border-bottom: 1px solid #f1edea;
 }
 /* line 20, ../assets/sass/modules/_study.scss */
-.container.study .study-content-parent .header h3 {
+.container.study .study-content-parent .header-section-container .section-header {
   font-size: 1.70rem;
-}
-@media (max-width: 600px) {
-  /* line 24, ../assets/sass/modules/_study.scss */
-  .container.study .study-content-parent .header h3 {
-    font-size: 1.50rem;
-  }
+  margin: 1.46rem 0 1.168rem 0;
 }
 @media (max-width: 992) {
-  /* line 30, ../assets/sass/modules/_study.scss */
-  .container.study .study-content-parent .header h3 {
+  /* line 28, ../assets/sass/modules/_study.scss */
+  .container.study .study-content-parent .header-section-container .section-header {
     font-size: 1.40rem;
   }
 }
-@media (max-width: 600) {
-  /* line 36, ../assets/sass/modules/_study.scss */
-  .container.study .study-content-parent .header h3 {
-    font-size: 1.70rem;
+@media (max-width: 600px) {
+  /* line 34, ../assets/sass/modules/_study.scss */
+  .container.study .study-content-parent .header-section-container .section-header {
+    font-size: 1.50rem;
   }
 }
-/* line 41, ../assets/sass/modules/_study.scss */
+/* line 39, ../assets/sass/modules/_study.scss */
 .container.study .study-content-parent .study-content {
   padding: 20px 5% 20px 5%;
 }
@@ -9609,7 +9569,32 @@ body {
   min-width: 320px;
 }
 
-/* line 16, ../assets/sass/modules/_layout.scss */
+/* line 18, ../assets/sass/modules/_layout.scss */
+h1.section-header {
+  font-size: 3rem;
+}
+/* line 21, ../assets/sass/modules/_layout.scss */
+h2.section-header {
+  font-size: 2.5rem;
+}
+/* line 24, ../assets/sass/modules/_layout.scss */
+h3.section-header {
+  font-size: 1.75rem;
+}
+/* line 27, ../assets/sass/modules/_layout.scss */
+h4.section-header {
+  font-size: 1.25rem;
+}
+/* line 30, ../assets/sass/modules/_layout.scss */
+h5.section-header {
+  font-size: 1.15rem;
+}
+/* line 33, ../assets/sass/modules/_layout.scss */
+h6.section-header {
+  font-size: 1rem;
+}
+
+/* line 38, ../assets/sass/modules/_layout.scss */
 .page-footer {
   position: absolute;
   right: 0;
@@ -9617,13 +9602,19 @@ body {
   left: 0;
 }
 
-/* line 28, ../assets/sass/modules/_layout.scss */
+/* line 49, ../assets/sass/modules/_layout.scss */
 .nav-wrapper .button-collapse {
   margin-left: 0;
 }
 @media (max-width: 600px) {
-  /* line 40, ../assets/sass/modules/_layout.scss */
+  /* line 61, ../assets/sass/modules/_layout.scss */
   .nav-wrapper #logo-container {
     font-size: 1.30rem;
   }
+}
+
+/* line 1, ../assets/sass/modules/_snippets.scss */
+.container.snippet {
+  padding-top: 10px;
+  width: 60%;
 }

@@ -2,14 +2,15 @@ $(document).ready(function() {
   //Instantiates select menu
   $('.materialize-select').material_select();
 
-  var resizing_select = "#language-select .select-wrapper";
-  var temp_select = "#width_tmp_select";
 
   //Instantiates modal menu
   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
   $('.modal').modal({
     opacity: .1
   });
+
+  var resizing_select = "#language-select .select-wrapper";
+  var temp_select = "#width_tmp_select";
 
   //Call once to initialize size
   resizeSelect(resizing_select, temp_select);
@@ -19,6 +20,7 @@ $(document).ready(function() {
     resizeSelect(resizing_select, temp_select);
   });
 
+  //Resize language select menu size
   function resizeSelect(resizing_select, temp_select)
   {
     //Set the text with the visible selected option
@@ -37,6 +39,8 @@ $(document).ready(function() {
     $(resizing_select).width(new_size);
   }
 
+
+  //Detect if attempt to Ctrl + s
   var ctrlDown = false,
       ctrlKey = 17,
       sKey = 83,

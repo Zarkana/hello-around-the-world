@@ -1,16 +1,17 @@
 <div class="container quiz" id="content">
 
   <div class="row center quiz-list">
-    <div class="header light-blue-text col s12 m8 offset-m2 quiz-menu">
-      <div id="language-select">
-        <p>Quizing yourself in </p>
-        <select class="materialize-select">
-          <%= render "quiz/quiz-list.html.erb" %>
+    <div id="language-select" class="light-blue-text col s12 m8 offset-m2 center-align">
+      <h2 class="section-header">Quizing yourself in
+        <div class="input-field inline">
+          <select class="materialize-select">
+            <%= render "quiz/quiz-list.html.erb" %>
+          </select>
+        </div>
+        <select id="width_tmp_select">
+          <option id="width_tmp_option"></option>
         </select>
-      </div>
-      <select id="width_tmp_select">
-        <option id="width_tmp_option"></option>
-      </select>
+      </h2>
     </div>
   </div>
   <div class="row center quiz-list">

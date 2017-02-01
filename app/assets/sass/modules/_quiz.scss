@@ -1,45 +1,14 @@
 .quiz.container{
   //used to allow for ace editor to take full width of screen at lower sizes
   width: 100%;
-}
-#question-header{
-  margin-top: 30px;
-  margin-bottom: 20px;
-  //used to make the header not be floating
-  h2 {
-    font-size: 2rem;
-    float: none;
-  }
+
+  padding-top: 15px;
 }
 
 #width_tmp_select{
   width: auto;
 }
 
-.quiz-menu{
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 60px;
-  p, .select-wrapper{
-    float:left;
-    margin: 0;
-    .select-dropdown{
-      font-size: 2rem;
-      margin-bottom: 10px;
-      margin-left: 10px;
-    }
-  }
-
-  #language-select{
-    margin: 0 auto;
-    display: inline-block;
-  }
-
-  .dropdown-content.select-dropdown{
-    max-height: 450px;
-    min-width: 150px;
-  }
-}
 .quiz{
   #quiz-editor-parent{
     position: relative;
@@ -74,7 +43,6 @@
   }
 }
 
-
 .question-navigation.buttons{
   text-align: center;
   margin-top: 35px;
@@ -104,13 +72,13 @@
   height:450px;
   border: 1px solid #f1edea;
   padding: 0;
+  //TODO: Remove this header styling
   @extend .grey, .lighten-5;
-  .header{
+  .section-header-container{
     border-bottom: 1px solid #f1edea;
     padding: 0;
-    h3{
-      font-size: 1.4rem;
-      margin: 12px 0 12px 0;
+    .section-header{
+      margin: 10px 0 10px 0;
     }
   }
   .content{
@@ -126,6 +94,12 @@
 
 .quiz-list{
   user-select: none;
+  .section-header{
+    //language-select drop down menu
+    .select-dropdown{
+      font-size: 2.5rem;
+    }
+  }
 
   .collapsible-header{
     border-bottom: none;

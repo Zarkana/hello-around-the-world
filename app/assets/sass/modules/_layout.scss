@@ -13,13 +13,34 @@ body{
   min-width: 320px;
 }
 
+.section-header{
+  @extend .light-blue-text, .lighten-5;
+  @at-root h1#{&} {
+    font-size: 3rem;
+  }
+  @at-root h2#{&} {
+    font-size: 2.5rem;
+  }
+  @at-root h3#{&} {
+    font-size: 1.75rem;
+  }
+  @at-root h4#{&} {
+    font-size: 1.25rem;
+  }
+  @at-root h5#{&} {
+    font-size: 1.15rem;
+  }
+  @at-root h6#{&} {
+    font-size: 1rem;
+  }
+}
+
 .page-footer{
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
 }
-
 
 .display-select{
 

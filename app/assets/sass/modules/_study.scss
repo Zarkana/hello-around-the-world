@@ -8,33 +8,31 @@
       }
   }
 
-
   .study-content-parent{
     padding: 0;
     border: 1px solid #f1edea;
     @extend .grey, .lighten-5;
-    .header{
+    .section-header-container{
       @extend .grey, .lighten-4;
       padding: 0;
       border-bottom: 1px solid #f1edea;
-      h3{
+      // convery the current topic of study on the study page
+      .section-header{
         font-size: 1.70rem;
+        margin: 1.46rem 0 1.168rem 0;
       }
-      @media (max-width: 600px){
-        h3{
-          font-size: 1.50rem;
-        }
-      }
-      // At <= 992
+
+      // responsive header sizes for current topic
+      // At <= 992px
       @media (max-width: 992){
-        h3{
+        .section-header{
           font-size: 1.40rem;
         }
       }
-      // At <= 600
-      @media (max-width: 600){
-        h3{
-          font-size: 1.70rem;
+      // At <= 600px
+      @media (max-width: 600px){
+        .section-header{
+          font-size: 1.50rem;
         }
       }
     }
