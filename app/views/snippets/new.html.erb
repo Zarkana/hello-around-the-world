@@ -1,0 +1,33 @@
+<div class="container snippet" id="content">
+  <h3>Add a Code Snippet</h3>
+    <%= form_for :snippet, url: snippets_path do |f| %>
+      <div class="row">
+        <div class="section input-field col s3">
+          <%= f.label :title %><br>
+          <%= f.text_field :title %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="section input-field col s3">
+          <%= f.label :language %><br>
+          <%= f.text_field :language %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s3">
+          <%= f.label :code %><br>
+          <%= f.text_field :code %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s3">
+          <%= f.label :runtime_complexity %><br>
+          <%= f.text_field :runtime_complexity %>
+        </div>
+      </div>
+      <p>
+        <%= f.submit :class => 'btn btn-flat'%>
+      </p>
+    </div>
+  <% end %>
+</div>

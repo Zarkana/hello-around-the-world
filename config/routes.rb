@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :snippets
+  get 'snippets/new'
+
+
   get 'study/index'
 
   get 'quiz/index'
