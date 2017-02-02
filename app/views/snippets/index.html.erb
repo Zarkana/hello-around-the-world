@@ -9,7 +9,7 @@
       <th>Language</th>
       <th>Runtime Complexity</th>
       <th>Space Complexity</th>
-      <th colspan="2"></th>
+      <th colspan="3"></th>
     </tr>
 
     <% @snippets.each do |snippet| %>
@@ -20,6 +20,7 @@
         <td><%= snippet.runtime_complexity %></td>
         <td><%= snippet.space_complexity %></td>
         <td><%= link_to 'Show', snippet_path(snippet) %></td>
+        <td><%= link_to 'Edit', edit_snippet_path(snippet) %></td>
         <td><%= link_to 'Destroy', snippet_path(snippet),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>

@@ -1,6 +1,19 @@
 <div class="container snippet" id="content">
-  <h2 class="section-header">New Code Snippet</h2>
-  <%= form_for :snippet, url: snippets_path do |f| %>
+  <h2 class="section-header">Edit Code Snippet</h2>
+  <%= form_for :snippet, url: snippet_path(@snippet), method: :patch do |f| %>
+    <% if @snippet.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@snippet.errors.count, "error") %> prohibited
+          this snippet from being saved:
+        </h2>
+        <ul>
+          <% @snippet.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
     <div class="row">
       <div class="section input-field col s3">
         <%= f.label :title %><br>
@@ -34,7 +47,6 @@
     <p>
       <%= f.submit :class => 'btn-large waves-effect waves-light blue white-text btn btn-flat'%>
     </p>
-    <br>
-    <%= link_to 'Back', snippets_path %>
   <% end %>
+  <%= link_to 'Back', snippets_path %>
 </div>
