@@ -25,9 +25,17 @@
           <%= f.text_field :runtime_complexity %>
         </div>
       </div>
+      <div class="row">
+        <div class="input-field col s3">
+          <%= f.label :space_complexity %><br>
+          <%= f.text_field :space_complexity %>
+        </div>
+      </div>
       <p>
-        <%= f.submit :class => 'btn btn-flat'%>
+        <%= f.submit :class => 'btn-large waves-effect waves-light blue white-text btn btn-flat'%>
       </p>
+      <br>
+      <%= link_to 'Back', snippets_path %>
     </div>
   <% end %>
 </div>

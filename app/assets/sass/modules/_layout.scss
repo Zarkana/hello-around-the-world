@@ -35,6 +35,11 @@ body{
   }
 }
 
+//To fix input labels not being in proper place
+.input-field label{
+  top: 2.2rem;
+}
+
 .page-footer{
   position: absolute;
   right: 0;

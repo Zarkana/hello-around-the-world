@@ -1,0 +1,27 @@
+<div class="container snippet" id="content">
+  <h2 class="section-header center-align">Listing Snippet</h2>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Code</th>
+      <th>Language</th>
+      <th>Runtime Complexity</th>
+      <th>Space Complexity</th>
+      <th colspan="2"></th>
+    </tr>
+
+    <tr>
+      <td><%= @snippet.title %></td>
+      <td><%= @snippet.code %></td>
+      <td><%= @snippet.language %></td>
+      <td><%= @snippet.runtime_complexity %></td>
+      <td><%= @snippet.space_complexity %></td>
+      <td></td>
+      <td><%= link_to 'Destroy', snippet_path(@snippet),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  </table>
+  <br>
+  <%= link_to 'Back', snippets_path %>
+</div>

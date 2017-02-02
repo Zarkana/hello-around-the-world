@@ -1,0 +1,29 @@
+<div class="container snippet" id="content">
+  <h2 class="section-header center-align">Listing Snippets</h2>
+
+  <%= link_to 'New snippet', new_snippet_path %>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Code</th>
+      <th>Language</th>
+      <th>Runtime Complexity</th>
+      <th>Space Complexity</th>
+      <th colspan="2"></th>
+    </tr>
+
+    <% @snippets.each do |snippet| %>
+      <tr>
+        <td><%= snippet.title %></td>
+        <td><%= snippet.code %></td>
+        <td><%= snippet.language %></td>
+        <td><%= snippet.runtime_complexity %></td>
+        <td><%= snippet.space_complexity %></td>
+        <td><%= link_to 'Show', snippet_path(snippet) %></td>
+        <td><%= link_to 'Destroy', snippet_path(snippet),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
