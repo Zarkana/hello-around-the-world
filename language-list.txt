@@ -2,14 +2,16 @@ Java
 C
 C++
 Python
-Visual Basic
 C#
 PHP
 Javascript
 Ruby
-Assembly
-Perl
 Go
+Pseudo Code
+
+Perl
+Visual Basic
+Assembly
 Swift
 Objective-C
 R
@@ -17,4 +19,3 @@ MATLAB
 Groovy
 D
 Haskell
-Pseudo Code

@@ -3,8 +3,8 @@
   <table>
     <tr>
       <th>Title</th>
-      <th>Code</th>
-      <th>Language</th>
+      <!-- <th>Code</th>
+      <th>Language</th> -->
       <th>Runtime Complexity</th>
       <th>Space Complexity</th>
       <th colspan="2"></th>
@@ -12,8 +12,12 @@
 
     <tr>
       <td><%= @snippet.title %></td>
-      <td><%= @snippet.code %></td>
-      <td><%= @snippet.language %></td>
+      <!-- TODO: Show all related implementations -->
+      <!-- fields_for @implementation do |fa|
+        <td> fa.code </td>
+        <td> fa.language </td>
+        <td> fa.language </td>
+      end  -->
       <td><%= @snippet.runtime_complexity %></td>
       <td><%= @snippet.space_complexity %></td>
       <td></td>

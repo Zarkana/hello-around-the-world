@@ -6,10 +6,13 @@ class SnippetsController < ApplicationController
 
     def show
       @snippet = Snippet.find(params[:id])
+      # @implementations = Implementation.find(params[:id])
     end
 
     def new
       @snippet = Snippet.new
+
+      @implementation = Implementation.new
     end
 
     def edit
@@ -19,7 +22,9 @@ class SnippetsController < ApplicationController
     def create
       @snippet = Snippet.new(snippet_params)
 
+      @implementation = Implementation.new( params.require(:implementation).permit(:code, :language) )
       @snippet.save
+      @implementation.save
       redirect_to @snippet
     end
 
@@ -42,7 +47,7 @@ class SnippetsController < ApplicationController
 
     private
       def snippet_params
-        params.require(:snippet).permit(:title, :code, :language, :runtime_complexity, :space_complexity)
+        params.require(:snippet).permit(:title, :implementations, :runtime_complexity, :space_complexity)
       end
 
 end

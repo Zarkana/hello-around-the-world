@@ -10,12 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170202010536) do
+ActiveRecord::Schema.define(version: 20170203032031) do
+
+  create_table "implementations", force: :cascade do |t|
+    t.string   "language"
+    t.text     "code"
+    t.integer  "snippet_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["snippet_id"], name: "index_implementations_on_snippet_id"
+  end
 
   create_table "snippets", force: :cascade do |t|
     t.string   "title"
-    t.text     "code"
-    t.string   "language"
     t.string   "runtime_complexity"
     t.string   "space_complexity"
     t.datetime "created_at",         null: false

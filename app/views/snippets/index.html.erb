@@ -5,8 +5,7 @@
   <table>
     <tr>
       <th>Title</th>
-      <th>Code</th>
-      <th>Language</th>
+      <!-- TODO: Num Supported Languages -->
       <th>Runtime Complexity</th>
       <th>Space Complexity</th>
       <th colspan="3"></th>
@@ -15,8 +14,6 @@
     <% @snippets.each do |snippet| %>
       <tr>
         <td><%= snippet.title %></td>
-        <td><%= snippet.code %></td>
-        <td><%= snippet.language %></td>
         <td><%= snippet.runtime_complexity %></td>
         <td><%= snippet.space_complexity %></td>
         <td><%= link_to 'Show', snippet_path(snippet) %></td>
