@@ -1,4 +1,5 @@
 <%= form_for @snippet do |f| %>
+
   <% if @snippet.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -12,24 +13,27 @@
       </ul>
     </div>
   <% end %>
+
   <div class="row">
     <div class="section input-field col s3">
       <%= f.label :title %><br>
       <%= f.text_field :title %>
     </div>
   </div>
-  <%= fields_for @implementation do |fa| %>
+  <%= f.fields_for :implementations do |builder| %>
   <div class="row">
+
     <div class="input-field col s3">
-        <%= fa.label :code %><br>
-        <%= fa.text_field :code %>
+        <%= builder.label :code %><br>
+        <%= builder.text_field :code %>
     </div>
-  </div>
-  <div class="row">
-    <div class="section input-field col s3">
-        <%= fa.label :language %><br>
-        <%= fa.text_field :language %>
+    <div class="input-field col s3">
+        <%= builder.label :language %><br>
+        <%= builder.text_field :language %>
     </div>
+    <!-- TODO: Add back partial form -->
+    <!-- render 'implementation_fields', :f => builder -->
+
   </div>
   <% end %>
   <div class="row">

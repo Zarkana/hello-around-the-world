@@ -8,6 +8,7 @@
       <!-- TODO: Num Supported Languages -->
       <th>Runtime Complexity</th>
       <th>Space Complexity</th>
+      <th>Code</th>
       <th colspan="3"></th>
     </tr>
 
@@ -16,6 +17,11 @@
         <td><%= snippet.title %></td>
         <td><%= snippet.runtime_complexity %></td>
         <td><%= snippet.space_complexity %></td>
+        <td>
+        <% for implementation in snippet.implementations %>
+          <%= implementation.code %>
+        <% end %>
+        </td>
         <td><%= link_to 'Show', snippet_path(snippet) %></td>
         <td><%= link_to 'Edit', edit_snippet_path(snippet) %></td>
         <td><%= link_to 'Destroy', snippet_path(snippet),

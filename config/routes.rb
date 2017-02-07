@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :snippets do
-    resources :implementations
-  end
+  # resources :snippets do
+  #   resources :implementations
+  # end
+  resources :snippets
 
   get 'study/index'
 

@@ -11,8 +11,9 @@ class SnippetsController < ApplicationController
 
     def new
       @snippet = Snippet.new
-
-      @implementation = Implementation.new
+      2.times do
+        implementation = @snippet.implementations.build
+      end
     end
 
     def edit
@@ -22,17 +23,24 @@ class SnippetsController < ApplicationController
     def create
       @snippet = Snippet.new(snippet_params)
 
-      @implementation = Implementation.new( params.require(:implementation).permit(:code, :language) )
-      @snippet.save
-      @implementation.save
-      redirect_to @snippet
+      # @implementation = Implementation.new( params.require(:implementation).permit(:code, :language) )
+      if @snippet.save
+        #render plain: params[:snippet].inspect
+
+        redirect_to snippets_path
+        # render :inline => "Succcess"
+      else
+        render("new")
+      end
+      # @implementation.save
+      # redirect_to @snippet
     end
 
     def update
       @snippet = Snippet.find(params[:id])
 
       if @snippet.update(snippet_params)
-        redirect_to @snippet
+        redirect_to @snippet, notice: 'Successfully updated code'
       else
         render 'edit'
       end
@@ -47,7 +55,7 @@ class SnippetsController < ApplicationController
 
     private
       def snippet_params
-        params.require(:snippet).permit(:title, :implementations, :runtime_complexity, :space_complexity)
+        params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, implementations_attributes:[:language, :code, :id, :snippet_id, :_destroy])
       end
 
 end
