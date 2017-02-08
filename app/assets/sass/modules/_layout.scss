@@ -13,6 +13,18 @@ body{
   min-width: 320px;
 }
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  margin-bottom: 110px;
+}
+
+
 .section-header{
   @extend .light-blue-text, .lighten-5;
   @at-root h1#{&} {
@@ -45,6 +57,7 @@ body{
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 5;
 }
 
 .display-select{
@@ -68,4 +81,12 @@ body{
     }
   }
 
+}
+
+.no-padding{
+  padding: 0;
+}
+
+.no-margin{
+  margin: 0;
 }

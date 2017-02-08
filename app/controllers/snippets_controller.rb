@@ -11,7 +11,7 @@ class SnippetsController < ApplicationController
 
     def new
       @snippet = Snippet.new
-      2.times do
+      3.times do
         implementation = @snippet.implementations.build
       end
     end

@@ -10,10 +10,10 @@
 }
 
 .quiz{
-  #quiz-editor-parent{
+  .quiz-editor-parent{
     position: relative;
     height: 500px;
-    #editor {
+    .editor {
         position: absolute;
         top: 0;
         right: 0;
@@ -22,10 +22,10 @@
         height: 100%;
     }
   }
-  #answer-editor-parent, #attempt-editor-parent{
+  .answer-editor-parent, .attempt-editor-parent{
     position: relative;
     height: calc(100% - 48px);
-    #answer-editor, #attempt-editor{
+    .editor{
         position: absolute;
         top: 0;
         right: 0;

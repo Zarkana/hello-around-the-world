@@ -15,40 +15,47 @@
   <% end %>
 
   <div class="row">
-    <div class="section input-field col s3">
+    <div class="section input-field col s5 m3 offset-s1 offset-m1 offset-l2">
       <%= f.label :title %><br>
       <%= f.text_field :title %>
     </div>
   </div>
-  <%= f.fields_for :implementations do |builder| %>
-  <div class="row">
-
-    <div class="input-field col s3">
-        <%= builder.label :code %><br>
-        <%= builder.text_field :code %>
+  <div class="row no-margin">
+    <script src="https://cdn.jsdelivr.net/ace/1.2.6/min/ace.js" type="text/javascript" charset="utf-8"></script>
+    <div id="snippet-editor-parent" class="snippet-editor-parent col s12 m10 offset-m1 l8 offset-l2">
+      <div class="editor-header">
+        <div class="languages">
+          <%= f.fields_for :implementations do |f| %>
+            <div class="language"><%= f.label :code %></div>
+          <% end %>
+        </div>
+      </div>
+      <%= f.fields_for :implementations do |f| %>
+        <div id="editor-<%= f.options[:child_index] %>" class="editor">function foo(items) {
+            var x = "All this is syntax highlighted";
+            return x;
+        }</div>
+        <script>
+            var editor = ace.edit("editor-<%= f.options[:child_index] %>");
+            editor.setTheme("ace/theme/dawn");
+            editor.getSession().setMode("ace/mode/javascript");
+        </script>
+      <% end %>
     </div>
-    <div class="input-field col s3">
-        <%= builder.label :language %><br>
-        <%= builder.text_field :language %>
-    </div>
-    <!-- TODO: Add back partial form -->
-    <!-- render 'implementation_fields', :f => builder -->
-
   </div>
-  <% end %>
   <div class="row">
-    <div class="input-field col s3">
+    <div class="input-field col s4 m3 offset-s1 offset-m1 offset-l2">
       <%= f.label :runtime_complexity %><br>
       <%= f.text_field :runtime_complexity %>
     </div>
-  </div>
-  <div class="row">
-    <div class="input-field col s3">
+    <div class="input-field col s4 m3 ">
       <%= f.label :space_complexity %><br>
       <%= f.text_field :space_complexity %>
     </div>
   </div>
-  <p>
-    <%= f.submit :class => 'btn-large waves-effect waves-light blue white-text btn btn-flat'%>
-  </p>
+  <div class="row">
+    <div class="col s10 offset-s1 offset-m1 offset-l2 ">
+      <%= f.submit :class => 'btn-large waves-effect waves-light blue white-text btn btn-flat'%>
+    </div>
+  </div>
 <% end %>

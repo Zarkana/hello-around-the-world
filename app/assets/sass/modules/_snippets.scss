@@ -1,4 +1,55 @@
 .container.snippet{
+  width: 100%;
+  //So that the editor can stretch from the left to the right
+
   padding-top: 10px;
-  width: 60%;
+}
+
+.snippet{
+  .snippet-editor-parent{
+    $editor-header-height: 80px;
+    position: relative;
+    height: 500px + $editor-header-height;
+    padding: 0;
+    .editor-header{
+      height: $editor-header-height;
+      @extend .blue, .lighten-2;
+      .languages{
+        height: calc(#{$editor-header-height} - 15px);
+        background-color: rgba(51, 51, 51, 0.08);
+        .language{
+          display: inline-block;
+          width: 65px;
+          height: 100%;
+          text-align: center;
+          padding-top: calc(#{$editor-header-height} / 4);
+          &:hover{
+            cursor: pointer;
+            background-color: rgba(51, 51, 51, 0.09);
+          }
+          label{
+            color: white;
+          }
+        }
+      }
+    }
+    .editor {
+        position: absolute;
+        top: $editor-header-height;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: calc(100% - #{$editor-header-height});
+        display: none;
+    }
+    #editor-3{
+      display: block;
+    }
+  }
+  #snippet_title{
+    margin-bottom: 0;
+  }
+  .input-field{
+    margin-top: 0;
+  }
 }

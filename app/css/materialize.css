@@ -39,7 +39,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.materialize-red.lighten-2, .question-navigation.buttons .pagination li.materialize-red.active {
+.materialize-red.lighten-2, .question-navigation.buttons .pagination li.materialize-red.active, .snippet .snippet-editor-parent .materialize-red.editor-header {
   background-color: #ee6e73 !important;
 }
 
@@ -139,7 +139,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.lighten-2, .question-navigation.buttons .pagination li.red.active {
+.red.lighten-2, .question-navigation.buttons .pagination li.red.active, .snippet .snippet-editor-parent .red.editor-header {
   background-color: #E57373 !important;
 }
 
@@ -279,7 +279,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.pink.lighten-2, .question-navigation.buttons .pagination li.pink.active {
+.pink.lighten-2, .question-navigation.buttons .pagination li.pink.active, .snippet .snippet-editor-parent .pink.editor-header {
   background-color: #f06292 !important;
 }
 
@@ -419,7 +419,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.purple.lighten-2, .question-navigation.buttons .pagination li.purple.active {
+.purple.lighten-2, .question-navigation.buttons .pagination li.purple.active, .snippet .snippet-editor-parent .purple.editor-header {
   background-color: #ba68c8 !important;
 }
 
@@ -559,7 +559,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-purple.lighten-2, .question-navigation.buttons .pagination li.deep-purple.active {
+.deep-purple.lighten-2, .question-navigation.buttons .pagination li.deep-purple.active, .snippet .snippet-editor-parent .deep-purple.editor-header {
   background-color: #9575cd !important;
 }
 
@@ -699,7 +699,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.indigo.lighten-2, .question-navigation.buttons .pagination li.indigo.active {
+.indigo.lighten-2, .question-navigation.buttons .pagination li.indigo.active, .snippet .snippet-editor-parent .indigo.editor-header {
   background-color: #7986cb !important;
 }
 
@@ -799,7 +799,7 @@
 }
 
 /* line 370, ../assets/sass/components/_color.scss */
-.blue, .question-navigation.buttons .pagination .circle {
+.blue, .question-navigation.buttons .pagination .circle, .snippet .snippet-editor-parent .editor-header {
   background-color: #2196F3 !important;
 }
 
@@ -809,7 +809,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-5, .question-navigation.buttons .pagination .lighten-5.circle, .question-navigation.buttons .pagination .circle#question-answer, .question-navigation.buttons .pagination .circle#question-attempt, .question-navigation.buttons .pagination .quiz-list .sub-menu .circle.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination .circle.collapsible-header, .question-navigation.buttons .pagination .container.study .circle.study-content-parent, .container.study .question-navigation.buttons .pagination .circle.study-content-parent, .question-navigation.buttons .pagination .circle.section-header, .blue#question-answer, .blue#question-attempt, .quiz-list .sub-menu .blue.collapsible-header, .container.study .blue.study-content-parent, .blue.section-header {
+.blue.lighten-5, .question-navigation.buttons .pagination .lighten-5.circle, .question-navigation.buttons .pagination .circle#question-answer, .question-navigation.buttons .pagination .circle#question-attempt, .question-navigation.buttons .pagination .quiz-list .sub-menu .circle.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination .circle.collapsible-header, .question-navigation.buttons .pagination .container.study .circle.study-content-parent, .container.study .question-navigation.buttons .pagination .circle.study-content-parent, .question-navigation.buttons .pagination .circle.section-header, .blue#question-answer, .snippet .snippet-editor-parent #question-answer.editor-header, .blue#question-attempt, .snippet .snippet-editor-parent #question-attempt.editor-header, .quiz-list .sub-menu .blue.collapsible-header, .quiz-list .sub-menu .snippet .snippet-editor-parent .collapsible-header.editor-header, .snippet .snippet-editor-parent .quiz-list .sub-menu .collapsible-header.editor-header, .container.study .blue.study-content-parent, .container.study .snippet .snippet-editor-parent .study-content-parent.editor-header, .snippet .snippet-editor-parent .container.study .study-content-parent.editor-header, .blue.section-header, .snippet .snippet-editor-parent .section-header.editor-header, .snippet .snippet-editor-parent .lighten-5.editor-header {
   background-color: #E3F2FD !important;
 }
 
@@ -819,7 +819,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-4, .question-navigation.buttons .pagination .circle, .container.study .study-content-parent .blue.section-header-container {
+.blue.lighten-4, .question-navigation.buttons .pagination .circle, .container.study .study-content-parent .blue.section-header-container, .container.study .study-content-parent .snippet .snippet-editor-parent .section-header-container.editor-header, .snippet .snippet-editor-parent .container.study .study-content-parent .section-header-container.editor-header, .snippet .snippet-editor-parent .lighten-4.editor-header {
   background-color: #BBDEFB !important;
 }
 
@@ -829,7 +829,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-3, .question-navigation.buttons .pagination .lighten-3.circle, .question-navigation.buttons .pagination .quiz-list .circle.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination .circle.expandable.collapsible-header:hover, .quiz-list .blue.expandable.collapsible-header:hover {
+.blue.lighten-3, .question-navigation.buttons .pagination .lighten-3.circle, .question-navigation.buttons .pagination .quiz-list .circle.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination .circle.expandable.collapsible-header:hover, .quiz-list .blue.expandable.collapsible-header:hover, .quiz-list .snippet .snippet-editor-parent .expandable.collapsible-header.editor-header:hover, .snippet .snippet-editor-parent .quiz-list .expandable.collapsible-header.editor-header:hover, .snippet .snippet-editor-parent .lighten-3.editor-header {
   background-color: #90CAF9 !important;
 }
 
@@ -839,7 +839,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-2, .question-navigation.buttons .pagination .lighten-2.circle, .question-navigation.buttons .pagination li.circle.active, .question-navigation.buttons .pagination li.blue.active {
+.blue.lighten-2, .question-navigation.buttons .pagination .lighten-2.circle, .question-navigation.buttons .pagination li.circle.active, .question-navigation.buttons .pagination .snippet .snippet-editor-parent .circle.editor-header, .snippet .snippet-editor-parent .question-navigation.buttons .pagination .circle.editor-header, .question-navigation.buttons .pagination li.blue.active, .question-navigation.buttons .pagination .snippet .snippet-editor-parent li.active.editor-header, .snippet .snippet-editor-parent .question-navigation.buttons .pagination li.active.editor-header, .snippet .snippet-editor-parent .editor-header {
   background-color: #64B5F6 !important;
 }
 
@@ -849,7 +849,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-1, .question-navigation.buttons .pagination .lighten-1.circle, .question-navigation.buttons .pagination li.circle:hover, .question-navigation.buttons .pagination li.blue:hover {
+.blue.lighten-1, .question-navigation.buttons .pagination .lighten-1.circle, .question-navigation.buttons .pagination li.circle:hover, .question-navigation.buttons .pagination li.blue:hover, .question-navigation.buttons .pagination .snippet .snippet-editor-parent li.editor-header:hover, .snippet .snippet-editor-parent .question-navigation.buttons .pagination li.editor-header:hover, .snippet .snippet-editor-parent .lighten-1.editor-header {
   background-color: #42A5F5 !important;
 }
 
@@ -859,7 +859,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.darken-1, .question-navigation.buttons .pagination .darken-1.circle {
+.blue.darken-1, .question-navigation.buttons .pagination .darken-1.circle, .snippet .snippet-editor-parent .darken-1.editor-header {
   background-color: #1E88E5 !important;
 }
 
@@ -869,7 +869,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.darken-2, .question-navigation.buttons .pagination .darken-2.circle {
+.blue.darken-2, .question-navigation.buttons .pagination .darken-2.circle, .snippet .snippet-editor-parent .darken-2.editor-header {
   background-color: #1976D2 !important;
 }
 
@@ -879,7 +879,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.darken-3, .question-navigation.buttons .pagination .darken-3.circle {
+.blue.darken-3, .question-navigation.buttons .pagination .darken-3.circle, .snippet .snippet-editor-parent .darken-3.editor-header {
   background-color: #1565C0 !important;
 }
 
@@ -889,7 +889,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.darken-4, .question-navigation.buttons .pagination .darken-4.circle {
+.blue.darken-4, .question-navigation.buttons .pagination .darken-4.circle, .snippet .snippet-editor-parent .darken-4.editor-header {
   background-color: #0D47A1 !important;
 }
 
@@ -899,7 +899,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.accent-1, .question-navigation.buttons .pagination .accent-1.circle {
+.blue.accent-1, .question-navigation.buttons .pagination .accent-1.circle, .snippet .snippet-editor-parent .accent-1.editor-header {
   background-color: #82B1FF !important;
 }
 
@@ -909,7 +909,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.accent-2, .question-navigation.buttons .pagination .accent-2.circle {
+.blue.accent-2, .question-navigation.buttons .pagination .accent-2.circle, .snippet .snippet-editor-parent .accent-2.editor-header {
   background-color: #448AFF !important;
 }
 
@@ -919,7 +919,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.accent-3, .question-navigation.buttons .pagination .accent-3.circle {
+.blue.accent-3, .question-navigation.buttons .pagination .accent-3.circle, .snippet .snippet-editor-parent .accent-3.editor-header {
   background-color: #2979FF !important;
 }
 
@@ -929,7 +929,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.accent-4, .question-navigation.buttons .pagination .accent-4.circle {
+.blue.accent-4, .question-navigation.buttons .pagination .accent-4.circle, .snippet .snippet-editor-parent .accent-4.editor-header {
   background-color: #2962FF !important;
 }
 
@@ -979,7 +979,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-blue.lighten-2, .question-navigation.buttons .pagination li.light-blue.active {
+.light-blue.lighten-2, .question-navigation.buttons .pagination li.light-blue.active, .snippet .snippet-editor-parent .light-blue.editor-header {
   background-color: #4fc3f7 !important;
 }
 
@@ -1119,7 +1119,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.cyan.lighten-2, .question-navigation.buttons .pagination li.cyan.active {
+.cyan.lighten-2, .question-navigation.buttons .pagination li.cyan.active, .snippet .snippet-editor-parent .cyan.editor-header {
   background-color: #4dd0e1 !important;
 }
 
@@ -1259,7 +1259,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.teal.lighten-2, .question-navigation.buttons .pagination li.teal.active {
+.teal.lighten-2, .question-navigation.buttons .pagination li.teal.active, .snippet .snippet-editor-parent .teal.editor-header {
   background-color: #4db6ac !important;
 }
 
@@ -1399,7 +1399,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.green.lighten-2, .question-navigation.buttons .pagination li.green.active {
+.green.lighten-2, .question-navigation.buttons .pagination li.green.active, .snippet .snippet-editor-parent .green.editor-header {
   background-color: #81C784 !important;
 }
 
@@ -1539,7 +1539,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-green.lighten-2, .question-navigation.buttons .pagination li.light-green.active {
+.light-green.lighten-2, .question-navigation.buttons .pagination li.light-green.active, .snippet .snippet-editor-parent .light-green.editor-header {
   background-color: #aed581 !important;
 }
 
@@ -1679,7 +1679,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.lime.lighten-2, .question-navigation.buttons .pagination li.lime.active {
+.lime.lighten-2, .question-navigation.buttons .pagination li.lime.active, .snippet .snippet-editor-parent .lime.editor-header {
   background-color: #dce775 !important;
 }
 
@@ -1819,7 +1819,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.yellow.lighten-2, .question-navigation.buttons .pagination li.yellow.active {
+.yellow.lighten-2, .question-navigation.buttons .pagination li.yellow.active, .snippet .snippet-editor-parent .yellow.editor-header {
   background-color: #fff176 !important;
 }
 
@@ -1959,7 +1959,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.amber.lighten-2, .question-navigation.buttons .pagination li.amber.active {
+.amber.lighten-2, .question-navigation.buttons .pagination li.amber.active, .snippet .snippet-editor-parent .amber.editor-header {
   background-color: #ffd54f !important;
 }
 
@@ -2099,7 +2099,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.orange.lighten-2, .question-navigation.buttons .pagination li.orange.active {
+.orange.lighten-2, .question-navigation.buttons .pagination li.orange.active, .snippet .snippet-editor-parent .orange.editor-header {
   background-color: #ffb74d !important;
 }
 
@@ -2239,7 +2239,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-orange.lighten-2, .question-navigation.buttons .pagination li.deep-orange.active {
+.deep-orange.lighten-2, .question-navigation.buttons .pagination li.deep-orange.active, .snippet .snippet-editor-parent .deep-orange.editor-header {
   background-color: #ff8a65 !important;
 }
 
@@ -2379,7 +2379,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.brown.lighten-2, .question-navigation.buttons .pagination li.brown.active {
+.brown.lighten-2, .question-navigation.buttons .pagination li.brown.active, .snippet .snippet-editor-parent .brown.editor-header {
   background-color: #a1887f !important;
 }
 
@@ -2479,7 +2479,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue-grey.lighten-2, .question-navigation.buttons .pagination li.blue-grey.active {
+.blue-grey.lighten-2, .question-navigation.buttons .pagination li.blue-grey.active, .snippet .snippet-editor-parent .blue-grey.editor-header {
   background-color: #90a4ae !important;
 }
 
@@ -2579,7 +2579,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-2, .question-navigation.buttons .pagination li.grey.active, .question-navigation.buttons .pagination li.active#question-answer, .question-navigation.buttons .pagination li.active#question-attempt, .question-navigation.buttons .pagination .quiz-list li.active.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination li.active.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu li.active.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination li.active.collapsible-header, .question-navigation.buttons .pagination .container.study li.active.study-content-parent, .container.study .question-navigation.buttons .pagination li.active.study-content-parent, .question-navigation.buttons .pagination .container.study .study-content-parent li.active.section-header-container, .container.study .study-content-parent .question-navigation.buttons .pagination li.active.section-header-container, .lighten-2#question-answer, .lighten-2#question-attempt, .quiz-list .lighten-2.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-2.collapsible-header, .container.study .lighten-2.study-content-parent, .container.study .study-content-parent .lighten-2.section-header-container {
+.grey.lighten-2, .question-navigation.buttons .pagination li.grey.active, .question-navigation.buttons .pagination li.active#question-answer, .question-navigation.buttons .pagination li.active#question-attempt, .question-navigation.buttons .pagination .quiz-list li.active.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination li.active.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu li.active.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination li.active.collapsible-header, .question-navigation.buttons .pagination .container.study li.active.study-content-parent, .container.study .question-navigation.buttons .pagination li.active.study-content-parent, .question-navigation.buttons .pagination .container.study .study-content-parent li.active.section-header-container, .container.study .study-content-parent .question-navigation.buttons .pagination li.active.section-header-container, .lighten-2#question-answer, .snippet .snippet-editor-parent #question-answer.editor-header, .lighten-2#question-attempt, .snippet .snippet-editor-parent #question-attempt.editor-header, .quiz-list .lighten-2.expandable.collapsible-header:hover, .quiz-list .snippet .snippet-editor-parent .expandable.collapsible-header.editor-header:hover, .snippet .snippet-editor-parent .quiz-list .expandable.collapsible-header.editor-header:hover, .quiz-list .sub-menu .lighten-2.collapsible-header, .quiz-list .sub-menu .snippet .snippet-editor-parent .collapsible-header.editor-header, .snippet .snippet-editor-parent .quiz-list .sub-menu .collapsible-header.editor-header, .container.study .lighten-2.study-content-parent, .container.study .snippet .snippet-editor-parent .study-content-parent.editor-header, .snippet .snippet-editor-parent .container.study .study-content-parent.editor-header, .container.study .study-content-parent .lighten-2.section-header-container, .container.study .study-content-parent .snippet .snippet-editor-parent .section-header-container.editor-header, .snippet .snippet-editor-parent .container.study .study-content-parent .section-header-container.editor-header, .snippet .snippet-editor-parent .grey.editor-header {
   background-color: #e0e0e0 !important;
 }
 
@@ -9406,12 +9406,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 }
 
 /* line 13, ../assets/sass/modules/_quiz.scss */
-.quiz #quiz-editor-parent {
+.quiz .quiz-editor-parent {
   position: relative;
   height: 500px;
 }
 /* line 16, ../assets/sass/modules/_quiz.scss */
-.quiz #quiz-editor-parent #editor {
+.quiz .quiz-editor-parent .editor {
   position: absolute;
   top: 0;
   right: 0;
@@ -9420,12 +9420,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   height: 100%;
 }
 /* line 25, ../assets/sass/modules/_quiz.scss */
-.quiz #answer-editor-parent, .quiz #attempt-editor-parent {
+.quiz .answer-editor-parent, .quiz .attempt-editor-parent {
   position: relative;
   height: calc(100% - 48px);
 }
 /* line 28, ../assets/sass/modules/_quiz.scss */
-.quiz #answer-editor-parent #answer-editor, .quiz #answer-editor-parent #attempt-editor, .quiz #attempt-editor-parent #answer-editor, .quiz #attempt-editor-parent #attempt-editor {
+.quiz .answer-editor-parent .editor, .quiz .attempt-editor-parent .editor {
   position: absolute;
   top: 0;
   right: 0;
@@ -9573,57 +9573,136 @@ body {
   min-width: 320px;
 }
 
-/* line 18, ../assets/sass/modules/_layout.scss */
+/* line 16, ../assets/sass/modules/_layout.scss */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* line 22, ../assets/sass/modules/_layout.scss */
+main {
+  flex: 1 0 auto;
+  margin-bottom: 110px;
+}
+
+/* line 30, ../assets/sass/modules/_layout.scss */
 h1.section-header {
   font-size: 3rem;
 }
-/* line 21, ../assets/sass/modules/_layout.scss */
+/* line 33, ../assets/sass/modules/_layout.scss */
 h2.section-header {
   font-size: 2.5rem;
 }
-/* line 24, ../assets/sass/modules/_layout.scss */
+/* line 36, ../assets/sass/modules/_layout.scss */
 h3.section-header {
   font-size: 1.75rem;
 }
-/* line 27, ../assets/sass/modules/_layout.scss */
+/* line 39, ../assets/sass/modules/_layout.scss */
 h4.section-header {
   font-size: 1.25rem;
 }
-/* line 30, ../assets/sass/modules/_layout.scss */
+/* line 42, ../assets/sass/modules/_layout.scss */
 h5.section-header {
   font-size: 1.15rem;
 }
-/* line 33, ../assets/sass/modules/_layout.scss */
+/* line 45, ../assets/sass/modules/_layout.scss */
 h6.section-header {
   font-size: 1rem;
 }
 
-/* line 39, ../assets/sass/modules/_layout.scss */
+/* line 51, ../assets/sass/modules/_layout.scss */
 .input-field label {
   top: 2.2rem;
 }
 
-/* line 43, ../assets/sass/modules/_layout.scss */
+/* line 55, ../assets/sass/modules/_layout.scss */
 .page-footer {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 5;
 }
 
-/* line 54, ../assets/sass/modules/_layout.scss */
+/* line 67, ../assets/sass/modules/_layout.scss */
 .nav-wrapper .button-collapse {
   margin-left: 0;
 }
 @media (max-width: 600px) {
-  /* line 66, ../assets/sass/modules/_layout.scss */
+  /* line 79, ../assets/sass/modules/_layout.scss */
   .nav-wrapper #logo-container {
     font-size: 1.30rem;
   }
 }
 
+/* line 86, ../assets/sass/modules/_layout.scss */
+.no-padding {
+  padding: 0;
+}
+
+/* line 90, ../assets/sass/modules/_layout.scss */
+.no-margin {
+  margin: 0;
+}
+
 /* line 1, ../assets/sass/modules/_snippets.scss */
 .container.snippet {
+  width: 100%;
   padding-top: 10px;
-  width: 60%;
+}
+
+/* line 9, ../assets/sass/modules/_snippets.scss */
+.snippet .snippet-editor-parent {
+  position: relative;
+  height: 580px;
+  padding: 0;
+}
+/* line 14, ../assets/sass/modules/_snippets.scss */
+.snippet .snippet-editor-parent .editor-header {
+  height: 80px;
+}
+/* line 17, ../assets/sass/modules/_snippets.scss */
+.snippet .snippet-editor-parent .editor-header .languages {
+  height: calc(80px - 15px);
+  background-color: rgba(51, 51, 51, 0.08);
+}
+/* line 20, ../assets/sass/modules/_snippets.scss */
+.snippet .snippet-editor-parent .editor-header .languages .language {
+  display: inline-block;
+  width: 65px;
+  height: 100%;
+  text-align: center;
+  padding-top: calc(80px / 4);
+}
+/* line 26, ../assets/sass/modules/_snippets.scss */
+.snippet .snippet-editor-parent .editor-header .languages .language:hover {
+  cursor: pointer;
+  background-color: rgba(51, 51, 51, 0.09);
+}
+/* line 30, ../assets/sass/modules/_snippets.scss */
+.snippet .snippet-editor-parent .editor-header .languages .language label {
+  color: white;
+}
+/* line 36, ../assets/sass/modules/_snippets.scss */
+.snippet .snippet-editor-parent .editor {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(100% - 80px);
+  display: none;
+}
+/* line 45, ../assets/sass/modules/_snippets.scss */
+.snippet .snippet-editor-parent #editor-3 {
+  display: block;
+}
+/* line 49, ../assets/sass/modules/_snippets.scss */
+.snippet #snippet_title {
+  margin-bottom: 0;
+}
+/* line 52, ../assets/sass/modules/_snippets.scss */
+.snippet .input-field {
+  margin-top: 0;
 }
