@@ -799,7 +799,7 @@
 }
 
 /* line 370, ../assets/sass/components/_color.scss */
-.blue, .question-navigation.buttons .pagination .circle, .snippet .snippet-editor-parent .editor-header {
+.blue, .question-navigation.buttons .pagination .circle, .snippet .snippet-editor-parent .editor-header, .container.language .custom-file-upload {
   background-color: #2196F3 !important;
 }
 
@@ -809,7 +809,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-5, .question-navigation.buttons .pagination .lighten-5.circle, .question-navigation.buttons .pagination .circle#question-answer, .question-navigation.buttons .pagination .circle#question-attempt, .question-navigation.buttons .pagination .quiz-list .sub-menu .circle.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination .circle.collapsible-header, .question-navigation.buttons .pagination .container.study .circle.study-content-parent, .container.study .question-navigation.buttons .pagination .circle.study-content-parent, .question-navigation.buttons .pagination .circle.section-header, .blue#question-answer, .snippet .snippet-editor-parent #question-answer.editor-header, .blue#question-attempt, .snippet .snippet-editor-parent #question-attempt.editor-header, .quiz-list .sub-menu .blue.collapsible-header, .quiz-list .sub-menu .snippet .snippet-editor-parent .collapsible-header.editor-header, .snippet .snippet-editor-parent .quiz-list .sub-menu .collapsible-header.editor-header, .container.study .blue.study-content-parent, .container.study .snippet .snippet-editor-parent .study-content-parent.editor-header, .snippet .snippet-editor-parent .container.study .study-content-parent.editor-header, .blue.section-header, .snippet .snippet-editor-parent .section-header.editor-header, .snippet .snippet-editor-parent .lighten-5.editor-header {
+.blue.lighten-5, .question-navigation.buttons .pagination .lighten-5.circle, .question-navigation.buttons .pagination .circle#question-answer, .question-navigation.buttons .pagination .circle#question-attempt, .question-navigation.buttons .pagination .quiz-list .sub-menu .circle.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination .circle.collapsible-header, .question-navigation.buttons .pagination .container.study .circle.study-content-parent, .container.study .question-navigation.buttons .pagination .circle.study-content-parent, .question-navigation.buttons .pagination .circle.section-header, .blue#question-answer, .snippet .snippet-editor-parent #question-answer.editor-header, .container.language #question-answer.custom-file-upload, .blue#question-attempt, .snippet .snippet-editor-parent #question-attempt.editor-header, .container.language #question-attempt.custom-file-upload, .quiz-list .sub-menu .blue.collapsible-header, .quiz-list .sub-menu .snippet .snippet-editor-parent .collapsible-header.editor-header, .snippet .snippet-editor-parent .quiz-list .sub-menu .collapsible-header.editor-header, .quiz-list .sub-menu .container.language .collapsible-header.custom-file-upload, .container.language .quiz-list .sub-menu .collapsible-header.custom-file-upload, .container.study .blue.study-content-parent, .container.study .snippet .snippet-editor-parent .study-content-parent.editor-header, .snippet .snippet-editor-parent .container.study .study-content-parent.editor-header, .container.study .container.language .study-content-parent.custom-file-upload, .container.language .container.study .study-content-parent.custom-file-upload, .blue.section-header, .snippet .snippet-editor-parent .section-header.editor-header, .container.language .section-header.custom-file-upload, .snippet .snippet-editor-parent .lighten-5.editor-header, .container.language .lighten-5.custom-file-upload {
   background-color: #E3F2FD !important;
 }
 
@@ -819,7 +819,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-4, .question-navigation.buttons .pagination .circle, .container.study .study-content-parent .blue.section-header-container, .container.study .study-content-parent .snippet .snippet-editor-parent .section-header-container.editor-header, .snippet .snippet-editor-parent .container.study .study-content-parent .section-header-container.editor-header, .snippet .snippet-editor-parent .lighten-4.editor-header {
+.blue.lighten-4, .question-navigation.buttons .pagination .circle, .container.study .study-content-parent .blue.section-header-container, .container.study .study-content-parent .snippet .snippet-editor-parent .section-header-container.editor-header, .snippet .snippet-editor-parent .container.study .study-content-parent .section-header-container.editor-header, .container.study .study-content-parent .container.language .section-header-container.custom-file-upload, .container.language .container.study .study-content-parent .section-header-container.custom-file-upload, .snippet .snippet-editor-parent .lighten-4.editor-header, .container.language .lighten-4.custom-file-upload {
   background-color: #BBDEFB !important;
 }
 
@@ -829,7 +829,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-3, .question-navigation.buttons .pagination .lighten-3.circle, .question-navigation.buttons .pagination .quiz-list .circle.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination .circle.expandable.collapsible-header:hover, .quiz-list .blue.expandable.collapsible-header:hover, .quiz-list .snippet .snippet-editor-parent .expandable.collapsible-header.editor-header:hover, .snippet .snippet-editor-parent .quiz-list .expandable.collapsible-header.editor-header:hover, .snippet .snippet-editor-parent .lighten-3.editor-header {
+.blue.lighten-3, .question-navigation.buttons .pagination .lighten-3.circle, .question-navigation.buttons .pagination .quiz-list .circle.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination .circle.expandable.collapsible-header:hover, .quiz-list .blue.expandable.collapsible-header:hover, .quiz-list .snippet .snippet-editor-parent .expandable.collapsible-header.editor-header:hover, .snippet .snippet-editor-parent .quiz-list .expandable.collapsible-header.editor-header:hover, .quiz-list .container.language .expandable.collapsible-header.custom-file-upload:hover, .container.language .quiz-list .expandable.collapsible-header.custom-file-upload:hover, .snippet .snippet-editor-parent .lighten-3.editor-header, .container.language .lighten-3.custom-file-upload {
   background-color: #90CAF9 !important;
 }
 
@@ -839,7 +839,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-2, .question-navigation.buttons .pagination .lighten-2.circle, .question-navigation.buttons .pagination li.circle.active, .question-navigation.buttons .pagination .snippet .snippet-editor-parent .circle.editor-header, .snippet .snippet-editor-parent .question-navigation.buttons .pagination .circle.editor-header, .question-navigation.buttons .pagination li.blue.active, .question-navigation.buttons .pagination .snippet .snippet-editor-parent li.active.editor-header, .snippet .snippet-editor-parent .question-navigation.buttons .pagination li.active.editor-header, .snippet .snippet-editor-parent .editor-header {
+.blue.lighten-2, .question-navigation.buttons .pagination .lighten-2.circle, .question-navigation.buttons .pagination li.circle.active, .question-navigation.buttons .pagination .snippet .snippet-editor-parent .circle.editor-header, .snippet .snippet-editor-parent .question-navigation.buttons .pagination .circle.editor-header, .question-navigation.buttons .pagination li.blue.active, .question-navigation.buttons .pagination .snippet .snippet-editor-parent li.active.editor-header, .snippet .snippet-editor-parent .question-navigation.buttons .pagination li.active.editor-header, .question-navigation.buttons .pagination .container.language li.active.custom-file-upload, .container.language .question-navigation.buttons .pagination li.active.custom-file-upload, .snippet .snippet-editor-parent .editor-header, .container.language .lighten-2.custom-file-upload {
   background-color: #64B5F6 !important;
 }
 
@@ -849,7 +849,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-1, .question-navigation.buttons .pagination .lighten-1.circle, .question-navigation.buttons .pagination li.circle:hover, .question-navigation.buttons .pagination li.blue:hover, .question-navigation.buttons .pagination .snippet .snippet-editor-parent li.editor-header:hover, .snippet .snippet-editor-parent .question-navigation.buttons .pagination li.editor-header:hover, .snippet .snippet-editor-parent .lighten-1.editor-header {
+.blue.lighten-1, .question-navigation.buttons .pagination .lighten-1.circle, .question-navigation.buttons .pagination li.circle:hover, .question-navigation.buttons .pagination li.blue:hover, .question-navigation.buttons .pagination .snippet .snippet-editor-parent li.editor-header:hover, .snippet .snippet-editor-parent .question-navigation.buttons .pagination li.editor-header:hover, .question-navigation.buttons .pagination .container.language li.custom-file-upload:hover, .container.language .question-navigation.buttons .pagination li.custom-file-upload:hover, .snippet .snippet-editor-parent .lighten-1.editor-header, .container.language .lighten-1.custom-file-upload {
   background-color: #42A5F5 !important;
 }
 
@@ -859,7 +859,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.darken-1, .question-navigation.buttons .pagination .darken-1.circle, .snippet .snippet-editor-parent .darken-1.editor-header {
+.blue.darken-1, .question-navigation.buttons .pagination .darken-1.circle, .snippet .snippet-editor-parent .darken-1.editor-header, .container.language .darken-1.custom-file-upload {
   background-color: #1E88E5 !important;
 }
 
@@ -869,7 +869,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.darken-2, .question-navigation.buttons .pagination .darken-2.circle, .snippet .snippet-editor-parent .darken-2.editor-header {
+.blue.darken-2, .question-navigation.buttons .pagination .darken-2.circle, .snippet .snippet-editor-parent .darken-2.editor-header, .container.language .darken-2.custom-file-upload {
   background-color: #1976D2 !important;
 }
 
@@ -879,7 +879,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.darken-3, .question-navigation.buttons .pagination .darken-3.circle, .snippet .snippet-editor-parent .darken-3.editor-header {
+.blue.darken-3, .question-navigation.buttons .pagination .darken-3.circle, .snippet .snippet-editor-parent .darken-3.editor-header, .container.language .darken-3.custom-file-upload {
   background-color: #1565C0 !important;
 }
 
@@ -889,7 +889,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.darken-4, .question-navigation.buttons .pagination .darken-4.circle, .snippet .snippet-editor-parent .darken-4.editor-header {
+.blue.darken-4, .question-navigation.buttons .pagination .darken-4.circle, .snippet .snippet-editor-parent .darken-4.editor-header, .container.language .darken-4.custom-file-upload {
   background-color: #0D47A1 !important;
 }
 
@@ -899,7 +899,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.accent-1, .question-navigation.buttons .pagination .accent-1.circle, .snippet .snippet-editor-parent .accent-1.editor-header {
+.blue.accent-1, .question-navigation.buttons .pagination .accent-1.circle, .snippet .snippet-editor-parent .accent-1.editor-header, .container.language .accent-1.custom-file-upload {
   background-color: #82B1FF !important;
 }
 
@@ -909,7 +909,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.accent-2, .question-navigation.buttons .pagination .accent-2.circle, .snippet .snippet-editor-parent .accent-2.editor-header {
+.blue.accent-2, .question-navigation.buttons .pagination .accent-2.circle, .snippet .snippet-editor-parent .accent-2.editor-header, .container.language .accent-2.custom-file-upload {
   background-color: #448AFF !important;
 }
 
@@ -919,7 +919,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.accent-3, .question-navigation.buttons .pagination .accent-3.circle, .snippet .snippet-editor-parent .accent-3.editor-header {
+.blue.accent-3, .question-navigation.buttons .pagination .accent-3.circle, .snippet .snippet-editor-parent .accent-3.editor-header, .container.language .accent-3.custom-file-upload {
   background-color: #2979FF !important;
 }
 
@@ -929,7 +929,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.accent-4, .question-navigation.buttons .pagination .accent-4.circle, .snippet .snippet-editor-parent .accent-4.editor-header {
+.blue.accent-4, .question-navigation.buttons .pagination .accent-4.circle, .snippet .snippet-editor-parent .accent-4.editor-header, .container.language .accent-4.custom-file-upload {
   background-color: #2962FF !important;
 }
 
@@ -2654,7 +2654,7 @@
 }
 
 /* line 393, ../assets/sass/components/_color.scss */
-.white-text {
+.white-text, .container.language .custom-file-upload {
   color: #FFFFFF !important;
 }
 
@@ -3151,12 +3151,12 @@ a {
 }
 
 /* line 61, ../assets/sass/components/_global.scss */
-.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .container.language .custom-file-upload, .btn-floating, .dropdown-content, .collapsible, .side-nav {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
 /* line 64, ../assets/sass/components/_global.scss */
-.z-depth-1-half, .btn:hover, .btn-large:hover, .btn-floating:hover {
+.z-depth-1-half, .btn:hover, .btn-large:hover, .container.language .custom-file-upload:hover, .btn-floating:hover {
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 
@@ -4837,7 +4837,7 @@ nav ul a {
   cursor: pointer;
 }
 /* line 118, ../assets/sass/components/_navbar.scss */
-nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
+nav ul a.btn, nav ul a.btn-large, nav ul .container.language a.custom-file-upload, .container.language nav ul a.custom-file-upload, nav ul a.btn-large, nav ul .container.language a.custom-file-upload, .container.language nav ul a.custom-file-upload, nav ul a.btn-flat, nav ul .container.language a.custom-file-upload, .container.language nav ul a.custom-file-upload, nav ul a.btn-floating {
   margin-top: -2px;
   margin-left: 15px;
   margin-right: 15px;
@@ -5423,7 +5423,7 @@ small {
   justify-content: space-between;
 }
 /* line 45, ../assets/sass/components/_toast.scss */
-.toast .btn, .toast .btn-large, .toast .btn-flat {
+.toast .btn, .toast .btn-large, .toast .container.language .custom-file-upload, .container.language .toast .custom-file-upload, .toast .btn-flat, .toast .container.language .custom-file-upload, .container.language .toast .custom-file-upload {
   margin: 0;
   margin-left: 3rem;
 }
@@ -5586,8 +5586,9 @@ small {
 }
 
 /* line 2, ../assets/sass/components/_buttons.scss */
-.btn, .btn-large,
-.btn-flat {
+.btn, .btn-large, .container.language .custom-file-upload,
+.btn-flat,
+.container.language .custom-file-upload {
   border: none;
   border-radius: 2px;
   display: inline-block;
@@ -5600,20 +5601,28 @@ small {
 }
 
 /* line 17, ../assets/sass/components/_buttons.scss */
-.btn.disabled, .disabled.btn-large,
+.btn.disabled, .disabled.btn-large, .container.language .disabled.custom-file-upload,
 .btn-floating.disabled,
 .btn-large.disabled,
+.container.language .disabled.custom-file-upload,
 .btn-flat.disabled,
+.container.language .disabled.custom-file-upload,
 .btn:disabled,
 .btn-large:disabled,
+.container.language .custom-file-upload:disabled,
 .btn-floating:disabled,
 .btn-large:disabled,
+.container.language .custom-file-upload:disabled,
 .btn-flat:disabled,
+.container.language .custom-file-upload:disabled,
 .btn[disabled],
 [disabled].btn-large,
+.container.language [disabled].custom-file-upload,
 .btn-floating[disabled],
 .btn-large[disabled],
-.btn-flat[disabled] {
+.container.language [disabled].custom-file-upload,
+.btn-flat[disabled],
+.container.language [disabled].custom-file-upload {
   pointer-events: none;
   background-color: #DFDFDF !important;
   box-shadow: none;
@@ -5621,48 +5630,60 @@ small {
   cursor: default;
 }
 /* line 35, ../assets/sass/components/_buttons.scss */
-.btn.disabled:hover, .disabled.btn-large:hover,
+.btn.disabled:hover, .disabled.btn-large:hover, .container.language .disabled.custom-file-upload:hover,
 .btn-floating.disabled:hover,
 .btn-large.disabled:hover,
+.container.language .disabled.custom-file-upload:hover,
 .btn-flat.disabled:hover,
+.container.language .disabled.custom-file-upload:hover,
 .btn:disabled:hover,
 .btn-large:disabled:hover,
+.container.language .custom-file-upload:disabled:hover,
 .btn-floating:disabled:hover,
 .btn-large:disabled:hover,
+.container.language .custom-file-upload:disabled:hover,
 .btn-flat:disabled:hover,
+.container.language .custom-file-upload:disabled:hover,
 .btn[disabled]:hover,
 [disabled].btn-large:hover,
+.container.language [disabled].custom-file-upload:hover,
 .btn-floating[disabled]:hover,
 .btn-large[disabled]:hover,
-.btn-flat[disabled]:hover {
+.container.language [disabled].custom-file-upload:hover,
+.btn-flat[disabled]:hover,
+.container.language [disabled].custom-file-upload:hover {
   background-color: #DFDFDF !important;
   color: #9F9F9F !important;
 }
 
 /* line 42, ../assets/sass/components/_buttons.scss */
-.btn, .btn-large,
+.btn, .btn-large, .container.language .custom-file-upload,
 .btn-floating,
 .btn-large,
-.btn-flat {
+.container.language .custom-file-upload,
+.btn-flat,
+.container.language .custom-file-upload {
   outline: 0;
 }
 /* line 49, ../assets/sass/components/_buttons.scss */
-.btn i, .btn-large i,
+.btn i, .btn-large i, .container.language .custom-file-upload i,
 .btn-floating i,
 .btn-large i,
-.btn-flat i {
+.container.language .custom-file-upload i,
+.btn-flat i,
+.container.language .custom-file-upload i {
   font-size: 1.3rem;
   line-height: inherit;
 }
 
 /* line 58, ../assets/sass/components/_buttons.scss */
-.btn:focus, .btn-large:focus,
+.btn:focus, .btn-large:focus, .container.language .custom-file-upload:focus,
 .btn-floating:focus {
   background-color: #128ef2;
 }
 
 /* line 64, ../assets/sass/components/_buttons.scss */
-.btn, .btn-large {
+.btn, .btn-large, .container.language .custom-file-upload {
   text-decoration: none;
   color: #fff;
   background-color: #42A5F5;
@@ -5672,7 +5693,7 @@ small {
   cursor: pointer;
 }
 /* line 74, ../assets/sass/components/_buttons.scss */
-.btn:hover, .btn-large:hover {
+.btn:hover, .btn-large:hover, .container.language .custom-file-upload:hover {
   background-color: #5ab1f6;
 }
 
@@ -5711,12 +5732,12 @@ small {
   border-radius: 0;
 }
 /* line 116, ../assets/sass/components/_buttons.scss */
-.btn-floating.btn-large {
+.btn-floating.btn-large, .container.language .btn-floating.custom-file-upload {
   width: 56px;
   height: 56px;
 }
 /* line 119, ../assets/sass/components/_buttons.scss */
-.btn-floating.btn-large i {
+.btn-floating.btn-large i, .container.language .btn-floating.custom-file-upload i {
   line-height: 56px;
 }
 
@@ -5830,7 +5851,7 @@ button.btn-floating {
 }
 
 /* line 238, ../assets/sass/components/_buttons.scss */
-.btn-flat {
+.btn-flat, .container.language .custom-file-upload {
   box-shadow: none;
   background-color: transparent;
   color: #343434;
@@ -5838,32 +5859,32 @@ button.btn-floating {
   transition: background-color .2s;
 }
 /* line 245, ../assets/sass/components/_buttons.scss */
-.btn-flat:focus, .btn-flat:active {
+.btn-flat:focus, .container.language .custom-file-upload:focus, .btn-flat:active, .container.language .custom-file-upload:active {
   background-color: transparent;
 }
 /* line 250, ../assets/sass/components/_buttons.scss */
-.btn-flat:focus, .btn-flat:hover {
+.btn-flat:focus, .container.language .custom-file-upload:focus, .btn-flat:hover, .container.language .custom-file-upload:hover {
   background-color: rgba(0, 0, 0, 0.1);
   box-shadow: none;
 }
 /* line 256, ../assets/sass/components/_buttons.scss */
-.btn-flat:active {
+.btn-flat:active, .container.language .custom-file-upload:active {
   background-color: rgba(0, 0, 0, 0.2);
 }
 /* line 260, ../assets/sass/components/_buttons.scss */
-.btn-flat.disabled {
+.btn-flat.disabled, .container.language .disabled.custom-file-upload {
   background-color: transparent !important;
   color: #b3b3b3 !important;
   cursor: default;
 }
 
 /* line 268, ../assets/sass/components/_buttons.scss */
-.btn-large {
+.btn-large, .container.language .custom-file-upload {
   height: 54px;
   line-height: 54px;
 }
 /* line 273, ../assets/sass/components/_buttons.scss */
-.btn-large i {
+.btn-large i, .container.language .custom-file-upload i {
   font-size: 1.6rem;
 }
 
@@ -5945,7 +5966,7 @@ button.btn-floating {
  * https://github.com/fians/Waves/blob/master/LICENSE
  */
 /* line 12, ../assets/sass/components/_waves.scss */
-.waves-effect {
+.waves-effect, .container.language .custom-file-upload {
   position: relative;
   cursor: pointer;
   display: inline-block;
@@ -5961,7 +5982,7 @@ button.btn-floating {
   transition: .3s ease-out;
 }
 /* line 39, ../assets/sass/components/_waves.scss */
-.waves-effect .waves-ripple {
+.waves-effect .waves-ripple, .container.language .custom-file-upload .waves-ripple {
   position: absolute;
   border-radius: 50%;
   width: 20px;
@@ -5976,35 +5997,35 @@ button.btn-floating {
   pointer-events: none;
 }
 /* line 61, ../assets/sass/components/_waves.scss */
-.waves-effect.waves-light .waves-ripple {
+.waves-effect.waves-light .waves-ripple, .container.language .custom-file-upload .waves-ripple {
   background-color: rgba(255, 255, 255, 0.45);
 }
 /* line 65, ../assets/sass/components/_waves.scss */
-.waves-effect.waves-red .waves-ripple {
+.waves-effect.waves-red .waves-ripple, .container.language .waves-red.custom-file-upload .waves-ripple {
   background-color: rgba(244, 67, 54, 0.7);
 }
 /* line 68, ../assets/sass/components/_waves.scss */
-.waves-effect.waves-yellow .waves-ripple {
+.waves-effect.waves-yellow .waves-ripple, .container.language .waves-yellow.custom-file-upload .waves-ripple {
   background-color: rgba(255, 235, 59, 0.7);
 }
 /* line 71, ../assets/sass/components/_waves.scss */
-.waves-effect.waves-orange .waves-ripple {
+.waves-effect.waves-orange .waves-ripple, .container.language .waves-orange.custom-file-upload .waves-ripple {
   background-color: rgba(255, 152, 0, 0.7);
 }
 /* line 74, ../assets/sass/components/_waves.scss */
-.waves-effect.waves-purple .waves-ripple {
+.waves-effect.waves-purple .waves-ripple, .container.language .waves-purple.custom-file-upload .waves-ripple {
   background-color: rgba(156, 39, 176, 0.7);
 }
 /* line 77, ../assets/sass/components/_waves.scss */
-.waves-effect.waves-green .waves-ripple {
+.waves-effect.waves-green .waves-ripple, .container.language .waves-green.custom-file-upload .waves-ripple {
   background-color: rgba(76, 175, 80, 0.7);
 }
 /* line 80, ../assets/sass/components/_waves.scss */
-.waves-effect.waves-teal .waves-ripple {
+.waves-effect.waves-teal .waves-ripple, .container.language .waves-teal.custom-file-upload .waves-ripple {
   background-color: rgba(0, 150, 136, 0.7);
 }
 /* line 85, ../assets/sass/components/_waves.scss */
-.waves-effect input[type="button"], .waves-effect input[type="reset"], .waves-effect input[type="submit"] {
+.waves-effect input[type="button"], .container.language .custom-file-upload input[type="button"], .waves-effect input[type="reset"], .container.language .custom-file-upload input[type="reset"], .waves-effect input[type="submit"], .container.language .custom-file-upload input[type="submit"] {
   border: 0;
   font-style: normal;
   font-size: inherit;
@@ -6012,7 +6033,7 @@ button.btn-floating {
   background: none;
 }
 /* line 93, ../assets/sass/components/_waves.scss */
-.waves-effect img {
+.waves-effect img, .container.language .custom-file-upload img {
   position: relative;
   z-index: -1;
 }
@@ -6058,7 +6079,7 @@ button.btn-floating {
 
 /* Firefox Bug: link not triggered */
 /* line 175, ../assets/sass/components/_waves.scss */
-.waves-effect .waves-ripple {
+.waves-effect .waves-ripple, .container.language .custom-file-upload .waves-ripple {
   z-index: -1;
 }
 
@@ -6104,7 +6125,7 @@ button.btn-floating {
   width: 100%;
 }
 /* line 40, ../assets/sass/components/_modal.scss */
-.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-flat {
+.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .container.language .custom-file-upload, .container.language .modal .modal-footer .custom-file-upload, .modal .modal-footer .btn-flat, .modal .modal-footer .container.language .custom-file-upload, .container.language .modal .modal-footer .custom-file-upload {
   float: right;
   margin: 6px 0;
 }
@@ -7452,7 +7473,7 @@ select:disabled {
   width: 100%;
 }
 /* line 14, ../assets/sass/components/forms/_file-input.scss */
-.file-field .btn, .file-field .btn-large {
+.file-field .btn, .file-field .btn-large, .file-field .container.language .custom-file-upload, .container.language .file-field .custom-file-upload {
   float: left;
   height: 3rem;
   line-height: 3rem;
@@ -7732,19 +7753,19 @@ input[type=range]:focus::-ms-fill-upper {
   background-color: rgba(0, 0, 0, 0.05);
 }
 /* line 52, ../assets/sass/components/_sideNav.scss */
-.side-nav a.btn, .side-nav a.btn-large, .side-nav a.btn-large, .side-nav a.btn-flat, .side-nav a.btn-floating {
+.side-nav a.btn, .side-nav a.btn-large, .side-nav .container.language a.custom-file-upload, .container.language .side-nav a.custom-file-upload, .side-nav a.btn-large, .side-nav .container.language a.custom-file-upload, .container.language .side-nav a.custom-file-upload, .side-nav a.btn-flat, .side-nav .container.language a.custom-file-upload, .container.language .side-nav a.custom-file-upload, .side-nav a.btn-floating {
   margin: 10px 15px;
 }
 /* line 56, ../assets/sass/components/_sideNav.scss */
-.side-nav a.btn, .side-nav a.btn-large, .side-nav a.btn-large, .side-nav a.btn-floating {
+.side-nav a.btn, .side-nav a.btn-large, .side-nav .container.language a.custom-file-upload, .container.language .side-nav a.custom-file-upload, .side-nav a.btn-large, .side-nav .container.language a.custom-file-upload, .container.language .side-nav a.custom-file-upload, .side-nav a.btn-floating {
   color: #fff;
 }
 /* line 59, ../assets/sass/components/_sideNav.scss */
-.side-nav a.btn-flat {
+.side-nav a.btn-flat, .side-nav .container.language a.custom-file-upload, .container.language .side-nav a.custom-file-upload {
   color: #343434;
 }
 /* line 61, ../assets/sass/components/_sideNav.scss */
-.side-nav a.btn:hover, .side-nav a.btn-large:hover, .side-nav a.btn-large:hover {
+.side-nav a.btn:hover, .side-nav a.btn-large:hover, .side-nav .container.language a.custom-file-upload:hover, .container.language .side-nav a.custom-file-upload:hover, .side-nav a.btn-large:hover, .side-nav .container.language a.custom-file-upload:hover, .container.language .side-nav a.custom-file-upload:hover {
   background-color: #5ab1f6;
 }
 /* line 63, ../assets/sass/components/_sideNav.scss */
@@ -9587,36 +9608,41 @@ main {
 }
 
 /* line 30, ../assets/sass/modules/_layout.scss */
+main a:hover {
+  text-decoration: underline;
+}
+
+/* line 38, ../assets/sass/modules/_layout.scss */
 h1.section-header {
   font-size: 3rem;
 }
-/* line 33, ../assets/sass/modules/_layout.scss */
+/* line 41, ../assets/sass/modules/_layout.scss */
 h2.section-header {
   font-size: 2.5rem;
 }
-/* line 36, ../assets/sass/modules/_layout.scss */
+/* line 44, ../assets/sass/modules/_layout.scss */
 h3.section-header {
   font-size: 1.75rem;
 }
-/* line 39, ../assets/sass/modules/_layout.scss */
+/* line 47, ../assets/sass/modules/_layout.scss */
 h4.section-header {
   font-size: 1.25rem;
 }
-/* line 42, ../assets/sass/modules/_layout.scss */
+/* line 50, ../assets/sass/modules/_layout.scss */
 h5.section-header {
   font-size: 1.15rem;
 }
-/* line 45, ../assets/sass/modules/_layout.scss */
+/* line 53, ../assets/sass/modules/_layout.scss */
 h6.section-header {
   font-size: 1rem;
 }
 
-/* line 51, ../assets/sass/modules/_layout.scss */
+/* line 59, ../assets/sass/modules/_layout.scss */
 .input-field label {
   top: 2.2rem;
 }
 
-/* line 55, ../assets/sass/modules/_layout.scss */
+/* line 63, ../assets/sass/modules/_layout.scss */
 .page-footer {
   position: absolute;
   right: 0;
@@ -9625,23 +9651,30 @@ h6.section-header {
   z-index: 5;
 }
 
-/* line 67, ../assets/sass/modules/_layout.scss */
+/* line 75, ../assets/sass/modules/_layout.scss */
 .nav-wrapper .button-collapse {
   margin-left: 0;
 }
 @media (max-width: 600px) {
-  /* line 79, ../assets/sass/modules/_layout.scss */
+  /* line 87, ../assets/sass/modules/_layout.scss */
   .nav-wrapper #logo-container {
     font-size: 1.30rem;
   }
 }
 
-/* line 86, ../assets/sass/modules/_layout.scss */
+/* line 93, ../assets/sass/modules/_layout.scss */
+td.min-width {
+  width: 1%;
+  white-space: nowrap;
+  padding: 0 15px 0 15px;
+}
+
+/* line 99, ../assets/sass/modules/_layout.scss */
 .no-padding {
   padding: 0;
 }
 
-/* line 90, ../assets/sass/modules/_layout.scss */
+/* line 103, ../assets/sass/modules/_layout.scss */
 .no-margin {
   margin: 0;
 }
@@ -9651,23 +9684,27 @@ h6.section-header {
   width: 100%;
   padding-top: 10px;
 }
+/* line 6, ../assets/sass/modules/_snippets.scss */
+.container.snippet.index {
+  width: 50%;
+}
 
-/* line 9, ../assets/sass/modules/_snippets.scss */
+/* line 12, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent {
   position: relative;
   height: 580px;
   padding: 0;
 }
-/* line 14, ../assets/sass/modules/_snippets.scss */
+/* line 17, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent .editor-header {
   height: 80px;
 }
-/* line 17, ../assets/sass/modules/_snippets.scss */
+/* line 20, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent .editor-header .languages {
   height: calc(80px - 15px);
   background-color: rgba(51, 51, 51, 0.08);
 }
-/* line 20, ../assets/sass/modules/_snippets.scss */
+/* line 23, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent .editor-header .languages .language {
   display: inline-block;
   width: 65px;
@@ -9675,16 +9712,16 @@ h6.section-header {
   text-align: center;
   padding-top: calc(80px / 4);
 }
-/* line 26, ../assets/sass/modules/_snippets.scss */
+/* line 29, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent .editor-header .languages .language:hover {
   cursor: pointer;
   background-color: rgba(51, 51, 51, 0.09);
 }
-/* line 30, ../assets/sass/modules/_snippets.scss */
+/* line 33, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent .editor-header .languages .language label {
   color: white;
 }
-/* line 36, ../assets/sass/modules/_snippets.scss */
+/* line 39, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent .editor {
   position: absolute;
   top: 80px;
@@ -9694,15 +9731,43 @@ h6.section-header {
   height: calc(100% - 80px);
   display: none;
 }
-/* line 45, ../assets/sass/modules/_snippets.scss */
+/* line 48, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent #editor-3 {
   display: block;
 }
-/* line 49, ../assets/sass/modules/_snippets.scss */
+/* line 52, ../assets/sass/modules/_snippets.scss */
 .snippet #snippet_title {
   margin-bottom: 0;
 }
-/* line 52, ../assets/sass/modules/_snippets.scss */
+/* line 55, ../assets/sass/modules/_snippets.scss */
 .snippet .input-field {
   margin-top: 0;
+}
+
+/* line 1, ../assets/sass/modules/_languages.scss */
+.container.language {
+  width: 30%;
+  padding-top: 10px;
+}
+/* line 6, ../assets/sass/modules/_languages.scss */
+.container.language table {
+  margin-top: 15px;
+}
+/* line 10, ../assets/sass/modules/_languages.scss */
+.container.language input[type="file"] {
+  display: none;
+}
+/* line 18, ../assets/sass/modules/_languages.scss */
+.container.language .file-input {
+  position: relative;
+  width: 106.5px;
+}
+/* line 23, ../assets/sass/modules/_languages.scss */
+.container.language #preview_logo {
+  position: absolute;
+  left: calc(100% + 70px);
+  top: 55px;
+  transform: translateY(-50%);
+  max-width: 100px;
+  display: none;
 }

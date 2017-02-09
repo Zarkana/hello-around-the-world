@@ -1,0 +1,33 @@
+.container.language{
+  width: 30%;
+  //So that the editor can stretch from the left to the right
+  padding-top: 10px;
+
+  table{
+    margin-top: 15px;
+  }
+
+  input[type="file"]{
+    display: none;
+  }
+
+  .custom-file-upload{
+    @extend .btn-large, .waves-effect, .waves-light, .blue, .white-text, .btn, .btn-flat;
+  }
+
+  .file-input{
+    position: relative;
+    width: 106.5px;
+  }
+
+  #preview_logo{
+    position: absolute;
+    left: calc(100% + 70px);
+    top: 55px;
+    transform: translateY(-50%);
+
+    max-width: 100px;
+    display: none;
+
+  }
+}

@@ -24,6 +24,14 @@ main {
   margin-bottom: 110px;
 }
 
+//On most pages
+main{
+  a{
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
 
 .section-header{
   @extend .light-blue-text, .lighten-5;
@@ -80,7 +88,12 @@ main {
       font-size: 1.30rem;
     }
   }
+}
 
+td.min-width{
+  width:1%;
+  white-space:nowrap;
+  padding: 0 15px 0 15px;
 }
 
 .no-padding{

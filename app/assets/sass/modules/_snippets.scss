@@ -3,6 +3,9 @@
   //So that the editor can stretch from the left to the right
 
   padding-top: 10px;
+  &.index{
+    width: 50%;
+  }
 }
 
 .snippet{

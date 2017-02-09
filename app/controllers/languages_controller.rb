@@ -4,7 +4,8 @@ class LanguagesController < ApplicationController
   end
 
   def show
-    @language = Language.find(params[:id])
+    # @language = Language.find(params[:id])
+    redirect_to languages_path
   end
 
   def new
@@ -19,7 +20,8 @@ class LanguagesController < ApplicationController
     @language = Language.new(language_params)
 
     if @language.save
-      redirect_to @language
+      # redirect_to @language
+      redirect_to languages_path
     else
       render 'new'
     end
@@ -29,7 +31,8 @@ class LanguagesController < ApplicationController
     @language = Language.find(params[:id])
 
     if @language.update(language_params)
-      redirect_to @language
+      # redirect_to @language
+      redirect_to languages_path
     else
       render 'edit'
     end
@@ -44,7 +47,7 @@ class LanguagesController < ApplicationController
 
     redirect_to languages_path
   end
-  # 
+  #
   # def destroy_logo
   #   @language = Language.find(params[:id])
   #

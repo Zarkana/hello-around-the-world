@@ -14,20 +14,28 @@
     </div>
   <% end %>
 
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
+  <div class="row">
+    <div class="section input-field col s5 m3 offset-s1 offset-m1 offset-l2">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+  </div>
 
-  <p>
-    <% if @language.logo.exists? %>
-      <%= image_tag @language.logo.url(:thumb) %>
-    <% end %>
-    <%= f.file_field :logo %>
-  </p>
+  <div class="row">
+    <div class="file-input section input-field col s10 offset-s1 offset-m1 offset-l2">
+        <% if @language.logo.exists? %>
+          <%= image_tag @language.logo.url(:thumb) %>
+        <% end %>
+        <label for="language_logo" class="custom-file-upload">Choose File</label>
+        <img id="preview_logo" src="#" alt="your image" />
+        <%= f.file_field :logo %>
+    </div>
+  </div>
+  <br>
 
-  <p>
-    <%= f.submit %>
-  </p>
+  <div class="row">
+    <div class="col s10 offset-s1 offset-m1 offset-l2">
+      <%= f.submit :class => 'btn-large waves-effect waves-light blue white-text btn btn-flat'%>
+    </div>
+  </div>
 <% end %>
-<%= link_to 'Back', languages_path %>

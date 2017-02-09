@@ -61,4 +61,20 @@ $(document).ready(function() {
         return false;
       }
   });
+
+  $("input[type='file']").change(function(){
+    readURL(this);
+  });
 });
+
+function readURL(input) {
+   if (input.files && input.files[0]) {
+     var reader = new FileReader();
+
+     reader.onload = function (e) {
+       $('#preview_logo').attr('src', e.target.result).show();
+     };
+
+     reader.readAsDataURL(input.files[0]);
+   }
+ }
