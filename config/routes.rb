@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  get 'languages/index'
+  post 'languages/destroy_logo'
+
   # resources :snippets do
   #   resources :implementations
   # end
   resources :snippets
+
+  resources :languages
 
   get 'study/index'
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170203032031) do
+ActiveRecord::Schema.define(version: 20170208213032) do
 
   create_table "implementations", force: :cascade do |t|
     t.string   "language"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 20170203032031) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["snippet_id"], name: "index_implementations_on_snippet_id"
+  end
+
+  create_table "languages", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
   end
 
   create_table "snippets", force: :cascade do |t|
