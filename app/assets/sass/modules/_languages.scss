@@ -1,7 +1,22 @@
 .container.language{
-  width: 30%;
+  width: 40%;
   //So that the editor can stretch from the left to the right
   padding-top: 10px;
+
+  // At < 992
+  @media (max-width: 992px){
+    &{
+      width: 60%;
+    }
+  }
+
+  // At < 600
+  @media (max-width: 600px){
+    &{
+      width: 100%;
+
+    }
+  }
 
   table{
     margin-top: 15px;
@@ -13,21 +28,20 @@
 
   .custom-file-upload{
     @extend .btn-large, .waves-effect, .waves-light, .blue, .white-text, .btn, .btn-flat;
-  }
-
-  .file-input{
+    width: 170px;
     position: relative;
-    width: 106.5px;
+    overflow: visible;
+    top: -25px;
   }
 
-  #preview_logo{
-    position: absolute;
-    left: calc(100% + 70px);
-    top: 55px;
-    transform: translateY(-50%);
-
-    max-width: 100px;
+  #preview_logo_unloaded{
     display: none;
-
+  }
+  #preview_logo, #preview_logo_unloaded{
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 15px);
+    transform: translateY(-50%);
+    max-width: 100px;
   }
 }

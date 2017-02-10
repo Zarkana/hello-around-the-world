@@ -75,7 +75,7 @@ main{
   .button-collapse{
     margin-left: 0;
   }
-  // At < 993
+  // At < 992
   @media (max-width: 992px){
     #logo-container{
       //font-size: 1.80rem;
@@ -93,7 +93,7 @@ main{
 td.min-width{
   width:1%;
   white-space:nowrap;
-  padding: 0 15px 0 15px;
+  padding: 0 12px 0 12px;
 }
 
 .no-padding{

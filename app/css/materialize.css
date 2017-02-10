@@ -9666,7 +9666,7 @@ h6.section-header {
 td.min-width {
   width: 1%;
   white-space: nowrap;
-  padding: 0 15px 0 15px;
+  padding: 0 12px 0 12px;
 }
 
 /* line 99, ../assets/sass/modules/_layout.scss */
@@ -9746,27 +9746,42 @@ td.min-width {
 
 /* line 1, ../assets/sass/modules/_languages.scss */
 .container.language {
-  width: 30%;
+  width: 40%;
   padding-top: 10px;
 }
-/* line 6, ../assets/sass/modules/_languages.scss */
+@media (max-width: 992px) {
+  /* line 8, ../assets/sass/modules/_languages.scss */
+  .container.language {
+    width: 60%;
+  }
+}
+@media (max-width: 600px) {
+  /* line 15, ../assets/sass/modules/_languages.scss */
+  .container.language {
+    width: 100%;
+    padding: 20px;
+  }
+}
+/* line 21, ../assets/sass/modules/_languages.scss */
 .container.language table {
   margin-top: 15px;
 }
-/* line 10, ../assets/sass/modules/_languages.scss */
+/* line 25, ../assets/sass/modules/_languages.scss */
 .container.language input[type="file"] {
   display: none;
 }
-/* line 18, ../assets/sass/modules/_languages.scss */
-.container.language .file-input {
+/* line 29, ../assets/sass/modules/_languages.scss */
+.container.language .custom-file-upload {
+  width: 170px;
   position: relative;
-  width: 106.5px;
+  overflow: visible;
+  top: -25px;
 }
-/* line 23, ../assets/sass/modules/_languages.scss */
+/* line 37, ../assets/sass/modules/_languages.scss */
 .container.language #preview_logo {
   position: absolute;
-  left: calc(100% + 70px);
-  top: 55px;
+  top: 50%;
+  left: calc(100% + 20px);
   transform: translateY(-50%);
   max-width: 100px;
   display: none;

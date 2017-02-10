@@ -15,24 +15,25 @@
   <% end %>
 
   <div class="row">
-    <div class="section input-field col s5 m3 offset-s1 offset-m1 offset-l2">
+    <div class="section input-field col s8 m6 l4 offset-s1 offset-m1 offset-l2">
       <%= f.label :name %><br>
       <%= f.text_field :name %>
     </div>
   </div>
 
   <div class="row">
-    <div class="file-input section input-field col s10 offset-s1 offset-m1 offset-l2">
-        <% if @language.logo.exists? %>
-          <%= image_tag @language.logo.url(:thumb) %>
-        <% end %>
-        <label for="language_logo" class="custom-file-upload">Choose File</label>
-        <img id="preview_logo" src="#" alt="your image" />
+    <div class="no-padding section input-field col s10 offset-s1 offset-m1 offset-l2">
+        <label for="language_logo" class="custom-file-upload">Choose File
+          <img id="preview_logo_unloaded" src="#" alt="your image" />
+          <% if @language.logo.exists? %>
+            <%= image_tag @language.logo.url(:thumb), :id => 'preview_logo' %>
+          <% end %>
+        </label>
         <%= f.file_field :logo %>
     </div>
   </div>
   <br>
-
+  <br>
   <div class="row">
     <div class="col s10 offset-s1 offset-m1 offset-l2">
       <%= f.submit :class => 'btn-large waves-effect waves-light blue white-text btn btn-flat'%>
