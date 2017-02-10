@@ -11,7 +11,9 @@ class SnippetsController < ApplicationController
 
     def new
       @snippet = Snippet.new
-      3.times do
+      @languages = Language.all
+      
+      @languages.length.times do
         implementation = @snippet.implementations.build
       end
     end

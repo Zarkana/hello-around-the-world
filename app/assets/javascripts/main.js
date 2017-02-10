@@ -72,7 +72,7 @@ function readURL(input) {
      var reader = new FileReader();
 
      reader.onload = function (e) {
-       $('#preview_logo').attr('src', e.target.result).show();
+       $('#preview_logo, #preview_logo_unloaded').attr('src', e.target.result).show();       
      };
 
      reader.readAsDataURL(input.files[0]);
