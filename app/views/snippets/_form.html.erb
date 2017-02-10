@@ -25,20 +25,26 @@
     <div id="snippet-editor-parent" class="snippet-editor-parent col s12 m10 offset-m1 l8 offset-l2">
       <div class="editor-header">
         <div class="languages">
-          <%= f.fields_for :implementations do |f| %>
-            <div class="language"><%= f.label :code %></div>
+          <% @languages.each do |language| %>
+            <div class="language"><%= image_tag language.logo.url %></div>
           <% end %>
         </div>
       </div>
       <%= f.fields_for :implementations do |f| %>
-        <div id="editor-<%= f.options[:child_index] %>" class="editor">function foo(items) {
+        <%= f.text_area :code, :id => "editor-#{f.options[:child_index]}", :class => 'code-field' %>
+        <div id="ace-editor-<%= f.options[:child_index] %>" class="editor">function foo(items) {
             var x = "All this is syntax highlighted";
             return x;
         }</div>
+        <%= f.text_field :language, :class => 'language-field' %>
         <script>
-            var editor = ace.edit("editor-<%= f.options[:child_index] %>");
-            editor.setTheme("ace/theme/dawn");
-            editor.getSession().setMode("ace/mode/javascript");
+            var aceEditor<%= f.options[:child_index] %> = ace.edit("ace-editor-<%= f.options[:child_index] %>");
+            $("#editor-<%= f.options[:child_index] %>").text(aceEditor<%= f.options[:child_index] %>.getValue());
+            aceEditor<%= f.options[:child_index] %>.getSession().on('change', function(e) {
+              $("#editor-<%= f.options[:child_index] %>").text(aceEditor<%= f.options[:child_index] %>.getValue());
+            });
+            aceEditor<%= f.options[:child_index] %>.setTheme("ace/theme/dawn");
+            aceEditor<%= f.options[:child_index] %>.getSession().setMode("ace/mode/javascript");
         </script>
       <% end %>
     </div>

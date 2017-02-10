@@ -25,16 +25,26 @@
           width: 65px;
           height: 100%;
           text-align: center;
-          padding-top: calc(#{$editor-header-height} / 4);
+          // padding-top: calc(#{$editor-header-height} / 4);
           &:hover{
             cursor: pointer;
             background-color: rgba(51, 51, 51, 0.09);
           }
-          label{
-            color: white;
+          &:before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+          }
+          img{
+            max-width: 24px;
+            transform: translateY(40%);
           }
         }
       }
+    }
+    .language-field, .code-field{
+      display: none;
     }
     .editor {
         position: absolute;
@@ -43,10 +53,9 @@
         bottom: 0;
         width: 100%;
         height: calc(100% - #{$editor-header-height});
-        display: none;
     }
-    #editor-3{
-      display: block;
+    .editor ~ .editor{
+       display: none;
     }
   }
   #snippet_title{

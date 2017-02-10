@@ -9710,7 +9710,6 @@ td.min-width {
   width: 65px;
   height: 100%;
   text-align: center;
-  padding-top: calc(80px / 4);
 }
 /* line 29, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent .editor-header .languages .language:hover {
@@ -9718,10 +9717,22 @@ td.min-width {
   background-color: rgba(51, 51, 51, 0.09);
 }
 /* line 33, ../assets/sass/modules/_snippets.scss */
-.snippet .snippet-editor-parent .editor-header .languages .language label {
-  color: white;
+.snippet .snippet-editor-parent .editor-header .languages .language:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
 }
 /* line 39, ../assets/sass/modules/_snippets.scss */
+.snippet .snippet-editor-parent .editor-header .languages .language img {
+  max-width: 24px;
+  transform: translateY(40%);
+}
+/* line 46, ../assets/sass/modules/_snippets.scss */
+.snippet .snippet-editor-parent .language-field, .snippet .snippet-editor-parent .code-field {
+  display: none;
+}
+/* line 49, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent .editor {
   position: absolute;
   top: 80px;
@@ -9729,17 +9740,16 @@ td.min-width {
   bottom: 0;
   width: 100%;
   height: calc(100% - 80px);
+}
+/* line 57, ../assets/sass/modules/_snippets.scss */
+.snippet .snippet-editor-parent .editor ~ .editor {
   display: none;
 }
-/* line 48, ../assets/sass/modules/_snippets.scss */
-.snippet .snippet-editor-parent #editor-3 {
-  display: block;
-}
-/* line 52, ../assets/sass/modules/_snippets.scss */
+/* line 61, ../assets/sass/modules/_snippets.scss */
 .snippet #snippet_title {
   margin-bottom: 0;
 }
-/* line 55, ../assets/sass/modules/_snippets.scss */
+/* line 64, ../assets/sass/modules/_snippets.scss */
 .snippet .input-field {
   margin-top: 0;
 }
@@ -9759,7 +9769,6 @@ td.min-width {
   /* line 15, ../assets/sass/modules/_languages.scss */
   .container.language {
     width: 100%;
-    padding: 20px;
   }
 }
 /* line 21, ../assets/sass/modules/_languages.scss */
@@ -9778,11 +9787,14 @@ td.min-width {
   top: -25px;
 }
 /* line 37, ../assets/sass/modules/_languages.scss */
-.container.language #preview_logo {
+.container.language #preview_logo_unloaded {
+  display: none;
+}
+/* line 41, ../assets/sass/modules/_languages.scss */
+.container.language #preview_logo, .container.language #preview_logo_unloaded {
   position: absolute;
   top: 50%;
-  left: calc(100% + 20px);
+  left: calc(100% + 15px);
   transform: translateY(-50%);
   max-width: 100px;
-  display: none;
 }
