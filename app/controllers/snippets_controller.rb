@@ -24,6 +24,8 @@ class SnippetsController < ApplicationController
 
     def edit
       @snippet = Snippet.find(params[:id])
+      @allLanguages = Language.all
+      @languages = Language.limit(@allLanguages.length)
     end
 
     def create
