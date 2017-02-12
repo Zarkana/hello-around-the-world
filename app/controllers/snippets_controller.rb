@@ -11,8 +11,8 @@ class SnippetsController < ApplicationController
 
     def new
       @snippet = Snippet.new
-      @languages = Language.all
-
+      @allLanguages = Language.all
+      @languages = Language.limit(@allLanguages.length)
       # @languages.length.times do
       #   language = @languages.build
       # end

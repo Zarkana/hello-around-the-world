@@ -65,16 +65,28 @@ $(document).ready(function() {
   $("input[type='file']").change(function(){
     readURL(this);
   });
+
+  //all input is disabled, until not empty remains disabled
+
+  //when language button is clicked switch active textareas
+  $(".language").click(function(){
+    var selectedLanguage = $(this).children("img[data-language]").attr("data-language");
+    $(".ace_editor").hide();//Hide all editors
+    //var activeAceEditor = $(".ace_editor").find("[data-language='" + selectedLanguage + "']");
+    var activeAceEditor = $(".ace_editor[data-language='" + selectedLanguage + "']");
+    activeAceEditor.show();
+  });
 });
 
+//Will add the image preview of selected file to upload
 function readURL(input) {
-   if (input.files && input.files[0]) {
-     var reader = new FileReader();
+ if (input.files && input.files[0]) {
+   var reader = new FileReader();
 
-     reader.onload = function (e) {
-       $('#preview_logo, #preview_logo_unloaded').attr('src', e.target.result).show();
-     };
+   reader.onload = function (e) {
+     $('#preview_logo, #preview_logo_unloaded').attr('src', e.target.result).show();
+   };
 
-     reader.readAsDataURL(input.files[0]);
-   }
+   reader.readAsDataURL(input.files[0]);
  }
+}

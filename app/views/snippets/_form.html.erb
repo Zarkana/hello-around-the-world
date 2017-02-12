@@ -25,18 +25,19 @@
     <div id="snippet-editor-parent" class="snippet-editor-parent col s12 m10 offset-m1 l8 offset-l2">
       <div class="editor-header">
         <div class="languages">
-          <% @languages.each do |language| %>
-            <div class="language"><%= image_tag language.logo.url %></div>
+          <% @languages.each_with_index do |language,index| %>
+            <div class="language"><%= image_tag language.logo.url, :data => {:language => language.name } %></div>
           <% end %>
         </div>
       </div>
       <%= f.fields_for :implementations do |f| %>
         <%= f.text_area :code, :id => "editor-#{f.options[:child_index]}", :class => 'code-field' %>
-        <div id="ace-editor-<%= f.options[:child_index] %>" class="editor">function foo(items) {
+        <div id="ace-editor-<%= f.options[:child_index] %>" class="editor" data-language="<%= @languages[f.options[:child_index]].name %>">function foo(items) {
             var x = "All this is syntax highlighted";
             return x;
         }</div>
-        <%= f.text_field :language, :class => 'language-field' %>
+        <!-- UMMMM lol -->
+        <%= f.text_field :language, :class => 'language-field', :value => @languages[f.options[:child_index]].name, :data => {:language => @languages[f.options[:child_index]].name } %>
         <script>
             var aceEditor<%= f.options[:child_index] %> = ace.edit("ace-editor-<%= f.options[:child_index] %>");
             $("#editor-<%= f.options[:child_index] %>").text(aceEditor<%= f.options[:child_index] %>.getValue());

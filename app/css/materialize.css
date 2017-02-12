@@ -9679,6 +9679,11 @@ td.min-width {
   margin: 0;
 }
 
+/* line 107, ../assets/sass/modules/_layout.scss */
+.display-none {
+  display: none;
+}
+
 /* line 1, ../assets/sass/modules/_snippets.scss */
 .container.snippet {
   width: 100%;

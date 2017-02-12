@@ -23,6 +23,7 @@
       <td><%= @snippet.space_complexity %></td>
       <td>
       <% for implementation in @snippet.implementations %>
+        <%= implementation.language %>
         <%= implementation.code %>
       <% end %>
       </td>
