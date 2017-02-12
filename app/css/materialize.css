@@ -9730,14 +9730,15 @@ td.min-width {
 }
 /* line 39, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent .editor-header .languages .language img {
-  max-width: 24px;
+  max-height: 32px;
+  max-width: 32px;
   transform: translateY(40%);
 }
-/* line 46, ../assets/sass/modules/_snippets.scss */
+/* line 47, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent .language-field, .snippet .snippet-editor-parent .code-field {
   display: none;
 }
-/* line 49, ../assets/sass/modules/_snippets.scss */
+/* line 50, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent .editor {
   position: absolute;
   top: 80px;
@@ -9746,15 +9747,15 @@ td.min-width {
   width: 100%;
   height: calc(100% - 80px);
 }
-/* line 57, ../assets/sass/modules/_snippets.scss */
+/* line 58, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent .editor ~ .editor {
   display: none;
 }
-/* line 61, ../assets/sass/modules/_snippets.scss */
+/* line 62, ../assets/sass/modules/_snippets.scss */
 .snippet #snippet_title {
   margin-bottom: 0;
 }
-/* line 64, ../assets/sass/modules/_snippets.scss */
+/* line 65, ../assets/sass/modules/_snippets.scss */
 .snippet .input-field {
   margin-top: 0;
 }
@@ -9802,4 +9803,12 @@ td.min-width {
   left: calc(100% + 15px);
   transform: translateY(-50%);
   max-width: 100px;
+}
+/* line 49, ../assets/sass/modules/_languages.scss */
+.container.language .languages .name {
+  font-size: 22px;
+}
+/* line 52, ../assets/sass/modules/_languages.scss */
+.container.language .languages .logo {
+  max-width: 32px;
 }

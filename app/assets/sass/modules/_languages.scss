@@ -37,12 +37,20 @@
   #preview_logo_unloaded{
     display: none;
   }
-  
+
   #preview_logo, #preview_logo_unloaded{
     position: absolute;
     top: 50%;
     left: calc(100% + 15px);
     transform: translateY(-50%);
     max-width: 100px;
+  }
+  .languages{
+    .name{
+      font-size: 22px;
+    }
+    .logo{
+      max-width: 32px;
+    }
   }
 }

@@ -9,11 +9,11 @@
         <th colspan="2"></th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="languages">
       <% @languages.each do |language| %>
         <tr>
-          <td><%= language.name %></td>
-          <td><%= image_tag language.logo.url %></td>
+          <td><span class="name"><%= language.name %></span></td>
+          <td><%= image_tag language.logo.url, :class => "logo" %></td>
           <!-- <td><%= link_to 'Show', language_path(language) %></td> -->
           <td class="min-width"><%= link_to 'Edit', edit_language_path(language) %></td>
           <td class="min-width"><%= link_to 'Destroy', language_path(language),
