@@ -9,6 +9,13 @@
 }
 
 .snippet{
+  .options{
+      margin-top: 40.7px;
+      float: right;
+      .option{
+        margin-left: 20px;
+      }
+  }
   .snippet-editor-parent{
     $editor-header-height: 80px;
     position: relative;
@@ -65,4 +72,19 @@
   .input-field{
     margin-top: 0;
   }
+  .data-fields{
+    margin-top: 30px;
+    .data-label{
+
+      font-size: 16px;
+      color: #9e9e9e;
+    }
+    .data-field{
+      font-size: 22px;
+    }
+  }
+  .snippet-back-link{
+    margin-top: 15px;
+  }
+
 }

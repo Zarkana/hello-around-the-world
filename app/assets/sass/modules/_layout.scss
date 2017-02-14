@@ -107,3 +107,11 @@ td.min-width{
 .display-none{
   display: none;
 }
+
+.noselection .ace_marker-layer .ace_selection {
+   background: transparent;
+}
+
+.noselection .ace_cursor {
+   color: transparent;
+}

@@ -6,6 +6,8 @@ class SnippetsController < ApplicationController
 
     def show
       @snippet = Snippet.find(params[:id])
+      @allLanguages = Language.all
+      @languages = Language.limit(@allLanguages.length)
       # @implementations = Implementation.find(params[:id])
     end
 

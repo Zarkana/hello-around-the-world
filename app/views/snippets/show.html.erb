@@ -1,39 +1,55 @@
 <div class="container snippet" id="content">
-  <h2 class="section-header center-align">Listing Snippet</h2>
-  <table>
-    <tr>
-      <th>Title</th>
-      <!-- <th>Code</th>
-      <th>Language</th> -->
-      <th>Runtime Complexity</th>
-      <th>Space Complexity</th>
-      <th>Code</th>
-      <th colspan="3"></th>
-    </tr>
+  <div class="row no-margin">
+    <h2 class="section-header col s8 m6  offset-s1 offset-m1 offset-l2"><%= @snippet.title %></h2>
+    <div class="col s2">
+      <div class="options">
+        <%= link_to 'Edit', edit_snippet_path(@snippet), class: "option" %>
+        <%= link_to 'Destroy', snippet_path(@snippet),
+              method: :delete,
+              data: { confirm: 'Are you sure?' },
+              class: "option" %>
+      </div>
+    </div>
+  </div>
+  <div class="row no-margin">
+    <script src="https://cdn.jsdelivr.net/ace/1.2.6/min/ace.js" type="text/javascript" charset="utf-8"></script>
+    <div id="snippet-editor-parent" class="snippet-editor-parent col s12 m10 offset-m1 l8 offset-l2">
+      <div class="editor-header">
+        <div class="languages">
+          <% @languages.each_with_index do |language,index| %>
+            <div class="language"><%= image_tag language.logo.url, :data => {:language => language.name } %></div>
+          <% end %>
+        </div>
+      </div>
+      <% @snippet.implementations.each_with_index do |implementation, index| %>
+        <div id="ace-editor-<%= index %>" class="editor" data-language="<%= implementation.language %>"><%= implementation.code %></div>
+        <script>
+          var aceEditor<%= index %> = ace.edit("ace-editor-<%= index %>");
+          $("#editor-<%= index %>").text(aceEditor<%= index %>.getValue());
+          aceEditor<%= index %>.getSession().on('change', function(e) {
+            $("#editor-<%= index %>").text(aceEditor<%= index %>.getValue());
+          });
 
-    <tr>
-      <td><%= @snippet.title %></td>
-      <!-- TODO: Show all related implementations -->
-      <!-- fields_for @implementation do |fa|
-        <td> fa.code </td>
-        <td> fa.language </td>
-        <td> fa.language </td>
-      end  -->
-      <td><%= @snippet.runtime_complexity %></td>
-      <td><%= @snippet.space_complexity %></td>
-      <td>
-      <% for implementation in @snippet.implementations %>
-        <%= implementation.language %>
-        <%= implementation.code %>
+          //aceEditor<%= index %>.renderer.setStyle("disabled", true)
+
+          aceEditor<%= index %>.setTheme("ace/theme/dawn");
+          //TODO: Get the right linter
+          aceEditor<%= index %>.getSession().setMode("ace/mode/javascript");
+        </script>
       <% end %>
-      </td>
-      <td></td>
-      <td><%= link_to 'Edit', edit_snippet_path(@snippet) %></td>
-      <td><%= link_to 'Destroy', snippet_path(@snippet),
-            method: :delete,
-            data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  </table>
-  <br>
-  <%= link_to 'Back', snippets_path %>
+    </div>
+  </div>
+  <div class="row data-fields">
+    <div class="input-field col s4 m4 l4 offset-s2 offset-m2 offset-l3">
+      <span class="data-label">Runtime Complexity</span><br>
+      <span class="data-field"><%= @snippet.runtime_complexity %></span>
+    </div>
+    <div class="input-field col s4 m4 l4">
+      <span class="data-label">Space Complexity</span><br>
+      <span class="data-field"><%= @snippet.space_complexity %></span>
+    </div>
+    <div class="col s12 m10 offset-m1 l8 offset-l2 snippet-back-link">
+      <%= link_to '&larr; Back'.html_safe, snippets_path %>
+    </div>
+  </div>
 </div>
