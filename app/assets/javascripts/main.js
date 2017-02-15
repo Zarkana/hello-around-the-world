@@ -97,3 +97,57 @@ function readURL(input) {
    reader.readAsDataURL(input.files[0]);
  }
 }
+
+function initializeEditor(aceEditor, index, language){
+  determineDisabled(aceEditor, index);
+
+  aceEditor.getSession().on('change', function(e) {
+    //update rails form on ace editor change
+    $("#editor-" + index).text(aceEditor.getValue());
+
+    determineDisabled(aceEditor, index);
+  });
+
+  aceEditor.setTheme("ace/theme/dawn");
+
+  //TODO: Get the language syntax-highlighter
+  switch(language.toLowerCase()){
+    case "c":
+        aceEditor.getSession().setMode("ace/mode/c_cpp");
+      break;
+    case "c++":
+        aceEditor.getSession().setMode("ace/mode/c_cpp");
+      break;
+    case "java":
+        aceEditor.getSession().setMode("ace/mode/c_cpp");
+      break;
+    case "javascript":
+        aceEditor.getSession().setMode("ace/mode/javascript");
+      break;
+    case "php":
+        aceEditor.getSession().setMode("ace/mode/php");
+      break;
+    case "python":
+        aceEditor.getSession().setMode("ace/mode/python");
+      break;
+    case "ruby":
+        aceEditor.getSession().setMode("ace/mode/ruby");
+      break;
+    default:
+      debugger;
+      aceEditor.getSession().setMode("ace/mode/" + language.toLowerCase());
+    break;
+  }
+}
+
+
+//add and remove disabled class for empty code snippet-back-link
+function determineDisabled(aceEditor, index){
+  var languageTab = "#language-tab-" + index;
+  if(!aceEditor.getValue()){
+    $(languageTab).addClass("disabled");
+  }
+  else{
+    $(languageTab).removeClass("disabled");
+  }
+}

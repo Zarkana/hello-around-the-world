@@ -17,24 +17,17 @@
       <div class="editor-header">
         <div class="languages">
           <% @languages.each_with_index do |language,index| %>
-            <div class="language"><%= image_tag language.logo.url, :data => {:language => language.name } %></div>
+            <div id="language-tab-<%= index %>" class="language"><%= image_tag language.logo.url, :data => {:language => language.name } %></div>
           <% end %>
         </div>
       </div>
       <% @snippet.implementations.each_with_index do |implementation, index| %>
         <div id="ace-editor-<%= index %>" class="editor" data-language="<%= implementation.language %>"><%= implementation.code %></div>
         <script>
-          var aceEditor<%= index %> = ace.edit("ace-editor-<%= index %>");
-          $("#editor-<%= index %>").text(aceEditor<%= index %>.getValue());
-          aceEditor<%= index %>.getSession().on('change', function(e) {
-            $("#editor-<%= index %>").text(aceEditor<%= index %>.getValue());
+          $(document).ready(function() {
+            initializeEditor(ace.edit("ace-editor-<%= index %>"), <%= index %>, "<%= implementation.language %>");
+            ace.edit("ace-editor-<%= index %>").setReadOnly(true);
           });
-
-          //aceEditor<%= index %>.renderer.setStyle("disabled", true)
-
-          aceEditor<%= index %>.setTheme("ace/theme/dawn");
-          //TODO: Get the right linter
-          aceEditor<%= index %>.getSession().setMode("ace/mode/javascript");
         </script>
       <% end %>
     </div>

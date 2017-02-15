@@ -36,16 +36,19 @@
           // padding-top: calc(#{$editor-header-height} / 4);
           &.active{
             //active is assigned after clicking on a language
-            background-color: rgba(51, 51, 51, 0.09);
+            background-color: rgba(51, 51, 51, 0.06);
           }
           &.disabled{
             img{
-              opacity: .33;
+              opacity: .20;
+              transition: opacity .5s ease-in-out;
+              -moz-transition: opacity .5s ease-in-out;
+              -webkit-transition: opacity .5s ease-in-out;
             }
           }
           &:hover{
             cursor: pointer;
-            background-color: rgba(51, 51, 51, 0.09);
+            background-color: rgba(51, 51, 51, 0.11);
           }
           &:before {
             content: "";

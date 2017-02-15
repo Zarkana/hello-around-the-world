@@ -36,21 +36,20 @@
         <%= f.text_field :language, :class => 'language-field', :value => @languages[f.options[:child_index]].name, :data => {:language => @languages[f.options[:child_index]].name } %>
 
         <script>
-            var aceEditor<%= f.options[:child_index] %> = ace.edit("ace-editor-<%= f.options[:child_index] %>");
+            //var aceEditor<%= f.options[:child_index] %> = ace.edit("ace-editor-<%= f.options[:child_index] %>");
             //was written to initally set, but jquery already detects on change
             //$("#editor-<%= f.options[:child_index] %>").text(aceEditor<%= f.options[:child_index] %>.getValue());
-            aceEditor<%= f.options[:child_index] %>.getSession().on('change', function(e) {
-              //update rails form on ace editor change
-              $("#editor-<%= f.options[:child_index] %>").text(aceEditor<%= f.options[:child_index] %>.getValue());
-              if(!aceEditor<%= f.options[:child_index] %>.getValue()){
-                $("#language-tab-<%= f.options[:child_index] %>").addClass("disabled");
-              }
+            $(document).ready(function() {
+              initializeEditor(ace.edit("ace-editor-<%= f.options[:child_index] %>"), <%= f.options[:child_index] %>, "<%= @languages[f.options[:child_index]].name %>");
+              //determineDisabled(aceEditor<%= f.options[:child_index] %>, <%= f.options[:child_index] %>);
             });
 
-
-            aceEditor<%= f.options[:child_index] %>.setTheme("ace/theme/dawn");
-            //TODO: Get the r
-            aceEditor<%= f.options[:child_index] %>.getSession().setMode("ace/mode/javascript");
+            // aceEditor<%= f.options[:child_index] %>.getSession().on('change', function(e) {
+            //   //update rails form on ace editor change
+            //   $("#editor-<%= f.options[:child_index] %>").text(aceEditor<%= f.options[:child_index] %>.getValue());
+            //
+            //   determineDisabled(aceEditor<%= f.options[:child_index] %>, <%= f.options[:child_index] %>);
+            // });
         </script>
 
       <% end %>
