@@ -68,6 +68,10 @@ $(document).ready(function() {
 
   //all input is disabled, until not empty remains disabled
 
+
+  //Select the first language and make it active
+  $(".language").first().addClass("active");
+
   //when language button is clicked switch active textareas
   $(".language").click(function(){
     var selectedLanguage = $(this).children("img[data-language]").attr("data-language");
@@ -75,6 +79,9 @@ $(document).ready(function() {
     //var activeAceEditor = $(".ace_editor").find("[data-language='" + selectedLanguage + "']");
     var activeAceEditor = $(".ace_editor[data-language='" + selectedLanguage + "']");
     activeAceEditor.show();
+
+    $(".language").removeClass("active");
+    $(this).addClass("active");
   });
 });
 

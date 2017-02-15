@@ -26,7 +26,7 @@
       <div class="editor-header">
         <div class="languages">
           <% @languages.each_with_index do |language,index| %>
-            <div class="language"><%= image_tag language.logo.url, :data => {:language => language.name } %></div>
+            <div id="language-tab-<%= index %>" class="language"><%= image_tag language.logo.url, :data => {:language => language.name } %></div>
           <% end %>
         </div>
       </div>
@@ -34,16 +34,25 @@
         <%= f.text_area :code, :id => "editor-#{f.options[:child_index]}", :class => 'code-field' %>
         <div id="ace-editor-<%= f.options[:child_index] %>" class="editor" data-language="<%= @languages[f.options[:child_index]].name %>"><%= f.object.code %></div>
         <%= f.text_field :language, :class => 'language-field', :value => @languages[f.options[:child_index]].name, :data => {:language => @languages[f.options[:child_index]].name } %>
+
         <script>
             var aceEditor<%= f.options[:child_index] %> = ace.edit("ace-editor-<%= f.options[:child_index] %>");
-            $("#editor-<%= f.options[:child_index] %>").text(aceEditor<%= f.options[:child_index] %>.getValue());
+            //was written to initally set, but jquery already detects on change
+            //$("#editor-<%= f.options[:child_index] %>").text(aceEditor<%= f.options[:child_index] %>.getValue());
             aceEditor<%= f.options[:child_index] %>.getSession().on('change', function(e) {
+              //update rails form on ace editor change
               $("#editor-<%= f.options[:child_index] %>").text(aceEditor<%= f.options[:child_index] %>.getValue());
+              if(!aceEditor<%= f.options[:child_index] %>.getValue()){
+                $("#language-tab-<%= f.options[:child_index] %>").addClass("disabled");
+              }
             });
+
+
             aceEditor<%= f.options[:child_index] %>.setTheme("ace/theme/dawn");
-            //TODO: Get the right linter 
+            //TODO: Get the r
             aceEditor<%= f.options[:child_index] %>.getSession().setMode("ace/mode/javascript");
         </script>
+
       <% end %>
     </div>
   </div>

@@ -27,12 +27,22 @@
       .languages{
         height: calc(#{$editor-header-height} - 15px);
         background-color: rgba(51, 51, 51, 0.08);
+        font-size: 0;
         .language{
           display: inline-block;
-          width: 65px;
+          width: 70px;
           height: 100%;
           text-align: center;
           // padding-top: calc(#{$editor-header-height} / 4);
+          &.active{
+            //active is assigned after clicking on a language
+            background-color: rgba(51, 51, 51, 0.09);
+          }
+          &.disabled{
+            img{
+              opacity: .33;
+            }
+          }
           &:hover{
             cursor: pointer;
             background-color: rgba(51, 51, 51, 0.09);
@@ -46,7 +56,7 @@
           img{
             max-height: 32px;
             max-width: 32px;
-            transform: translateY(40%);
+            transform: translateY(50%);
           }
         }
       }
