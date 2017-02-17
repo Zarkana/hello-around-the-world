@@ -9787,23 +9787,31 @@ td.min-width {
   margin-bottom: 0;
 }
 /* line 85, ../assets/sass/modules/_snippets.scss */
+.snippet .category-select {
+  margin: 20px 0 0 0;
+}
+/* line 87, ../assets/sass/modules/_snippets.scss */
+.snippet .category-select input[type=text] {
+  margin: 0;
+}
+/* line 91, ../assets/sass/modules/_snippets.scss */
 .snippet .input-field {
   margin-top: 0;
 }
-/* line 88, ../assets/sass/modules/_snippets.scss */
+/* line 94, ../assets/sass/modules/_snippets.scss */
 .snippet .data-fields {
   margin-top: 30px;
 }
-/* line 90, ../assets/sass/modules/_snippets.scss */
+/* line 96, ../assets/sass/modules/_snippets.scss */
 .snippet .data-fields .data-label {
   font-size: 16px;
   color: #9e9e9e;
 }
-/* line 95, ../assets/sass/modules/_snippets.scss */
+/* line 101, ../assets/sass/modules/_snippets.scss */
 .snippet .data-fields .data-field {
   font-size: 22px;
 }
-/* line 99, ../assets/sass/modules/_snippets.scss */
+/* line 105, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-back-link {
   margin-top: 15px;
 }

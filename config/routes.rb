@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   resources :languages
 
+  resources :categories
+
+  get 'categories/index'
+
   get 'study/index'
 
   get 'quiz/index'
