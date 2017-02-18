@@ -6,6 +6,7 @@ class SnippetsController < ApplicationController
 
     def show
       @snippet = Snippet.find(params[:id])
+      @category = Category.find_by_id(@snippet.category_id)
       @allLanguages = Language.all
       @languages = Language.limit(@allLanguages.length)
       # @implementations = Implementation.find(params[:id])
@@ -32,6 +33,9 @@ class SnippetsController < ApplicationController
 
     def create
       @snippet = Snippet.new(snippet_params)
+      # Include languages so that when errors redirect to new it won't error
+      @allLanguages = Language.all
+      @languages = Language.limit(@allLanguages.length)
 
       # @implementation = Implementation.new( params.require(:implementation).permit(:code, :language) )
       if @snippet.save
@@ -65,7 +69,7 @@ class SnippetsController < ApplicationController
 
     private
       def snippet_params
-        params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, implementations_attributes:[:language, :code, :id, :snippet_id, :_destroy])
+        params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, :category, :category_id, implementations_attributes:[:language, :code, :id, :snippet_id, :_destroy])
       end
 
 end

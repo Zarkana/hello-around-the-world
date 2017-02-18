@@ -1,6 +1,8 @@
 <div class="container snippet" id="content">
   <div class="row no-margin">
-    <h2 class="section-header col s8 m6  offset-s1 offset-m1 offset-l2"><%= @snippet.title %></h2>
+    <div class="col s8 m6  offset-s1 offset-m1 offset-l2">
+      <h2 class="section-header"><%= @snippet.title %><span class="snippet-category-label"><% unless @category.blank? %>- <%= @category.name %><% end %></span></h2>      
+    </div>
     <div class="col s2">
       <div class="options">
         <%= link_to 'Edit', edit_snippet_path(@snippet), class: "option" %>

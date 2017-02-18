@@ -54,6 +54,9 @@ $(document).ready(function() {
       if (e.keyCode == ctrlKey || e.keyCode == cmdKey) ctrlDown = false;
   });
 
+  //initializes the error modal
+  $('.error-modal').modal('open');
+
   $(document).keydown(function(e) {
       if (ctrlDown && e.keyCode == sKey)
       {

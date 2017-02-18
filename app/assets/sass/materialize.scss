@@ -12,6 +12,7 @@
 @import "components/normalize";
 
 // components
+@import "components/alerts";
 @import "components/global";
 @import "components/icons-material-design";
 @import "components/grid";
@@ -38,8 +39,11 @@
 @import "components/date_picker/default";
 @import "components/date_picker/default.date";
 @import "components/date_picker/default.time";
+
+// modules
 @import "modules/quiz";
 @import "modules/study";
 @import "modules/layout";
 @import "modules/snippets";
 @import "modules/languages";
+@import "modules/categories";

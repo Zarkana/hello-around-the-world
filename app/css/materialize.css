@@ -3103,6 +3103,17 @@ th {
   padding: 0;
 }
 
+/* line 1, ../assets/sass/components/_alerts.scss */
+#card-alert button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
 /* line 3, ../assets/sass/components/_global.scss */
 html {
   box-sizing: border-box;
@@ -9867,4 +9878,26 @@ td.min-width {
 /* line 52, ../assets/sass/modules/_languages.scss */
 .container.language .languages .logo {
   max-width: 32px;
+}
+
+/* line 1, ../assets/sass/modules/_categories.scss */
+.container.category {
+  width: 20%;
+  padding-top: 10px;
+}
+@media (max-width: 992px) {
+  /* line 8, ../assets/sass/modules/_categories.scss */
+  .container.category {
+    width: 40%;
+  }
+}
+@media (max-width: 600px) {
+  /* line 15, ../assets/sass/modules/_categories.scss */
+  .container.category {
+    width: 70%;
+  }
+}
+/* line 21, ../assets/sass/modules/_categories.scss */
+.container.category table {
+  margin-top: 15px;
 }

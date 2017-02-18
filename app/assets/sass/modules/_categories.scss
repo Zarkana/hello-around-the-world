@@ -1,0 +1,24 @@
+.container.category{
+  width: 20%;
+  //So that the editor can stretch from the left to the right
+  padding-top: 10px;
+
+  // At < 992
+  @media (max-width: 992px){
+    &{
+      width: 40%;
+    }
+  }
+
+  // At < 600
+  @media (max-width: 600px){
+    &{
+      width: 70%;
+
+    }
+  }
+
+  table{
+    margin-top: 15px;
+  }
+}

@@ -60,6 +60,10 @@ main{
   top: 2.2rem;
 }
 
+.select-dropdown{
+  color: #9e9e9e;
+}
+
 .page-footer{
   position: absolute;
   right: 0;
@@ -88,6 +92,10 @@ main{
       font-size: 1.30rem;
     }
   }
+}
+
+.modal.error-modal{
+  width: 20%;
 }
 
 td.min-width{

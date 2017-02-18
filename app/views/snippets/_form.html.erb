@@ -20,7 +20,7 @@
       <%= f.text_field :title %>
     </div>
     <div class="section input-field col s5 m3 offset-s1 offset-m1 offset-l2">
-      <%= collection_select(:category_id, 0, Category.all, :id, :name,  {}, {:class=>'materialize-select category-select'} ) %>
+      <%= collection_select(:snippet, :category_id, Category.all, :id, :name,  {:include_blank=>'No Category'}, {:include_blank=>'Nothing selected', :class=>'materialize-select category-select'} ) %>
     </div>
   </div>
   <div class="row no-margin">
