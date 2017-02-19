@@ -1,5 +1,4 @@
 <div class="container quiz" id="content">
-
   <div class="row center quiz-list">
     <div id="language-select" class="light-blue-text col s12 m8 offset-m2 center-align">
       <h2 class="section-header">Quizing yourself in
@@ -17,9 +16,11 @@
   <div class="row center quiz-list">
     <div class="col s12 m8 offset-m2">
       <ul class="collapsible" data-collapsible="accordion">
+        <% @singleSnippets.each do |snippet| %>
         <li>
           <div class="collapsible-header">
-            Hello World!
+            <%= snippet.title %>
+            <%= snippet.active %>
             <div class="switch">
               <label>
                 <input checked type="checkbox">
@@ -28,9 +29,10 @@
             </div>
           </div>
         </li>
+        <% end %>
         <li>
-          <div class="collapsible-header expandable">
-            Algorithms - Sorting
+          <div class="collapsible-header">
+            DIVIDER
             <div class="switch">
               <label>
                 <input checked type="checkbox">
@@ -38,101 +40,41 @@
               </label>
             </div>
           </div>
+        </li>
+        <% @categories.each do |category| %>
+        <li>
+          <div class="collapsible-header expandable <% if category.snippets.blank? %>disabled<% end %>">
+            <div class="arrow-parent"><%= image_tag("dropdown-arrow.png", :class => "arrow") %></div>
+            <%= category.name %>
+            <%= category.active %>
+            <div class="switch">
+              <label>
+                <input <% if category.snippets.blank? %>disabled<% end %> <% if category.active = true %>checked<% end %> type="checkbox">
+                <span class="lever"></span>
+              </label>
+            </div>
+          </div>
+          <% unless category.snippets.blank? %>
           <div class="collapsible-body">
             <ul class="collapsible sub-menu" data-collapsible="accordion">
               <li>
+                <% category.snippets.each do |snippet| %>
                 <div class="collapsible-header">
-                  Bubble Sort
+                  <%= snippet.title %>
                   <div class="switch">
                     <label>
-                      <input checked type="checkbox">
+                      <input <% if category.active = true %>checked<% end %> type="checkbox">
                       <span class="lever"></span>
                     </label>
                   </div>
                 </div>
-              </li>
-              <li>
-                <div class="collapsible-header">
-                  Merge Sort
-                  <div class="switch">
-                    <label>
-                      <input checked type="checkbox">
-                      <span class="lever"></span>
-                    </label>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="collapsible-header">
-                  Heapsort
-                  <div class="switch">
-                    <label>
-                      <input checked type="checkbox">
-                      <span class="lever"></span>
-                    </label>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="collapsible-header">
-                  Insertion Sort
-                  <div class="switch">
-                    <label>
-                      <input checked type="checkbox">
-                      <span class="lever"></span>
-                    </label>
-                  </div>
-                </div>
-                <div class="collapsible-header">
-                  Selection Sort
-                  <div class="switch">
-                    <label>
-                      <input checked type="checkbox">
-                      <span class="lever"></span>
-                    </label>
-                  </div>
-                </div>
+                <% end %>
               </li>
             </ul>
           </div>
+          <% end %>
         </li>
-        <li>
-          <div class="collapsible-header expandable">
-            Algorithms - Search
-            <div class="switch">
-              <label>
-                <input checked type="checkbox">
-                <span class="lever"></span>
-              </label>
-            </div>
-          </div>
-          <div class="collapsible-body">
-            <ul class="collapsible sub-menu" data-collapsible="accordion">
-              <li>
-                <div class="collapsible-header">
-                  Linear Search
-                  <div class="switch">
-                    <label>
-                      <input checked type="checkbox">
-                      <span class="lever"></span>
-                    </label>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="collapsible-header">
-                  Binary Search
-                  <div class="switch">
-                    <label>
-                      <input checked type="checkbox">
-                      <span class="lever"></span>
-                    </label>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </li>
+        <% end %>
         <!--<li>
           <div class="collapsible-header">Web Development</div>
           <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>

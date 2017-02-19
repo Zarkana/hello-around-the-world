@@ -107,11 +107,48 @@
   .collapsible-header{
     border-bottom: none;
     cursor: default;
+    .arrow-parent{
+      width: 16px;
+      float: left;
+      .arrow{
+        transition: transform .2s;
+        width: 100%;
+        transform: rotate(-90deg);
+      }
+    }
+
+    &.active{
+      .arrow{
+        transform: none;
+      }
+    }
+
+    &.active.disabled{
+      .arrow{
+        transform: rotate(-90deg);
+      }
+    }
+
+    &:last-child{
+
+    }
+    &.disabled{
+      @extend .grey-text;
+      .switch .lever{
+        background-color: #e4e4e4;
+        &:after{
+          background-color: #d0d0d0;
+        }
+      }
+    }
+  }
+  .collapsible.sub-menu{
+    box-shadow: none;
   }
 
-  .expandable.collapsible-header:hover{
+  .collapsible-header:hover{
     cursor: pointer;
-    @extend .grey, .lighten-3;
+    @extend .grey, .lighten-4;
   }
 
   ul.collapsible{

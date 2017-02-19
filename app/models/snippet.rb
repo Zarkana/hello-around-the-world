@@ -6,4 +6,11 @@ class Snippet < ApplicationRecord
   # :dependent => :destroy
 
   accepts_nested_attributes_for :implementations, allow_destroy: true
+
+  after_initialize :init
+
+  def init
+    self.active  ||= true   #will set the default value only if it's nil
+  end
+
 end

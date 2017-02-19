@@ -88,6 +88,8 @@ $(document).ready(function() {
   });
 });
 
+
+
 //Will add the image preview of selected file to upload
 function readURL(input) {
  if (input.files && input.files[0]) {

@@ -19,7 +19,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.materialize-red.lighten-4, .question-navigation.buttons .pagination .materialize-red.circle, .container.study .study-content-parent .materialize-red.section-header-container {
+.materialize-red.lighten-4, .question-navigation.buttons .pagination .materialize-red.circle, .quiz-list .materialize-red.collapsible-header:hover, .container.study .study-content-parent .materialize-red.section-header-container {
   background-color: #f8c1c3 !important;
 }
 
@@ -29,7 +29,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.materialize-red.lighten-3, .quiz-list .materialize-red.expandable.collapsible-header:hover {
+.materialize-red.lighten-3 {
   background-color: #f3989b !important;
 }
 
@@ -119,7 +119,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.lighten-4, .question-navigation.buttons .pagination .red.circle, .container.study .study-content-parent .red.section-header-container {
+.red.lighten-4, .question-navigation.buttons .pagination .red.circle, .quiz-list .red.collapsible-header:hover, .container.study .study-content-parent .red.section-header-container {
   background-color: #FFCDD2 !important;
 }
 
@@ -129,7 +129,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.lighten-3, .quiz-list .red.expandable.collapsible-header:hover {
+.red.lighten-3 {
   background-color: #EF9A9A !important;
 }
 
@@ -259,7 +259,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.pink.lighten-4, .question-navigation.buttons .pagination .pink.circle, .container.study .study-content-parent .pink.section-header-container {
+.pink.lighten-4, .question-navigation.buttons .pagination .pink.circle, .quiz-list .pink.collapsible-header:hover, .container.study .study-content-parent .pink.section-header-container {
   background-color: #f8bbd0 !important;
 }
 
@@ -269,7 +269,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.pink.lighten-3, .quiz-list .pink.expandable.collapsible-header:hover {
+.pink.lighten-3 {
   background-color: #f48fb1 !important;
 }
 
@@ -399,7 +399,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.purple.lighten-4, .question-navigation.buttons .pagination .purple.circle, .container.study .study-content-parent .purple.section-header-container {
+.purple.lighten-4, .question-navigation.buttons .pagination .purple.circle, .quiz-list .purple.collapsible-header:hover, .container.study .study-content-parent .purple.section-header-container {
   background-color: #e1bee7 !important;
 }
 
@@ -409,7 +409,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.purple.lighten-3, .quiz-list .purple.expandable.collapsible-header:hover {
+.purple.lighten-3 {
   background-color: #ce93d8 !important;
 }
 
@@ -539,7 +539,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-purple.lighten-4, .question-navigation.buttons .pagination .deep-purple.circle, .container.study .study-content-parent .deep-purple.section-header-container {
+.deep-purple.lighten-4, .question-navigation.buttons .pagination .deep-purple.circle, .quiz-list .deep-purple.collapsible-header:hover, .container.study .study-content-parent .deep-purple.section-header-container {
   background-color: #d1c4e9 !important;
 }
 
@@ -549,7 +549,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-purple.lighten-3, .quiz-list .deep-purple.expandable.collapsible-header:hover {
+.deep-purple.lighten-3 {
   background-color: #b39ddb !important;
 }
 
@@ -679,7 +679,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.indigo.lighten-4, .question-navigation.buttons .pagination .indigo.circle, .container.study .study-content-parent .indigo.section-header-container {
+.indigo.lighten-4, .question-navigation.buttons .pagination .indigo.circle, .quiz-list .indigo.collapsible-header:hover, .container.study .study-content-parent .indigo.section-header-container {
   background-color: #c5cae9 !important;
 }
 
@@ -689,7 +689,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.indigo.lighten-3, .quiz-list .indigo.expandable.collapsible-header:hover {
+.indigo.lighten-3 {
   background-color: #9fa8da !important;
 }
 
@@ -819,7 +819,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-4, .question-navigation.buttons .pagination .circle, .container.study .study-content-parent .blue.section-header-container, .container.study .study-content-parent .snippet .snippet-editor-parent .section-header-container.editor-header, .snippet .snippet-editor-parent .container.study .study-content-parent .section-header-container.editor-header, .container.study .study-content-parent .container.language .section-header-container.custom-file-upload, .container.language .container.study .study-content-parent .section-header-container.custom-file-upload, .snippet .snippet-editor-parent .lighten-4.editor-header, .container.language .lighten-4.custom-file-upload {
+.blue.lighten-4, .question-navigation.buttons .pagination .circle, .quiz-list .blue.collapsible-header:hover, .quiz-list .snippet .snippet-editor-parent .collapsible-header.editor-header:hover, .snippet .snippet-editor-parent .quiz-list .collapsible-header.editor-header:hover, .quiz-list .container.language .collapsible-header.custom-file-upload:hover, .container.language .quiz-list .collapsible-header.custom-file-upload:hover, .container.study .study-content-parent .blue.section-header-container, .container.study .study-content-parent .snippet .snippet-editor-parent .section-header-container.editor-header, .snippet .snippet-editor-parent .container.study .study-content-parent .section-header-container.editor-header, .container.study .study-content-parent .container.language .section-header-container.custom-file-upload, .container.language .container.study .study-content-parent .section-header-container.custom-file-upload, .snippet .snippet-editor-parent .lighten-4.editor-header, .container.language .lighten-4.custom-file-upload {
   background-color: #BBDEFB !important;
 }
 
@@ -829,7 +829,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue.lighten-3, .question-navigation.buttons .pagination .lighten-3.circle, .question-navigation.buttons .pagination .quiz-list .circle.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination .circle.expandable.collapsible-header:hover, .quiz-list .blue.expandable.collapsible-header:hover, .quiz-list .snippet .snippet-editor-parent .expandable.collapsible-header.editor-header:hover, .snippet .snippet-editor-parent .quiz-list .expandable.collapsible-header.editor-header:hover, .quiz-list .container.language .expandable.collapsible-header.custom-file-upload:hover, .container.language .quiz-list .expandable.collapsible-header.custom-file-upload:hover, .snippet .snippet-editor-parent .lighten-3.editor-header, .container.language .lighten-3.custom-file-upload {
+.blue.lighten-3, .question-navigation.buttons .pagination .lighten-3.circle, .snippet .snippet-editor-parent .lighten-3.editor-header, .container.language .lighten-3.custom-file-upload {
   background-color: #90CAF9 !important;
 }
 
@@ -959,7 +959,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-blue.lighten-4, .question-navigation.buttons .pagination .light-blue.circle, .container.study .study-content-parent .light-blue.section-header-container {
+.light-blue.lighten-4, .question-navigation.buttons .pagination .light-blue.circle, .quiz-list .light-blue.collapsible-header:hover, .container.study .study-content-parent .light-blue.section-header-container {
   background-color: #b3e5fc !important;
 }
 
@@ -969,7 +969,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-blue.lighten-3, .quiz-list .light-blue.expandable.collapsible-header:hover {
+.light-blue.lighten-3 {
   background-color: #81d4fa !important;
 }
 
@@ -1099,7 +1099,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.cyan.lighten-4, .question-navigation.buttons .pagination .cyan.circle, .container.study .study-content-parent .cyan.section-header-container {
+.cyan.lighten-4, .question-navigation.buttons .pagination .cyan.circle, .quiz-list .cyan.collapsible-header:hover, .container.study .study-content-parent .cyan.section-header-container {
   background-color: #b2ebf2 !important;
 }
 
@@ -1109,7 +1109,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.cyan.lighten-3, .quiz-list .cyan.expandable.collapsible-header:hover {
+.cyan.lighten-3 {
   background-color: #80deea !important;
 }
 
@@ -1239,7 +1239,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.teal.lighten-4, .question-navigation.buttons .pagination .teal.circle, .container.study .study-content-parent .teal.section-header-container {
+.teal.lighten-4, .question-navigation.buttons .pagination .teal.circle, .quiz-list .teal.collapsible-header:hover, .container.study .study-content-parent .teal.section-header-container {
   background-color: #b2dfdb !important;
 }
 
@@ -1249,7 +1249,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.teal.lighten-3, .quiz-list .teal.expandable.collapsible-header:hover {
+.teal.lighten-3 {
   background-color: #80cbc4 !important;
 }
 
@@ -1379,7 +1379,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.green.lighten-4, .question-navigation.buttons .pagination .green.circle, .container.study .study-content-parent .green.section-header-container {
+.green.lighten-4, .question-navigation.buttons .pagination .green.circle, .quiz-list .green.collapsible-header:hover, .container.study .study-content-parent .green.section-header-container {
   background-color: #C8E6C9 !important;
 }
 
@@ -1389,7 +1389,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.green.lighten-3, .quiz-list .green.expandable.collapsible-header:hover {
+.green.lighten-3 {
   background-color: #A5D6A7 !important;
 }
 
@@ -1519,7 +1519,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-green.lighten-4, .question-navigation.buttons .pagination .light-green.circle, .container.study .study-content-parent .light-green.section-header-container {
+.light-green.lighten-4, .question-navigation.buttons .pagination .light-green.circle, .quiz-list .light-green.collapsible-header:hover, .container.study .study-content-parent .light-green.section-header-container {
   background-color: #dcedc8 !important;
 }
 
@@ -1529,7 +1529,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.light-green.lighten-3, .quiz-list .light-green.expandable.collapsible-header:hover {
+.light-green.lighten-3 {
   background-color: #c5e1a5 !important;
 }
 
@@ -1659,7 +1659,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.lime.lighten-4, .question-navigation.buttons .pagination .lime.circle, .container.study .study-content-parent .lime.section-header-container {
+.lime.lighten-4, .question-navigation.buttons .pagination .lime.circle, .quiz-list .lime.collapsible-header:hover, .container.study .study-content-parent .lime.section-header-container {
   background-color: #f0f4c3 !important;
 }
 
@@ -1669,7 +1669,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.lime.lighten-3, .quiz-list .lime.expandable.collapsible-header:hover {
+.lime.lighten-3 {
   background-color: #e6ee9c !important;
 }
 
@@ -1799,7 +1799,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.yellow.lighten-4, .question-navigation.buttons .pagination .yellow.circle, .container.study .study-content-parent .yellow.section-header-container {
+.yellow.lighten-4, .question-navigation.buttons .pagination .yellow.circle, .quiz-list .yellow.collapsible-header:hover, .container.study .study-content-parent .yellow.section-header-container {
   background-color: #fff9c4 !important;
 }
 
@@ -1809,7 +1809,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.yellow.lighten-3, .quiz-list .yellow.expandable.collapsible-header:hover {
+.yellow.lighten-3 {
   background-color: #fff59d !important;
 }
 
@@ -1939,7 +1939,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.amber.lighten-4, .question-navigation.buttons .pagination .amber.circle, .container.study .study-content-parent .amber.section-header-container {
+.amber.lighten-4, .question-navigation.buttons .pagination .amber.circle, .quiz-list .amber.collapsible-header:hover, .container.study .study-content-parent .amber.section-header-container {
   background-color: #ffecb3 !important;
 }
 
@@ -1949,7 +1949,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.amber.lighten-3, .quiz-list .amber.expandable.collapsible-header:hover {
+.amber.lighten-3 {
   background-color: #ffe082 !important;
 }
 
@@ -2079,7 +2079,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.orange.lighten-4, .question-navigation.buttons .pagination .orange.circle, .container.study .study-content-parent .orange.section-header-container {
+.orange.lighten-4, .question-navigation.buttons .pagination .orange.circle, .quiz-list .orange.collapsible-header:hover, .container.study .study-content-parent .orange.section-header-container {
   background-color: #ffe0b2 !important;
 }
 
@@ -2089,7 +2089,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.orange.lighten-3, .quiz-list .orange.expandable.collapsible-header:hover {
+.orange.lighten-3 {
   background-color: #ffcc80 !important;
 }
 
@@ -2219,7 +2219,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-orange.lighten-4, .question-navigation.buttons .pagination .deep-orange.circle, .container.study .study-content-parent .deep-orange.section-header-container {
+.deep-orange.lighten-4, .question-navigation.buttons .pagination .deep-orange.circle, .quiz-list .deep-orange.collapsible-header:hover, .container.study .study-content-parent .deep-orange.section-header-container {
   background-color: #ffccbc !important;
 }
 
@@ -2229,7 +2229,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.deep-orange.lighten-3, .quiz-list .deep-orange.expandable.collapsible-header:hover {
+.deep-orange.lighten-3 {
   background-color: #ffab91 !important;
 }
 
@@ -2359,7 +2359,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.brown.lighten-4, .question-navigation.buttons .pagination .brown.circle, .container.study .study-content-parent .brown.section-header-container {
+.brown.lighten-4, .question-navigation.buttons .pagination .brown.circle, .quiz-list .brown.collapsible-header:hover, .container.study .study-content-parent .brown.section-header-container {
   background-color: #d7ccc8 !important;
 }
 
@@ -2369,7 +2369,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.brown.lighten-3, .quiz-list .brown.expandable.collapsible-header:hover {
+.brown.lighten-3 {
   background-color: #bcaaa4 !important;
 }
 
@@ -2459,7 +2459,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue-grey.lighten-4, .question-navigation.buttons .pagination .blue-grey.circle, .container.study .study-content-parent .blue-grey.section-header-container {
+.blue-grey.lighten-4, .question-navigation.buttons .pagination .blue-grey.circle, .quiz-list .blue-grey.collapsible-header:hover, .container.study .study-content-parent .blue-grey.section-header-container {
   background-color: #cfd8dc !important;
 }
 
@@ -2469,7 +2469,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.blue-grey.lighten-3, .quiz-list .blue-grey.expandable.collapsible-header:hover {
+.blue-grey.lighten-3 {
   background-color: #b0bec5 !important;
 }
 
@@ -2539,102 +2539,102 @@
 }
 
 /* line 370, ../assets/sass/components/_color.scss */
-.grey, #question-answer, #question-attempt, .quiz-list .expandable.collapsible-header:hover, .quiz-list .sub-menu .collapsible-header, .container.study .study-content-parent, .container.study .study-content-parent .section-header-container {
+.grey, #question-answer, #question-attempt, .quiz-list .collapsible-header:hover, .quiz-list .sub-menu .collapsible-header, .container.study .study-content-parent, .container.study .study-content-parent .section-header-container {
   background-color: #9e9e9e !important;
 }
 
 /* line 373, ../assets/sass/components/_color.scss */
-.grey-text {
+.grey-text, .quiz-list .collapsible-header.disabled {
   color: #9e9e9e !important;
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-5, #question-answer, #question-attempt, .quiz-list .lighten-5.expandable.collapsible-header:hover, .quiz-list .sub-menu .expandable.collapsible-header:hover, .quiz-list .container.study .expandable.collapsible-header.study-content-parent:hover, .container.study .quiz-list .expandable.collapsible-header.study-content-parent:hover, .quiz-list .expandable.collapsible-header.section-header:hover, .quiz-list .sub-menu .collapsible-header, .container.study .study-content-parent, .container.study .study-content-parent .lighten-5.section-header-container, .container.study .study-content-parent .quiz-list .sub-menu .section-header-container.collapsible-header, .quiz-list .sub-menu .container.study .study-content-parent .section-header-container.collapsible-header, .container.study .study-content-parent .section-header-container.study-content-parent, .container.study .study-content-parent .section-header-container.section-header, .grey.section-header {
+.grey.lighten-5, #question-answer, #question-attempt, .quiz-list .lighten-5.collapsible-header:hover, .quiz-list .collapsible-header.section-header:hover, .quiz-list .sub-menu .collapsible-header, .container.study .study-content-parent, .container.study .study-content-parent .lighten-5.section-header-container, .container.study .study-content-parent .quiz-list .sub-menu .section-header-container.collapsible-header, .quiz-list .sub-menu .container.study .study-content-parent .section-header-container.collapsible-header, .container.study .study-content-parent .section-header-container.study-content-parent, .container.study .study-content-parent .section-header-container.section-header, .grey.section-header {
   background-color: #fafafa !important;
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.grey-text.text-lighten-5 {
+.grey-text.text-lighten-5, .quiz-list .text-lighten-5.collapsible-header.disabled {
   color: #fafafa !important;
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-4, .question-navigation.buttons .pagination .grey.circle, .question-navigation.buttons .pagination .circle#question-answer, .question-navigation.buttons .pagination .circle#question-attempt, .question-navigation.buttons .pagination .quiz-list .circle.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination .circle.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu .circle.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination .circle.collapsible-header, .question-navigation.buttons .pagination .container.study .circle.study-content-parent, .container.study .question-navigation.buttons .pagination .circle.study-content-parent, .lighten-4#question-answer, .container.study .study-content-parent #question-answer.section-header-container, .lighten-4#question-attempt, .container.study .study-content-parent #question-attempt.section-header-container, .quiz-list .lighten-4.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-4.collapsible-header, .container.study .lighten-4.study-content-parent, .container.study .study-content-parent .section-header-container {
+.grey.lighten-4, .question-navigation.buttons .pagination .grey.circle, .question-navigation.buttons .pagination .circle#question-answer, .question-navigation.buttons .pagination .circle#question-attempt, .question-navigation.buttons .pagination .quiz-list .circle.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination .circle.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu .circle.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination .circle.collapsible-header, .question-navigation.buttons .pagination .container.study .circle.study-content-parent, .container.study .question-navigation.buttons .pagination .circle.study-content-parent, .lighten-4#question-answer, .quiz-list #question-answer.collapsible-header:hover, .container.study .study-content-parent #question-answer.section-header-container, .lighten-4#question-attempt, .quiz-list #question-attempt.collapsible-header:hover, .container.study .study-content-parent #question-attempt.section-header-container, .quiz-list .collapsible-header:hover, .quiz-list .sub-menu .lighten-4.collapsible-header, .container.study .lighten-4.study-content-parent, .container.study .study-content-parent .section-header-container {
   background-color: #f5f5f5 !important;
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.grey-text.text-lighten-4 {
+.grey-text.text-lighten-4, .quiz-list .text-lighten-4.collapsible-header.disabled {
   color: #f5f5f5 !important;
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-3, .lighten-3#question-answer, .quiz-list #question-answer.expandable.collapsible-header:hover, .lighten-3#question-attempt, .quiz-list #question-attempt.expandable.collapsible-header:hover, .quiz-list .expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-3.collapsible-header, .container.study .lighten-3.study-content-parent, .container.study .study-content-parent .lighten-3.section-header-container {
+.grey.lighten-3, .lighten-3#question-answer, .lighten-3#question-attempt, .quiz-list .lighten-3.collapsible-header:hover, .quiz-list .sub-menu .lighten-3.collapsible-header, .container.study .lighten-3.study-content-parent, .container.study .study-content-parent .lighten-3.section-header-container {
   background-color: #eeeeee !important;
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.grey-text.text-lighten-3 {
+.grey-text.text-lighten-3, .quiz-list .text-lighten-3.collapsible-header.disabled {
   color: #eeeeee !important;
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-2, .question-navigation.buttons .pagination li.grey.active, .question-navigation.buttons .pagination li.active#question-answer, .question-navigation.buttons .pagination li.active#question-attempt, .question-navigation.buttons .pagination .quiz-list li.active.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination li.active.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu li.active.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination li.active.collapsible-header, .question-navigation.buttons .pagination .container.study li.active.study-content-parent, .container.study .question-navigation.buttons .pagination li.active.study-content-parent, .question-navigation.buttons .pagination .container.study .study-content-parent li.active.section-header-container, .container.study .study-content-parent .question-navigation.buttons .pagination li.active.section-header-container, .lighten-2#question-answer, .snippet .snippet-editor-parent #question-answer.editor-header, .lighten-2#question-attempt, .snippet .snippet-editor-parent #question-attempt.editor-header, .quiz-list .lighten-2.expandable.collapsible-header:hover, .quiz-list .snippet .snippet-editor-parent .expandable.collapsible-header.editor-header:hover, .snippet .snippet-editor-parent .quiz-list .expandable.collapsible-header.editor-header:hover, .quiz-list .sub-menu .lighten-2.collapsible-header, .quiz-list .sub-menu .snippet .snippet-editor-parent .collapsible-header.editor-header, .snippet .snippet-editor-parent .quiz-list .sub-menu .collapsible-header.editor-header, .container.study .lighten-2.study-content-parent, .container.study .snippet .snippet-editor-parent .study-content-parent.editor-header, .snippet .snippet-editor-parent .container.study .study-content-parent.editor-header, .container.study .study-content-parent .lighten-2.section-header-container, .container.study .study-content-parent .snippet .snippet-editor-parent .section-header-container.editor-header, .snippet .snippet-editor-parent .container.study .study-content-parent .section-header-container.editor-header, .snippet .snippet-editor-parent .grey.editor-header {
+.grey.lighten-2, .question-navigation.buttons .pagination li.grey.active, .question-navigation.buttons .pagination li.active#question-answer, .question-navigation.buttons .pagination li.active#question-attempt, .question-navigation.buttons .pagination .quiz-list li.active.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination li.active.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu li.active.collapsible-header, .quiz-list .sub-menu .question-navigation.buttons .pagination li.active.collapsible-header, .question-navigation.buttons .pagination .container.study li.active.study-content-parent, .container.study .question-navigation.buttons .pagination li.active.study-content-parent, .question-navigation.buttons .pagination .container.study .study-content-parent li.active.section-header-container, .container.study .study-content-parent .question-navigation.buttons .pagination li.active.section-header-container, .lighten-2#question-answer, .snippet .snippet-editor-parent #question-answer.editor-header, .lighten-2#question-attempt, .snippet .snippet-editor-parent #question-attempt.editor-header, .quiz-list .lighten-2.collapsible-header:hover, .quiz-list .snippet .snippet-editor-parent .collapsible-header.editor-header:hover, .snippet .snippet-editor-parent .quiz-list .collapsible-header.editor-header:hover, .quiz-list .sub-menu .lighten-2.collapsible-header, .quiz-list .sub-menu .snippet .snippet-editor-parent .collapsible-header.editor-header, .snippet .snippet-editor-parent .quiz-list .sub-menu .collapsible-header.editor-header, .container.study .lighten-2.study-content-parent, .container.study .snippet .snippet-editor-parent .study-content-parent.editor-header, .snippet .snippet-editor-parent .container.study .study-content-parent.editor-header, .container.study .study-content-parent .lighten-2.section-header-container, .container.study .study-content-parent .snippet .snippet-editor-parent .section-header-container.editor-header, .snippet .snippet-editor-parent .container.study .study-content-parent .section-header-container.editor-header, .snippet .snippet-editor-parent .grey.editor-header {
   background-color: #e0e0e0 !important;
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.grey-text.text-lighten-2 {
+.grey-text.text-lighten-2, .quiz-list .text-lighten-2.collapsible-header.disabled {
   color: #e0e0e0 !important;
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.lighten-1, .question-navigation.buttons .pagination li.grey:hover, .question-navigation.buttons .pagination li#question-answer:hover, .question-navigation.buttons .pagination li#question-attempt:hover, .question-navigation.buttons .pagination .quiz-list li.expandable.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination li.expandable.collapsible-header:hover, .question-navigation.buttons .pagination .quiz-list .sub-menu li.collapsible-header:hover, .quiz-list .sub-menu .question-navigation.buttons .pagination li.collapsible-header:hover, .question-navigation.buttons .pagination .container.study li.study-content-parent:hover, .container.study .question-navigation.buttons .pagination li.study-content-parent:hover, .question-navigation.buttons .pagination .container.study .study-content-parent li.section-header-container:hover, .container.study .study-content-parent .question-navigation.buttons .pagination li.section-header-container:hover, .lighten-1#question-answer, .lighten-1#question-attempt, .quiz-list .lighten-1.expandable.collapsible-header:hover, .quiz-list .sub-menu .lighten-1.collapsible-header, .container.study .lighten-1.study-content-parent, .container.study .study-content-parent .lighten-1.section-header-container {
+.grey.lighten-1, .question-navigation.buttons .pagination li.grey:hover, .question-navigation.buttons .pagination li#question-answer:hover, .question-navigation.buttons .pagination li#question-attempt:hover, .question-navigation.buttons .pagination .quiz-list li.collapsible-header:hover, .quiz-list .question-navigation.buttons .pagination li.collapsible-header:hover, .question-navigation.buttons .pagination .container.study li.study-content-parent:hover, .container.study .question-navigation.buttons .pagination li.study-content-parent:hover, .question-navigation.buttons .pagination .container.study .study-content-parent li.section-header-container:hover, .container.study .study-content-parent .question-navigation.buttons .pagination li.section-header-container:hover, .lighten-1#question-answer, .lighten-1#question-attempt, .quiz-list .lighten-1.collapsible-header:hover, .quiz-list .sub-menu .lighten-1.collapsible-header, .container.study .lighten-1.study-content-parent, .container.study .study-content-parent .lighten-1.section-header-container {
   background-color: #bdbdbd !important;
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.grey-text.text-lighten-1 {
+.grey-text.text-lighten-1, .quiz-list .text-lighten-1.collapsible-header.disabled {
   color: #bdbdbd !important;
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.darken-1, .darken-1#question-answer, .darken-1#question-attempt, .quiz-list .darken-1.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-1.collapsible-header, .container.study .darken-1.study-content-parent, .container.study .study-content-parent .darken-1.section-header-container {
+.grey.darken-1, .darken-1#question-answer, .darken-1#question-attempt, .quiz-list .darken-1.collapsible-header:hover, .quiz-list .sub-menu .darken-1.collapsible-header, .container.study .darken-1.study-content-parent, .container.study .study-content-parent .darken-1.section-header-container {
   background-color: #757575 !important;
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.grey-text.text-darken-1 {
+.grey-text.text-darken-1, .quiz-list .text-darken-1.collapsible-header.disabled {
   color: #757575 !important;
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.darken-2, .darken-2#question-answer, .darken-2#question-attempt, .quiz-list .darken-2.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-2.collapsible-header, .container.study .darken-2.study-content-parent, .container.study .study-content-parent .darken-2.section-header-container {
+.grey.darken-2, .darken-2#question-answer, .darken-2#question-attempt, .quiz-list .darken-2.collapsible-header:hover, .quiz-list .sub-menu .darken-2.collapsible-header, .container.study .darken-2.study-content-parent, .container.study .study-content-parent .darken-2.section-header-container {
   background-color: #616161 !important;
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.grey-text.text-darken-2 {
+.grey-text.text-darken-2, .quiz-list .text-darken-2.collapsible-header.disabled {
   color: #616161 !important;
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.darken-3, .darken-3#question-answer, .darken-3#question-attempt, .quiz-list .darken-3.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-3.collapsible-header, .container.study .darken-3.study-content-parent, .container.study .study-content-parent .darken-3.section-header-container {
+.grey.darken-3, .darken-3#question-answer, .darken-3#question-attempt, .quiz-list .darken-3.collapsible-header:hover, .quiz-list .sub-menu .darken-3.collapsible-header, .container.study .darken-3.study-content-parent, .container.study .study-content-parent .darken-3.section-header-container {
   background-color: #424242 !important;
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.grey-text.text-darken-3 {
+.grey-text.text-darken-3, .quiz-list .text-darken-3.collapsible-header.disabled {
   color: #424242 !important;
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.grey.darken-4, .darken-4#question-answer, .darken-4#question-attempt, .quiz-list .darken-4.expandable.collapsible-header:hover, .quiz-list .sub-menu .darken-4.collapsible-header, .container.study .darken-4.study-content-parent, .container.study .study-content-parent .darken-4.section-header-container {
+.grey.darken-4, .darken-4#question-answer, .darken-4#question-attempt, .quiz-list .darken-4.collapsible-header:hover, .quiz-list .sub-menu .darken-4.collapsible-header, .container.study .darken-4.study-content-parent, .container.study .study-content-parent .darken-4.section-header-container {
   background-color: #212121 !important;
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.grey-text.text-darken-4 {
+.grey-text.text-darken-4, .quiz-list .text-darken-4.collapsible-header.disabled {
   color: #212121 !important;
 }
 
@@ -9527,20 +9527,51 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   border-bottom: none;
   cursor: default;
 }
-/* line 112, ../assets/sass/modules/_quiz.scss */
-.quiz-list .expandable.collapsible-header:hover {
+/* line 110, ../assets/sass/modules/_quiz.scss */
+.quiz-list .collapsible-header .arrow-parent {
+  width: 16px;
+  float: left;
+}
+/* line 113, ../assets/sass/modules/_quiz.scss */
+.quiz-list .collapsible-header .arrow-parent .arrow {
+  transition: transform .2s;
+  width: 100%;
+  transform: rotate(-90deg);
+}
+/* line 121, ../assets/sass/modules/_quiz.scss */
+.quiz-list .collapsible-header.active .arrow {
+  transform: none;
+}
+/* line 127, ../assets/sass/modules/_quiz.scss */
+.quiz-list .collapsible-header.active.disabled .arrow {
+  transform: rotate(-90deg);
+}
+/* line 137, ../assets/sass/modules/_quiz.scss */
+.quiz-list .collapsible-header.disabled .switch .lever {
+  background-color: #e4e4e4;
+}
+/* line 139, ../assets/sass/modules/_quiz.scss */
+.quiz-list .collapsible-header.disabled .switch .lever:after {
+  background-color: #d0d0d0;
+}
+/* line 145, ../assets/sass/modules/_quiz.scss */
+.quiz-list .collapsible.sub-menu {
+  box-shadow: none;
+}
+/* line 149, ../assets/sass/modules/_quiz.scss */
+.quiz-list .collapsible-header:hover {
   cursor: pointer;
 }
-/* line 117, ../assets/sass/modules/_quiz.scss */
+/* line 154, ../assets/sass/modules/_quiz.scss */
 .quiz-list ul.collapsible {
   position: relative;
 }
-/* line 121, ../assets/sass/modules/_quiz.scss */
+/* line 158, ../assets/sass/modules/_quiz.scss */
 .quiz-list .sub-menu {
   margin: 0;
   /*@extend .blue, .lighten-4;*/
 }
-/* line 131, ../assets/sass/modules/_quiz.scss */
+/* line 168, ../assets/sass/modules/_quiz.scss */
 .quiz-list .switch {
   display: inline-block;
   position: absolute;
@@ -9653,7 +9684,7 @@ h6.section-header {
   top: 2.2rem;
 }
 
-/* line 63, ../assets/sass/modules/_layout.scss */
+/* line 67, ../assets/sass/modules/_layout.scss */
 .page-footer {
   position: absolute;
   right: 0;
@@ -9662,45 +9693,50 @@ h6.section-header {
   z-index: 5;
 }
 
-/* line 75, ../assets/sass/modules/_layout.scss */
+/* line 79, ../assets/sass/modules/_layout.scss */
 .nav-wrapper .button-collapse {
   margin-left: 0;
 }
 @media (max-width: 600px) {
-  /* line 87, ../assets/sass/modules/_layout.scss */
+  /* line 91, ../assets/sass/modules/_layout.scss */
   .nav-wrapper #logo-container {
     font-size: 1.30rem;
   }
 }
 
-/* line 93, ../assets/sass/modules/_layout.scss */
+/* line 97, ../assets/sass/modules/_layout.scss */
+.modal.error-modal {
+  width: 20%;
+}
+
+/* line 101, ../assets/sass/modules/_layout.scss */
 td.min-width {
   width: 1%;
   white-space: nowrap;
   padding: 0 12px 0 12px;
 }
 
-/* line 99, ../assets/sass/modules/_layout.scss */
+/* line 107, ../assets/sass/modules/_layout.scss */
 .no-padding {
   padding: 0;
 }
 
-/* line 103, ../assets/sass/modules/_layout.scss */
+/* line 111, ../assets/sass/modules/_layout.scss */
 .no-margin {
   margin: 0;
 }
 
-/* line 107, ../assets/sass/modules/_layout.scss */
+/* line 115, ../assets/sass/modules/_layout.scss */
 .display-none {
   display: none;
 }
 
-/* line 111, ../assets/sass/modules/_layout.scss */
+/* line 119, ../assets/sass/modules/_layout.scss */
 .noselection .ace_marker-layer .ace_selection {
   background: transparent;
 }
 
-/* line 115, ../assets/sass/modules/_layout.scss */
+/* line 123, ../assets/sass/modules/_layout.scss */
 .noselection .ace_cursor {
   color: transparent;
 }
@@ -9776,11 +9812,11 @@ td.min-width {
   max-width: 32px;
   transform: translateY(50%);
 }
-/* line 67, ../assets/sass/modules/_snippets.scss */
+/* line 68, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent .language-field, .snippet .snippet-editor-parent .code-field {
   display: none;
 }
-/* line 70, ../assets/sass/modules/_snippets.scss */
+/* line 71, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent .editor {
   position: absolute;
   top: 80px;
@@ -9789,40 +9825,48 @@ td.min-width {
   width: 100%;
   height: calc(100% - 80px);
 }
-/* line 78, ../assets/sass/modules/_snippets.scss */
+/* line 79, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-editor-parent .editor ~ .editor {
   display: none;
 }
-/* line 82, ../assets/sass/modules/_snippets.scss */
+/* line 83, ../assets/sass/modules/_snippets.scss */
 .snippet #snippet_title {
   margin-bottom: 0;
 }
-/* line 85, ../assets/sass/modules/_snippets.scss */
+/* line 86, ../assets/sass/modules/_snippets.scss */
+.snippet .snippet-category-label {
+  font-size: 14px;
+  color: #9e9e9e;
+  position: relative;
+  top: -5px;
+  left: 6px;
+}
+/* line 93, ../assets/sass/modules/_snippets.scss */
 .snippet .category-select {
   margin: 20px 0 0 0;
 }
-/* line 87, ../assets/sass/modules/_snippets.scss */
+/* line 95, ../assets/sass/modules/_snippets.scss */
 .snippet .category-select input[type=text] {
   margin: 0;
 }
-/* line 91, ../assets/sass/modules/_snippets.scss */
+/* line 99, ../assets/sass/modules/_snippets.scss */
 .snippet .input-field {
   margin-top: 0;
 }
-/* line 94, ../assets/sass/modules/_snippets.scss */
+/* line 102, ../assets/sass/modules/_snippets.scss */
 .snippet .data-fields {
   margin-top: 30px;
 }
-/* line 96, ../assets/sass/modules/_snippets.scss */
+/* line 104, ../assets/sass/modules/_snippets.scss */
 .snippet .data-fields .data-label {
   font-size: 16px;
   color: #9e9e9e;
 }
-/* line 101, ../assets/sass/modules/_snippets.scss */
+/* line 109, ../assets/sass/modules/_snippets.scss */
 .snippet .data-fields .data-field {
   font-size: 22px;
 }
-/* line 105, ../assets/sass/modules/_snippets.scss */
+/* line 113, ../assets/sass/modules/_snippets.scss */
 .snippet .snippet-back-link {
   margin-top: 15px;
 }
