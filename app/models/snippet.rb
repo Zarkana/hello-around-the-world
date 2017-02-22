@@ -7,7 +7,7 @@ class Snippet < ApplicationRecord
 
   accepts_nested_attributes_for :implementations, allow_destroy: true
 
-  after_initialize :init
+  after_create :init
 
   def init
     self.active  ||= true   #will set the default value only if it's nil

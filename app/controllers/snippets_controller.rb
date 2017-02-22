@@ -36,7 +36,7 @@ class SnippetsController < ApplicationController
       # Include languages so that when errors redirect to new it won't error
       @allLanguages = Language.all
       @languages = Language.limit(@allLanguages.length)
-      
+
       # @implementation = Implementation.new( params.require(:implementation).permit(:code, :language) )
       if @snippet.save
         #render plain: params[:snippet].inspect
@@ -67,9 +67,22 @@ class SnippetsController < ApplicationController
       redirect_to snippets_path
     end
 
+    def update_active
+      @snippet = Snippet.find(params[:id])
+
+      # if @snippet.update_attributes(:active => params[:active])
+      if @snippet.update_attributes(:active => params[:active])
+        # data = {:message => "Worked! " + params[:active]}
+        # render :json => data, :status => :ok
+      else
+        # data = {:message => "Not worked! " + params[:active]}
+        # render :json => data, :status => :ok
+      end
+    end
+
     private
       def snippet_params
-        params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, :category, :category_id, implementations_attributes:[:language, :code, :id, :snippet_id, :_destroy])
+        params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, :active, :category, :category_id, implementations_attributes:[:language, :code, :id, :snippet_id, :_destroy])
       end
 
 end

@@ -51,6 +51,19 @@ class CategoriesController < ApplicationController
     # format.html { redirect_to @category, notice: 'Widget was successfully created.' }
   end
 
+  def update_active
+    @category = Category.find(params[:id])
+
+    # if @category.update_attributes(:active => params[:active])
+    if @category.update_attributes(:active => params[:active])
+      # data = {:message => "Worked! " + params[:active]}
+      # render :json => data, :status => :ok
+    else
+      # data = {:message => "Not worked! " + params[:active]}
+      # render :json => data, :status => :ok
+    end
+  end
+
   private
     def category_params
       params.require(:category).permit(:name)

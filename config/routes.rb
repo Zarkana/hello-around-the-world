@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   get 'languages/index'
   post 'languages/destroy_logo'
 
+  post 'snippets/:id/update_active', to: 'snippets#update_active'
+  post 'categories/:id/update_active', to: 'categories#update_active'
+
   # resources :snippets do
   #   resources :implementations
   # end

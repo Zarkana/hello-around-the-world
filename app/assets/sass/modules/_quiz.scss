@@ -133,11 +133,14 @@
 
     }
     &.disabled{
-      @extend .grey-text;
+      .arrow{
+        opacity: .70;
+      }
+      @extend .grey-text, .text-lighten-1;
       .switch .lever{
-        background-color: #e4e4e4;
+        background-color: #e8e8e8;
         &:after{
-          background-color: #d0d0d0;
+          background-color: #d4d4d4 !important;
         }
       }
     }

@@ -20,36 +20,23 @@
         <li>
           <div class="collapsible-header">
             <%= snippet.title %>
-            <%= snippet.active %>
             <div class="switch">
               <label>
-                <input checked type="checkbox">
+                <input class="snippet-active-switch" value="<%= snippet.id %>" <% if snippet.active == true %>checked<% end %> type="checkbox">
                 <span class="lever"></span>
               </label>
             </div>
           </div>
         </li>
         <% end %>
-        <li>
-          <div class="collapsible-header">
-            DIVIDER
-            <div class="switch">
-              <label>
-                <input checked type="checkbox">
-                <span class="lever"></span>
-              </label>
-            </div>
-          </div>
-        </li>
         <% @categories.each do |category| %>
         <li>
           <div class="collapsible-header expandable <% if category.snippets.blank? %>disabled<% end %>">
             <div class="arrow-parent"><%= image_tag("dropdown-arrow.png", :class => "arrow") %></div>
             <%= category.name %>
-            <%= category.active %>
             <div class="switch">
               <label>
-                <input <% if category.snippets.blank? %>disabled<% end %> <% if category.active = true %>checked<% end %> type="checkbox">
+                <input class="category-active-switch" value="<%= category.id %>"  <% if category.snippets.blank? %>disabled<% end %> <% if category.active == true %>checked<% end %> type="checkbox">
                 <span class="lever"></span>
               </label>
             </div>
@@ -63,7 +50,7 @@
                   <%= snippet.title %>
                   <div class="switch">
                     <label>
-                      <input <% if category.active = true %>checked<% end %> type="checkbox">
+                      <input class="snippet-active-switch" value="<%= snippet.id %>" <% if snippet.active == true %>checked<% end %> type="checkbox">
                       <span class="lever"></span>
                     </label>
                   </div>
@@ -86,4 +73,38 @@
     <%= link_to 'Begin!', {controller: 'quiz', action: 'question'}, :id => 'download-button', :class => 'btn-large waves-effect waves-light blue'  %>
   </div>
   <br><br>
+  <script>
+  $("input.snippet-active-switch").change(function(){
+    //if (this.checked){
+    $.ajax({
+      url: '/snippets/'+this.value+'/update_active',
+      type: 'POST',
+      data: { active: this.checked },
+      success: function(data,status,xhr){
+        console.log(data);
+        alert(data.message);
+      },
+      error: function(xhr,status,error){
+        console.log(xhr);
+        alert(error);
+      }
+      });
+    });
+    $("input.category-active-switch").change(function(){
+      //if (this.checked){
+      $.ajax({
+        url: '/categories/'+this.value+'/update_active',
+        type: 'POST',
+        data: { active: this.checked },
+        success: function(data,status,xhr){
+          console.log(data);
+          alert(data.message);
+        },
+        error: function(xhr,status,error){
+          console.log(xhr);
+          alert(error);
+        }
+      });
+    });
+  </script>
 </div>

@@ -54,7 +54,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.materialize-red-text.text-lighten-1 {
+.materialize-red-text.text-lighten-1, .quiz-list .materialize-red-text.collapsible-header.disabled {
   color: #ea454b !important;
 }
 
@@ -154,7 +154,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.red-text.text-lighten-1 {
+.red-text.text-lighten-1, .quiz-list .red-text.collapsible-header.disabled {
   color: #EF5350 !important;
 }
 
@@ -294,7 +294,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.pink-text.text-lighten-1 {
+.pink-text.text-lighten-1, .quiz-list .pink-text.collapsible-header.disabled {
   color: #ec407a !important;
 }
 
@@ -434,7 +434,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.purple-text.text-lighten-1 {
+.purple-text.text-lighten-1, .quiz-list .purple-text.collapsible-header.disabled {
   color: #ab47bc !important;
 }
 
@@ -574,7 +574,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.deep-purple-text.text-lighten-1 {
+.deep-purple-text.text-lighten-1, .quiz-list .deep-purple-text.collapsible-header.disabled {
   color: #7e57c2 !important;
 }
 
@@ -714,7 +714,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.indigo-text.text-lighten-1 {
+.indigo-text.text-lighten-1, .quiz-list .indigo-text.collapsible-header.disabled {
   color: #5c6bc0 !important;
 }
 
@@ -854,7 +854,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.blue-text.text-lighten-1 {
+.blue-text.text-lighten-1, .quiz-list .blue-text.collapsible-header.disabled {
   color: #42A5F5 !important;
 }
 
@@ -994,7 +994,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.light-blue-text.text-lighten-1, .text-lighten-1.section-header {
+.light-blue-text.text-lighten-1, .quiz-list .light-blue-text.collapsible-header.disabled, .quiz-list .collapsible-header.disabled.section-header, .text-lighten-1.section-header {
   color: #29b6f6 !important;
 }
 
@@ -1134,7 +1134,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.cyan-text.text-lighten-1 {
+.cyan-text.text-lighten-1, .quiz-list .cyan-text.collapsible-header.disabled {
   color: #26c6da !important;
 }
 
@@ -1274,7 +1274,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.teal-text.text-lighten-1 {
+.teal-text.text-lighten-1, .quiz-list .teal-text.collapsible-header.disabled {
   color: #26a69a !important;
 }
 
@@ -1414,7 +1414,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.green-text.text-lighten-1 {
+.green-text.text-lighten-1, .quiz-list .green-text.collapsible-header.disabled {
   color: #66BB6A !important;
 }
 
@@ -1554,7 +1554,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.light-green-text.text-lighten-1 {
+.light-green-text.text-lighten-1, .quiz-list .light-green-text.collapsible-header.disabled {
   color: #9ccc65 !important;
 }
 
@@ -1694,7 +1694,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.lime-text.text-lighten-1 {
+.lime-text.text-lighten-1, .quiz-list .lime-text.collapsible-header.disabled {
   color: #d4e157 !important;
 }
 
@@ -1834,7 +1834,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.yellow-text.text-lighten-1 {
+.yellow-text.text-lighten-1, .quiz-list .yellow-text.collapsible-header.disabled {
   color: #ffee58 !important;
 }
 
@@ -1974,7 +1974,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.amber-text.text-lighten-1 {
+.amber-text.text-lighten-1, .quiz-list .amber-text.collapsible-header.disabled {
   color: #ffca28 !important;
 }
 
@@ -2114,7 +2114,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.orange-text.text-lighten-1 {
+.orange-text.text-lighten-1, .quiz-list .orange-text.collapsible-header.disabled {
   color: #ffa726 !important;
 }
 
@@ -2254,7 +2254,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.deep-orange-text.text-lighten-1 {
+.deep-orange-text.text-lighten-1, .quiz-list .deep-orange-text.collapsible-header.disabled {
   color: #ff7043 !important;
 }
 
@@ -2394,7 +2394,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.brown-text.text-lighten-1 {
+.brown-text.text-lighten-1, .quiz-list .brown-text.collapsible-header.disabled {
   color: #8d6e63 !important;
 }
 
@@ -2494,7 +2494,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.blue-grey-text.text-lighten-1 {
+.blue-grey-text.text-lighten-1, .quiz-list .blue-grey-text.collapsible-header.disabled {
   color: #78909c !important;
 }
 
@@ -2594,7 +2594,7 @@
 }
 
 /* line 381, ../assets/sass/components/_color.scss */
-.grey-text.text-lighten-1, .quiz-list .text-lighten-1.collapsible-header.disabled {
+.grey-text.text-lighten-1, .quiz-list .collapsible-header.disabled {
   color: #bdbdbd !important;
 }
 
@@ -9546,32 +9546,36 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .quiz-list .collapsible-header.active.disabled .arrow {
   transform: rotate(-90deg);
 }
-/* line 137, ../assets/sass/modules/_quiz.scss */
+/* line 136, ../assets/sass/modules/_quiz.scss */
+.quiz-list .collapsible-header.disabled .arrow {
+  opacity: .70;
+}
+/* line 140, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.disabled .switch .lever {
-  background-color: #e4e4e4;
+  background-color: #e8e8e8;
 }
-/* line 139, ../assets/sass/modules/_quiz.scss */
+/* line 142, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.disabled .switch .lever:after {
-  background-color: #d0d0d0;
+  background-color: #d4d4d4 !important;
 }
-/* line 145, ../assets/sass/modules/_quiz.scss */
+/* line 148, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible.sub-menu {
   box-shadow: none;
 }
-/* line 149, ../assets/sass/modules/_quiz.scss */
+/* line 152, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header:hover {
   cursor: pointer;
 }
-/* line 154, ../assets/sass/modules/_quiz.scss */
+/* line 157, ../assets/sass/modules/_quiz.scss */
 .quiz-list ul.collapsible {
   position: relative;
 }
-/* line 158, ../assets/sass/modules/_quiz.scss */
+/* line 161, ../assets/sass/modules/_quiz.scss */
 .quiz-list .sub-menu {
   margin: 0;
   /*@extend .blue, .lighten-4;*/
 }
-/* line 168, ../assets/sass/modules/_quiz.scss */
+/* line 171, ../assets/sass/modules/_quiz.scss */
 .quiz-list .switch {
   display: inline-block;
   position: absolute;
