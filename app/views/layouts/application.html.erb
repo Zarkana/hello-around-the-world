@@ -20,9 +20,9 @@
     <nav class="light-blue lighten-1" role="navigation">
       <div class="nav-wrapper container"><%= link_to "Hello Around the World!", root_path, :id => 'logo-container', :class => 'brand-logo' %>
         <ul class="right hide-on-med-and-down">
-          <li><%= link_to "Quiz", :controller => 'quiz'%></li>
-          <li><%= link_to "Study", :controller => 'study'%></li>
-          <li><a href="#">Log In</a></li>
+          <li><%= link_to "Quiz", quiz_index_path %></li>
+          <li><%= link_to "Study", study_index_path %></li>
+          <li><%= link_to "Log In", new_user_session_path %></li>
         </ul>
         <ul id="nav-mobile" class="side-nav">
           <li><a href="#">Navbar Link</a></li>
@@ -31,8 +31,13 @@
       </div>
     </nav>
     <main class="section no-pad-bot main-section" id="index-banner">
-
-          <%= yield %>
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+      <%= yield %>
 
     </main>
     <footer class="page-footer blue lighten-1">
