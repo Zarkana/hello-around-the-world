@@ -20,8 +20,8 @@
     <nav class="light-blue lighten-1" role="navigation">
       <div class="nav-wrapper container"><%= link_to "Hello Around the World!", root_path, :id => 'logo-container', :class => 'brand-logo' %>
         <% if user_signed_in? %>
-          Logged in as <strong><%= current_user.email %></strong>.
           <ul class="right hide-on-med-and-down">
+            <li>Logged in as <strong><%= current_user.email %></strong></li>
             <li><%= link_to "Quiz", quiz_index_path %></li>
             <li><%= link_to "Study", study_index_path %></li>
             <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
@@ -42,14 +42,21 @@
       </div>
     </nav>
     <main class="section no-pad-bot main-section" id="index-banner">
-      <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
-      <% end %>
+      <!-- Modal Structure -->
       <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
+      <div class="modal error-modal">
+        <div class="modal-content">
+          <h4>Aw, shucks!</h4>
+          <div id="error_explanation">
+            <p class="alert alert-danger"><%= alert %></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Got It!</a>
+        </div>
+      </div>
       <% end %>
       <%= yield %>
-
     </main>
     <footer class="page-footer blue lighten-1">
       <div class="footer-copyright">

@@ -5,51 +5,45 @@
     <%= devise_error_messages! %>
 
     <div class="row">
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
       <div class="field col s12 center-align">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true %>
       </div>
-    </div>
-
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-    <% end %>
-
-    <div class="row">
-      <div class="field col s12 center-align">
-        <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+      <div class="field input-field col s12 center-align">
+        <%= f.label :password %><br />
         <%= f.password_field :password, autocomplete: "off" %>
-        <% if @minimum_password_length %>
-          <br />
-          <em><%= @minimum_password_length %> characters minimum</em>
-        <% end %>
       </div>
     </div>
-
     <div class="row">
-      <div class="field col s12 center-align">
+      <div class="field input-field col s12 center-align">
         <%= f.label :password_confirmation %><br />
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="field col s12 center-align">
-        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+      <div class="field input-field col s12 center-align">
+        <%= f.label :current_password %><br />
         <%= f.password_field :current_password, autocomplete: "off" %>
       </div>
     </div>
-
     <div class="row">
-      <div class="actions col s12 center-align">
+      <div class="actions input-field col s12 center-align">
         <%= f.button "Update", :class => 'btn-large waves-effect waves-light blue white-text btn btn-flat'%>
       </div>
     </div>
   <% end %>
-
-  <h3>Cancel my account</h3>
-
-  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
+  <br>
+  <br>
+  <h3 class="section-header center-align">Cancel my account</h3>
+  <div class="row">
+    <div class="actions col s12 center-align">
+    <p>Don't want an account anymore?
+      <%= button_to "Delete Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn-large waves-effect waves-light red white-text btn btn-flat'  %>
+    </p>
+    </div>
+  </div>
   <%= link_to "Back", :back %>
 </div>
