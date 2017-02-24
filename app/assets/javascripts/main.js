@@ -2,6 +2,26 @@ $(document).ready(function() {
   //Instantiates select menu
   $('.materialize-select').material_select();
 
+  // $(".collapsible-header.expandable").click(function(e){
+  //   if(e.target.className == "lever"){
+  //     //e.stopPropagation();
+  //   }
+  // });
+  //
+  // var dont_drop = false;
+  // $("ul.collapsiblez").click(function(e){
+  //   if(e.target.className == "lever"){
+  //     debugger;
+  //     dont_drop = true;
+  //     //e.stopPropagation();
+  //   }
+  // });
+
+  $('.collapsiblez:not(.lever)').collapsible({
+    accordion: true, // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    onOpen: function(el) { }, // Callback for Collapsible open
+    onClose: function(el) { } // Callback for Collapsible close
+  });
 
   //Instantiates modal menu
   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered

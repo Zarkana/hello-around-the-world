@@ -9,3 +9,7 @@ dist
 # Ignore docs files
 app/assets/.sass-cache
 app/assets/.sass-cache/*
+
+db/development.sqlite3
+log/development.log
+tmp/pids/server.pid

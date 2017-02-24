@@ -145,7 +145,7 @@
       }
     }
   }
-  .collapsible.sub-menu{
+  .collapsiblez.sub-menu{
     box-shadow: none;
   }
 
@@ -154,9 +154,13 @@
     @extend .grey, .lighten-4;
   }
 
-  ul.collapsible{
+  ul.collapsiblez{
     position: relative;
   }
+
+  // .collapsible-body{
+  //     border: none;
+  // }
 
   .sub-menu{
     margin: 0;

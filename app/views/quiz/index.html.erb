@@ -15,7 +15,7 @@
   </div>
   <div class="row center quiz-list">
     <div class="col s12 m8 offset-m2">
-      <ul class="collapsible" data-collapsible="accordion">
+      <ul class="collapsiblez" data-collapsible="accordion">
         <% @singleSnippets.each do |snippet| %>
         <li>
           <div class="collapsible-header">
@@ -30,7 +30,7 @@
         </li>
         <% end %>
         <% @categories.each do |category| %>
-        <li>
+        <li id="category-<%= category.id %>">
           <div class="collapsible-header expandable <% if category.snippets.blank? %>disabled<% end %>">
             <div class="arrow-parent"><%= image_tag("dropdown-arrow.png", :class => "arrow") %></div>
             <%= category.name %>
@@ -43,7 +43,7 @@
           </div>
           <% unless category.snippets.blank? %>
           <div class="collapsible-body">
-            <ul class="collapsible sub-menu" data-collapsible="accordion">
+            <ul class="collapsiblez sub-menu" data-collapsible="accordion">
               <li>
                 <% category.snippets.each do |snippet| %>
                 <div class="collapsible-header">
@@ -74,37 +74,56 @@
   </div>
   <br><br>
   <script>
-  $("input.snippet-active-switch").change(function(){
-    //if (this.checked){
-    $.ajax({
-      url: '/snippets/'+this.value+'/update_active',
-      type: 'POST',
-      data: { active: this.checked },
-      success: function(data,status,xhr){
-        console.log(data);
-        alert(data.message);
-      },
-      error: function(xhr,status,error){
-        console.log(xhr);
-        alert(error);
+    $(document).ready(function(){
+      $('.category-active-switch:not(:checked)').each(function(){
+          disableSnippets($(this));
+      });
+
+      $("input.snippet-active-switch").change(function(){
+        //if (this.checked){
+        $.ajax({
+          url: '/snippets/'+this.value+'/update_active',
+          type: 'POST',
+          data: { active: this.checked },
+          success: function(data,status,xhr){
+            console.log(data);
+            alert(data.message);
+          },
+          error: function(xhr,status,error){
+            console.log(xhr);
+            alert(error);
+          }
+        });
+      });
+
+      $("input.category-active-switch").change(function(){
+
+        disableSnippets($(this));
+        //if (this.checked){
+        $.ajax({
+          url: '/categories/'+this.value+'/update_active',
+          type: 'POST',
+          data: { active: this.checked },
+          success: function(data,status,xhr){
+            console.log(data);
+            //alert(data.message);
+          },
+          error: function(xhr,status,error){
+            console.log(xhr);
+            //alert(error);
+          }
+        });
+      });
+    });
+    function disableSnippets(checkBox){
+      var category_id = checkBox.val();
+      if (!checkBox.is(':checked')){
+        $("#category-" + category_id + " .collapsible-body .collapsible-header").addClass("disabled");
+        $("#category-" + category_id + " .collapsible-body .collapsible-header input").prop('disabled', true);
+      }else{
+        $("#category-" + category_id + " .collapsible-body .collapsible-header").removeClass("disabled");
+        $("#category-" + category_id + " .collapsible-body .collapsible-header input").prop('disabled', false);
       }
-      });
-    });
-    $("input.category-active-switch").change(function(){
-      //if (this.checked){
-      $.ajax({
-        url: '/categories/'+this.value+'/update_active',
-        type: 'POST',
-        data: { active: this.checked },
-        success: function(data,status,xhr){
-          console.log(data);
-          alert(data.message);
-        },
-        error: function(xhr,status,error){
-          console.log(xhr);
-          alert(error);
-        }
-      });
-    });
+    }
   </script>
 </div>

@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * Materialize v0.97.8 (http://materializecss.com)
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
@@ -502,14 +502,14 @@ if (jQuery) {
         if (isChildrenOfPanelHeader(element)) {
           element = getPanelHeader(element);
         }
-        // if(element.context.className == "lever")
-        // {
-        //   //return 0;
-        // }
+        //if(element.context.className == "lever")
+        //{
+          //return 0;
+        //}
         // else {
           element.toggleClass('active');
           collapsibleOpen(element);
-        // }
+        //}
 
 
       });

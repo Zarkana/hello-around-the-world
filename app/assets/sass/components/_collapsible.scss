@@ -1,4 +1,4 @@
-.collapsible {
+.collapsiblez {
   border-top: 1px solid $collapsible-border-color;
   border-right: 1px solid $collapsible-border-color;
   border-left: 1px solid $collapsible-border-color;
@@ -41,7 +41,7 @@
 .side-nav,
 .side-nav.fixed {
 
-  .collapsible {
+  .collapsiblez {
     border: none;
     box-shadow: none;
 
@@ -73,7 +73,7 @@
 
 // Popout Collapsible
 
-.collapsible.popout {
+.collapsiblez.popout {
   border: none;
   box-shadow: none;
   > li {
