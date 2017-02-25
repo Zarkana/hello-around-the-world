@@ -1,6 +1,9 @@
 class CategoriesController < ApplicationController
+
+  before_filter :authenticate_user!
+
   def index
-    @categories = Category.all
+    @categories = Category.accessible_by(current_ability)
   end
 
   def show
@@ -12,19 +15,22 @@ class CategoriesController < ApplicationController
     @category = Category.new
   end
 
-  def edit
-    # @category = Category.find(params[:id])
-    redirect_to categories_path
-  end
-
   def create
     @category = Category.new(category_params)
+    @category.user = current_user
+    authorize! :create, @category
 
     if @category.save
+      @categories = Category.accessible_by(current_ability)
       redirect_to categories_path
     else
       render 'new'
     end
+  end
+
+  def edit
+    # @category = Category.find(params[:id])
+    redirect_to categories_path
   end
 
   def update
@@ -41,6 +47,7 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
     if @category.destroy
+      @categories = Category.accessible_by(current_ability)
       # flash[:success] = "Category destroyed Successfully"
       redirect_to categories_path
     else

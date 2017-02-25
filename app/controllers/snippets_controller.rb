@@ -1,21 +1,22 @@
 class SnippetsController < ApplicationController
+    before_filter :authenticate_user!
 
     def index
-      @snippets = Snippet.all
+      @snippets = Snippet.accessible_by(current_ability)
     end
 
     def show
       @snippet = Snippet.find(params[:id])
       @category = Category.find_by_id(@snippet.category_id)
-      @allLanguages = Language.all
-      @languages = Language.limit(@allLanguages.length)
+      @languages = Language.accessible_by(current_ability)
+      # @languages = Language.limit(@allLanguages.length)
       # @implementations = Implementation.find(params[:id])
     end
 
     def new
       @snippet = Snippet.new
-      @allLanguages = Language.all
-      @languages = Language.limit(@allLanguages.length)
+      @allLanguages = Language.accessible_by(current_ability)
+      @languages = Language.accessible_by(current_ability)
       # @languages.length.times do
       #   language = @languages.build
       # end
@@ -25,36 +26,35 @@ class SnippetsController < ApplicationController
       end
     end
 
-    def edit
-      @snippet = Snippet.find(params[:id])
-      @allLanguages = Language.all
-      @languages = Language.limit(@allLanguages.length)
-    end
-
     def create
       @snippet = Snippet.new(snippet_params)
+      @snippet.user = current_user
+      authorize! :create, @snippet
       # Include languages so that when errors redirect to new it won't error
-      @allLanguages = Language.all
-      @languages = Language.limit(@allLanguages.length)
+      @languages = Language.accessible_by(current_ability)
 
       # @implementation = Implementation.new( params.require(:implementation).permit(:code, :language) )
       if @snippet.save
-        #render plain: params[:snippet].inspect
-
+        @snippets = Snippet.accessible_by(current_ability)
         redirect_to snippets_path
-        # render :inline => "Succcess"
       else
         render("new")
       end
-      # @implementation.save
-      # redirect_to @snippet
+    end
+
+    def edit
+      @snippet = Snippet.find(params[:id])
+      authorize! :edit, @snippet
+      @languages = Language.accessible_by(current_ability)
     end
 
     def update
       @snippet = Snippet.find(params[:id])
 
       if @snippet.update(snippet_params)
-        redirect_to @snippet, notice: 'Successfully updated code'
+        @snippets = Snippet.accessible_by(current_ability)
+        authorize! :update, @snippet
+        redirect_to snippets_path
       else
         render 'edit'
       end
@@ -62,7 +62,9 @@ class SnippetsController < ApplicationController
 
     def destroy
       @snippet = Snippet.find(params[:id])
+      authorize! :destroy, @snippet
       @snippet.destroy
+      @snippets = Snippet.accessible_by(current_ability)
 
       redirect_to snippets_path
     end
@@ -81,6 +83,16 @@ class SnippetsController < ApplicationController
     end
 
     private
+
+      def save_snippet
+        if @snippet.save
+          @snippets = Snippet.accessible_by(current_ability)
+          render :hide_form
+        else
+          render :show_form
+        end
+      end
+
       def snippet_params
         params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, :active, :category, :category_id, implementations_attributes:[:language, :code, :id, :snippet_id, :_destroy])
       end

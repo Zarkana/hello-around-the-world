@@ -1,9 +1,9 @@
 class QuizController < ApplicationController
   def index
-    @snippets = Snippet.all
-    @singleSnippets = Snippet.where(category_id: nil)
-    @categories = Category.includes(:snippets)
-    @multiSnippets = Snippet.where.not(category_id: nil)
+    @snippets = Snippet.accessible_by(current_ability)
+    @singleSnippets = Snippet.where(category_id: nil).accessible_by(current_ability)
+    @categories = Category.includes(:snippets).accessible_by(current_ability)
+    @multiSnippets = Snippet.where.not(category_id: nil).accessible_by(current_ability)
 
   end
 

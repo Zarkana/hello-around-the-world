@@ -1,4 +1,8 @@
 class Snippet < ApplicationRecord
+  belongs_to :user
+
+  validates_presence_of :user
+
   has_many :implementations, inverse_of: :snippet, :dependent => :destroy
   # belongs_to :category
   # removed the above to allow for not requiring category

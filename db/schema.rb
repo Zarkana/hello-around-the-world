@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170222200107) do
+ActiveRecord::Schema.define(version: 20170225011817) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.boolean  "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "implementations", force: :cascade do |t|
@@ -37,6 +38,7 @@ ActiveRecord::Schema.define(version: 20170222200107) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.integer  "user_id"
   end
 
   create_table "snippets", force: :cascade do |t|
@@ -47,6 +49,7 @@ ActiveRecord::Schema.define(version: 20170222200107) do
     t.datetime "updated_at",         null: false
     t.integer  "category_id"
     t.boolean  "active"
+    t.integer  "user_id"
     t.index ["category_id"], name: "index_snippets_on_category_id"
   end
 

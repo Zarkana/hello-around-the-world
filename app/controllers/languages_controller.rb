@@ -1,6 +1,9 @@
 class LanguagesController < ApplicationController
+
+  before_filter :authenticate_user!
+
   def index
-    @languages = Language.all
+    @languages = Language.accessible_by(current_ability)
   end
 
   def show
@@ -12,25 +15,30 @@ class LanguagesController < ApplicationController
     @language = Language.new
   end
 
-  def edit
-    @language = Language.find(params[:id])
-  end
-
   def create
     @language = Language.new(language_params)
+    @language.user = current_user
+    authorize! :create, @language
 
     if @language.save
-      # redirect_to @language
+      @languages = Language.accessible_by(current_ability)
       redirect_to languages_path
     else
       render 'new'
     end
   end
 
+  def edit
+    @language = Language.find(params[:id])
+    authorize! :edit, @language
+  end
+
   def update
     @language = Language.find(params[:id])
 
     if @language.update(language_params)
+      @languages = Language.accessible_by(current_ability)
+      authorize! :update, @language
       # redirect_to @language
       redirect_to languages_path
     else
@@ -41,9 +49,8 @@ class LanguagesController < ApplicationController
   def destroy
     @language = Language.find(params[:id])
 
-    # destroy_logo
-
     @language.destroy
+    @languages = Language.accessible_by(current_ability)
 
     redirect_to languages_path
   end
