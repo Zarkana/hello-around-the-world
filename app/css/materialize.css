@@ -1,73 +1,3 @@
-<<<<<<< HEAD
-/*
-Error: Invalid CSS after "}": expected "}", was ""
-        on line 128 of C:/Users/Joes1/vagrant-projects/hello-around-the-world/hello-around-the-world/app/assets/sass/modules/_users.scss
-        from line 50 of C:/Users/Joes1/vagrant-projects/hello-around-the-world/hello-around-the-world/app/assets/sass/materialize.scss
-
-123:   .snippet-back-link{
-124:     margin-top: 15px;
-125:   }
-126: 
-127: }
-
-Backtrace:
-C:/Users/Joes1/vagrant-projects/hello-around-the-world/hello-around-the-world/app/assets/sass/modules/_users.scss:128
-C:/Users/Joes1/vagrant-projects/hello-around-the-world/hello-around-the-world/app/assets/sass/materialize.scss:50
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1132:in `tok!'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:667:in `block'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:658:in `ruleset'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:684:in `block_child'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:674:in `block_contents'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:125:in `stylesheet'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:406:in `_to_tree'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:312:in `to_tree'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:20:in `render'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:281:in `render'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:331:in `block in watch'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 128 of C:/Users/Joes1/vagrant-projects/hello-around-the-world/hello-around-the-world/app/assets/sass/modules/_users.scss\A         from line 50 of C:/Users/Joes1/vagrant-projects/hello-around-the-world/hello-around-the-world/app/assets/sass/materialize.scss\A \A 123:   .snippet-back-link{\A 124:     margin-top: 15px;\A 125:   }\A 126: \A 127: }"; }
-=======
 /* line 370, ../assets/sass/components/_color.scss */
 .materialize-red {
   background-color: #e51c23 !important;
@@ -9501,18 +9431,32 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   width: 100%;
   padding-top: 15px;
 }
+/* line 7, ../assets/sass/modules/_quiz.scss */
+.quiz.container .buttons {
+  position: relative;
+}
+/* line 9, ../assets/sass/modules/_quiz.scss */
+.quiz.container .buttons .manage-button {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+}
+/* line 16, ../assets/sass/modules/_quiz.scss */
+.quiz.container .manage-back-link {
+  margin-left: 15px;
+}
 
-/* line 8, ../assets/sass/modules/_quiz.scss */
+/* line 21, ../assets/sass/modules/_quiz.scss */
 #width_tmp_select {
   width: auto;
 }
 
-/* line 13, ../assets/sass/modules/_quiz.scss */
+/* line 26, ../assets/sass/modules/_quiz.scss */
 .quiz .quiz-editor-parent {
   position: relative;
   height: 500px;
 }
-/* line 16, ../assets/sass/modules/_quiz.scss */
+/* line 29, ../assets/sass/modules/_quiz.scss */
 .quiz .quiz-editor-parent .editor {
   position: absolute;
   top: 0;
@@ -9521,12 +9465,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   width: 100%;
   height: 100%;
 }
-/* line 25, ../assets/sass/modules/_quiz.scss */
+/* line 38, ../assets/sass/modules/_quiz.scss */
 .quiz .answer-editor-parent, .quiz .attempt-editor-parent {
   position: relative;
   height: calc(100% - 48px);
 }
-/* line 28, ../assets/sass/modules/_quiz.scss */
+/* line 41, ../assets/sass/modules/_quiz.scss */
 .quiz .answer-editor-parent .editor, .quiz .attempt-editor-parent .editor {
   position: absolute;
   top: 0;
@@ -9536,18 +9480,18 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   height: 100%;
 }
 @media (max-width: 960px) {
-  /* line 39, ../assets/sass/modules/_quiz.scss */
+  /* line 52, ../assets/sass/modules/_quiz.scss */
   .quiz #editor-parent {
     max-width: 100%;
   }
 }
 
-/* line 46, ../assets/sass/modules/_quiz.scss */
+/* line 59, ../assets/sass/modules/_quiz.scss */
 .question-navigation.buttons {
   text-align: center;
   margin-top: 35px;
 }
-/* line 51, ../assets/sass/modules/_quiz.scss */
+/* line 64, ../assets/sass/modules/_quiz.scss */
 .question-navigation.buttons .pagination .circle {
   border-radius: 20px;
   height: 15px;
@@ -9555,97 +9499,97 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   margin-top: 7px;
 }
 
-/* line 70, ../assets/sass/modules/_quiz.scss */
+/* line 83, ../assets/sass/modules/_quiz.scss */
 #question-answer, #question-attempt {
   height: 450px;
   border: 1px solid #f1edea;
   padding: 0;
 }
-/* line 77, ../assets/sass/modules/_quiz.scss */
+/* line 90, ../assets/sass/modules/_quiz.scss */
 #question-answer .section-header-container, #question-attempt .section-header-container {
   border-bottom: 1px solid #f1edea;
   padding: 0;
 }
-/* line 80, ../assets/sass/modules/_quiz.scss */
+/* line 93, ../assets/sass/modules/_quiz.scss */
 #question-answer .section-header-container .section-header, #question-attempt .section-header-container .section-header {
   margin: 10px 0 10px 0;
 }
-/* line 84, ../assets/sass/modules/_quiz.scss */
+/* line 97, ../assets/sass/modules/_quiz.scss */
 #question-answer .content, #question-attempt .content {
   padding: 10px 25px 10px 25px;
 }
 
-/* line 90, ../assets/sass/modules/_quiz.scss */
+/* line 103, ../assets/sass/modules/_quiz.scss */
 #save-modal {
   width: 25%;
 }
 
-/* line 95, ../assets/sass/modules/_quiz.scss */
+/* line 108, ../assets/sass/modules/_quiz.scss */
 .quiz-list {
   user-select: none;
 }
-/* line 99, ../assets/sass/modules/_quiz.scss */
+/* line 112, ../assets/sass/modules/_quiz.scss */
 .quiz-list .section-header .select-dropdown {
   font-size: 2.5rem;
 }
-/* line 102, ../assets/sass/modules/_quiz.scss */
+/* line 115, ../assets/sass/modules/_quiz.scss */
 .quiz-list .section-header .dropdown-content {
   min-width: 150px;
 }
-/* line 107, ../assets/sass/modules/_quiz.scss */
+/* line 120, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header {
   border-bottom: none;
   cursor: default;
 }
-/* line 110, ../assets/sass/modules/_quiz.scss */
+/* line 123, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header .arrow-parent {
   width: 16px;
   float: left;
 }
-/* line 113, ../assets/sass/modules/_quiz.scss */
+/* line 126, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header .arrow-parent .arrow {
   transition: transform .2s;
   width: 100%;
   transform: rotate(-90deg);
 }
-/* line 121, ../assets/sass/modules/_quiz.scss */
+/* line 134, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.active .arrow {
   transform: none;
 }
-/* line 127, ../assets/sass/modules/_quiz.scss */
+/* line 140, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.active.disabled .arrow {
   transform: rotate(-90deg);
 }
-/* line 136, ../assets/sass/modules/_quiz.scss */
+/* line 149, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.disabled .arrow {
   opacity: .70;
 }
-/* line 140, ../assets/sass/modules/_quiz.scss */
+/* line 153, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.disabled .switch .lever {
   background-color: #e8e8e8;
 }
-/* line 142, ../assets/sass/modules/_quiz.scss */
+/* line 155, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.disabled .switch .lever:after {
   background-color: #d4d4d4 !important;
 }
-/* line 148, ../assets/sass/modules/_quiz.scss */
+/* line 161, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsiblez.sub-menu {
   box-shadow: none;
 }
-/* line 152, ../assets/sass/modules/_quiz.scss */
+/* line 165, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header:hover {
   cursor: pointer;
 }
-/* line 157, ../assets/sass/modules/_quiz.scss */
+/* line 170, ../assets/sass/modules/_quiz.scss */
 .quiz-list ul.collapsiblez {
   position: relative;
 }
-/* line 165, ../assets/sass/modules/_quiz.scss */
+/* line 178, ../assets/sass/modules/_quiz.scss */
 .quiz-list .sub-menu {
   margin: 0;
   /*@extend .blue, .lighten-4;*/
 }
-/* line 175, ../assets/sass/modules/_quiz.scss */
+/* line 188, ../assets/sass/modules/_quiz.scss */
 .quiz-list .switch {
   display: inline-block;
   position: absolute;
@@ -10015,8 +9959,25 @@ td.min-width {
     width: 70%;
   }
 }
-/* line 21, ../assets/sass/modules/_categories.scss */
+/* line 20, ../assets/sass/modules/_categories.scss */
 .container.category table {
   margin-top: 15px;
 }
->>>>>>> 263033e120f6adacce668e9b15a42a108c6f5240
+
+/* line 1, ../assets/sass/modules/_users.scss */
+.container.user {
+  width: 30%;
+  padding-top: 10px;
+}
+@media (max-width: 992px) {
+  /* line 8, ../assets/sass/modules/_users.scss */
+  .container.user {
+    width: 60%;
+  }
+}
+@media (max-width: 600px) {
+  /* line 15, ../assets/sass/modules/_users.scss */
+  .container.user {
+    width: 100%;
+  }
+}

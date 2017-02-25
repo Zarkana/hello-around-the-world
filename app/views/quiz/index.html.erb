@@ -70,7 +70,12 @@
     </div>
   </div>
   <div class="row center">
-    <%= link_to 'Begin!', {controller: 'quiz', action: 'question'}, :id => 'download-button', :class => 'btn-large waves-effect waves-light blue'  %>
+    <div class="col s12 m8 offset-m2 buttons">
+      <%= link_to 'Begin!', {controller: 'quiz', action: 'question'}, :class => 'btn-large waves-effect waves-light blue'  %>
+      <% if user_signed_in? %>
+        <%= link_to(raw("<i class='material-icons'>edit</i>"), {controller: 'quiz', action: 'manage'}, :id => 'download-button', :class => 'manage-button btn-floating btn-large waves-effect waves-light blue') %>
+      <% end %>
+    </div>
   </div>
   <br><br>
   <script>

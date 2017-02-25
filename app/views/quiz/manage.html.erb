@@ -1,0 +1,21 @@
+<div class="container quiz" id="content">
+  <div class="row center quiz-list">
+    <div id="language-select" class="light-blue-text col s12 m8 offset-m2 center-align">
+      <h2 class="section-header">Manage</h2>
+    </div>
+  </div>
+  <div class="row center">
+    <div class="col s10 offset-s1 m6 offset-m3">
+      <div class="collection">
+        <%= link_to 'Code Snippets', {controller: 'snippets', action: 'index'}, :class => 'collection-item'  %>
+        <%= link_to 'Snippet Categories', {controller: 'categories', action: 'index'}, :class => 'collection-item'  %>
+        <%= link_to 'Programming Languages', {controller: 'languages', action: 'index'}, :class => 'collection-item'  %>
+      </div>
+    </div>
+  </div>
+  <div class="row no-margin">
+    <div class="col s10 offset-s1 m6 offset-m3">
+      <%= link_to '&larr; Back'.html_safe, quiz_index_path, :class => "manage-back-link" %>
+    </div>
+  </div>
+</div>

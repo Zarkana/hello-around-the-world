@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
   get 'quiz/index'
   get 'quiz/question', to: 'quiz#question'
+  get 'quiz/manage', to: 'quiz#manage'
   get 'quiz/answer', to: 'quiz#answer'
   get 'welcome/index'
 
