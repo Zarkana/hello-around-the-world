@@ -99,7 +99,7 @@
 }
 
 /* line 370, ../assets/sass/components/_color.scss */
-.red {
+.red, .container.user .button_to i.btn-large.red input[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] {
   background-color: #F44336 !important;
 }
 
@@ -109,7 +109,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.lighten-5, .red#question-answer, .red#question-attempt, .quiz-list .sub-menu .red.collapsible-header, .container.study .red.study-content-parent, .red.section-header {
+.red.lighten-5, .red#question-answer, .container.user .button_to i.btn-large.red input#question-answer[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input#question-answer[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input#question-answer[type="submit"], .red#question-attempt, .container.user .button_to i.btn-large.red input#question-attempt[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input#question-attempt[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input#question-attempt[type="submit"], .quiz-list .sub-menu .red.collapsible-header, .quiz-list .sub-menu .container.user .button_to i.btn-large.red input.collapsible-header[type="submit"], .container.user .button_to i.btn-large.red .quiz-list .sub-menu input.collapsible-header[type="submit"], .quiz-list .sub-menu .container.user .button_to .container.language i.red.custom-file-upload input.collapsible-header[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload .quiz-list .sub-menu input.collapsible-header[type="submit"], .quiz-list .sub-menu .container.language .container.user .button_to i.red.custom-file-upload input.collapsible-header[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload .quiz-list .sub-menu input.collapsible-header[type="submit"], .container.study .red.study-content-parent, .container.study .container.user .button_to i.btn-large.red input.study-content-parent[type="submit"], .container.user .button_to i.btn-large.red .container.study input.study-content-parent[type="submit"], .container.study .container.user .button_to .container.language i.red.custom-file-upload input.study-content-parent[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload .container.study input.study-content-parent[type="submit"], .container.study .container.language .container.user .button_to i.red.custom-file-upload input.study-content-parent[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload .container.study input.study-content-parent[type="submit"], .red.section-header, .container.user .button_to i.btn-large.red input.section-header[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input.section-header[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input.section-header[type="submit"], .container.user .button_to i.btn-large.red input.lighten-5[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input.lighten-5[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input.lighten-5[type="submit"] {
   background-color: #FFEBEE !important;
 }
 
@@ -119,7 +119,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.lighten-4, .question-navigation.buttons .pagination .red.circle, .quiz-list .red.collapsible-header:hover, .container.study .study-content-parent .red.section-header-container {
+.red.lighten-4, .question-navigation.buttons .pagination .red.circle, .question-navigation.buttons .pagination .container.user .button_to i.btn-large.red input.circle[type="submit"], .container.user .button_to i.btn-large.red .question-navigation.buttons .pagination input.circle[type="submit"], .question-navigation.buttons .pagination .container.user .button_to .container.language i.red.custom-file-upload input.circle[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload .question-navigation.buttons .pagination input.circle[type="submit"], .question-navigation.buttons .pagination .container.language .container.user .button_to i.red.custom-file-upload input.circle[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload .question-navigation.buttons .pagination input.circle[type="submit"], .quiz-list .red.collapsible-header:hover, .quiz-list .container.user .button_to i.btn-large.red input.collapsible-header[type="submit"]:hover, .container.user .button_to i.btn-large.red .quiz-list input.collapsible-header[type="submit"]:hover, .quiz-list .container.user .button_to .container.language i.red.custom-file-upload input.collapsible-header[type="submit"]:hover, .container.user .button_to .container.language i.red.custom-file-upload .quiz-list input.collapsible-header[type="submit"]:hover, .quiz-list .container.language .container.user .button_to i.red.custom-file-upload input.collapsible-header[type="submit"]:hover, .container.language .container.user .button_to i.red.custom-file-upload .quiz-list input.collapsible-header[type="submit"]:hover, .container.study .study-content-parent .red.section-header-container, .container.study .study-content-parent .container.user .button_to i.btn-large.red input.section-header-container[type="submit"], .container.user .button_to i.btn-large.red .container.study .study-content-parent input.section-header-container[type="submit"], .container.study .study-content-parent .container.user .button_to .container.language i.red.custom-file-upload input.section-header-container[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload .container.study .study-content-parent input.section-header-container[type="submit"], .container.study .study-content-parent .container.language .container.user .button_to i.red.custom-file-upload input.section-header-container[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload .container.study .study-content-parent input.section-header-container[type="submit"], .container.user .button_to i.btn-large.red input.lighten-4[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input.lighten-4[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input.lighten-4[type="submit"] {
   background-color: #FFCDD2 !important;
 }
 
@@ -129,7 +129,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.lighten-3 {
+.red.lighten-3, .container.user .button_to i.btn-large.red input.lighten-3[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input.lighten-3[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input.lighten-3[type="submit"] {
   background-color: #EF9A9A !important;
 }
 
@@ -139,7 +139,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.lighten-2, .question-navigation.buttons .pagination li.red.active, .snippet .snippet-editor-parent .red.editor-header {
+.red.lighten-2, .question-navigation.buttons .pagination li.red.active, .snippet .snippet-editor-parent .red.editor-header, .snippet .snippet-editor-parent .container.user .button_to i.btn-large.red input.editor-header[type="submit"], .container.user .button_to i.btn-large.red .snippet .snippet-editor-parent input.editor-header[type="submit"], .snippet .snippet-editor-parent .container.user .button_to .container.language i.red.custom-file-upload input.editor-header[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload .snippet .snippet-editor-parent input.editor-header[type="submit"], .snippet .snippet-editor-parent .container.language .container.user .button_to i.red.custom-file-upload input.editor-header[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload .snippet .snippet-editor-parent input.editor-header[type="submit"], .container.user .button_to i.btn-large.red input.lighten-2[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input.lighten-2[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input.lighten-2[type="submit"] {
   background-color: #E57373 !important;
 }
 
@@ -149,7 +149,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.lighten-1, .question-navigation.buttons .pagination li.red:hover {
+.red.lighten-1, .question-navigation.buttons .pagination li.red:hover, .container.user .button_to i.btn-large.red input.lighten-1[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input.lighten-1[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input.lighten-1[type="submit"] {
   background-color: #EF5350 !important;
 }
 
@@ -159,7 +159,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.darken-1 {
+.red.darken-1, .container.user .button_to i.btn-large.red input.darken-1[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input.darken-1[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input.darken-1[type="submit"] {
   background-color: #E53935 !important;
 }
 
@@ -169,7 +169,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.darken-2 {
+.red.darken-2, .container.user .button_to i.btn-large.red input.darken-2[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input.darken-2[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input.darken-2[type="submit"] {
   background-color: #D32F2F !important;
 }
 
@@ -179,7 +179,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.darken-3 {
+.red.darken-3, .container.user .button_to i.btn-large.red input.darken-3[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input.darken-3[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input.darken-3[type="submit"] {
   background-color: #C62828 !important;
 }
 
@@ -189,7 +189,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.darken-4 {
+.red.darken-4, .container.user .button_to i.btn-large.red input.darken-4[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input.darken-4[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input.darken-4[type="submit"] {
   background-color: #B71C1C !important;
 }
 
@@ -199,7 +199,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.accent-1 {
+.red.accent-1, .container.user .button_to i.btn-large.red input.accent-1[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input.accent-1[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input.accent-1[type="submit"] {
   background-color: #FF8A80 !important;
 }
 
@@ -209,7 +209,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.accent-2 {
+.red.accent-2, .container.user .button_to i.btn-large.red input.accent-2[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input.accent-2[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input.accent-2[type="submit"] {
   background-color: #FF5252 !important;
 }
 
@@ -219,7 +219,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.accent-3 {
+.red.accent-3, .container.user .button_to i.btn-large.red input.accent-3[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input.accent-3[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input.accent-3[type="submit"] {
   background-color: #FF1744 !important;
 }
 
@@ -229,7 +229,7 @@
 }
 
 /* line 378, ../assets/sass/components/_color.scss */
-.red.accent-4 {
+.red.accent-4, .container.user .button_to i.btn-large.red input.accent-4[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input.accent-4[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input.accent-4[type="submit"] {
   background-color: #D50000 !important;
 }
 
@@ -2654,7 +2654,7 @@
 }
 
 /* line 393, ../assets/sass/components/_color.scss */
-.white-text, .container.language .custom-file-upload {
+.white-text, .container.language .custom-file-upload, .container.user .button_to i.btn-large.red input[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] {
   color: #FFFFFF !important;
 }
 
@@ -3162,12 +3162,12 @@ a {
 }
 
 /* line 61, ../assets/sass/components/_global.scss */
-.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .container.language .custom-file-upload, .btn-floating, .dropdown-content, .collapsiblez, .side-nav {
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .container.language .custom-file-upload, .container.user .button_to i.btn-large.red input[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"], .btn-floating, .dropdown-content, .collapsiblez, .side-nav {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
 /* line 64, ../assets/sass/components/_global.scss */
-.z-depth-1-half, .btn:hover, .btn-large:hover, .container.language .custom-file-upload:hover, .btn-floating:hover {
+.z-depth-1-half, .btn:hover, .btn-large:hover, .container.language .custom-file-upload:hover, .container.user .button_to i.btn-large.red input[type="submit"]:hover, .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"]:hover, .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"]:hover, .btn-floating:hover {
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 
@@ -5434,7 +5434,7 @@ small {
   justify-content: space-between;
 }
 /* line 45, ../assets/sass/components/_toast.scss */
-.toast .btn, .toast .btn-large, .toast .container.language .custom-file-upload, .container.language .toast .custom-file-upload, .toast .btn-flat, .toast .container.language .custom-file-upload, .container.language .toast .custom-file-upload {
+.toast .btn, .toast .btn-large, .toast .container.language .custom-file-upload, .container.language .toast .custom-file-upload, .toast .container.user .button_to i.btn-large.red input[type="submit"], .container.user .button_to i.btn-large.red .toast input[type="submit"], .toast .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload .toast input[type="submit"], .toast .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload .toast input[type="submit"], .toast .btn-flat, .toast .container.language .custom-file-upload, .container.language .toast .custom-file-upload, .toast .container.user .button_to i.btn-large.red input[type="submit"], .container.user .button_to i.btn-large.red .toast input[type="submit"], .toast .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload .toast input[type="submit"], .toast .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload .toast input[type="submit"] {
   margin: 0;
   margin-left: 3rem;
 }
@@ -5597,9 +5597,12 @@ small {
 }
 
 /* line 2, ../assets/sass/components/_buttons.scss */
-.btn, .btn-large, .container.language .custom-file-upload,
+.btn, .btn-large, .container.language .custom-file-upload, .container.user .button_to i.btn-large.red input[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"],
 .btn-flat,
-.container.language .custom-file-upload {
+.container.language .custom-file-upload,
+.container.user .button_to i.btn-large.red input[type="submit"],
+.container.user .button_to .container.language i.red.custom-file-upload input[type="submit"],
+.container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] {
   border: none;
   border-radius: 2px;
   display: inline-block;
@@ -5612,28 +5615,46 @@ small {
 }
 
 /* line 17, ../assets/sass/components/_buttons.scss */
-.btn.disabled, .disabled.btn-large, .container.language .disabled.custom-file-upload,
+.btn.disabled, .disabled.btn-large, .container.language .disabled.custom-file-upload, .container.user .button_to i.btn-large.red input.disabled[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input.disabled[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input.disabled[type="submit"],
 .btn-floating.disabled,
 .btn-large.disabled,
 .container.language .disabled.custom-file-upload,
+.container.user .button_to i.btn-large.red input.disabled[type="submit"],
 .btn-flat.disabled,
 .container.language .disabled.custom-file-upload,
+.container.user .button_to i.btn-large.red input.disabled[type="submit"],
+.container.user .button_to .container.language i.red.custom-file-upload input.disabled[type="submit"],
+.container.language .container.user .button_to i.red.custom-file-upload input.disabled[type="submit"],
 .btn:disabled,
 .btn-large:disabled,
 .container.language .custom-file-upload:disabled,
+.container.user .button_to i.btn-large.red input[type="submit"]:disabled,
+.container.user .button_to .container.language i.red.custom-file-upload input[type="submit"]:disabled,
+.container.language .container.user .button_to i.red.custom-file-upload input[type="submit"]:disabled,
 .btn-floating:disabled,
 .btn-large:disabled,
 .container.language .custom-file-upload:disabled,
+.container.user .button_to i.btn-large.red input[type="submit"]:disabled,
 .btn-flat:disabled,
 .container.language .custom-file-upload:disabled,
+.container.user .button_to i.btn-large.red input[type="submit"]:disabled,
+.container.user .button_to .container.language i.red.custom-file-upload input[type="submit"]:disabled,
+.container.language .container.user .button_to i.red.custom-file-upload input[type="submit"]:disabled,
 .btn[disabled],
 [disabled].btn-large,
 .container.language [disabled].custom-file-upload,
+.container.user .button_to i.btn-large.red input[disabled][type="submit"],
+.container.user .button_to .container.language i.red.custom-file-upload input[disabled][type="submit"],
+.container.language .container.user .button_to i.red.custom-file-upload input[disabled][type="submit"],
 .btn-floating[disabled],
 .btn-large[disabled],
 .container.language [disabled].custom-file-upload,
+.container.user .button_to i.btn-large.red input[disabled][type="submit"],
 .btn-flat[disabled],
-.container.language [disabled].custom-file-upload {
+.container.language [disabled].custom-file-upload,
+.container.user .button_to i.btn-large.red input[disabled][type="submit"],
+.container.user .button_to .container.language i.red.custom-file-upload input[disabled][type="submit"],
+.container.language .container.user .button_to i.red.custom-file-upload input[disabled][type="submit"] {
   pointer-events: none;
   background-color: #DFDFDF !important;
   box-shadow: none;
@@ -5641,60 +5662,86 @@ small {
   cursor: default;
 }
 /* line 35, ../assets/sass/components/_buttons.scss */
-.btn.disabled:hover, .disabled.btn-large:hover, .container.language .disabled.custom-file-upload:hover,
+.btn.disabled:hover, .disabled.btn-large:hover, .container.language .disabled.custom-file-upload:hover, .container.user .button_to i.btn-large.red input.disabled[type="submit"]:hover, .container.user .button_to .container.language i.red.custom-file-upload input.disabled[type="submit"]:hover, .container.language .container.user .button_to i.red.custom-file-upload input.disabled[type="submit"]:hover,
 .btn-floating.disabled:hover,
 .btn-large.disabled:hover,
 .container.language .disabled.custom-file-upload:hover,
+.container.user .button_to i.btn-large.red input.disabled[type="submit"]:hover,
 .btn-flat.disabled:hover,
 .container.language .disabled.custom-file-upload:hover,
+.container.user .button_to i.btn-large.red input.disabled[type="submit"]:hover,
+.container.user .button_to .container.language i.red.custom-file-upload input.disabled[type="submit"]:hover,
+.container.language .container.user .button_to i.red.custom-file-upload input.disabled[type="submit"]:hover,
 .btn:disabled:hover,
 .btn-large:disabled:hover,
 .container.language .custom-file-upload:disabled:hover,
+.container.user .button_to i.btn-large.red input[type="submit"]:disabled:hover,
+.container.user .button_to .container.language i.red.custom-file-upload input[type="submit"]:disabled:hover,
+.container.language .container.user .button_to i.red.custom-file-upload input[type="submit"]:disabled:hover,
 .btn-floating:disabled:hover,
 .btn-large:disabled:hover,
 .container.language .custom-file-upload:disabled:hover,
+.container.user .button_to i.btn-large.red input[type="submit"]:disabled:hover,
 .btn-flat:disabled:hover,
 .container.language .custom-file-upload:disabled:hover,
+.container.user .button_to i.btn-large.red input[type="submit"]:disabled:hover,
+.container.user .button_to .container.language i.red.custom-file-upload input[type="submit"]:disabled:hover,
+.container.language .container.user .button_to i.red.custom-file-upload input[type="submit"]:disabled:hover,
 .btn[disabled]:hover,
 [disabled].btn-large:hover,
 .container.language [disabled].custom-file-upload:hover,
+.container.user .button_to i.btn-large.red input[disabled][type="submit"]:hover,
+.container.user .button_to .container.language i.red.custom-file-upload input[disabled][type="submit"]:hover,
+.container.language .container.user .button_to i.red.custom-file-upload input[disabled][type="submit"]:hover,
 .btn-floating[disabled]:hover,
 .btn-large[disabled]:hover,
 .container.language [disabled].custom-file-upload:hover,
+.container.user .button_to i.btn-large.red input[disabled][type="submit"]:hover,
 .btn-flat[disabled]:hover,
-.container.language [disabled].custom-file-upload:hover {
+.container.language [disabled].custom-file-upload:hover,
+.container.user .button_to i.btn-large.red input[disabled][type="submit"]:hover,
+.container.user .button_to .container.language i.red.custom-file-upload input[disabled][type="submit"]:hover,
+.container.language .container.user .button_to i.red.custom-file-upload input[disabled][type="submit"]:hover {
   background-color: #DFDFDF !important;
   color: #9F9F9F !important;
 }
 
 /* line 42, ../assets/sass/components/_buttons.scss */
-.btn, .btn-large, .container.language .custom-file-upload,
+.btn, .btn-large, .container.language .custom-file-upload, .container.user .button_to i.btn-large.red input[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"],
 .btn-floating,
 .btn-large,
 .container.language .custom-file-upload,
+.container.user .button_to i.btn-large.red input[type="submit"],
 .btn-flat,
-.container.language .custom-file-upload {
+.container.language .custom-file-upload,
+.container.user .button_to i.btn-large.red input[type="submit"],
+.container.user .button_to .container.language i.red.custom-file-upload input[type="submit"],
+.container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] {
   outline: 0;
 }
 /* line 49, ../assets/sass/components/_buttons.scss */
-.btn i, .btn-large i, .container.language .custom-file-upload i,
+.btn i, .btn-large i, .container.language .custom-file-upload i, .container.user .button_to i.btn-large.red input[type="submit"] i, .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"] i, .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] i,
 .btn-floating i,
 .btn-large i,
 .container.language .custom-file-upload i,
+.container.user .button_to i.btn-large.red input[type="submit"] i,
 .btn-flat i,
-.container.language .custom-file-upload i {
+.container.language .custom-file-upload i,
+.container.user .button_to i.btn-large.red input[type="submit"] i,
+.container.user .button_to .container.language i.red.custom-file-upload input[type="submit"] i,
+.container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] i {
   font-size: 1.3rem;
   line-height: inherit;
 }
 
 /* line 58, ../assets/sass/components/_buttons.scss */
-.btn:focus, .btn-large:focus, .container.language .custom-file-upload:focus,
+.btn:focus, .btn-large:focus, .container.language .custom-file-upload:focus, .container.user .button_to i.btn-large.red input[type="submit"]:focus, .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"]:focus, .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"]:focus,
 .btn-floating:focus {
   background-color: #128ef2;
 }
 
 /* line 64, ../assets/sass/components/_buttons.scss */
-.btn, .btn-large, .container.language .custom-file-upload {
+.btn, .btn-large, .container.language .custom-file-upload, .container.user .button_to i.btn-large.red input[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] {
   text-decoration: none;
   color: #fff;
   background-color: #42A5F5;
@@ -5704,7 +5751,7 @@ small {
   cursor: pointer;
 }
 /* line 74, ../assets/sass/components/_buttons.scss */
-.btn:hover, .btn-large:hover, .container.language .custom-file-upload:hover {
+.btn:hover, .btn-large:hover, .container.language .custom-file-upload:hover, .container.user .button_to i.btn-large.red input[type="submit"]:hover, .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"]:hover, .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"]:hover {
   background-color: #5ab1f6;
 }
 
@@ -5743,12 +5790,12 @@ small {
   border-radius: 0;
 }
 /* line 116, ../assets/sass/components/_buttons.scss */
-.btn-floating.btn-large, .container.language .btn-floating.custom-file-upload {
+.btn-floating.btn-large, .container.language .btn-floating.custom-file-upload, .container.user .button_to i.btn-large.red input.btn-floating[type="submit"] {
   width: 56px;
   height: 56px;
 }
 /* line 119, ../assets/sass/components/_buttons.scss */
-.btn-floating.btn-large i, .container.language .btn-floating.custom-file-upload i {
+.btn-floating.btn-large i, .container.language .btn-floating.custom-file-upload i, .container.user .button_to i.btn-large.red input.btn-floating[type="submit"] i {
   line-height: 56px;
 }
 
@@ -5862,7 +5909,7 @@ button.btn-floating {
 }
 
 /* line 238, ../assets/sass/components/_buttons.scss */
-.btn-flat, .container.language .custom-file-upload {
+.btn-flat, .container.language .custom-file-upload, .container.user .button_to i.btn-large.red input[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] {
   box-shadow: none;
   background-color: transparent;
   color: #343434;
@@ -5870,32 +5917,32 @@ button.btn-floating {
   transition: background-color .2s;
 }
 /* line 245, ../assets/sass/components/_buttons.scss */
-.btn-flat:focus, .container.language .custom-file-upload:focus, .btn-flat:active, .container.language .custom-file-upload:active {
+.btn-flat:focus, .container.language .custom-file-upload:focus, .container.user .button_to i.btn-large.red input[type="submit"]:focus, .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"]:focus, .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"]:focus, .btn-flat:active, .container.language .custom-file-upload:active, .container.user .button_to i.btn-large.red input[type="submit"]:active, .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"]:active, .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"]:active {
   background-color: transparent;
 }
 /* line 250, ../assets/sass/components/_buttons.scss */
-.btn-flat:focus, .container.language .custom-file-upload:focus, .btn-flat:hover, .container.language .custom-file-upload:hover {
+.btn-flat:focus, .container.language .custom-file-upload:focus, .container.user .button_to i.btn-large.red input[type="submit"]:focus, .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"]:focus, .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"]:focus, .btn-flat:hover, .container.language .custom-file-upload:hover, .container.user .button_to i.btn-large.red input[type="submit"]:hover, .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"]:hover, .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"]:hover {
   background-color: rgba(0, 0, 0, 0.1);
   box-shadow: none;
 }
 /* line 256, ../assets/sass/components/_buttons.scss */
-.btn-flat:active, .container.language .custom-file-upload:active {
+.btn-flat:active, .container.language .custom-file-upload:active, .container.user .button_to i.btn-large.red input[type="submit"]:active, .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"]:active, .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"]:active {
   background-color: rgba(0, 0, 0, 0.2);
 }
 /* line 260, ../assets/sass/components/_buttons.scss */
-.btn-flat.disabled, .container.language .disabled.custom-file-upload {
+.btn-flat.disabled, .container.language .disabled.custom-file-upload, .container.user .button_to i.btn-large.red input.disabled[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input.disabled[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input.disabled[type="submit"] {
   background-color: transparent !important;
   color: #b3b3b3 !important;
   cursor: default;
 }
 
 /* line 268, ../assets/sass/components/_buttons.scss */
-.btn-large, .container.language .custom-file-upload {
+.btn-large, .container.language .custom-file-upload, .container.user .button_to i.btn-large.red input[type="submit"] {
   height: 54px;
   line-height: 54px;
 }
 /* line 273, ../assets/sass/components/_buttons.scss */
-.btn-large i, .container.language .custom-file-upload i {
+.btn-large i, .container.language .custom-file-upload i, .container.user .button_to i.btn-large.red input[type="submit"] i {
   font-size: 1.6rem;
 }
 
@@ -5977,7 +6024,7 @@ button.btn-floating {
  * https://github.com/fians/Waves/blob/master/LICENSE
  */
 /* line 12, ../assets/sass/components/_waves.scss */
-.waves-effect, .container.language .custom-file-upload {
+.waves-effect, .container.language .custom-file-upload, .container.user .button_to i.btn-large.red input[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] {
   position: relative;
   cursor: pointer;
   display: inline-block;
@@ -5993,7 +6040,7 @@ button.btn-floating {
   transition: .3s ease-out;
 }
 /* line 39, ../assets/sass/components/_waves.scss */
-.waves-effect .waves-ripple, .container.language .custom-file-upload .waves-ripple {
+.waves-effect .waves-ripple, .container.language .custom-file-upload .waves-ripple, .container.user .button_to i.btn-large.red input[type="submit"] .waves-ripple, .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"] .waves-ripple, .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] .waves-ripple {
   position: absolute;
   border-radius: 50%;
   width: 20px;
@@ -6008,35 +6055,35 @@ button.btn-floating {
   pointer-events: none;
 }
 /* line 61, ../assets/sass/components/_waves.scss */
-.waves-effect.waves-light .waves-ripple, .container.language .custom-file-upload .waves-ripple {
+.waves-effect.waves-light .waves-ripple, .container.language .custom-file-upload .waves-ripple, .container.user .button_to i.btn-large.red input[type="submit"] .waves-ripple, .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"] .waves-ripple, .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] .waves-ripple {
   background-color: rgba(255, 255, 255, 0.45);
 }
 /* line 65, ../assets/sass/components/_waves.scss */
-.waves-effect.waves-red .waves-ripple, .container.language .waves-red.custom-file-upload .waves-ripple {
+.waves-effect.waves-red .waves-ripple, .container.language .waves-red.custom-file-upload .waves-ripple, .container.user .button_to i.btn-large.red input.waves-red[type="submit"] .waves-ripple, .container.user .button_to .container.language i.red.custom-file-upload input.waves-red[type="submit"] .waves-ripple, .container.language .container.user .button_to i.red.custom-file-upload input.waves-red[type="submit"] .waves-ripple {
   background-color: rgba(244, 67, 54, 0.7);
 }
 /* line 68, ../assets/sass/components/_waves.scss */
-.waves-effect.waves-yellow .waves-ripple, .container.language .waves-yellow.custom-file-upload .waves-ripple {
+.waves-effect.waves-yellow .waves-ripple, .container.language .waves-yellow.custom-file-upload .waves-ripple, .container.user .button_to i.btn-large.red input.waves-yellow[type="submit"] .waves-ripple, .container.user .button_to .container.language i.red.custom-file-upload input.waves-yellow[type="submit"] .waves-ripple, .container.language .container.user .button_to i.red.custom-file-upload input.waves-yellow[type="submit"] .waves-ripple {
   background-color: rgba(255, 235, 59, 0.7);
 }
 /* line 71, ../assets/sass/components/_waves.scss */
-.waves-effect.waves-orange .waves-ripple, .container.language .waves-orange.custom-file-upload .waves-ripple {
+.waves-effect.waves-orange .waves-ripple, .container.language .waves-orange.custom-file-upload .waves-ripple, .container.user .button_to i.btn-large.red input.waves-orange[type="submit"] .waves-ripple, .container.user .button_to .container.language i.red.custom-file-upload input.waves-orange[type="submit"] .waves-ripple, .container.language .container.user .button_to i.red.custom-file-upload input.waves-orange[type="submit"] .waves-ripple {
   background-color: rgba(255, 152, 0, 0.7);
 }
 /* line 74, ../assets/sass/components/_waves.scss */
-.waves-effect.waves-purple .waves-ripple, .container.language .waves-purple.custom-file-upload .waves-ripple {
+.waves-effect.waves-purple .waves-ripple, .container.language .waves-purple.custom-file-upload .waves-ripple, .container.user .button_to i.btn-large.red input.waves-purple[type="submit"] .waves-ripple, .container.user .button_to .container.language i.red.custom-file-upload input.waves-purple[type="submit"] .waves-ripple, .container.language .container.user .button_to i.red.custom-file-upload input.waves-purple[type="submit"] .waves-ripple {
   background-color: rgba(156, 39, 176, 0.7);
 }
 /* line 77, ../assets/sass/components/_waves.scss */
-.waves-effect.waves-green .waves-ripple, .container.language .waves-green.custom-file-upload .waves-ripple {
+.waves-effect.waves-green .waves-ripple, .container.language .waves-green.custom-file-upload .waves-ripple, .container.user .button_to i.btn-large.red input.waves-green[type="submit"] .waves-ripple, .container.user .button_to .container.language i.red.custom-file-upload input.waves-green[type="submit"] .waves-ripple, .container.language .container.user .button_to i.red.custom-file-upload input.waves-green[type="submit"] .waves-ripple {
   background-color: rgba(76, 175, 80, 0.7);
 }
 /* line 80, ../assets/sass/components/_waves.scss */
-.waves-effect.waves-teal .waves-ripple, .container.language .waves-teal.custom-file-upload .waves-ripple {
+.waves-effect.waves-teal .waves-ripple, .container.language .waves-teal.custom-file-upload .waves-ripple, .container.user .button_to i.btn-large.red input.waves-teal[type="submit"] .waves-ripple, .container.user .button_to .container.language i.red.custom-file-upload input.waves-teal[type="submit"] .waves-ripple, .container.language .container.user .button_to i.red.custom-file-upload input.waves-teal[type="submit"] .waves-ripple {
   background-color: rgba(0, 150, 136, 0.7);
 }
 /* line 85, ../assets/sass/components/_waves.scss */
-.waves-effect input[type="button"], .container.language .custom-file-upload input[type="button"], .waves-effect input[type="reset"], .container.language .custom-file-upload input[type="reset"], .waves-effect input[type="submit"], .container.language .custom-file-upload input[type="submit"] {
+.waves-effect input[type="button"], .container.language .custom-file-upload input[type="button"], .container.user .button_to i.btn-large.red input[type="submit"] input[type="button"], .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"] input[type="button"], .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] input[type="button"], .waves-effect input[type="reset"], .container.language .custom-file-upload input[type="reset"], .container.user .button_to i.btn-large.red input[type="submit"] input[type="reset"], .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"] input[type="reset"], .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] input[type="reset"], .waves-effect input[type="submit"], .container.language .custom-file-upload input[type="submit"], .container.user .button_to i.btn-large.red input[type="submit"] input[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"] input[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] input[type="submit"] {
   border: 0;
   font-style: normal;
   font-size: inherit;
@@ -6044,7 +6091,7 @@ button.btn-floating {
   background: none;
 }
 /* line 93, ../assets/sass/components/_waves.scss */
-.waves-effect img, .container.language .custom-file-upload img {
+.waves-effect img, .container.language .custom-file-upload img, .container.user .button_to i.btn-large.red input[type="submit"] img, .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"] img, .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] img {
   position: relative;
   z-index: -1;
 }
@@ -6061,12 +6108,12 @@ button.btn-floating {
 }
 
 /* line 136, ../assets/sass/components/_waves.scss */
-.waves-input-wrapper {
+.waves-input-wrapper, .container.user .button_to i.btn-large.red input[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] {
   border-radius: 0.2em;
   vertical-align: bottom;
 }
 /* line 144, ../assets/sass/components/_waves.scss */
-.waves-input-wrapper .waves-button-input {
+.waves-input-wrapper .waves-button-input, .container.user .button_to i.btn-large.red input[type="submit"] .waves-button-input, .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"] .waves-button-input, .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] .waves-button-input {
   position: relative;
   top: 0;
   left: 0;
@@ -6090,7 +6137,7 @@ button.btn-floating {
 
 /* Firefox Bug: link not triggered */
 /* line 175, ../assets/sass/components/_waves.scss */
-.waves-effect .waves-ripple, .container.language .custom-file-upload .waves-ripple {
+.waves-effect .waves-ripple, .container.language .custom-file-upload .waves-ripple, .container.user .button_to i.btn-large.red input[type="submit"] .waves-ripple, .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"] .waves-ripple, .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"] .waves-ripple {
   z-index: -1;
 }
 
@@ -6136,7 +6183,7 @@ button.btn-floating {
   width: 100%;
 }
 /* line 40, ../assets/sass/components/_modal.scss */
-.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .container.language .custom-file-upload, .container.language .modal .modal-footer .custom-file-upload, .modal .modal-footer .btn-flat, .modal .modal-footer .container.language .custom-file-upload, .container.language .modal .modal-footer .custom-file-upload {
+.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .container.language .custom-file-upload, .container.language .modal .modal-footer .custom-file-upload, .modal .modal-footer .container.user .button_to i.btn-large.red input[type="submit"], .container.user .button_to i.btn-large.red .modal .modal-footer input[type="submit"], .modal .modal-footer .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload .modal .modal-footer input[type="submit"], .modal .modal-footer .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload .modal .modal-footer input[type="submit"], .modal .modal-footer .btn-flat, .modal .modal-footer .container.language .custom-file-upload, .container.language .modal .modal-footer .custom-file-upload, .modal .modal-footer .container.user .button_to i.btn-large.red input[type="submit"], .container.user .button_to i.btn-large.red .modal .modal-footer input[type="submit"], .modal .modal-footer .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload .modal .modal-footer input[type="submit"], .modal .modal-footer .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload .modal .modal-footer input[type="submit"] {
   float: right;
   margin: 6px 0;
 }
@@ -7484,7 +7531,7 @@ select:disabled {
   width: 100%;
 }
 /* line 14, ../assets/sass/components/forms/_file-input.scss */
-.file-field .btn, .file-field .btn-large, .file-field .container.language .custom-file-upload, .container.language .file-field .custom-file-upload {
+.file-field .btn, .file-field .btn-large, .file-field .container.language .custom-file-upload, .container.language .file-field .custom-file-upload, .file-field .container.user .button_to i.btn-large.red input[type="submit"], .container.user .button_to i.btn-large.red .file-field input[type="submit"], .file-field .container.user .button_to .container.language i.red.custom-file-upload input[type="submit"], .container.user .button_to .container.language i.red.custom-file-upload .file-field input[type="submit"], .file-field .container.language .container.user .button_to i.red.custom-file-upload input[type="submit"], .container.language .container.user .button_to i.red.custom-file-upload .file-field input[type="submit"] {
   float: left;
   height: 3rem;
   line-height: 3rem;
@@ -9980,4 +10027,8 @@ td.min-width {
   .container.user {
     width: 100%;
   }
+}
+/* line 22, ../assets/sass/modules/_users.scss */
+.container.user .button_to i.btn-large.red, .container.user .button_to .container.language i.red.custom-file-upload, .container.language .container.user .button_to i.red.custom-file-upload {
+  padding: 0;
 }

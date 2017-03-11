@@ -11,33 +11,6 @@ class Users::RegistrationsController < DeviseController
     yield resource if block_given?
     p "RESPOND WITH RESOURCE 1"
     respond_with resource
-
-
-  #   p "INITIALIZING USER"
-  #   if User.exists?(admin: true)
-  #     @admin = User.where('admin = ?', true).first
-  #     @adminSnippets = Snippet.where('user_id = ?', @admin.id)
-  #     @adminSingleSnippets = Snippet.where(category_id: nil).where('user_id = ?', @admin.id)
-  #     @adminCategories = Category.includes(:snippets).where('user_id= ?', @admin.id)
-  #     @adminMultiSnippets = Snippet.where.not(category_id: nil).where('user_id = ?', @admin.id)
-  #   end
-  #   p "COPIED SNIPPETS 1->"
-  #   @copied_admin = @admin.deep_clone
-  #   p @copied_admin.inspect
-  #   @copied_snippets = Snippet.where('user_id = ?', @copied_admin.id)
-  #   p @copied_snippets.inspect
-  #
-  #   p "COPIED SNIPPETS 2->"
-  #   @copied_admin = @admin.deep_clone include: [:snippets, { snippets: :implementations }]
-  #   p @copied_admin.inspect
-  #
-  #   @copied_snippets = @copied_admin.snippets
-  #   p @copied_snippets.inspect
-  #
-  #   @copied_snippets.each do |snippet|
-  #     @copied_implementation = snippet.implementations
-  #     p @copied_implementation.inspect
-  #   end
   end
 
   # POST /resource
@@ -188,48 +161,66 @@ class Users::RegistrationsController < DeviseController
 
   def initialize_user(resource)
     p "INITIALIZING USER"
+
+
     if User.exists?(admin: true)
       admin = User.where('admin = ?', true).first
-      adminSnippets = Snippet.where('user_id = ?', admin.id)
-      adminSingleSnippets = Snippet.where(category_id: nil).where('user_id = ?', admin.id)
-      adminCategories = Category.includes(:snippets).where('user_id= ?', admin.id)
+      adminSnippets = admin.snippets.where(category_id: nil)
+      # adminCategories = Category.includes(:snippets).where('user_id= ?', admin.id)
       # adminMCategories = Category.where('user_id= ?', admin.id)
-      adminMCategories = admin.categories
-      adminMultiSnippets = Snippet.where.not(category_id: nil).where('user_id = ?', admin.id)
+      adminLanguages = admin.languages.where("languages.user" => admin)
+      adminCategories = admin.categories.where("categories.user" => admin)
+      # adminMCategories = admin.categories
+      # adminMultiSnippets = Snippet.where.not(category_id: nil).where('user_id = ?', admin.id)
     end
 
-
-    adminSingleSnippets.each do |snippet|
-        cloned_snippet = snippet.deep_clone include: [:implementations]
-        cloned_snippet.user = resource
-        if cloned_snippet.save!
-          p "Snippet saved successfully"
-        else
-          p "Snippet failed to save"
-        end
+    adminLanguages.each do |language|
+      p "CLONING LANGUAGE: " + language.inspect
+      cloned_language = language.deep_clone
+      cloned_language.user = resource
+      cloned_language.logo = language.logo
+      # t.string   "logo_file_name"
+      # t.string   "logo_content_type"
+      # t.integer  "logo_file_size"
+      # t.datetime "logo_updated_at"
+      if cloned_language.save!
+        p "Language saved successfully"
+      else
+        p "Language failed to save"
+      end
     end
 
-    p "THE ADMIN CATEGORIES " + adminMCategories.inspect
-    adminMCategories.each do |category|
-        # only if user is resource!
-        # cloned_category = category.deep_clone include: { snippets: :implementations }
-        # cloned_category = category.deep_clone :include => { snippets: { if: lambda{|resource| resource.id?(admin.id) } } }
-        # cloned_category = category.deep_clone :include => { :snippets => { :if => lambda{|resource| resource.id == admin.id } } }
-        cloned_category = category.deep_clone  include: [
-          snippets: [ :implementations, if: lambda {|snippet| snippet.user == admin } ]
-        ]
+    adminSnippets.each do |snippet|
+      p "CLONING SNIPPET: " + snippet.inspect
+      cloned_snippet = snippet.deep_clone include: [:implementations]
+      cloned_snippet.user = resource
+      if cloned_snippet.save!
+        p "Snippet saved successfully"
+      else
+        p "Snippet failed to save"
+      end
+    end
 
-        cloned_category.user = resource
-        cloned_category.snippets.each do |snippet|
-          snippet.user = resource
-          p "THE ADMIN SNIPPET" + snippet.inspect
-        end
-        p cloned_category.inspect
-        if cloned_category.save!
-          p "Category saved successfully"
-        else
-          p "Category failed to save"
-        end
+    adminCategories.each do |category|
+      p "CLONING CATEGORY: " + category.inspect
+      # only if user is resource!
+      # cloned_category = category.deep_clone include: { snippets: :implementations }
+      # cloned_category = category.deep_clone :include => { snippets: { if: lambda{|resource| resource.id?(admin.id) } } }
+      # cloned_category = category.deep_clone :include => { :snippets => { :if => lambda{|resource| resource.id == admin.id } } }
+      cloned_category = category.deep_clone  include: [
+        snippets: [ :implementations, if: lambda {|snippet| snippet.user == admin } ]
+      ]
+
+      cloned_category.user = resource
+      cloned_category.snippets.each do |snippet|
+        snippet.user = resource
+      end
+      p cloned_category.inspect
+      if cloned_category.save!
+        p "Category saved successfully"
+      else
+        p "Category failed to save"
+      end
     end
 
     # # To visually see the id

@@ -17,4 +17,15 @@
 
     }
   }
+
+  .button_to{
+    i.btn-large.red{
+      padding: 0;
+      input[type="submit"]{
+        // To make the button selectable at any point
+        @extend .btn-large, .waves-effect, .waves-light, .red, .white-text, .btn, .btn-flat, .waves-input-wrapper;
+      }
+    }
+  }
+
 }

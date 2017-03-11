@@ -16,41 +16,15 @@
   <div class="row center quiz-list">
     <div class="col s12 m8 offset-m2">
       <ul class="collapsiblez" data-collapsible="accordion">
-        <% unless @singleSnippets.blank? %>
-          <% @singleSnippets.each do |snippet| %>
-          <li>
-            <div class="collapsible-header">
-              <%= snippet.title %>
-              <div class="switch">
-                <label>
-                  <input class="snippet-active-switch" value="<%= snippet.id %>" <% if snippet.active == true %>checked<% end %> type="checkbox">
-                  <span class="lever"></span>
-                </label>
-              </div>
-            </div>
-          </li>
-          <% end %>
-        <% end %>
-        <% unless @categories.blank? %>
-          <% @categories.each do |category| %>
-          <li id="category-<%= category.id %>">
-            <div class="collapsible-header expandable <% if category.snippets.blank? %>disabled<% end %>">
-              <div class="arrow-parent"><%= image_tag("dropdown-arrow.png", :class => "arrow") %></div>
-              <%= category.name %>
-              <div class="switch">
-                <label>
-                  <input class="category-active-switch" value="<%= category.id %>"  <% if category.snippets.blank? %>disabled<% end %> <% if category.active == true %>checked<% end %> type="checkbox">
-                  <span class="lever"></span>
-                </label>
-              </div>
-            </div>
-            <% unless category.snippets.blank? %>
-            <div class="collapsible-body">
-              <ul class="collapsiblez sub-menu" data-collapsible="accordion">
-                <li>
-                  <% category.snippets.each do |snippet| %>
-                  <div class="collapsible-header">
-                    <%= snippet.title %>
+        <%
+        snippetsArray = [@adminSnippets, @snippets]
+        unless snippetsArray.blank?
+          snippetsArray.each do |snippets|
+            unless snippets.blank?
+              snippets.each do |snippet| %>
+                  <li>
+                    <div class="collapsible-header">
+                      <%= snippet.title %>
                     <div class="switch">
                       <label>
                         <input class="snippet-active-switch" value="<%= snippet.id %>" <% if snippet.active == true %>checked<% end %> type="checkbox">
@@ -58,14 +32,52 @@
                       </label>
                     </div>
                   </div>
+                </li>
+              <% end
+              end
+            end
+          end
+          categoriesArray = [@adminCategories, @categories]
+          unless categoriesArray.blank?
+            categoriesArray.each do |categories|
+              unless categories.blank?
+                categories.each do |category| %>
+                  <li id="category-<%= category.id %>">
+                    <div class="collapsible-header expandable <% if category.snippets.blank? %>disabled<% end %>">
+                      <div class="arrow-parent"><%= image_tag("dropdown-arrow.png", :class => "arrow") %></div>
+                      <%= category.name %>
+                      <div class="switch">
+                        <label>
+                          <input class="category-active-switch" value="<%= category.id %>"  <% if category.snippets.blank? %>disabled<% end %> <% if category.active == true %>checked<% end %> type="checkbox">
+                          <span class="lever"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <% unless category.snippets.blank? %>
+                    <div class="collapsible-body">
+                      <ul class="collapsiblez sub-menu" data-collapsible="accordion">
+                        <li>
+                          <% category.snippets.each do |snippet| %>
+                          <div class="collapsible-header">
+                            <%= snippet.title %>
+                            <div class="switch">
+                              <label>
+                                <input class="snippet-active-switch" value="<%= snippet.id %>" <% if snippet.active == true %>checked<% end %> type="checkbox">
+                                <span class="lever"></span>
+                              </label>
+                            </div>
+                          </div>
+                          <% end %>
+                        </li>
+                      </ul>
+                    </div>
                   <% end %>
                 </li>
-              </ul>
-            </div>
-            <% end %>
-          </li>
-          <% end %>
-        <% end %>
+            <% end
+            end
+          end
+        end
+        %>
       </ul>
     </div>
   </div>
