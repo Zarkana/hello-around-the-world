@@ -36,6 +36,8 @@ gem 'devise'
 
 gem 'cancan'
 
+gem 'deep_cloneable', '~> 2.2.2'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

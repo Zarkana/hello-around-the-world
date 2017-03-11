@@ -5,3 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# admin = User.create({  })
+
+# Languages
+# languages = Language.create([
+#   { name: 'C' },
+#   { name: 'C++' },
+#   { name: 'Java' },
+#   { name: 'Python' },
+#   { name: 'PHP' },
+#   { name: 'JavaScrpt' },
+#   { name: 'Ruby' }
+# ])
+
+#
+# <option value="c">C</option>
+# <option value="c++">C++</option>
+# <option value="java">Java</option>
+# <option value="python">Python</option>
+# <option value="php">PHP</option>
+# <option value="javascript">JavaScript</option>
+# <option value="ruby">Ruby</option>
