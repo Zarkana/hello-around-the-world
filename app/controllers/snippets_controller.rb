@@ -29,10 +29,6 @@ class SnippetsController < ApplicationController
     def create
       @snippet = Snippet.new(snippet_params)
 
-      if current_user.admin == true
-        @snippet.default = true;
-      end
-
       @snippet.user = current_user
       authorize! :create, @snippet
 
@@ -41,6 +37,18 @@ class SnippetsController < ApplicationController
 
       # @implementation = Implementation.new( params.require(:implementation).permit(:code, :language) )
       if @snippet.save
+
+        #If admin we need to store data to be used later for default snippet look up
+        if current_user.admin == true
+          @snippet.default = true;
+          # @snippet.default_id = true;
+          # @snippet.update_attributes :default_id => @snippet.id
+          @snippet.update_attributes(
+            :default => true,
+            :default_id => @snippet.id
+            )
+        end
+
         @snippets = Snippet.accessible_by(current_ability)
         redirect_to snippets_path
       else
@@ -99,6 +107,7 @@ class SnippetsController < ApplicationController
       p "CLONING SNIPPET: " + defaultSnippet.inspect
       cloned_snippet = defaultSnippet.deep_clone include: [:implementations]
       cloned_snippet.user = current_user
+      cloned_snippet.default_id = defaultSnippet.id
       if cloned_snippet.save!
         p "Snippet updated successfully"
         snippet.destroy

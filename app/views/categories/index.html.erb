@@ -2,7 +2,7 @@
   <h2 class="section-header center-align">Categories</h2>
   <!-- Modal Structure -->
   <% if !flash.empty? %>
-  <div class="modal error-modal">
+  <!-- <div class="modal error-modal">
     <div class="modal-content">
       <h4>Aw, shucks!</h4>
       <div id="error_explanation">
@@ -14,7 +14,7 @@
     <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Got It!</a>
     </div>
-  </div>
+  </div> -->
   <% end %>
 
   <table class="highlight">
@@ -44,7 +44,8 @@
   </div>
   <div class="row no-margin">
     <div class="col s12">
-      <%= link_to '&larr; Done'.html_safe, quiz_index_path, :class => "manage-back-link" %>
+      <!-- <%= link_to '&larr; Done'.html_safe, quiz_index_path, :class => "manage-back-link" %> -->
+      <%= link_to '&larr; Back'.html_safe, :back %>
     </div>
   </div>
 </div>

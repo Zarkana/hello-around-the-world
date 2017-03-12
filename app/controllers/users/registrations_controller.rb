@@ -202,7 +202,7 @@ class Users::RegistrationsController < DeviseController
       cloned_category.user = resource
       cloned_category.snippets.each do |snippet|
         snippet.user = resource
-        snippet.default_id = snippet.id
+        # snippet.default_id = snippet.id
       end
       p cloned_category.inspect
       if cloned_category.save!
