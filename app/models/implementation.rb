@@ -1,5 +1,5 @@
 class Implementation < ApplicationRecord
-  belongs_to :snippet, inverse_of: :implementations, dependent: :destroy
+  belongs_to :snippet, inverse_of: :implementations
 
   after_initialize :init
 

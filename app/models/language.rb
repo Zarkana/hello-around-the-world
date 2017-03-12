@@ -1,5 +1,5 @@
 class Language < ApplicationRecord
-  belongs_to :user, dependent: :destroy
+  belongs_to :user
 
   validates_presence_of :user
 
