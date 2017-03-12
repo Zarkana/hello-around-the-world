@@ -34,7 +34,7 @@ main{
 }
 
 .section-header{
-  @extend .light-blue-text, .lighten-5;
+  @extend .light-blue-text;
   @at-root h1#{&} {
     font-size: 3rem;
   }

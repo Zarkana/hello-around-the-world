@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170226002308) do
+ActiveRecord::Schema.define(version: 20170311234729) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -32,24 +32,29 @@ ActiveRecord::Schema.define(version: 20170226002308) do
 
   create_table "languages", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
     t.integer  "user_id"
+    t.boolean  "visible",           default: false
   end
 
   create_table "snippets", force: :cascade do |t|
     t.string   "title"
     t.string   "runtime_complexity"
     t.string   "space_complexity"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.integer  "category_id"
     t.boolean  "active"
     t.integer  "user_id"
+    t.integer  "default_id"
+    t.boolean  "default",            default: false
+    t.boolean  "modified",           default: false
+    t.boolean  "visible",            default: false
     t.index ["category_id"], name: "index_snippets_on_category_id"
   end
 

@@ -6,6 +6,14 @@
   &.index{
     width: 50%;
   }
+
+  .buttons{
+    position: relative;
+    .sync-button{      
+      right: 10px;
+      bottom: 0;
+    }
+  }
 }
 
 .snippet{

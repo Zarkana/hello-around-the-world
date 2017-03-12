@@ -77,6 +77,21 @@ $(document).ready(function() {
   //initializes the error modal
   $('.error-modal').modal('open');
 
+  //initializes the sync modal
+  $('.sync-modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .7, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%' // Ending top style attribute
+    }
+  );
+
+  $(".sync-button .material-icons").click(function(){
+    $('.sync-modal').modal('open');
+  });
+
   $(document).keydown(function(e) {
       if (ctrlDown && e.keyCode == sKey)
       {

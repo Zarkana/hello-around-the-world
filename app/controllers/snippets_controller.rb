@@ -28,8 +28,14 @@ class SnippetsController < ApplicationController
 
     def create
       @snippet = Snippet.new(snippet_params)
+
+      if current_user.admin == true
+        @snippet.default = true;
+      end
+
       @snippet.user = current_user
       authorize! :create, @snippet
+
       # Include languages so that when errors redirect to new it won't error
       @languages = Language.accessible_by(current_ability)
 
@@ -81,6 +87,43 @@ class SnippetsController < ApplicationController
         # render :json => data, :status => :ok
       end
     end
+
+
+    def update_snippet
+      snippet = Snippet.find(params[:id])
+      # authorize! :update_snippet, snippet
+
+      p "UPDATING SNIPPET"
+      defaultSnippet = Snippet.find(snippet.default_id)
+
+      p "CLONING SNIPPET: " + defaultSnippet.inspect
+      cloned_snippet = defaultSnippet.deep_clone include: [:implementations]
+      cloned_snippet.user = current_user
+      if cloned_snippet.save!
+        p "Snippet updated successfully"
+        snippet.destroy
+      else
+        p "Snippet failed to update"
+      end
+    end
+    #
+    # def add_snippet
+    #   snippet = Snippet.find(params[:id])
+    #   # authorize! :update_snippet, snippet
+    #
+    #   p "UPDATING SNIPPET"
+    #   defaultSnippet = Snippet.find(snippet.default_id)
+    #
+    #   p "CLONING SNIPPET: " + defaultSnippet.inspect
+    #   cloned_snippet = defaultSnippet.deep_clone include: [:implementations]
+    #   cloned_snippet.user = current_user
+    #   if cloned_snippet.save!
+    #     p "Snippet updated successfully"
+    #     snippet.destroy
+    #   else
+    #     p "Snippet failed to update"
+    #   end
+    # end
 
     private
 

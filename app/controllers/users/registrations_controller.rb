@@ -161,17 +161,11 @@ class Users::RegistrationsController < DeviseController
 
   def initialize_user(resource)
     p "INITIALIZING USER"
-
-
     if User.exists?(admin: true)
       admin = User.where('admin = ?', true).first
       adminSnippets = admin.snippets.where(category_id: nil)
-      # adminCategories = Category.includes(:snippets).where('user_id= ?', admin.id)
-      # adminMCategories = Category.where('user_id= ?', admin.id)
       adminLanguages = admin.languages.where("languages.user" => admin)
       adminCategories = admin.categories.where("categories.user" => admin)
-      # adminMCategories = admin.categories
-      # adminMultiSnippets = Snippet.where.not(category_id: nil).where('user_id = ?', admin.id)
     end
 
     adminLanguages.each do |language|
@@ -179,10 +173,6 @@ class Users::RegistrationsController < DeviseController
       cloned_language = language.deep_clone
       cloned_language.user = resource
       cloned_language.logo = language.logo
-      # t.string   "logo_file_name"
-      # t.string   "logo_content_type"
-      # t.integer  "logo_file_size"
-      # t.datetime "logo_updated_at"
       if cloned_language.save!
         p "Language saved successfully"
       else
@@ -194,6 +184,7 @@ class Users::RegistrationsController < DeviseController
       p "CLONING SNIPPET: " + snippet.inspect
       cloned_snippet = snippet.deep_clone include: [:implementations]
       cloned_snippet.user = resource
+      cloned_snippet.default_id = snippet.id
       if cloned_snippet.save!
         p "Snippet saved successfully"
       else
@@ -203,10 +194,7 @@ class Users::RegistrationsController < DeviseController
 
     adminCategories.each do |category|
       p "CLONING CATEGORY: " + category.inspect
-      # only if user is resource!
-      # cloned_category = category.deep_clone include: { snippets: :implementations }
-      # cloned_category = category.deep_clone :include => { snippets: { if: lambda{|resource| resource.id?(admin.id) } } }
-      # cloned_category = category.deep_clone :include => { :snippets => { :if => lambda{|resource| resource.id == admin.id } } }
+
       cloned_category = category.deep_clone  include: [
         snippets: [ :implementations, if: lambda {|snippet| snippet.user == admin } ]
       ]
@@ -214,6 +202,7 @@ class Users::RegistrationsController < DeviseController
       cloned_category.user = resource
       cloned_category.snippets.each do |snippet|
         snippet.user = resource
+        snippet.default_id = snippet.id
       end
       p cloned_category.inspect
       if cloned_category.save!
@@ -222,59 +211,6 @@ class Users::RegistrationsController < DeviseController
         p "Category failed to save"
       end
     end
-
-    # # To visually see the id
-    # p "THE RESOURCE"
-    # p resource.inspect
-    #
-    # # Copy admin to get the data, but not the account itself
-    # p "COPIED ADMIN"
-    # @copied_admin = @admin.deep_clone include: [:snippets, { snippets: :implementations }]
-    # p @copied_admin.inspect
-    #
-    # # Get the admins languages in order to be able to add them to the resource
-    # p "COPIED LANGUAGES"
-    # @copied_languages = @copied_admin.languages
-    # @copied_languages.each do |language|
-    #   if language.save
-    #     # @snippets = Snippet.accessible_by(current_ability)
-    #     # redirect_to snippets_path
-    #     p language.inspect
-    #     p "Language saved successfully"
-    #   else
-    #     # render("new")
-    #     p "Language failed to save"
-    #   end
-    # end
-  #
-  #   # Get the admins snippets in order to be able to add them to the resource
-  #   p "COPIED SNIPPETS"
-  #   @copied_snippets = @copied_admin.snippets
-  #   @copied_snippets.each do |snippet|
-  #     if snippet.save
-  #       # @snippets = Snippet.accessible_by(current_ability)
-  #       # redirect_to snippets_path
-  #       p snippet.inspect
-  #       p "Snippet saved successfully"
-  #     else
-  #       # render("new")
-  #       p "Snippet failed to save"
-  #     end
-  #   end
-  #   # p @copied_snippets.inspect
-  #
-  #   p @copied_languages.inspect
-  #
-  #   # Get the snippets implementations in order to be able to add them to the resource
-  #   p "COPIED IMPLEMENTATIONS"
-  #   @copied_snippets.each do |snippet|
-  #     snippet.user_id = resource.id
-  #     @copied_implementation.each do |implementation|
-  #       implementation = snippet.implementations
-  #       implementation.user_id = resource.id
-  #       p implementation.inspect
-  #     end
-  #   end
   end
 
 end

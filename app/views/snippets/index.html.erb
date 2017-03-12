@@ -34,9 +34,11 @@
   </table>
   </br>
   <div class="row center">
-    <div class="col s12">
+    <div class="col s12 buttons">
       <!-- TODO implement FAB -->
       <%= link_to 'New snippet', new_snippet_path, :class => 'btn-large waves-effect waves-light blue' %>
+      <!-- <%= link_to(raw("<i class='material-icons'>loop</i>"), {controller: 'quiz', action: 'manage'}, :id => 'download-button', :class => 'sync-button btn-floating btn-large waves-effect waves-light blue') %> -->
+      <a class="sync-button btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">loop</i></a>
     </div>
   </div>
   <div class="row no-margin">
@@ -44,4 +46,49 @@
       <%= link_to '&larr; Done'.html_safe, quiz_index_path, :class => "manage-back-link" %>
     </div>
   </div>
+  <!-- Modal Structure -->
+  <div class="modal sync-modal">
+    <div class="modal-header">
+      <h3 class="section-header white-text">Sync Snippets</h3>
+    </div>
+    <div class="modal-content">
+      <table>
+        <% @snippets.each do |snippet| %>
+          <% if snippet.default == true %>
+            <tr>
+              <td>
+                <%= snippet.title %>
+              </td>
+              <td class="min-width">
+                <a class="update-button waves-effect waves-light btn" data-value="<%= snippet.id %>">Update</a>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Got It!</a>
+    </div>
+  </div>
 </div>
+
+<script>
+  $(document).ready(function(){
+    $("a.update-button, a.reset-button").click(function(){
+      //if (this.checked){
+      $.ajax({
+        url: '/snippets/'+$(this).data("value")+'/update_snippet',
+        type: 'POST',
+        success: function(data,status,xhr){
+          console.log(data);
+          alert(data.message);
+        },
+        error: function(xhr,status,error){
+          console.log(xhr);
+          alert(error);
+        }
+      });
+    });
+  });
+</script>
