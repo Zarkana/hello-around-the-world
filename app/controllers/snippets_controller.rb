@@ -3,6 +3,21 @@ class SnippetsController < ApplicationController
 
     def index
       @snippets = Snippet.accessible_by(current_ability)
+
+      admin = User.where('admin = ?', true).first
+      # Get the snippets that should be added
+      @default_admin_snippets = Snippet.where(:default => true).where(:user_id => admin.id)
+      p @default_admin_snippets
+      default_user_snippets = Snippet.where(:default => true).where(:user_id => current_user.id)
+      p default_user_snippets
+      @to_add_snippets = @default_admin_snippets
+
+      user_snippets = default_user_snippets.pluck(:default_id).uniq
+      @to_add_snippets = @to_add_snippets.where('id NOT IN (?)', user_snippets)
+
+      @add_snippets_exists = @to_add_snippets.exists?
+      @updated_snippets_exists = Snippet.where(:update_available => true).exists?
+      @modified_snippets_exists = Snippet.where(:modified => true).exists?
     end
 
     def show
@@ -41,8 +56,6 @@ class SnippetsController < ApplicationController
         #If admin we need to store data to be used later for default snippet look up
         if current_user.admin == true
           @snippet.default = true;
-          # @snippet.default_id = true;
-          # @snippet.update_attributes :default_id => @snippet.id
           @snippet.update_attributes(
             :default => true,
             :default_id => @snippet.id
@@ -64,6 +77,20 @@ class SnippetsController < ApplicationController
 
     def update
       @snippet = Snippet.find(params[:id])
+      #If admin we need to store data to be used later for default snippet look up
+
+      if current_user.admin == true
+          # Get all snippets that should be marked available for update, that are default and not owned by admin
+          to_update_snippets = Snippet.where(default: true).where(default_id: @snippet.id).where.not(user_id: current_user.id)
+          # to_update_snippets do |snippet|
+          #   snippet.update_attributes(:update_available, true)
+          # end
+          to_update_snippets.update_all(update_available: true)
+      else
+        # If current user is not admin then set snippet to modified
+        # admins don't need modified to be set because they are the admin and they have the definitive version of the snippet
+        @snippet.modified = true
+      end
 
       if @snippet.update(snippet_params)
         @snippets = Snippet.accessible_by(current_ability)
@@ -99,9 +126,6 @@ class SnippetsController < ApplicationController
 
     def update_snippet
       snippet = Snippet.find(params[:id])
-      # authorize! :update_snippet, snippet
-
-      p "UPDATING SNIPPET"
       defaultSnippet = Snippet.find(snippet.default_id)
 
       p "CLONING SNIPPET: " + defaultSnippet.inspect
@@ -115,24 +139,22 @@ class SnippetsController < ApplicationController
         p "Snippet failed to update"
       end
     end
-    #
-    # def add_snippet
-    #   snippet = Snippet.find(params[:id])
-    #   # authorize! :update_snippet, snippet
-    #
-    #   p "UPDATING SNIPPET"
-    #   defaultSnippet = Snippet.find(snippet.default_id)
-    #
-    #   p "CLONING SNIPPET: " + defaultSnippet.inspect
-    #   cloned_snippet = defaultSnippet.deep_clone include: [:implementations]
-    #   cloned_snippet.user = current_user
-    #   if cloned_snippet.save!
-    #     p "Snippet updated successfully"
-    #     snippet.destroy
-    #   else
-    #     p "Snippet failed to update"
-    #   end
-    # end
+
+    def add_snippet
+      # snippet = Snippet.find(params[:id])
+      # defaultSnippet = Snippet.find(snippet.default_id)
+      defaultSnippet = Snippet.find(params[:id])
+
+      p "CLONING SNIPPET: " + defaultSnippet.inspect
+      cloned_snippet = defaultSnippet.deep_clone include: [:implementations]
+      cloned_snippet.user = current_user
+      cloned_snippet.default_id = defaultSnippet.id
+      if cloned_snippet.save!
+        p "Snippet added successfully"
+      else
+        p "Snippet failed to be added"
+      end
+    end
 
     private
 

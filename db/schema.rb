@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170312215021) do
+ActiveRecord::Schema.define(version: 20170312222616) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20170312215021) do
     t.boolean  "default",            default: false
     t.boolean  "modified",           default: false
     t.boolean  "visible",            default: false
+    t.boolean  "update_available",   default: false
     t.index ["category_id"], name: "index_snippets_on_category_id"
   end
 

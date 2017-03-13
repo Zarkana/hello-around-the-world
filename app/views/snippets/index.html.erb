@@ -38,7 +38,14 @@
       <!-- TODO implement FAB -->
       <%= link_to 'New snippet', new_snippet_path, :class => 'btn-large waves-effect waves-light blue' %>
       <!-- <%= link_to(raw("<i class='material-icons'>loop</i>"), {controller: 'quiz', action: 'manage'}, :id => 'download-button', :class => 'sync-button btn-floating btn-large waves-effect waves-light blue') %> -->
-      <a class="sync-button btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">loop</i></a>
+
+      <% if (@updated_snippets_exists || @add_snippets_exists) && !current_user.admin %>
+        <a class="sync-button btn-floating btn-large waves-effect waves-light green"><i class="material-icons">loop</i></a>
+      <% elsif @modified_snippets_exists  && !current_user.admin %>
+        <a class="sync-button btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">loop</i></a>
+      <% elsif %>
+        <a class="sync-button btn-floating btn-large waves-effect waves-light grey"><i class="material-icons">loop</i></a>
+      <% end %>
     </div>
   </div>
   <div class="row no-margin">
@@ -50,7 +57,7 @@
   <!-- Modal Structure -->
   <div class="modal sync-modal">
     <div class="modal-header">
-      <h3 class="section-header white-text">Sync Snippets</h3>
+      <h3 class="section-header white-text">Sync Default Snippets</h3>
     </div>
     <div class="modal-content">
       <table>
@@ -61,7 +68,27 @@
                 <%= snippet.title %>
               </td>
               <td class="min-width">
-                <a class="update-button waves-effect waves-light btn" data-value="<%= snippet.id %>">Update</a>
+                <% if snippet.update_available %>
+                  <a class="reset-button green waves-effect waves-light btn" data-value="<%= snippet.id %>">Update</a>
+                <% elsif snippet.modified %>
+                  <a class="update-button waves-effect waves-light btn" data-value="<%= snippet.id %>">Reset</a>
+                <% elsif current_user.admin == true %>
+                  <a class="grey waves-effect waves-light btn" data-value="">N/A</a>
+                <% else %>
+                  <a class="waves-effect grey waves-light btn" data-value="">Reset</a>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+        <% @to_add_snippets.each do |snippet| %>
+          <% if snippet.default == true %>
+            <tr>
+              <td>
+                <%= snippet.title %>
+              </td>
+              <td class="min-width">
+                <a class="add-button green waves-effect waves-light btn" data-value="<%= snippet.id %>">Add</a>
               </td>
             </tr>
           <% end %>
@@ -69,7 +96,7 @@
       </table>
     </div>
     <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Got It!</a>
+      <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Done</a>
     </div>
   </div>
 </div>
@@ -77,9 +104,23 @@
 <script>
   $(document).ready(function(){
     $("a.update-button, a.reset-button").click(function(){
-      //if (this.checked){
       $.ajax({
         url: '/snippets/'+$(this).data("value")+'/update_snippet',
+        type: 'POST',
+        success: function(data,status,xhr){
+          console.log(data);
+          alert(data.message);
+        },
+        error: function(xhr,status,error){
+          console.log(xhr);
+          alert(error);
+        }
+      });
+    });
+
+    $("a.add-button").click(function(){
+      $.ajax({
+        url: '/snippets/'+$(this).data("value")+'/add_snippet',
         type: 'POST',
         success: function(data,status,xhr){
           console.log(data);
