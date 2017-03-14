@@ -2,18 +2,21 @@ class SnippetsController < ApplicationController
     before_filter :authenticate_user!
 
     def index
-      @snippets = Snippet.accessible_by(current_ability)
+      @snippets = Snippet.accessible_by(current_ability).order('LOWER(title)')
 
       admin = User.where('admin = ?', true).first
       # Get the snippets that should be added
       @default_admin_snippets = Snippet.where(:default => true).where(:user_id => admin.id)
-      p @default_admin_snippets
       default_user_snippets = Snippet.where(:default => true).where(:user_id => current_user.id)
-      p default_user_snippets
+
       @to_add_snippets = @default_admin_snippets
 
       user_snippets = default_user_snippets.pluck(:default_id).uniq
-      @to_add_snippets = @to_add_snippets.where('id NOT IN (?)', user_snippets)
+      if !user_snippets.empty?
+        @to_add_snippets = @to_add_snippets.where('id NOT IN (?)', user_snippets)
+      else
+        @to_add_snippets = @default_admin_snippets
+      end
 
       @add_snippets_exists = @to_add_snippets.exists?
       @updated_snippets_exists = Snippet.where(:update_available => true).exists?
@@ -135,14 +138,14 @@ class SnippetsController < ApplicationController
       if cloned_snippet.save!
         p "Snippet updated successfully"
         snippet.destroy
+        @updated_snippet = cloned_snippet
+        render :json => @updated_snippet
       else
         p "Snippet failed to update"
       end
     end
 
     def add_snippet
-      # snippet = Snippet.find(params[:id])
-      # defaultSnippet = Snippet.find(snippet.default_id)
       defaultSnippet = Snippet.find(params[:id])
 
       p "CLONING SNIPPET: " + defaultSnippet.inspect
@@ -151,10 +154,14 @@ class SnippetsController < ApplicationController
       cloned_snippet.default_id = defaultSnippet.id
       if cloned_snippet.save!
         p "Snippet added successfully"
+        @added_snippet = cloned_snippet
+        render :json => @added_snippet
       else
         p "Snippet failed to be added"
       end
     end
+
+
 
     private
 

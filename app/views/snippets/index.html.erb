@@ -1,6 +1,6 @@
 <div class="container snippet index" id="content">
   <h2 class="section-header center-align">Snippets</h2>
-  <table class="highlight responsive-table centered">
+  <table id="snippets-index-table" class="highlight responsive-table centered">
     <thead>
       <tr>
         <th>Title</th>
@@ -13,7 +13,7 @@
     </thead>
     <tbody>
     <% @snippets.each do |snippet| %>
-      <tr>
+      <tr data-id="<%= snippet.id %>">
         <td><%= snippet.title %></td>
         <td><%= snippet.runtime_complexity %></td>
         <td><%= snippet.space_complexity %></td>
@@ -38,7 +38,6 @@
       <!-- TODO implement FAB -->
       <%= link_to 'New snippet', new_snippet_path, :class => 'btn-large waves-effect waves-light blue' %>
       <!-- <%= link_to(raw("<i class='material-icons'>loop</i>"), {controller: 'quiz', action: 'manage'}, :id => 'download-button', :class => 'sync-button btn-floating btn-large waves-effect waves-light blue') %> -->
-
       <% if (@updated_snippets_exists || @add_snippets_exists) && !current_user.admin %>
         <a class="sync-button btn-floating btn-large waves-effect waves-light green"><i class="material-icons">loop</i></a>
       <% elsif @modified_snippets_exists  && !current_user.admin %>
@@ -60,11 +59,11 @@
       <h3 class="section-header white-text">Sync Default Snippets</h3>
     </div>
     <div class="modal-content">
-      <table>
+      <table id="snippets-sync-table">
         <% @snippets.each do |snippet| %>
           <% if snippet.default == true %>
-            <tr>
-              <td>
+            <tr data-id="<%= snippet.id %>">
+              <td class="snippet-name">
                 <%= snippet.title %>
               </td>
               <td class="min-width">
@@ -82,7 +81,7 @@
         <% @to_add_snippets.each do |snippet| %>
           <% if snippet.default == true %>
             <tr>
-              <td>
+              <td class="snippet-name">
                 <%= snippet.title %>
               </td>
               <td class="min-width">
@@ -108,8 +107,7 @@
         type: 'POST',
         success: function(data,status,xhr){
           console.log(data);
-          // if($(this).hasClass("update-button")) { new_action = "update"; } else { new_action = "reset"; }
-          updateSnippetsPage(button, "default");
+          updateSnippetsPage(button, "default", data);
         },
         error: function(xhr,status,error){
           console.log(xhr);
@@ -124,8 +122,8 @@
         url: '/snippets/'+$(this).data("value")+'/add_snippet',
         type: 'POST',
         success: function(data,status,xhr){
-          console.log(data);          
-          updateSnippetsPage(button, "default");
+          console.log(data);
+          updateSnippetsPage(button, "default", data);
         },
         error: function(xhr,status,error){
           console.log(xhr);
@@ -134,11 +132,37 @@
       });
     });
 
-    function updateSnippetsPage(button, action){
-      var defaultValue = 0;
+    function updateSnippetsPage(button, action, record){
+      if(button.hasClass("update-button") || button.hasClass("reset-button") ){
+        $("#snippets-index-table tr[data-id=" + button.data("value") + "]").remove();
+        $("#snippets-sync-table tr[data-id=" + button.data("value") + "] .snippet-name").text(record.title);
+      }
+
       button.text(action);
       button.removeClass("update-button add-button reset-button default-button");
+
       button.addClass(action + "-button btn-flat");
+
+      var tile = "<td>" + record.title + "</td>";
+      var runtime_complexity = "<td>" + record.runtime_complexity + "</td>";
+      var space_complexity = "<td>" + record.space_complexity + "</td>";
+      var implemented = "<td>" + "</td>";
+      var show = '<td class="min-width">' + '<a href="/snippets/' + record.id + '">Show</a>' + '</td>';
+      var edit = '<td class="min-width">' + '<a href="/snippets/' + record.id + '/edit">Edit</a>' + '</td>';
+      var destroy = '<td class="min-width"><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/snippets/' + record.id + '">Destroy</a></td>';
+      $('#snippets-index-table tr:last').after('<tr ' +  'data-id="' + button.data("value") + '"> ' + tile + runtime_complexity + space_complexity + implemented + show + edit + destroy + ' </tr>');
+
+      var sync_table_buttons = $('#snippets-sync-table .btn');
+      if(!sync_table_buttons.hasClass("reset-button") && !sync_table_buttons.hasClass("update-button") && !sync_table_buttons.hasClass("add-button")){
+        // If all the buttons are default, make the sync button grey
+        $('.sync-button').removeClass("green blue");
+        $('.sync-button').addClass("grey");
+      }else if (sync_table_buttons.hasClass("reset-button") && !sync_table_buttons.hasClass("update-button") && !sync_table_buttons.hasClass("add-button")) {
+        // If the only buttons left are reset buttons, make the sync button blue
+        $('.sync-button').removeClass("grey green");
+        $('.sync-button').addClass("blue");
+      }
+
     }
   });
 
