@@ -69,13 +69,11 @@
               </td>
               <td class="min-width">
                 <% if snippet.update_available %>
-                  <a class="reset-button green waves-effect waves-light btn" data-value="<%= snippet.id %>">Update</a>
+                  <a class="update-button waves-effect waves-light btn" data-value="<%= snippet.id %>">Update</a>
                 <% elsif snippet.modified %>
-                  <a class="update-button waves-effect waves-light btn" data-value="<%= snippet.id %>">Reset</a>
-                <% elsif current_user.admin == true %>
-                  <a class="grey waves-effect waves-light btn" data-value="">N/A</a>
+                  <a class="reset-button waves-effect waves-light btn" data-value="<%= snippet.id %>">Reset</a>
                 <% else %>
-                  <a class="waves-effect grey waves-light btn" data-value="">Reset</a>
+                  <a class="default-button waves-effect waves-light btn btn-flat" data-value="">Default</a>
                 <% end %>
               </td>
             </tr>
@@ -88,7 +86,7 @@
                 <%= snippet.title %>
               </td>
               <td class="min-width">
-                <a class="add-button green waves-effect waves-light btn" data-value="<%= snippet.id %>">Add</a>
+                <a class="add-button waves-effect waves-light btn" data-value="<%= snippet.id %>">Add</a>
               </td>
             </tr>
           <% end %>
@@ -104,12 +102,14 @@
 <script>
   $(document).ready(function(){
     $("a.update-button, a.reset-button").click(function(){
+      button = $(this);
       $.ajax({
         url: '/snippets/'+$(this).data("value")+'/update_snippet',
         type: 'POST',
         success: function(data,status,xhr){
           console.log(data);
-          alert(data.message);
+          // if($(this).hasClass("update-button")) { new_action = "update"; } else { new_action = "reset"; }
+          updateSnippetsPage(button, "default");
         },
         error: function(xhr,status,error){
           console.log(xhr);
@@ -119,12 +119,13 @@
     });
 
     $("a.add-button").click(function(){
+      button = $(this);
       $.ajax({
         url: '/snippets/'+$(this).data("value")+'/add_snippet',
         type: 'POST',
         success: function(data,status,xhr){
-          console.log(data);
-          alert(data.message);
+          console.log(data);          
+          updateSnippetsPage(button, "default");
         },
         error: function(xhr,status,error){
           console.log(xhr);
@@ -132,5 +133,13 @@
         }
       });
     });
+
+    function updateSnippetsPage(button, action){
+      var defaultValue = 0;
+      button.text(action);
+      button.removeClass("update-button add-button reset-button default-button");
+      button.addClass(action + "-button btn-flat");
+    }
   });
+
 </script>
