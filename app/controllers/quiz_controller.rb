@@ -9,7 +9,12 @@ class QuizController < ApplicationController
     #   # @adminMultiSnippets = Snippet.where.not(category_id: nil).where('user_id = ?', @admin.id)
     # end
     # If signed in
+
+    # Include languages so that when errors redirect to new it won't error
+
     if user_signed_in?
+
+      @languages = Language.accessible_by(current_ability)
       # If not admin, because we don't want to display duplicate
       # unless current_user.admin == true
       #   @admin = User.where('admin = ?', true).first
@@ -27,6 +32,8 @@ class QuizController < ApplicationController
       # @adminSnippets = Snippet.where('user_id = ?', @admin.id)
       @adminSnippets = @admin.snippets.where(category_id: nil)
       @adminCategories = @admin.categories.includes(:snippets).where("snippets.user" => @admin)
+
+      @languages = @admin.languages
     end
 
   end

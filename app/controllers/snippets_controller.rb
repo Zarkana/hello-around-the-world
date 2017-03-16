@@ -53,7 +53,7 @@ class SnippetsController < ApplicationController
 
       # Include languages so that when errors redirect to new it won't error
       @languages = Language.accessible_by(current_ability)
-
+      
       # @implementation = Implementation.new( params.require(:implementation).permit(:code, :language) )
       if @snippet.save
 

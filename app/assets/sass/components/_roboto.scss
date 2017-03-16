@@ -21,10 +21,11 @@
 @font-face {
     font-family: "Roboto";
     src: local(Roboto Regular), url('#{$roboto-font-path}Roboto-Regular.eot');
-    src: url("#{$roboto-font-path}Roboto-Regular.eot?#iefix") format('embedded-opentype'),
-        url("#{$roboto-font-path}Roboto-Regular.woff2") format("woff2"),
-        url("#{$roboto-font-path}Roboto-Regular.woff") format("woff"),
-        url("#{$roboto-font-path}Roboto-Regular.ttf") format("truetype");
+    src: url("#{$roboto-font-path}Roboto-Regular.eot?#iefix") format('embedded-opentype');
+        // TODO: ADD IN? Were not downloading properly
+        // url("#{$roboto-font-path}Roboto-Regular.woff2") format("woff2"),
+        // url("#{$roboto-font-path}Roboto-Regular.woff") format("woff"),
+        // url("#{$roboto-font-path}Roboto-Regular.ttf") format("truetype");
     font-weight: 400;
 }
 

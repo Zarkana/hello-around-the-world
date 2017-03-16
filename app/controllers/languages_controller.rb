@@ -49,7 +49,7 @@ class LanguagesController < ApplicationController
     if @language.update(language_params)
       @languages = Language.accessible_by(current_ability)
       authorize! :update, @language
-      # redirect_to @language
+
       redirect_to languages_path
     else
       render 'edit'

@@ -32,6 +32,13 @@ $(document).ready(function() {
   var resizing_select = "#language-select .select-wrapper";
   var temp_select = "#width_tmp_select";
 
+  // debugger;
+  // $(resizing_select).addClass("active selected");
+  // $(temp_select + " option:first").prop("disabled");
+  // $(temp_select + " option:first").prop("selected");
+  $(resizing_select + " li:first").addClass("disabled");
+  // $(".materialize-select.initialized option:first").prop("disabled", true);
+  // $(".materialize-select.initialized option:first").attr("selected", "");
   //Call once to initialize size
   resizeSelect(resizing_select, temp_select);
 
