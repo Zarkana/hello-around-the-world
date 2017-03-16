@@ -163,16 +163,18 @@ class Users::RegistrationsController < DeviseController
     p "INITIALIZING USER"
     if User.exists?(admin: true)
       admin = User.where('admin = ?', true).first
-      adminSnippets = admin.snippets.where(category_id: nil)
-      adminLanguages = admin.languages.where("languages.user" => admin)
-      adminCategories = admin.categories.where("categories.user" => admin)
+      # admin_snippets = admin.snippets.where(category_id: nil)
+      admin_snippets = admin.snippets
+      admin_languages = admin.languages.where("languages.user" => admin)
+      admin_categories = admin.categories.where("categories.user" => admin)
     end
 
-    adminLanguages.each do |language|
+    admin_languages.each do |language|
       p "CLONING LANGUAGE: " + language.inspect
       cloned_language = language.deep_clone
       cloned_language.user = resource
       cloned_language.logo = language.logo
+      cloned_language.default_id = language.id
       if cloned_language.save!
         p "Language saved successfully"
       else
@@ -180,11 +182,25 @@ class Users::RegistrationsController < DeviseController
       end
     end
 
-    adminSnippets.each do |snippet|
+    admin_snippets.each do |snippet|
       p "CLONING SNIPPET: " + snippet.inspect
       cloned_snippet = snippet.deep_clone include: [:implementations]
       cloned_snippet.user = resource
       cloned_snippet.default_id = snippet.id
+
+      # Unless there is no category assigned
+      unless snippet.category_id == nil
+        # Unless their already exists a record with the category_id we are going to add
+        unless current_user.categories.where(default_id: snippet.category_id).exists?
+          # clone the snippet with category_id
+          cloned_snippet.category_id = add_category(snippet.category_id)
+        else
+          # make it the same id as the original snippet to avoid duplication
+          cloned_snippet.category_id = current_user.categories.where(default_id: snippet.category_id).first.id
+          # cloned_snippet.category_id = current_user.categories.find(:id, :conditions => [ "user_name = ?", user_name])
+        end
+      end
+      # TODO:Make sure that the snippets category_id is correct
       if cloned_snippet.save!
         p "Snippet saved successfully"
       else
@@ -192,25 +208,40 @@ class Users::RegistrationsController < DeviseController
       end
     end
 
-    adminCategories.each do |category|
-      p "CLONING CATEGORY: " + category.inspect
-
-      cloned_category = category.deep_clone  include: [
-        snippets: [ :implementations, if: lambda {|snippet| snippet.user == admin } ]
-      ]
-
-      cloned_category.user = resource
-      cloned_category.snippets.each do |snippet|
-        snippet.user = resource
-        # snippet.default_id = snippet.id
-      end
-      p cloned_category.inspect
-      if cloned_category.save!
-        p "Category saved successfully"
-      else
-        p "Category failed to save"
-      end
-    end
+    # admin_categories.each do |category|
+    #   p "CLONING CATEGORY: " + category.inspect
+    #
+    #   cloned_category = category.deep_clone  include: [
+    #     snippets: [ :implementations, if: lambda {|snippet| snippet.user == admin } ]
+    #   ]
+    #
+    #   cloned_category.user = resource
+    #   cloned_category.default_id = category.id
+    #
+    #   cloned_category.snippets.each do |snippet|
+    #     snippet.user = resource
+    #     # snippet.default_id = snippet.id
+    #   end
+    #   p cloned_category.inspect
+    #   if cloned_category.save!
+    #     p "Category saved successfully"
+    #   else
+    #     p "Category failed to save"
+    #   end
+    # end
   end
 
+
+  def add_category(id)
+    category = Category.find(id)
+    cloned_category = category.deep_clone
+    cloned_category.user = current_user
+    # Make sure we aren't making the category twice
+    if cloned_category.save!
+      p "Category saved successfully"
+      cloned_category.id
+    else
+      p "Category failed to save"
+    end
+  end
 end

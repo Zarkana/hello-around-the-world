@@ -1,6 +1,6 @@
 <div class="container snippet index" id="content">
   <h2 class="section-header center-align">Snippets</h2>
-  <table id="snippets-index-table" class="highlight responsive-table centered">
+  <table id="snippets-index-table" class="highlight centered">
     <thead>
       <tr>
         <th>Title</th>
@@ -50,7 +50,8 @@
   <div class="row no-margin">
     <div class="col s12">
       <!-- <%= link_to '&larr; Done'.html_safe, quiz_index_path, :class => "manage-back-link" %> -->
-      <%= link_to '&larr; Back'.html_safe, :back %>
+      <!-- <%= link_to '&larr; Back'.html_safe, :back %> -->
+      <%= link_to '&larr; Back'.html_safe, {controller: 'quiz', action: 'manage'}, :class => "manage-back-link"  %>
     </div>
   </div>
   <!-- Modal Structure -->

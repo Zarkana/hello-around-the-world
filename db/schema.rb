@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170312222616) do
+ActiveRecord::Schema.define(version: 20170315193919) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20170312222616) do
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.integer  "user_id"
+    t.integer  "default_id"
+    t.boolean  "default",    default: false
   end
 
   create_table "implementations", force: :cascade do |t|
@@ -40,6 +42,8 @@ ActiveRecord::Schema.define(version: 20170312222616) do
     t.datetime "logo_updated_at"
     t.integer  "user_id"
     t.boolean  "visible",           default: false
+    t.integer  "default_id"
+    t.boolean  "default",           default: false
   end
 
   create_table "snippets", force: :cascade do |t|

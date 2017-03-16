@@ -2,6 +2,7 @@ class SnippetsController < ApplicationController
     before_filter :authenticate_user!
 
     def index
+      # Organize the snippets alphabetically
       @snippets = Snippet.accessible_by(current_ability).order('LOWER(title)')
 
       admin = User.where('admin = ?', true).first
@@ -129,12 +130,28 @@ class SnippetsController < ApplicationController
 
     def update_snippet
       snippet = Snippet.find(params[:id])
-      defaultSnippet = Snippet.find(snippet.default_id)
+      default_snippet = Snippet.find(snippet.default_id)
 
-      p "CLONING SNIPPET: " + defaultSnippet.inspect
-      cloned_snippet = defaultSnippet.deep_clone include: [:implementations]
+      p "CLONING SNIPPET: " + default_snippet.inspect
+      cloned_snippet = default_snippet.deep_clone include: [:implementations]
       cloned_snippet.user = current_user
-      cloned_snippet.default_id = defaultSnippet.id
+      cloned_snippet.default_id = default_snippet.id
+
+      # Unless there is no category assigned
+      unless default_snippet.category_id == nil
+        # Unless their already exists a record with the category_id we are going to add
+        unless current_user.categories.where(default_id: default_snippet.category_id).exists?
+          # clone the snippet with category_id
+          cloned_snippet.category_id = add_category(default_snippet.category_id)
+        else
+          # make it the same id as the original snippet to avoid duplication
+          cloned_snippet.category_id = current_user.categories.where(default_id: default_snippet.category_id).first.id
+          # cloned_snippet.category_id = current_user.categories.find(:id, :conditions => [ "user_name = ?", user_name])
+        end
+      end
+
+      # cloned_snippet.category_id = add_category(default_snippet.category_id)
+      add_languages
       if cloned_snippet.save!
         p "Snippet updated successfully"
         snippet.destroy
@@ -146,12 +163,28 @@ class SnippetsController < ApplicationController
     end
 
     def add_snippet
-      defaultSnippet = Snippet.find(params[:id])
+      default_snippet = Snippet.find(params[:id])
 
-      p "CLONING SNIPPET: " + defaultSnippet.inspect
-      cloned_snippet = defaultSnippet.deep_clone include: [:implementations]
+      p "CLONING SNIPPET: " + default_snippet.inspect
+      cloned_snippet = default_snippet.deep_clone include: [:implementations]
       cloned_snippet.user = current_user
-      cloned_snippet.default_id = defaultSnippet.id
+      cloned_snippet.default_id = default_snippet.id
+
+      # Unless there is no category assigned
+      unless default_snippet.category_id == nil
+        # Unless their already exists a record with the category_id we are going to add
+        unless current_user.categories.where(default_id: default_snippet.category_id).exists?
+          # clone the snippet with category_id
+          cloned_snippet.category_id = add_category(default_snippet.category_id)
+        else
+          # make it the same id as the original snippet to avoid duplication
+          cloned_snippet.category_id = current_user.categories.where(default_id: default_snippet.category_id).first.id
+          # cloned_snippet.category_id = current_user.categories.find(:id, :conditions => [ "user_name = ?", user_name])
+        end
+      end
+
+      # cloned_snippet.category_id = add_category(default_snippet.category_id)
+      add_languages
       if cloned_snippet.save!
         p "Snippet added successfully"
         @added_snippet = cloned_snippet
@@ -161,7 +194,44 @@ class SnippetsController < ApplicationController
       end
     end
 
+    def add_category(id)
+      category = Category.find(id)
+      cloned_category = category.deep_clone
+      cloned_category.user = current_user
+      if cloned_category.save!
+        p "Category saved successfully"
+        cloned_category.id
+      else
+        p "Category failed to save"
+      end
+    end
 
+    def add_languages
+      admin = User.where('admin = ?', true).first
+
+      default_admin_languages = admin.languages.where(:default => true);
+      default_user_languages = current_user.languages.where(:default => true);
+
+      to_add_languages = default_admin_languages
+      user_languages = default_user_languages.pluck(:default_id).uniq
+
+      if !user_languages.empty?
+        to_add_languages = to_add_languages.where('id NOT IN (?)', user_languages)
+      else
+        to_add_languages = default_admin_languages
+      end
+
+      to_add_languages.each do |language|
+        cloned_language = language.deep_clone
+        cloned_language.user = current_user
+        cloned_language.logo = language.logo
+        if cloned_language.save!
+          p "Language saved successfully"
+        else
+          p "Language failed to save"
+        end
+      end
+    end
 
     private
 

@@ -21,6 +21,16 @@ class CategoriesController < ApplicationController
     authorize! :create, @category
 
     if @category.save
+
+      #If admin we need to store data to be used later for default language look up
+      if current_user.admin == true
+        @category.default = true;
+        @category.update_attributes(
+          :default => true,
+          :default_id => @category.id
+          )
+      end
+
       @categories = Category.accessible_by(current_ability)
       redirect_to categories_path
     else

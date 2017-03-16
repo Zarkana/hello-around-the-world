@@ -21,6 +21,16 @@ class LanguagesController < ApplicationController
     authorize! :create, @language
 
     if @language.save
+
+      #If admin we need to store data to be used later for default language look up
+      if current_user.admin == true
+        @language.default = true;
+        @language.update_attributes(
+          :default => true,
+          :default_id => @language.id
+          )
+      end
+
       @languages = Language.accessible_by(current_ability)
       redirect_to languages_path
     else
