@@ -36,9 +36,6 @@ class SnippetsController < ApplicationController
       @snippet = Snippet.new
       @allLanguages = Language.accessible_by(current_ability)
       @languages = Language.accessible_by(current_ability)
-      # @languages.length.times do
-      #   language = @languages.build
-      # end
 
       @languages.length.times do
         implementation = @snippet.implementations.build
@@ -53,7 +50,7 @@ class SnippetsController < ApplicationController
 
       # Include languages so that when errors redirect to new it won't error
       @languages = Language.accessible_by(current_ability)
-      
+
       # @implementation = Implementation.new( params.require(:implementation).permit(:code, :language) )
       if @snippet.save
 
@@ -77,6 +74,46 @@ class SnippetsController < ApplicationController
       @snippet = Snippet.find(params[:id])
       authorize! :edit, @snippet
       @languages = Language.accessible_by(current_ability)
+
+      @implementations = @snippet.implementations
+
+      @languages.each do |language|
+        p language.inspect
+      end
+      @implementations.each do |implementation|
+        p implementation.inspect
+      end
+
+      implementations = @implementations.pluck(:language).uniq
+      languages = @languages.pluck(:name).uniq
+
+      if implementations.size < languages.size
+        p "Not enough implementations"
+        to_add = languages.size - implementations.size
+        p implementations
+        p languages
+        for i in 0..(to_add-1)
+          @new_implementation = Implementation.new()
+          # Set the language equal to the implementation at the size of the original array + the current index
+          @new_implementation.language = languages[(implementations.size) + i]
+          @new_implementation.code = ""
+          @new_implementation.snippet_id = @snippet.id
+          @new_implementation.active = true
+          if @new_implementation.save
+            p "Implementation added successfully"
+            p @new_implementation
+          else
+            p "Implementation added unsuccessfully"
+          end
+        end
+        @snippet = Snippet.find(params[:id])
+      else
+        p "Enough implementations"
+      end
+    end
+
+    def add_implementation
+
     end
 
     def update

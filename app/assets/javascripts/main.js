@@ -181,8 +181,8 @@ function initializeEditor(aceEditor, index, language){
         aceEditor.getSession().setMode("ace/mode/ruby");
       break;
     default:
-      debugger;
-      aceEditor.getSession().setMode("ace/mode/" + language.toLowerCase());
+      // debugger;
+      // aceEditor.getSession().setMode("ace/mode/" + language.toLowerCase());
     break;
   }
 }

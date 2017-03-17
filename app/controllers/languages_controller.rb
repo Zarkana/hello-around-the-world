@@ -59,18 +59,30 @@ class LanguagesController < ApplicationController
   def destroy
     @language = Language.find(params[:id])
 
-    @language.destroy
+    # Get an array of the ids of the current_users snippets
+    snippet_ids = current_user.snippets.pluck(:id).uniq
+    # Get all the implementations that are for snippets owned by the user and where they share the name of language being destroyed
+    @implementations = Implementation.where(snippet_id: snippet_ids).where(language: @language.name)
+
+    @implementations.each do |implementation|
+      if implementation.destroy
+        p "Successfully destroyed implementation"
+      else
+        p "Unsuccessfully destroyed implementation"
+      end
+    end
+
+    if @language.destroy
+      p "Successfully destroyed language"
+    else
+      p "Unsuccessfully destroyed language"
+    end
     @languages = Language.accessible_by(current_ability)
+
+
 
     redirect_to languages_path
   end
-  #
-  # def destroy_logo
-  #   @language = Language.find(params[:id])
-  #
-  #   @language.logo = nil;
-  #   @language.save
-  # end
 
   private
     def language_params
