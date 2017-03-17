@@ -9603,66 +9603,69 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 }
 /* line 112, ../assets/sass/modules/_quiz.scss */
 .quiz-list .section-header .select-dropdown {
+  position: relative;
+  left: -5px;
+  margin-bottom: 1.25rem;
   font-size: 2.5rem;
 }
-/* line 115, ../assets/sass/modules/_quiz.scss */
+/* line 118, ../assets/sass/modules/_quiz.scss */
 .quiz-list .section-header .dropdown-content {
   min-width: 150px;
 }
-/* line 120, ../assets/sass/modules/_quiz.scss */
+/* line 123, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header {
   border-bottom: none;
   cursor: default;
 }
-/* line 123, ../assets/sass/modules/_quiz.scss */
+/* line 126, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header .arrow-parent {
   width: 16px;
   float: left;
 }
-/* line 126, ../assets/sass/modules/_quiz.scss */
+/* line 129, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header .arrow-parent .arrow {
   transition: transform .2s;
   width: 100%;
   transform: rotate(-90deg);
 }
-/* line 134, ../assets/sass/modules/_quiz.scss */
+/* line 137, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.active .arrow {
   transform: none;
 }
-/* line 140, ../assets/sass/modules/_quiz.scss */
+/* line 143, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.active.disabled .arrow {
   transform: rotate(-90deg);
 }
-/* line 149, ../assets/sass/modules/_quiz.scss */
+/* line 152, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.disabled .arrow {
   opacity: .70;
 }
-/* line 153, ../assets/sass/modules/_quiz.scss */
+/* line 156, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.disabled .switch .lever {
   background-color: #e8e8e8;
 }
-/* line 155, ../assets/sass/modules/_quiz.scss */
+/* line 158, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.disabled .switch .lever:after {
   background-color: #d4d4d4 !important;
 }
-/* line 161, ../assets/sass/modules/_quiz.scss */
+/* line 164, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsiblez.sub-menu {
   box-shadow: none;
 }
-/* line 165, ../assets/sass/modules/_quiz.scss */
+/* line 168, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header:hover {
   cursor: pointer;
 }
-/* line 170, ../assets/sass/modules/_quiz.scss */
+/* line 173, ../assets/sass/modules/_quiz.scss */
 .quiz-list ul.collapsiblez {
   position: relative;
 }
-/* line 178, ../assets/sass/modules/_quiz.scss */
+/* line 181, ../assets/sass/modules/_quiz.scss */
 .quiz-list .sub-menu {
   margin: 0;
   /*@extend .blue, .lighten-4;*/
 }
-/* line 188, ../assets/sass/modules/_quiz.scss */
+/* line 191, ../assets/sass/modules/_quiz.scss */
 .quiz-list .switch {
   display: inline-block;
   position: absolute;
