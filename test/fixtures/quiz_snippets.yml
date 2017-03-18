@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  attempt: MyText
+  answer: MyText
+  title: MyString
+  quiz_id: 1
+
+two:
+  attempt: MyText
+  answer: MyText
+  title: MyString
+  quiz_id: 1

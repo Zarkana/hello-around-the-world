@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170315193919) do
+ActiveRecord::Schema.define(version: 20170317195554) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -44,6 +44,24 @@ ActiveRecord::Schema.define(version: 20170315193919) do
     t.boolean  "visible",           default: false
     t.integer  "default_id"
     t.boolean  "default",           default: false
+  end
+
+  create_table "quiz_snippets", force: :cascade do |t|
+    t.text     "attempt"
+    t.text     "answer"
+    t.string   "title"
+    t.integer  "quiz_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "snippet_id"
+  end
+
+  create_table "quizzes", force: :cascade do |t|
+    t.integer  "language_id"
+    t.integer  "user_id"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.boolean  "complete",    default: false
   end
 
   create_table "snippets", force: :cascade do |t|

@@ -37,6 +37,7 @@ class SnippetsController < ApplicationController
       @allLanguages = Language.accessible_by(current_ability)
       @languages = Language.accessible_by(current_ability)
 
+      # Create the blank implementations to be available on new view
       @languages.length.times do
         implementation = @snippet.implementations.build
       end

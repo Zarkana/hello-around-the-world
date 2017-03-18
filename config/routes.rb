@@ -18,18 +18,20 @@ Rails.application.routes.draw do
 
   resources :categories
 
+  resources :quizzes
+
   get 'categories/index'
 
   get 'study/index'
 
-  get 'quiz/index'
-  get 'quiz/question', to: 'quiz#question'
-  get 'quiz/manage', to: 'quiz#manage'
-  get 'quiz/answer', to: 'quiz#answer'
+  get 'quizzes/index'
+  get 'quizzes/question', to: 'quizzes#question'
+  get 'quizzes/manage', to: 'quizzes#manage'
+  get 'quizzes/answer', to: 'quizzes#answer'
   get 'welcome/index'
 
-  root 'quiz#index'
-  #get '/quiz', to: 'controller_name#press'
+  root 'quizzes#new'
+  #get '/quizzes', to: 'controller_name#press'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
