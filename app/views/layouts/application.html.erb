@@ -22,14 +22,14 @@
         <% if user_signed_in? %>
           <ul class="right hide-on-med-and-down">
             <li>Logged in as <strong><%= current_user.email %></strong></li>
-            <li><%= link_to "Quiz", quizzes_index_path %></li>
+            <li><%= link_to "Quiz", quizzes_new_path %></li>
             <li><%= link_to "Study", study_index_path %></li>
             <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
           </ul>
         <% else %>
           <ul class="right hide-on-med-and-down">
-            <li><%= link_to "Quiz", quizzes_index_path %></li>
+            <li><%= link_to "Quiz", quizzes_new_path %></li>
             <li><%= link_to "Study", study_index_path %></li>
             <li><%= link_to "Login", new_user_session_path %></li>
             <li><%= link_to "Sign up", new_user_registration_path %></li>

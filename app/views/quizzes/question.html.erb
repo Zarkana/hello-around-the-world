@@ -1,14 +1,26 @@
 <div class="container quiz" id="content">
   <div class="row">
-    <div class="light-blue-text col s12 m8 offset-m2 center-align">
-      <h2 class="section-header">Hello World! in Java</h2>
-    </div>
-    <div id="" class="quiz-editor-parent col s12 m10 offset-m1 l8 offset-l2">
-      <div id="editor" class="editor">function foo(items) {
-          var x = "All this is syntax highlighted";
-          return x;
-      }</div>
-    </div>
+    <%= form_for @quiz do |f| %>
+      <% @quiz.quiz_snippets.each_with_index do |quiz_snippet, index| %>
+        <div class="question">
+          <%= f.fields_for :quiz_snippets, quiz_snippet do |f| %>
+          <div class="light-blue-text col s12 m8 offset-m2 center-align">
+            <h2 class="section-header"><%= quiz_snippet.title %></h2>
+          </div>
+          <div id="" class="quiz-editor-parent col s12 m10 offset-m1 l8 offset-l2">
+            <%= f.text_area :attempt, :id => "editor-#{index}", :class => 'code-field' %>
+            <div id="ace-editor-<%= index %>" class="editor" data-language="<%= @language.name %>"></div>
+
+            <script>
+              $(document).ready(function() {
+                initializeEditor(ace.edit("ace-editor-<%= index %>"), <%= index %>, "<%= @language.name %>");
+              });
+            </script>
+
+          </div>
+        </div>
+      <% end %>
+    <% end %>
     <div class="question-navigation buttons col s12">
       <ul class="pagination">
         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
@@ -29,6 +41,7 @@
         editor.setTheme("ace/theme/dawn");
         editor.getSession().setMode("ace/mode/javascript");
     </script>
+    <% end %>
   </div>
 </div>
 <!-- Modal Structure -->
@@ -36,7 +49,7 @@
   <div class="modal-content">
     <h4>Good Show!</h4>
     <p>It is a sign of an experienced programmer to to save freqently... even if they attempt to do so in the browser on occasion.</p>
-    <p>On a side note, if you make an account (100% free) you can add snippets of code to practice... and you can actually save those.</p>
+    <p>On a side note, if you make an account (100% free) you can add your own snippets of code to practice... and those can actually be saved.</p>
   </div>
   <div class="modal-footer">
     <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Got It!</a>

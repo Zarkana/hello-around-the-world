@@ -28,8 +28,6 @@ class SnippetsController < ApplicationController
       @snippet = Snippet.find(params[:id])
       @category = Category.find_by_id(@snippet.category_id)
       @languages = Language.accessible_by(current_ability)
-      # @languages = Language.limit(@allLanguages.length)
-      # @implementations = Implementation.find(params[:id])
     end
 
     def new

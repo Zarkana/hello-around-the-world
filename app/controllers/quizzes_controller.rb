@@ -1,6 +1,5 @@
 class QuizzesController < ApplicationController
   def index
-
   end
 
   def new
@@ -8,25 +7,32 @@ class QuizzesController < ApplicationController
     if user_signed_in?
       @languages = Language.accessible_by(current_ability)
       # doesn't include snippets with categories
-      @snippets = current_user.snippets.where(category_id: nil).accessible_by(current_ability)
-      @categories = current_user.categories.includes(:snippets).where("snippets.user" => current_user).accessible_by(current_ability)
+      # @snippets = current_user.snippets.where(category_id: nil).accessible_by(current_ability)
+      # @categories = current_user.categories.includes(:snippets).where("snippets.user" => current_user).accessible_by(current_ability)
+      @snippets = current_user.snippets.order('LOWER(category_id)')
+      # @categories = current_user.categories
+      # @snippet_categories = current_user.snippets.where.not(category_id: nil)
     else
       @admin = User.where('admin = ?', true).first
 
       @languages = @admin.languages
       # doesn't include snippets with categories
-      @snippets = @admin.snippets.where(category_id: nil)
-      @categories = @admin.categories.includes(:snippets).where("snippets.user" => @admin)
+      # @snippets = @admin.snippets.where(category_id: nil)
+      # @categories = @admin.categories.includes(:snippets).where("snippets.user" => @admin)
+      @snippets = @admin.snippets.order('LOWER(category_id)')
+      # @snippet_categories = @admin.categories.snippets.where("snippets.user" => @admin)
     end
     # Create the blank quiz_snippets to be available on new view
-    # @snippets.length.times do
-    #   quiz_snippet = @quiz.quiz_snippets.build
-    # end
-
     @snippets.each do |snippet|
       quiz_snippet = @quiz.quiz_snippets.build(:snippet_id => snippet.id)
     end
-
+    # @category_snippets.each do |snippet|
+    #   category_quiz_snippet = @quiz.quiz_snippets.build(:snippet_id => snippet.id)
+    # end
+    # Create the blank quiz_categories to be available on new view
+    # @categories.each do |category|
+    #   quiz_snippet = @quiz.quiz_snippets.build(:snippet_id => snippet.id)
+    # end
   end
 
   def create
@@ -53,11 +59,10 @@ class QuizzesController < ApplicationController
           if snippet.active
             p "snippet is active"
 
-
             # Set the quiz_snippets answer to the implementations code that has the same name as the selected language
-            quiz_snippet.answer = snippet.implementations.where(language: selected_language.name).code
-            quiz_snippet.title = "#{snippet.title} in #{language.name}"
-            quiz_snippet.quiz_id = @quiz_id
+            quiz_snippet.answer = snippet.implementations.where(language: selected_language.name).first.code
+            quiz_snippet.title = "#{snippet.title} in #{selected_language.name}"
+            quiz_snippet.quiz_id = @quiz.id
 
             if quiz_snippet.save
                 p "Quiz Snippet saved successfully"
@@ -74,18 +79,22 @@ class QuizzesController < ApplicationController
         end
       end
 
-      redirect_to :action => 'question'
+      redirect_to action: 'question', id: @quiz.id
+      return
     else
-      p "Quiz saved unsuccessfully"      
+      p "Quiz saved unsuccessfully"
     end
-    redirect_to :action => 'new'
+    redirect_to action: 'new'
+    return
   end
-
 
   def manage
   end
 
   def question
+    @quiz = Quiz.find(params[:id])
+    @quiz_snippets = @quiz.quiz_snippets
+    @language = Language.find(@quiz.language_id)
   end
 
   def answer

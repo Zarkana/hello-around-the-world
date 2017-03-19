@@ -12,6 +12,19 @@ Rails.application.routes.draw do
   # resources :snippets do
   #   resources :implementations
   # end
+
+
+  get 'categories/index'
+
+  get 'study/index'
+
+  get 'quizzes/index'
+  get 'quizzes/new', to: 'quizzes#new'
+  get 'quizzes/question', to: 'quizzes#question'
+  get 'quizzes/manage', to: 'quizzes#manage'
+  get 'quizzes/answer', to: 'quizzes#answer'
+  get 'welcome/index'
+
   resources :snippets
 
   resources :languages
@@ -19,16 +32,6 @@ Rails.application.routes.draw do
   resources :categories
 
   resources :quizzes
-
-  get 'categories/index'
-
-  get 'study/index'
-
-  get 'quizzes/index'
-  get 'quizzes/question', to: 'quizzes#question'
-  get 'quizzes/manage', to: 'quizzes#manage'
-  get 'quizzes/answer', to: 'quizzes#answer'
-  get 'welcome/index'
 
   root 'quizzes#new'
   #get '/quizzes', to: 'controller_name#press'

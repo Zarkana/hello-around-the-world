@@ -56,6 +56,16 @@
   }
 }
 
+.question{
+    display: none;
+    &:first-of-type{
+      display: block;
+    }
+    .code-field{
+      display: none;
+    }
+}
+
 .question-navigation.buttons{
   text-align: center;
   margin-top: 35px;

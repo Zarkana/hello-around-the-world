@@ -19,9 +19,6 @@
         <td><%= snippet.space_complexity %></td>
         <td>
           <%= snippet.implementations.length %>
-        <!-- <% for implementation in snippet.implementations %>
-          <%= implementation.code %>
-        <% end %> -->
         </td>
         <td class="min-width"><%= link_to 'Show', snippet_path(snippet) %></td>
         <td class="min-width"><%= link_to 'Edit', edit_snippet_path(snippet) %></td>
@@ -37,7 +34,6 @@
     <div class="col s12 buttons">
       <!-- TODO implement FAB -->
       <%= link_to 'New snippet', new_snippet_path, :class => 'btn-large waves-effect waves-light blue' %>
-      <!-- <%= link_to(raw("<i class='material-icons'>loop</i>"), {controller: 'quiz', action: 'manage'}, :id => 'download-button', :class => 'sync-button btn-floating btn-large waves-effect waves-light blue') %> -->
       <% if (@updated_snippets_exists || @add_snippets_exists) && !current_user.admin %>
         <a class="sync-button btn-floating btn-large waves-effect waves-light green"><i class="material-icons">loop</i></a>
       <% elsif @modified_snippets_exists  && !current_user.admin %>
@@ -49,8 +45,6 @@
   </div>
   <div class="row no-margin">
     <div class="col s12">
-      <!-- <%= link_to '&larr; Done'.html_safe, quiz_index_path, :class => "manage-back-link" %> -->
-      <!-- <%= link_to '&larr; Back'.html_safe, :back %> -->
       <%= link_to '&larr; Back'.html_safe, {controller: 'quizzes', action: 'manage'}, :class => "manage-back-link"  %>
     </div>
   </div>

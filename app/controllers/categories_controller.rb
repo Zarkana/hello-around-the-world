@@ -39,18 +39,10 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-    # @category = Category.find(params[:id])
     redirect_to categories_path
   end
 
   def update
-    # @category = Category.find(params[:id])
-    #
-    # if @category.update(category_params)
-    #   redirect_to @category
-    # else
-    #   render 'edit'
-    # end
     redirect_to categories_path
   end
 
@@ -58,14 +50,12 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     if @category.destroy
       @categories = Category.accessible_by(current_ability)
-      # flash[:success] = "Category destroyed Successfully"
       redirect_to categories_path
     else
       respond_to do |format|
         format.html { redirect_to categories_path, alert: "Categories cannot be destroyed if they are still being used to describe any code snippets."}
       end
     end
-    # format.html { redirect_to @category, notice: 'Widget was successfully created.' }
   end
 
   def update_active
@@ -83,6 +73,6 @@ class CategoriesController < ApplicationController
 
   private
     def category_params
-      params.require(:category).permit(:name)
+      params.require(:category).permit(:name, :active)
     end
 end
