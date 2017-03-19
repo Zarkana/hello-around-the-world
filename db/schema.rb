@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170318024147) do
+ActiveRecord::Schema.define(version: 20170319192438) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -26,9 +26,10 @@ ActiveRecord::Schema.define(version: 20170318024147) do
     t.string   "language"
     t.text     "code"
     t.integer  "snippet_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.boolean  "active"
+    t.integer  "language_id"
     t.index ["snippet_id"], name: "index_implementations_on_snippet_id"
   end
 

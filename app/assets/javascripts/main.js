@@ -2,21 +2,6 @@ $(document).ready(function() {
   //Instantiates select menu
   $('.materialize-select').material_select();
 
-  // $(".collapsible-header.expandable").click(function(e){
-  //   if(e.target.className == "lever"){
-  //     //e.stopPropagation();
-  //   }
-  // });
-  //
-  // var dont_drop = false;
-  // $("ul.collapsiblez").click(function(e){
-  //   if(e.target.className == "lever"){
-  //     debugger;
-  //     dont_drop = true;
-  //     //e.stopPropagation();
-  //   }
-  // });
-
   $('.collapsiblez:not(.lever)').collapsible({
     accordion: true, // A setting that changes the collapsible behavior to expandable instead of the default accordion style
     onOpen: function(el) { }, // Callback for Collapsible open
@@ -32,13 +17,8 @@ $(document).ready(function() {
   var resizing_select = "#language-select .select-wrapper";
   var temp_select = "#width_tmp_select";
 
-  // debugger;
-  // $(resizing_select).addClass("active selected");
-  // $(temp_select + " option:first").prop("disabled");
-  // $(temp_select + " option:first").prop("selected");
   $(resizing_select + " li:first").addClass("disabled");
-  // $(".materialize-select.initialized option:first").prop("disabled", true);
-  // $(".materialize-select.initialized option:first").attr("selected", "");
+
   //Call once to initialize size
   resizeSelect(resizing_select, temp_select);
 
@@ -113,7 +93,6 @@ $(document).ready(function() {
 
   //all input is disabled, until not empty remains disabled
 
-
   //Select the first language and make it active
   $(".language").first().addClass("active");
 
@@ -128,8 +107,33 @@ $(document).ready(function() {
     $(".language").removeClass("active");
     $(this).addClass("active");
   });
+
+
+  required_inputs = ['#quiz_language_id'];
+  disable_submit("#new-quiz-submit-btn", required_inputs);
+  // disable submit until language_id has been chosen
+  $.each(required_inputs, function(index){
+    $(required_inputs[index]).change(function(){
+      disable_submit("#new-quiz-submit-btn", ['#quiz_language_id']);
+    });
+  });
 });
 
+
+function disable_submit(button, required_inputs){
+  $.each(required_inputs, function(index){
+
+    if($(required_inputs[index]).val() ==  "")
+      $(button).attr('disabled', true);
+
+    // $(required_inputs[index]).keyup(function(){
+      if($(required_inputs[index]).val() !=  "")
+        $(button).attr('disabled', false);
+      else
+        $(button).attr('disabled', true);
+    // });
+  });
+}
 
 
 //Will add the image preview of selected file to upload

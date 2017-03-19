@@ -1,30 +1,38 @@
 <div class="container quiz" id="content">
   <div class="row">
-    <div class="col s12 m8 offset-m2 center-align">
-      <h2 class="section-header">Hello World! in Java</h2>
-    </div>
-    <div id="question-attempt" class=" col s12 m6 z-depth-2">
-      <div class="section-header-container col s12">
-          <h3 class="section-header grey-text center-align">Attempt</h3>
+
+      <% @quiz.quiz_snippets.each_with_index do |quiz_snippet, index| %>
+      <div class="answer">
+        <div class="col s12 m8 offset-m2 center-align">
+          <h2 class="section-header"><%= quiz_snippet.title %></h2>
+        </div>
+        <div id="question-attempt" class=" col s12 m6 z-depth-2">
+          <div class="section-header-container col s12">
+              <h3 class="section-header grey-text center-align">Attempt</h3>
+          </div>
+          <div id="" class="attempt-editor-parent content col s12">
+            <div id="attempt-editor-<%= index %>" class="editor"><%= quiz_snippet.attempt %></div>
+          </div>
+        </div>
+        <div id="question-answer" class=" col s12 m6 z-depth-2">
+          <div class="section-header-container col s12">
+              <h3 class="section-header grey-text center-align">Answer</h3>
+          </div>
+          <div id="" class="answer-editor-parent content col s12">
+            <div id="answer-editor-<%= index %>" class="editor"><%= quiz_snippet.answer %></div>
+          </div>
+
+          <script>
+            $(document).ready(function() {
+              initializeEditor(ace.edit("attempt-editor-<%= index %>"), <%= index %>, "<%= @language.name %>");
+              initializeEditor(ace.edit("answer-editor-<%= index %>"), <%= index %>, "<%= @language.name %>");
+            });
+          </script>
+
+        </div>
       </div>
-      <div id="" class="answer-editor-parent content col s12">
-        <div id="answer-editor" class="editor">function foo(items) {
-            var x = "All this is syntax highlighted";
-            return x;
-        }</div>
-      </div>
-    </div>
-    <div id="question-answer" class=" col s12 m6 z-depth-2">
-      <div class="section-header-container col s12">
-          <h3 class="section-header grey-text center-align">Answer</h3>
-      </div>
-      <div id="" class="attempt-editor-parent content col s12">
-        <div id="attempt-editor" class="editor">function foo(items) {
-            var x = "All this is syntax highlighted";
-            return x;
-        }</div>
-      </div>
-    </div>
+    <% end %>
+
     <div class="question-navigation buttons col s12">
       <ul class="pagination">
         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
@@ -42,19 +50,23 @@
 </div>
 <script src="https://cdn.jsdelivr.net/ace/1.2.6/min/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    var attemptEditor = ace.edit("attempt-editor");
-    //attemptEditor.setTheme("ace/theme/monokai");
-    attemptEditor.setTheme("ace/theme/dawn");
-    attemptEditor.getSession().setMode("ace/mode/javascript");
-    //Remove comment to disable editing
-    //attemptEditor.setReadOnly(true);
-
-    var answerEditor = ace.edit("answer-editor");
-    //answerEditor.setTheme("ace/theme/monokai");
-    answerEditor.setTheme("ace/theme/dawn");
-    answerEditor.getSession().setMode("ace/mode/javascript");
-    //Remove comment to disable editing
-    //answerEditor.setReadOnly(true);
+  var editor = ace.edit("editor");
+  //editor.setTheme("ace/theme/monokai");
+  editor.setTheme("ace/theme/dawn");
+  editor.getSession().setMode("ace/mode/javascript");
+    // var attemptEditor = ace.edit("attempt-editor");
+    // //attemptEditor.setTheme("ace/theme/monokai");
+    // attemptEditor.setTheme("ace/theme/dawn");
+    // attemptEditor.getSession().setMode("ace/mode/javascript");
+    // //Remove comment to disable editing
+    // //attemptEditor.setReadOnly(true);
+    //
+    // var answerEditor = ace.edit("answer-editor");
+    // //answerEditor.setTheme("ace/theme/monokai");
+    // answerEditor.setTheme("ace/theme/dawn");
+    // answerEditor.getSession().setMode("ace/mode/javascript");
+    // //Remove comment to disable editing
+    // //answerEditor.setReadOnly(true);
 
 
 </script>

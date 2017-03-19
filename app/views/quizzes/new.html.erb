@@ -5,7 +5,6 @@
         <h2 class="section-header">Quizing yourself in
           <div class="input-field inline">
             <%= f.collection_select :language_id, @languages, :id, :name, {:include_blank=>'What?'}, {:class=>'materialize-select'} %>
-
           </div>
           <select id="width_tmp_select">
             <option id="width_tmp_option">What?</option>
@@ -19,20 +18,20 @@
           <%
             start_category = true
             end_category = true
-            %>
+          %>
           <% @snippets.each.with_index do |snippet,index| %>
           <%= f.fields_for :quiz_snippets, snippet do |f| %>
-            <% if @snippets[f.options[:child_index]].category_id.nil? %>
+            <% if snippet.category_id.nil? %>
               <li>
                 <div class="collapsible-header">
                   <%= snippet.title %>
                   <div class="switch">
                     <label>
-                      <input class="snippet-active-switch" value="<%= snippet.id %>" <% if snippet.active == true %>checked<% end %> type="checkbox">
+                      <input class="snippet-active-switch no-category" value="<%= snippet.id %>" <% if snippet.active == true %>checked<% end %> type="checkbox">
                       <span class="lever"></span>
                     </label>
+                    <%= f.hidden_field :snippet_id, :value => snippet.id, :data => { :snippet => snippet.id } %>
                   </div>
-                  <%= f.hidden_field :snippet_id, :value => snippet.id %>
                 </div>
               </li>
             <% else %>
@@ -45,13 +44,17 @@
                   category = admin.categories.where(:id => category_id).first
                 end
 
-                # If the end
+                # If at the very end
                 if @snippets.size == (1 + index)
+                  # We should create a category end after this snippet
                   end_category = true
                 else
+                  # If the next snippet is not the same category as the curent one
                   if @snippets[index].category_id != @snippets[index + 1].category_id
-                    start_category = true
+                    # We should create a category end after this snippet
+                    end_category = true
                   else
+                    # We should not
                     end_category = false
                   end
 
@@ -78,19 +81,30 @@
                       <%= snippet.title %>
                       <div class="switch">
                         <label>
-                          <input class="snippet-active-switch" value="<%= snippet.id %>" <% if snippet.active %>checked<% end %> type="checkbox">
+                          <input class="snippet-active-switch has-category" data-category="<%= category.id %>" value="<%= snippet.id %>" <% if snippet.active %>checked<% end %> type="checkbox">
                           <span class="lever"></span>
                         </label>
+                        <%= f.hidden_field :snippet_id, :value => snippet.id, :data => { :category => category.id, :snippet => snippet.id } %>
                       </div>
-                      <%= f.hidden_field :snippet_id, :value => snippet.id %>
                     </div>
                   </li>
               <% if end_category %>
                   </ul>
                 </div>
               </li>
-                <% end_category = false %>
-                <% start_category = true %>
+                  <%
+                  # unless we are at the end
+                  unless @snippets.size == (1 + index)
+                    # If the next snippet is not the same category as the curent one
+                    if @snippets[index].category_id != @snippets[index + 1].category_id
+                      # We should create a category start after this snippet
+                      start_category = true
+                    else
+                      # We should not
+                      start_category = false
+                    end
+                  end
+                  %>
               <% end %>
             <% end %>
           <% end %>
@@ -100,7 +114,7 @@
     </div>
     <div class="row center">
       <div class="col s12 m8 offset-m2 buttons">
-        <%= f.button 'Begin!', :class => 'btn-large waves-effect waves-light blue'%>
+        <%= f.button 'Begin!', :id => 'new-quiz-submit-btn', :class => 'btn-large waves-effect waves-light blue'%>
         <% if user_signed_in? %>
           <%= link_to(raw("<i class='material-icons'>edit</i>"), quizzes_manage_path, :class => 'manage-button btn-floating btn-large waves-effect waves-light blue') %>
         <% end %>
@@ -111,6 +125,29 @@
       $(document).ready(function(){
         $('.category-active-switch:not(:checked)').each(function(){
             disableSnippets($(this));
+        });
+
+        //On submit remove non checked input fields
+        $("form").submit(function() {
+          $(".snippet-active-switch").each(function(){
+            var active_input = $(this)[0];
+            var snippet_id = $(this).val();
+            if(!active_input.checked){
+                active_input.remove();
+                $("input[data-snippet="+snippet_id+"]").remove();
+            }
+          });
+          //On submit remove non checked input fields
+          $(".category-active-switch").each(function(){
+            // for each snippet switch inside a disabled category
+            if(!$(this).checked){
+              var category_id = $(this).val();
+              $(".input[data-category="+category_id+"]").each(function(){
+                $(this)[0].remove();
+              });
+            }
+            //$(this)[0].remove();
+          });
         });
 
         $("input.snippet-active-switch").change(function(){

@@ -85,7 +85,7 @@ class SnippetsController < ApplicationController
 
       implementations = @implementations.pluck(:language).uniq
       languages = @languages.pluck(:name).uniq
-
+      language_ids = @languages.pluck(:id).uniq
       # Used to add languages that are new since original creation
       if implementations.size < languages.size
         p "Not enough implementations"
@@ -95,6 +95,7 @@ class SnippetsController < ApplicationController
           @new_implementation = Implementation.new()
           # Set the language equal to the implementation at the size of the original array + i
           @new_implementation.language = languages[(implementations.size) + i]
+          @new_implementation.language_id = language_ids[(implementations.size) + i]
           @new_implementation.code = ""
           @new_implementation.snippet_id = @snippet.id
           @new_implementation.active = true

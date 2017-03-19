@@ -40,48 +40,53 @@ class QuizzesController < ApplicationController
 
     @quiz.user = current_user
     # authorize! :create, @quiz
+    if @quiz.language_id
+      p "Language exists"
+    else
+      p "Language does not exist"
+      redirect_to action: 'new'
+      return
+    end
+
+    # Set the quiz_snippets answer to the implementations code that has the same name as the selected language
+    @quiz.quiz_snippets.each do |quiz_snippet|
+      unless quiz_snippet.snippet_id.nil?
+        # todo: please fix this
+        p "THE QIZ SNIPPET"
+        p quiz_snippet.inspect
+
+        snippet = Snippet.where(id: quiz_snippet.snippet_id).first
+        p "The Snippet"
+        p snippet.inspect
+        # snippet_category = Category.where(id: snippet.category_id).first
+        selected_language = Language.where(id: @quiz.language_id).first
+        p "The Language"
+        p selected_language.inspect
+
+        quiz_snippet.answer = snippet.implementations.where(language_id: selected_language.id).first.code
+
+        p "The Answer"
+        p quiz_snippet.answer.inspect
+
+        quiz_snippet.title = "#{snippet.title} in #{selected_language.name}"
+        quiz_snippet.quiz_id = @quiz.id
+
+      else
+        p "nil quiz_snippet.snippet_id"
+        quiz_snippet.delete()
+        # TODO: This is really weird and absolutely needs to be fixed
+        # Currently getting a number of empty quiz_snippets and just deleting them after
+      end
+    end
 
     if @quiz.save
       p "Quiz saved successfully"
-      @quiz.quiz_snippets.each do |quiz_snippet|
-        # Get the quiz_snippets snippet and category
-
-        snippet = Snippet.where(id: quiz_snippet.snippet_id).first
-        snippet_category = Category.where(id: snippet.category_id).first
-        selected_language = Language.where(id: @quiz.language_id).first
-
-        # Get whether there is a category
-        has_category = snippet_category
-
-        # Check if both are active
-        if (has_category && snippet_category.active) || !has_category
-          p "category is active or there is no category"
-          if snippet.active
-            p "snippet is active"
-
-            # Set the quiz_snippets answer to the implementations code that has the same name as the selected language
-            quiz_snippet.answer = snippet.implementations.where(language: selected_language.name).first.code
-            quiz_snippet.title = "#{snippet.title} in #{selected_language.name}"
-            quiz_snippet.quiz_id = @quiz.id
-
-            if quiz_snippet.save
-                p "Quiz Snippet saved successfully"
-                p "QUIZ SNIPPET"
-                p quiz_snippet.inspect
-            else
-              p "Quiz Snippet saved unsuccessfully"
-            end
-          else
-            p "snippet not active"
-          end
-        else
-          p "category not active"
-        end
-      end
 
       redirect_to action: 'question', id: @quiz.id
       return
+
     else
+
       p "Quiz saved unsuccessfully"
     end
     redirect_to action: 'new'
@@ -97,12 +102,33 @@ class QuizzesController < ApplicationController
     @language = Language.find(@quiz.language_id)
   end
 
+  def update
+    @quiz = Quiz.find(params[:id])
+
+    if @quiz.update(quiz_update_params)
+      # @quizzes = current_user.quizzes
+      # authorize! :update, @quiz
+      p "Quiz updated successfully"
+      redirect_to action: 'answer', id: @quiz.id
+      return
+    else
+      p "Quiz updated unsuccessfully"
+      redirect_to action: 'question', id: @quiz.id
+      return
+    end
+  end
+
   def answer
+    @quiz = Quiz.find(params[:id])
+    @quiz_snippets = @quiz.quiz_snippets
+    @language = Language.find(@quiz.language_id)
   end
 
   private
     def quiz_params
       params.require(:quiz).permit(:language_id, :user_id, :complete, quiz_snippets_attributes:[:attempt, :answer, :title, :quiz_id, :snippet_id, :_destroy])
     end
-
+    def quiz_update_params
+      params.require(:quiz).permit(:language_id, :user_id, :complete, quiz_snippets_attributes:[:id, :attempt, :answer, :title, :quiz_id, :snippet_id, :_destroy])
+    end
 end
