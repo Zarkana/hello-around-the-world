@@ -167,6 +167,9 @@ class Users::RegistrationsController < DeviseController
       admin_snippets = admin.snippets
       admin_languages = admin.languages.where("languages.user" => admin)
       admin_categories = admin.categories.where("categories.user" => admin)
+    else
+      # There needs to be one
+      return
     end
 
     admin_languages.each do |language|
@@ -200,6 +203,13 @@ class Users::RegistrationsController < DeviseController
           # cloned_snippet.category_id = current_user.categories.find(:id, :conditions => [ "user_name = ?", user_name])
         end
       end
+
+      cloned_snippet.implementations.each do |implementation|
+        # Get the id of the language owned by the current user that has a default_id equivalent to the implementations language id
+        # This should properly update it to behave correctly
+        implementation.language_id = Language.where(user_id: resource.id).where(default_id: implementation.language_id).first.id
+      end
+
       # TODO:Make sure that the snippets category_id is correct
       if cloned_snippet.save!
         p "Snippet saved successfully"
@@ -207,28 +217,6 @@ class Users::RegistrationsController < DeviseController
         p "Snippet failed to save"
       end
     end
-
-    # admin_categories.each do |category|
-    #   p "CLONING CATEGORY: " + category.inspect
-    #
-    #   cloned_category = category.deep_clone  include: [
-    #     snippets: [ :implementations, if: lambda {|snippet| snippet.user == admin } ]
-    #   ]
-    #
-    #   cloned_category.user = resource
-    #   cloned_category.default_id = category.id
-    #
-    #   cloned_category.snippets.each do |snippet|
-    #     snippet.user = resource
-    #     # snippet.default_id = snippet.id
-    #   end
-    #   p cloned_category.inspect
-    #   if cloned_category.save!
-    #     p "Category saved successfully"
-    #   else
-    #     p "Category failed to save"
-    #   end
-    # end
   end
 
 

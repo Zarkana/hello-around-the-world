@@ -21,8 +21,12 @@ class QuizzesController < ApplicationController
 
   def create
     @quiz = Quiz.new(quiz_params)
+    if user_signed_in?
+      @quiz.user = current_user
+    else
+      @quiz.user = User.where('admin = ?', true).first
+    end
 
-    @quiz.user = current_user
     # authorize! :create, @quiz
     if @quiz.language_id
       p "Language exists"
@@ -36,7 +40,7 @@ class QuizzesController < ApplicationController
     @quiz.quiz_snippets.each do |quiz_snippet|
       unless quiz_snippet.snippet_id.nil?
         # todo: please fix this
-        p "THE QIZ SNIPPET"
+        p "THE QUIZ SNIPPET"
         p quiz_snippet.inspect
 
         snippet = Snippet.where(id: quiz_snippet.snippet_id).first
@@ -64,12 +68,9 @@ class QuizzesController < ApplicationController
 
     if @quiz.save
       p "Quiz saved successfully"
-
       redirect_to action: 'question', id: @quiz.id
       return
-
     else
-
       p "Quiz saved unsuccessfully"
     end
     redirect_to action: 'new'
@@ -89,7 +90,6 @@ class QuizzesController < ApplicationController
     @quiz = Quiz.find(params[:id])
 
     if @quiz.update(quiz_update_params)
-      # @quizzes = current_user.quizzes
       # authorize! :update, @quiz
       p "Quiz updated successfully"
       redirect_to action: 'answer', id: @quiz.id
