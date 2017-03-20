@@ -33,19 +33,17 @@
           <% end %>
         </div>
       </div>
-      <!-- TODO: implement other implementation -->
       <%= f.fields_for :implementations do |f| %>
         <%= f.text_area :code, :id => "editor-#{f.options[:child_index]}", :class => 'code-field' %>
         <div id="ace-editor-<%= f.options[:child_index] %>" class="editor" data-language="<%= @languages[f.options[:child_index]].name %>"><%= f.object.code %></div>
-
-        <%= f.text_field :language, :class => 'language-field', :value => @languages[f.options[:child_index]].name, :data => {:language => @languages[f.options[:child_index]].name } %>
-
+        
+        <!--  TODO REMOVE lnagueage field, need data?-->
+        <%= f.hidden_field :language_id, :value => @languages[f.options[:child_index]].id, :data => { :language => @languages[f.options[:child_index]].id } %>
         <script>
-            $(document).ready(function() {
-              initializeEditor(ace.edit("ace-editor-<%= f.options[:child_index] %>"), <%= f.options[:child_index] %>, "<%= @languages[f.options[:child_index]].name %>");
-            });
+          $(document).ready(function() {
+            initializeEditor(ace.edit("ace-editor-<%= f.options[:child_index] %>"), <%= f.options[:child_index] %>, "<%= @languages[f.options[:child_index]].name %>");
+          });
         </script>
-
       <% end %>
     </div>
   </div>

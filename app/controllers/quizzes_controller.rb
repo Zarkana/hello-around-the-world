@@ -6,33 +6,17 @@ class QuizzesController < ApplicationController
     @quiz = Quiz.new
     if user_signed_in?
       @languages = Language.accessible_by(current_ability)
-      # doesn't include snippets with categories
-      # @snippets = current_user.snippets.where(category_id: nil).accessible_by(current_ability)
-      # @categories = current_user.categories.includes(:snippets).where("snippets.user" => current_user).accessible_by(current_ability)
       @snippets = current_user.snippets.order('LOWER(category_id)')
-      # @categories = current_user.categories
-      # @snippet_categories = current_user.snippets.where.not(category_id: nil)
     else
       @admin = User.where('admin = ?', true).first
 
       @languages = @admin.languages
-      # doesn't include snippets with categories
-      # @snippets = @admin.snippets.where(category_id: nil)
-      # @categories = @admin.categories.includes(:snippets).where("snippets.user" => @admin)
       @snippets = @admin.snippets.order('LOWER(category_id)')
-      # @snippet_categories = @admin.categories.snippets.where("snippets.user" => @admin)
     end
     # Create the blank quiz_snippets to be available on new view
     @snippets.each do |snippet|
       quiz_snippet = @quiz.quiz_snippets.build(:snippet_id => snippet.id)
     end
-    # @category_snippets.each do |snippet|
-    #   category_quiz_snippet = @quiz.quiz_snippets.build(:snippet_id => snippet.id)
-    # end
-    # Create the blank quiz_categories to be available on new view
-    # @categories.each do |category|
-    #   quiz_snippet = @quiz.quiz_snippets.build(:snippet_id => snippet.id)
-    # end
   end
 
   def create
@@ -58,7 +42,6 @@ class QuizzesController < ApplicationController
         snippet = Snippet.where(id: quiz_snippet.snippet_id).first
         p "The Snippet"
         p snippet.inspect
-        # snippet_category = Category.where(id: snippet.category_id).first
         selected_language = Language.where(id: @quiz.language_id).first
         p "The Language"
         p selected_language.inspect

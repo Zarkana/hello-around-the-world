@@ -2,39 +2,37 @@
   <div class="row">
     <%= form_for @quiz do |f| %>
       <% @quiz.quiz_snippets.each_with_index do |quiz_snippet, index| %>
-        <div class="question">
-          <%= f.fields_for :quiz_snippets, quiz_snippet do |f| %>
-          <div class="light-blue-text col s12 m8 offset-m2 center-align">
-            <h2 class="section-header"><%= quiz_snippet.title %></h2>
+        <%= f.fields_for :quiz_snippets, quiz_snippet do |f| %>
+          <div class="question">
+            <div class="light-blue-text col s12 m8 offset-m2 center-align">
+              <h2 class="section-header"><%= quiz_snippet.title %></h2>
+            </div>
+            <div id="" class="quiz-editor-parent col s12 m10 offset-m1 l8 offset-l2">
+              <%= f.text_area :attempt, :id => "editor-#{index}", :class => 'code-field' %>
+              <div id="ace-editor-<%= index %>" class="editor" data-language="<%= @language.name %>"><%= quiz_snippet.attempt %></div>
+              <script>
+                $(document).ready(function() {
+                  initializeEditor(ace.edit("ace-editor-<%= index %>"), <%= index %>, "<%= @language.name %>");
+                });
+              </script>
+            </div>
           </div>
-          <div id="" class="quiz-editor-parent col s12 m10 offset-m1 l8 offset-l2">
-            <%= f.text_area :attempt, :id => "editor-#{index}", :class => 'code-field' %>
-            <div id="ace-editor-<%= index %>" class="editor" data-language="<%= @language.name %>"><%= quiz_snippet.attempt %></div>
-
-            <script>
-              $(document).ready(function() {
-                initializeEditor(ace.edit("ace-editor-<%= index %>"), <%= index %>, "<%= @language.name %>");
-              });
-            </script>
-
-          </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
-    <div class="question-navigation buttons col s12">
-      <ul class="pagination">
-        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-        <li id="active" class="waves-effect circle active"><a href="#!"></a></li>
-        <li class="waves-effect circle"><a href="#!"></a></li>
-        <li class="waves-effect circle"><a href="#!"></a></li>
-        <li class="waves-effect circle"><a href="#!"></a></li>
-        <li class="waves-effect circle"><a href="#!"></a></li>
-        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-      </ul>
-      <a class="disabled waves-effect waves-light blue btn">previous</a>
-      <%= f.button 'next', :class => 'waves-effect waves-light blue btn'%>
-    </div>
-    <script src="https://cdn.jsdelivr.net/ace/1.2.6/min/ace.js" type="text/javascript" charset="utf-8"></script>
+      <div class="question-navigation buttons col s12">
+        <ul class="pagination">
+          <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+          <li id="active" class="waves-effect circle active"><a href="#!"></a></li>
+          <li class="waves-effect circle"><a href="#!"></a></li>
+          <li class="waves-effect circle"><a href="#!"></a></li>
+          <li class="waves-effect circle"><a href="#!"></a></li>
+          <li class="waves-effect circle"><a href="#!"></a></li>
+          <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+        </ul>
+        <a class="disabled waves-effect waves-light blue btn">previous</a>
+        <%= f.button 'next', :class => 'waves-effect waves-light blue btn'%>
+      </div>
+      <script src="https://cdn.jsdelivr.net/ace/1.2.6/min/ace.js" type="text/javascript" charset="utf-8"></script>
     <% end %>
   </div>
 </div>

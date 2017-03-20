@@ -71,10 +71,10 @@ class SnippetsController < ApplicationController
 
     def edit
       @snippet = Snippet.find(params[:id])
+      @implementations = @snippet.implementations
+
       authorize! :edit, @snippet
       @languages = Language.accessible_by(current_ability)
-
-      @implementations = @snippet.implementations
 
       @languages.each do |language|
         p language.inspect
@@ -83,10 +83,13 @@ class SnippetsController < ApplicationController
         p implementation.inspect
       end
 
-      implementations = @implementations.pluck(:language).uniq
-      languages = @languages.pluck(:name).uniq
-      language_ids = @languages.pluck(:id).uniq
+      implementations = @implementations.pluck(:language_id).uniq
+      languages = @languages.pluck(:id).uniq
       # Used to add languages that are new since original creation
+      p "IMPLEMENTATIONS SIZE"
+      p implementations.size
+      p "LANGUAGES SIZE"
+      p languages.size
       if implementations.size < languages.size
         p "Not enough implementations"
         to_add = languages.size - implementations.size
@@ -94,11 +97,9 @@ class SnippetsController < ApplicationController
         for i in 0..(to_add-1)
           @new_implementation = Implementation.new()
           # Set the language equal to the implementation at the size of the original array + i
-          @new_implementation.language = languages[(implementations.size) + i]
-          @new_implementation.language_id = language_ids[(implementations.size) + i]
+          @new_implementation.language_id = languages[(implementations.size) + i]
           @new_implementation.code = ""
           @new_implementation.snippet_id = @snippet.id
-          @new_implementation.active = true
           if @new_implementation.save
             p "Implementation added successfully"
           else
@@ -281,7 +282,7 @@ class SnippetsController < ApplicationController
       end
 
       def snippet_params
-        params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, :active, :category, :category_id, implementations_attributes:[:language, :code, :id, :snippet_id, :_destroy])
+        params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, :active, :category, :category_id, implementations_attributes:[:language_id, :code, :id, :snippet_id, :_destroy])
       end
 
 end
