@@ -3,37 +3,53 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <title>Quiz</title>
-      <%= csrf_meta_tags %>
-      <%= stylesheet_link_tag    'materialize' %>
-
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!-- CSS  -->
-      <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
-      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <!-- TODO: Evaluate, may already have -->
-      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <title><%= content_for?(:title) ? content_for(:title) : "Hello Around the World!" %></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'materialize' %>
+    <%= favicon_link_tag "logo/logo-blue-16.png" %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- CSS  -->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- TODO: Evaluate, may already have -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   </head>
-
   <body>
     <nav class="light-blue lighten-1" role="navigation">
-      <div class="nav-wrapper container"><%= link_to "Hello Around the World!", root_path, :id => 'logo-container', :class => 'brand-logo' %>
+      <div class="nav-wrapper container">
+        <ul id="logo-container" class="left">
+          <li>
+            <%= link_to image_tag("logo/logo-white-64.png"), root_path, :id => 'logo-image', :class => 'brand-logo' %>
+          </li>
+          <li>
+            <%= link_to "Hello Around the World!", root_path, :id => 'logo-text', :class => 'brand-logo' %>
+          </li>
+        </ul>
         <% if user_signed_in? %>
-          <ul class="right hide-on-med-and-down">
-            <li>Logged in as <strong><%= current_user.email %></strong></li>
-            <li><%= link_to "Quiz", quizzes_new_path %></li>
-            <li><%= link_to "Study", study_index_path %></li>
-            <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
-            <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
-          </ul>
+        <ul class="right hide-on-med-and-down">
+          <!-- <li><%= link_to "Study", study_index_path %></li> -->
+          <li><%= link_to "Quiz", quizzes_new_path %></li>
+          <li>
+            <a class='dropdown-button' href='#' data-activates='user-dropdown'><strong><%= current_user.email %></strong></a>
+            <ul id='user-dropdown' class='dropdown-content'>
+              <li><%= link_to 'Edit Profile', edit_user_registration_path, :class => 'dropdown-item' %></li>
+              <li class="divider"></li>
+              <li><%= link_to 'Manage Snippets', snippets_path, :class => 'dropdown-item'  %></li>
+              <li><%= link_to 'Manage Categories', categories_path, :class => 'dropdown-item'  %></li>
+              <li><%= link_to 'Manage Languages', languages_path, :class => 'dropdown-item'  %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link dropdown-item'  %></li>
+            </ul>
+          </li>
+        </ul>
         <% else %>
-          <ul class="right hide-on-med-and-down">
-            <li><%= link_to "Quiz", quizzes_new_path %></li>
-            <li><%= link_to "Study", study_index_path %></li>
-            <li><%= link_to "Login", new_user_session_path %></li>
-            <li><%= link_to "Sign up", new_user_registration_path %></li>
-          </ul>
+        <ul class="right hide-on-med-and-down">
+          <li><%= link_to "Quiz", quizzes_new_path %></li>
+          <!--<li><%= link_to "Study", study_index_path %></li> -->
+          <li><%= link_to "Login", new_user_session_path %></li>
+          <li><%= link_to "Sign up", new_user_registration_path %></li>
+        </ul>
         <% end %>
         <ul id="nav-mobile" class="side-nav">
           <li><a href="#">Navbar Link</a></li>

@@ -1,7 +1,6 @@
 .quiz.container{
   //used to allow for ace editor to take full width of screen at lower sizes
   width: 100%;
-
   padding-top: 15px;
 
   .buttons{
@@ -52,6 +51,11 @@
     #editor-parent{
       //TODO: Could be done with grid system?
       max-width: 100%;
+    }
+  }
+  #manage-header{
+    .section-header{
+      margin-bottom: 10px;
     }
   }
 }
