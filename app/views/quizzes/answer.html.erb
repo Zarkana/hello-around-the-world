@@ -1,14 +1,13 @@
 <div class="container quiz" id="content">
   <div class="row">
-
-      <% @quiz.quiz_snippets.each_with_index do |quiz_snippet, index| %>
-      <div class="answer">
+    <% @quiz.quiz_snippets.each_with_index do |quiz_snippet, index| %>
+      <div id="answer-<%= index %>"  class="answer">
         <div class="col s12 m8 offset-m2 center-align">
           <h2 class="section-header"><%= quiz_snippet.title %></h2>
         </div>
         <div id="question-attempt" class=" col s12 m6 z-depth-2">
           <div class="section-header-container col s12">
-              <h3 class="section-header grey-text center-align">Attempt</h3>
+            <h3 class="section-header grey-text center-align">Attempt</h3>
           </div>
           <div id="" class="attempt-editor-parent content col s12">
             <div id="attempt-editor-<%= index %>" class="editor"><%= quiz_snippet.attempt %></div>
@@ -16,35 +15,31 @@
         </div>
         <div id="question-answer" class=" col s12 m6 z-depth-2">
           <div class="section-header-container col s12">
-              <h3 class="section-header grey-text center-align">Answer</h3>
+            <h3 class="section-header grey-text center-align">Answer</h3>
           </div>
           <div id="" class="answer-editor-parent content col s12">
             <div id="answer-editor-<%= index %>" class="editor"><%= quiz_snippet.answer %></div>
           </div>
-
           <script>
             $(document).ready(function() {
               initializeEditor(ace.edit("attempt-editor-<%= index %>"), <%= index %>, "<%= @language.name %>");
               initializeEditor(ace.edit("answer-editor-<%= index %>"), <%= index %>, "<%= @language.name %>");
             });
           </script>
-
         </div>
       </div>
     <% end %>
-
     <div class="question-navigation buttons col s12">
       <ul class="pagination">
-        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-        <li id="active" class="waves-effect circle active"><a href="#!"></a></li>
-        <li class="waves-effect circle"><a href="#!"></a></li>
-        <li class="waves-effect circle"><a href="#!"></a></li>
-        <li class="waves-effect circle"><a href="#!"></a></li>
-        <li class="waves-effect circle"><a href="#!"></a></li>
-        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+        <li class="left-nav-arrow waves-effect"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <% @quiz.quiz_snippets.each_with_index do |quiz_snippet, index| %>
+          <li data-question="<%= index %>" class="nav-item waves-effect circle"><a href="#!"></a></li>
+        <% end %>
+        <li class="right-nav-arrow waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
       </ul>
-      <a class="disabled waves-effect waves-light blue btn">previous</a>
-      <a class="waves-effect waves-light blue btn">next</a>
+      <a class="previous-item waves-effect waves-light blue btn">previous</a>
+      <a class="next-item waves-effect waves-light blue btn">next</a>
+      <%= link_to 'another!', quizzes_new_path, :class => "finish-button waves-effect waves-light green btn" %>
     </div>
   </div>
 </div>

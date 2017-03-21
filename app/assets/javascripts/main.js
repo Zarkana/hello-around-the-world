@@ -117,8 +117,64 @@ $(document).ready(function() {
       disable_submit("#new-quiz-submit-btn", ['#quiz_language_id']);
     });
   });
+
+  // $(".question-navigation .nav-item").first().addClass("active");
+  navigate(0);
+  $(".left-nav-arrow, .right-nav-arrow, .nav-item, .next-item, .previous-item").click(function(){
+    instantiate_navigation(this);
+  });
 });
 
+function instantiate_navigation(nav_link){
+  var active_index = $(".nav-item.active").data("question");
+  if($(nav_link).hasClass("nav-item")){
+    navigate($(nav_link).data("question"));
+  }else if (($(nav_link).hasClass("next-item") || $(nav_link).hasClass("right-nav-arrow")) && !out_of_bounds(active_index, "right")) {
+    navigate(active_index + 1);
+  }else if (($(nav_link).hasClass("previous-item") || $(nav_link).hasClass("left-nav-arrow")) && !out_of_bounds(active_index, "left")){
+    navigate(active_index - 1);
+  }
+}
+
+function navigate(index) {
+  var first_item_index = $(".question-navigation .nav-item").first().data("question");
+  var last_item_index =  $(".question-navigation .nav-item").last().data("question");
+  $(".nav-item").removeClass("active");
+  $(".nav-item[data-question='" + index + "']").addClass("active");
+  $(".question, .answer").hide();
+  $("#question-" + index).show();
+  $("#answer-" + index).show();
+  $(".left-nav-arrow, .right-nav-arrow, .nav-item, .next-item, .previous-item").removeClass("disabled");
+  hide_finish();
+  if($(".nav-item.active").data("question") == first_item_index){
+    $(".left-nav-arrow, .previous-item").addClass("disabled");
+  }
+  if($(".nav-item.active").data("question") == last_item_index){
+    $(".right-nav-arrow, .next-item").addClass("disabled");
+    show_finish();
+  }
+}
+
+function show_finish(){
+  $(".next-item").hide();
+  $(".finish-button").css('display', 'inline-block');;
+}
+
+function hide_finish(){
+  $(".finish-button").hide();
+  $(".next-item").css('display', 'inline-block');
+}
+
+function out_of_bounds(index, direction){
+  var first_item_index = $(".question-navigation .nav-item").first().data("question");
+  var last_item_index =  $(".question-navigation .nav-item").last().data("question");
+  if ((index - 1 < first_item_index) && direction == "left"){
+    return true;
+  }else if(index + 1 > last_item_index && direction == "right"){
+    return true;
+  }
+  return false;
+}
 
 function disable_submit(button, required_inputs){
   $.each(required_inputs, function(index){
