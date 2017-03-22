@@ -34,9 +34,9 @@
         </div>
       </div>
       <%= f.fields_for :implementations do |f| %>
-        <%= f.text_area :code, :id => "editor-#{f.options[:child_index]}", :class => 'code-field' %>
-        <div id="ace-editor-<%= f.options[:child_index] %>" class="editor" data-language="<%= @languages[f.options[:child_index]].name %>"><%= f.object.code %></div>
-        
+        <%= f.text_area :code, :id => "editor-#{f.options[:child_index]}", :class => 'code-field' %>.where(default_id: default_snippet.category_id).first.id
+        <div id="ace-editor-<%= f.options[:child_index] %>" class="editor" data-language="<%= @languages[f.options[:child_index]].name %>"><%= Implementation.where(snippet_id: @snippet.id).where(language_id: @languages[f.options[:child_index]].id).first.code %></div>
+
         <!--  TODO REMOVE lnagueage field, need data?-->
         <%= f.hidden_field :language_id, :value => @languages[f.options[:child_index]].id, :data => { :language => @languages[f.options[:child_index]].id } %>
         <script>

@@ -74,6 +74,9 @@ class SnippetsController < ApplicationController
       @implementations = @snippet.implementations
 
       authorize! :edit, @snippet
+
+      implementations = @implementations.pluck(:language_id).uniq
+
       @languages = Language.accessible_by(current_ability)
 
       @languages.each do |language|
@@ -95,6 +98,7 @@ class SnippetsController < ApplicationController
         to_add = languages.size - implementations.size
 
         for i in 0..(to_add-1)
+          # TODO: Bug location?
           @new_implementation = Implementation.new()
           # Set the language equal to the implementation at the size of the original array + i
           @new_implementation.language_id = languages[(implementations.size) + i]
@@ -189,6 +193,21 @@ class SnippetsController < ApplicationController
 
       # cloned_snippet.category_id = add_category(default_snippet.category_id)
       add_languages
+
+      p "Crossing fingers"
+      cloned_snippet.implementations.each do |implementation|
+        # Get the id of the language owned by the current user that has a default_id equivalent to the implementations language id
+        # This should properly update it to behave correctly
+        p "Goal is to set the language id to the users language and not the admins"
+        p "pre change implementation language id"
+        p implementation.language_id
+
+        implementation.language_id = Language.where(user_id: current_user.id).where(default_id: implementation.language_id).first.id
+
+        p "pre change implementation language id"
+        p implementation.language_id
+      end
+
       if cloned_snippet.save!
         p "Snippet updated successfully"
         snippet.destroy
@@ -222,6 +241,21 @@ class SnippetsController < ApplicationController
 
       # cloned_snippet.category_id = add_category(default_snippet.category_id)
       add_languages
+
+      p "Crossing fingers"
+      cloned_snippet.implementations.each do |implementation|
+        # Get the id of the language owned by the current user that has a default_id equivalent to the implementations language id
+        # This should properly update it to behave correctly
+        p "Goal is to set the language id to the users language and not the admins"
+        p "pre change implementation language id"
+        p implementation.language_id
+
+        implementation.language_id = Language.where(user_id: current_user.id).where(default_id: implementation.language_id).first.id
+
+        p "pre change implementation language id"
+        p implementation.language_id
+      end
+
       if cloned_snippet.save!
         p "Snippet added successfully"
         @added_snippet = cloned_snippet
