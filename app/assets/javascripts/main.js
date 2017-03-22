@@ -258,7 +258,20 @@ function determineDisabled(aceEditor, index){
   }
 }
 
-function imgError(image) {  
+function imgIndexError(image) {
+  $(image).onerror = "";
+  var lang_id = $(image).data("langid");
+  var abr = $(".logo[data-langid='" + lang_id + "']");
+  abr.show();
+  $(image).hide();
+  abr.removeClass("has-image");
+  abr.addClass("no-image");
+  // image.src = "/images/noimage.gif";
+  return true;
+  // #034468
+}
+
+function imgError(image) {
   $(image).onerror = "";
   // $(".has-image img").hide();
   var lang_id = $(image).data("langid");

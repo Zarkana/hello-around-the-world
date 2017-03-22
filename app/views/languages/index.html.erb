@@ -14,7 +14,7 @@
       <% @languages.each do |language| %>
         <tr>
           <td><span class="name"><%= language.name %></span></td>
-          <td><%= image_tag language.logo.url, :class => "logo" %></td>
+          <td><span style="display: none" class="text-version logo has-image" data-langid="<%= language.id %>"><%= language.name[0..1] %></span><%= image_tag language.logo.url, :class => "image-version logo", :onerror => 'imgIndexError(this);', :data => {:language => language.name, :langid => language.id } %></td>
           <!-- <td><%= link_to 'Show', language_path(language) %></td> -->
           <td class="min-width"><%= link_to 'Edit', edit_language_path(language) %></td>
           <td class="min-width"><%= link_to 'Destroy', language_path(language),

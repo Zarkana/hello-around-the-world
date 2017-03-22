@@ -49,8 +49,16 @@
     .name{
       font-size: 22px;
     }
+
     .logo{
       max-width: 32px;
+      &.has-image{
+        display: none;
+      }
+      &.no-image{
+        font-size: 32px;
+        color: #034468;
+      }
     }
   }
 }
