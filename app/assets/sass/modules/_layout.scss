@@ -6,6 +6,14 @@ html{
   height: 100%;
 }
 
+.collection-item:hover{
+  background-color: #f3f3f3 !important;
+}
+
+.dropdown-item:hover{
+  background-color: #f3f3f3 !important;
+}
+
 nav{
   #logo-container{
     .brand-logo:hover{
@@ -19,7 +27,7 @@ nav{
       }
     }
     #logo-text{
-      margin-left: 20px;
+      margin-left: 10px;
     }
   }
   #user-dropdown{

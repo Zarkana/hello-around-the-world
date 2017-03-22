@@ -20,20 +20,26 @@
       <div class="editor-header">
         <div class="languages">
           <% @languages.each_with_index do |language,index| %>
-            <div id="language-tab-<%= index %>" class="language"><%= image_tag language.logo.url, :data => {:language => language.name } %></div>
+            <div id="language-tab-<%= index %>" class="language with-image" data-langid="<%= language.id %>">
+              <div class="abr"><span><%= language.name[0..1] %></span></div>
+              <%= image_tag language.logo.url, :onerror => 'imgError(this);', :data => {:language => language.name, :langid => language.id } %>
+            </div>
           <% end %>
         </div>
       </div>
+
       <% @snippet.implementations.each_with_index do |implementation, index| %>
-        <div id="ace-editor-<%= index %>" class="editor" data-language="<%= implementation.language %>"><%= implementation.code %></div>
+        <div id="ace-editor-<%= index %>" class="editor" data-language="<%= Language.find_by_id(implementation.language_id).name %>"><%= implementation.code %></div>
         <script>
           $(document).ready(function() {
-            initializeEditor(ace.edit("ace-editor-<%= index %>"), <%= index %>, "<%= implementation.language %>");
+            initializeEditor(ace.edit("ace-editor-<%= index %>"), <%= index %>, "<%= Language.find_by_id(implementation.language_id).name %>");
             ace.edit("ace-editor-<%= index %>").setReadOnly(true);
             ace.edit("ace-editor-<%= index %>").setHighlightActiveLine(false);
           });
         </script>
       <% end %>
+
+
     </div>
   </div>
   <div class="row data-fields">

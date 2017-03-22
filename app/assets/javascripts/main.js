@@ -253,8 +253,19 @@ function determineDisabled(aceEditor, index){
   var languageTab = "#language-tab-" + index;
   if(!aceEditor.getValue()){
     $(languageTab).addClass("disabled");
-  }
-  else{
+  }else{
     $(languageTab).removeClass("disabled");
   }
+}
+
+function imgError(image) {  
+  $(image).onerror = "";
+  // $(".has-image img").hide();
+  var lang_id = $(image).data("langid");
+  var abr = $(".language[data-langid='" + lang_id + "']");
+  abr.removeClass("has-image");
+  abr.addClass("no-image");
+  // image.src = "/images/noimage.gif";
+  return true;
+  // #034468
 }
