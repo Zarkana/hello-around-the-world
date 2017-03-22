@@ -9746,22 +9746,36 @@ html {
   height: 100%;
 }
 
-/* line 10, ../assets/sass/modules/_layout.scss */
+/* line 11, ../assets/sass/modules/_layout.scss */
+nav #logo-container .brand-logo:hover {
+  background-color: transparent;
+}
+/* line 15, ../assets/sass/modules/_layout.scss */
+nav #logo-container #logo-image img {
+  position: relative;
+  top: 9px;
+  height: 45px;
+}
+/* line 21, ../assets/sass/modules/_layout.scss */
+nav #logo-container #logo-text {
+  margin-left: 20px;
+}
+/* line 25, ../assets/sass/modules/_layout.scss */
 nav #user-dropdown {
   top: 65px;
   width: 175px !important;
 }
-/* line 13, ../assets/sass/modules/_layout.scss */
+/* line 28, ../assets/sass/modules/_layout.scss */
 nav #user-dropdown .dropdown-item {
   min-height: 64px;
   padding-top: 20px;
 }
-/* line 16, ../assets/sass/modules/_layout.scss */
+/* line 31, ../assets/sass/modules/_layout.scss */
 nav #user-dropdown .dropdown-item a {
   min-height: 64px;
 }
 
-/* line 23, ../assets/sass/modules/_layout.scss */
+/* line 38, ../assets/sass/modules/_layout.scss */
 body {
   position: relative;
   min-height: 100%;
@@ -9769,55 +9783,55 @@ body {
   min-width: 320px;
 }
 
-/* line 30, ../assets/sass/modules/_layout.scss */
+/* line 45, ../assets/sass/modules/_layout.scss */
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
 
-/* line 36, ../assets/sass/modules/_layout.scss */
+/* line 51, ../assets/sass/modules/_layout.scss */
 main {
   flex: 1 0 auto;
   margin-bottom: 110px;
 }
 
-/* line 44, ../assets/sass/modules/_layout.scss */
+/* line 59, ../assets/sass/modules/_layout.scss */
 main a:hover {
   text-decoration: underline;
 }
 
-/* line 52, ../assets/sass/modules/_layout.scss */
+/* line 67, ../assets/sass/modules/_layout.scss */
 h1.section-header {
   font-size: 3rem;
 }
-/* line 55, ../assets/sass/modules/_layout.scss */
+/* line 70, ../assets/sass/modules/_layout.scss */
 h2.section-header {
   font-size: 2.5rem;
 }
-/* line 58, ../assets/sass/modules/_layout.scss */
+/* line 73, ../assets/sass/modules/_layout.scss */
 h3.section-header {
   font-size: 1.75rem;
 }
-/* line 61, ../assets/sass/modules/_layout.scss */
+/* line 76, ../assets/sass/modules/_layout.scss */
 h4.section-header {
   font-size: 1.25rem;
 }
-/* line 64, ../assets/sass/modules/_layout.scss */
+/* line 79, ../assets/sass/modules/_layout.scss */
 h5.section-header {
   font-size: 1.15rem;
 }
-/* line 67, ../assets/sass/modules/_layout.scss */
+/* line 82, ../assets/sass/modules/_layout.scss */
 h6.section-header {
   font-size: 1rem;
 }
 
-/* line 73, ../assets/sass/modules/_layout.scss */
+/* line 88, ../assets/sass/modules/_layout.scss */
 .input-field label {
   top: 2.2rem;
 }
 
-/* line 81, ../assets/sass/modules/_layout.scss */
+/* line 96, ../assets/sass/modules/_layout.scss */
 .page-footer {
   position: absolute;
   right: 0;
@@ -9826,50 +9840,50 @@ h6.section-header {
   z-index: 5;
 }
 
-/* line 93, ../assets/sass/modules/_layout.scss */
+/* line 108, ../assets/sass/modules/_layout.scss */
 .nav-wrapper .button-collapse {
   margin-left: 0;
 }
 @media (max-width: 600px) {
-  /* line 105, ../assets/sass/modules/_layout.scss */
+  /* line 120, ../assets/sass/modules/_layout.scss */
   .nav-wrapper #logo-text {
     font-size: 1.30rem;
   }
 }
 
-/* line 111, ../assets/sass/modules/_layout.scss */
+/* line 126, ../assets/sass/modules/_layout.scss */
 .modal.error-modal {
   width: 20%;
 }
 
-/* line 115, ../assets/sass/modules/_layout.scss */
+/* line 130, ../assets/sass/modules/_layout.scss */
 td.min-width {
   width: 1%;
   white-space: nowrap;
   padding: 0 12px 0 12px;
 }
 
-/* line 121, ../assets/sass/modules/_layout.scss */
+/* line 136, ../assets/sass/modules/_layout.scss */
 .no-padding {
   padding: 0;
 }
 
-/* line 125, ../assets/sass/modules/_layout.scss */
+/* line 140, ../assets/sass/modules/_layout.scss */
 .no-margin {
   margin: 0;
 }
 
-/* line 129, ../assets/sass/modules/_layout.scss */
+/* line 144, ../assets/sass/modules/_layout.scss */
 .display-none {
   display: none;
 }
 
-/* line 133, ../assets/sass/modules/_layout.scss */
+/* line 148, ../assets/sass/modules/_layout.scss */
 .noselection .ace_marker-layer .ace_selection {
   background: transparent;
 }
 
-/* line 137, ../assets/sass/modules/_layout.scss */
+/* line 152, ../assets/sass/modules/_layout.scss */
 .noselection .ace_cursor {
   color: transparent;
 }
