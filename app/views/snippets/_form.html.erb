@@ -53,10 +53,6 @@
         <script>
           $(document).ready(function() {
             initializeEditor(ace.edit("ace-editor-<%= f.options[:child_index] %>"), <%= f.options[:child_index] %>, "<%= @languages[f.options[:child_index]].name %>");
-
-            $(".language[data-langid='<%= language.id %>']").error(function() {
-                imgError(this);
-              });
           });
         </script>
       <% end %>
