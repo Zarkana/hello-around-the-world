@@ -66,7 +66,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '~> 2.3'
 
 # needed for the deployment to Heroku
 gem 'rails_12factor', group: :production
