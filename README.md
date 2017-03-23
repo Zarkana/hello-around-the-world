@@ -12,11 +12,11 @@ There are no charges currently associated with creating an account and the privi
 Development for Hello Around the World will continue and the program will become more feature rich in time, but it will always sticking to it's original intent of providing a unique interface strictly for learning and practicing common algorithms and snippets of code. 
 
 The application was developed with Ruby on Rails and makes use of several open source gems.
--Account management with devise
+- Account management with devise
 https://github.com/plataformatec/devise
--Account Permissions with cancan
+- Account Permissions with cancan
 https://github.com/ryanb/cancan
--Image uploading with paperclip
+- Image uploading with paperclip
 https://github.com/thoughtbot/paperclip
 
 ## Updates
