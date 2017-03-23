@@ -37,7 +37,7 @@ Making a new quiz is the primary function of the web app. On the root page users
 
 Once the quiz has begun you can try to implement each algorithm in the corresponding language. Once complete you will be presented with the answer beside your attempt. Simple. 
 
-## How do I customize it?
+# How do I customize it?
 After making an account (No charges), users can modify code snippets as well as add additional snippets.
 - Create/Read/Update/Delete Snippets
 - Create/Delete Categories
