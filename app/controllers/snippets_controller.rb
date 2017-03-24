@@ -1,9 +1,9 @@
 class SnippetsController < ApplicationController
     before_filter :authenticate_user!
     include ApplicationHelper
-    load_and_authorize_resource
 
     def index
+      authorize! :index, Snippet
       # Snippets to list
       @snippets = Snippet.accessible_by(current_ability).order('created_at')
       # Snippets to display at bottom of sync list
@@ -26,31 +26,29 @@ class SnippetsController < ApplicationController
       @snippet = Snippet.accessible_by(current_ability).find(params[:id])
       @category = Category.accessible_by(current_ability).find_by_id(@snippet.category_id)
       @implementations = @snippet.implementations
+      authorize! :new, @snippet
     end
 
     def new
       @snippet = Snippet.new
-      @allLanguages = Language.accessible_by(current_ability)
-      @languages = Language.accessible_by(current_ability)
+      authorize! :new, @snippet
+      languages = Language.accessible_by(current_ability)
 
-      # Create the blank implementations to be available on new view
-      @languages.length.times do
+      @implementations = []
+      # Create blank implementations to be used in new view
+      languages.each do |language|
         implementation = @snippet.implementations.build
-      end
+        implementation.language_id = language.id
+        @implementations << implementation
+      end      
     end
 
     def create
       @snippet = Snippet.new(snippet_params)
-
       @snippet.user = current_user
       authorize! :create, @snippet
 
-      # Include languages so that when errors redirect to new it won't error
-      @languages = Language.accessible_by(current_ability)
-
-      # @implementation = Implementation.new( params.require(:implementation).permit(:code, :language) )
       if @snippet.save
-
         #If admin we need to store data to be used later for default snippet look up
         if current_user.admin == true
           @snippet.default = true;
@@ -59,8 +57,6 @@ class SnippetsController < ApplicationController
             :default_id => @snippet.id
             )
         end
-
-        @snippets = Snippet.accessible_by(current_ability)
         redirect_to snippets_path
       else
         render("new")
@@ -331,10 +327,8 @@ class SnippetsController < ApplicationController
         unowned_snippets
       end
 
-
-
       def snippet_params
-        params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, :active, :category, :category_id, implementations_attributes:[:language_id, :code, :id, :snippet_id, :_destroy])
+        params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, :category_id, implementations_attributes:[:language_id, :code])
       end
 
 end
