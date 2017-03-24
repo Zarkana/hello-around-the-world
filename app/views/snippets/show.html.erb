@@ -27,18 +27,16 @@
           <% end %>
         </div>
       </div>
-
       <% @snippet.implementations.each_with_index do |implementation, index| %>
-        <div id="ace-editor-<%= index %>" class="editor" data-language="<%= Language.find_by_id(implementation.language_id).name %>"><%= implementation.code %></div>
+        <div id="ace-editor-<%= index %>" class="editor" data-language="<%= get_language(implementation, @snippet.id).name %>"><%= implementation.code %></div>
         <script>
           $(document).ready(function() {
-            initializeEditor(ace.edit("ace-editor-<%= index %>"), <%= index %>, "<%= Language.find_by_id(implementation.language_id).name %>");
+            initializeEditor(ace.edit("ace-editor-<%= index %>"), <%= index %>, "<%= get_language(implementation, @snippet.id).name %>");
             ace.edit("ace-editor-<%= index %>").setReadOnly(true);
             ace.edit("ace-editor-<%= index %>").setHighlightActiveLine(false);
           });
         </script>
       <% end %>
-
 
     </div>
   </div>

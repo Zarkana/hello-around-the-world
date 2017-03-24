@@ -1,5 +1,6 @@
 class SnippetsController < ApplicationController
-    before_filter :authenticate_user!
+    before_filter :authenticate_user!    
+    include ApplicationHelper
 
     def index
       # Snippets to list
@@ -21,8 +22,8 @@ class SnippetsController < ApplicationController
     end
 
     def show
-      @snippet = Snippet.find(params[:id])
-      @category = Category.find_by_id(@snippet.category_id)
+      @snippet = Snippet.accessible_by(current_ability).find(params[:id])
+      @category = Category.accessible_by(current_ability).find_by_id(@snippet.category_id)
       @languages = Language.accessible_by(current_ability)
     end
 
@@ -112,9 +113,9 @@ class SnippetsController < ApplicationController
       end
     end
 
-    def add_implementation
-
-    end
+    # def add_implementation
+    #
+    # end
 
     def update
       @snippet = Snippet.find(params[:id])
