@@ -10,8 +10,8 @@ class SnippetsController < ApplicationController
       @unowned_snippets = get_unowned_snippets
 
       unowned_exists = @unowned_snippets.exists?
-      updated_exists = !Snippet.find_by(:update_available => true).blank?
-      modified_exists = !Snippet.find_by(:modified => true).blank?
+      updated_exists = !@snippets.find_by(:update_available => true).blank?
+      modified_exists = !@snippets.where(:modified => true).find_by(:default => true).blank?
 
       # color of FAB button
       @color = "grey"
@@ -40,7 +40,7 @@ class SnippetsController < ApplicationController
         implementation = @snippet.implementations.build
         implementation.language_id = language.id
         @implementations << implementation
-      end      
+      end
     end
 
     def create
@@ -51,89 +51,43 @@ class SnippetsController < ApplicationController
       if @snippet.save
         #If admin we need to store data to be used later for default snippet look up
         if current_user.admin == true
-          @snippet.default = true;
+          # @snippet.default = true;
           @snippet.update_attributes(
             :default => true,
             :default_id => @snippet.id
             )
+        else
+          @snippet.update_attributes(
+            :default => false
+            )
         end
         redirect_to snippets_path
       else
-        render("new")
+        render 'new'
       end
     end
 
     def edit
-      @snippet = Snippet.find(params[:id])
-      @implementations = @snippet.implementations
-
+      @snippet = Snippet.accessible_by(current_ability).find(params[:id])
       authorize! :edit, @snippet
-
-      implementations = @implementations.pluck(:language_id).uniq
-
-      @languages = Language.accessible_by(current_ability)
-
-      @languages.each do |language|
-        p language.inspect
-      end
-      @implementations.each do |implementation|
-        p implementation.inspect
-      end
-
-      implementations = @implementations.pluck(:language_id).uniq
-      languages = @languages.pluck(:id).uniq
-      # Used to add languages that are new since original creation
-      p "IMPLEMENTATIONS SIZE"
-      p implementations.size
-      p "LANGUAGES SIZE"
-      p languages.size
-      if implementations.size < languages.size
-        p "Not enough implementations"
-        to_add = languages.size - implementations.size
-
-        for i in 0..(to_add-1)
-          # TODO: Bug location?
-          @new_implementation = Implementation.new()
-          # Set the language equal to the implementation at the size of the original array + i
-          @new_implementation.language_id = languages[(implementations.size) + i]
-          @new_implementation.code = ""
-          @new_implementation.snippet_id = @snippet.id
-          if @new_implementation.save
-            p "Implementation added successfully"
-          else
-            p "Implementation added unsuccessfully"
-          end
-        end
-        @snippet = Snippet.find(params[:id])
-      else
-        p "Enough implementations"
-      end
+      @implementations = @snippet.implementations
+      add_new_implementations
     end
-
-    # def add_implementation
-    #
-    # end
 
     def update
       @snippet = Snippet.find(params[:id])
-      #If admin we need to store data to be used later for default snippet look up
+      authorize! :update, @snippet
 
+      #If admin we need to store data to be used later for default snippet look up
       if current_user.admin == true
-          # Get all snippets that should be marked available for update, that are default and not owned by admin
-          to_update_snippets = Snippet.where(default: true).where(default_id: @snippet.id).where.not(user_id: current_user.id)
-          # to_update_snippets do |snippet|
-          #   snippet.update_attributes(:update_available, true)
-          # end
-          to_update_snippets.update_all(update_available: true)
+        # Get all snippets that should be marked available for update, that are default and not owned by admin
+        to_update_snippets = Snippet.where(default: true).where(default_id: @snippet.id).where.not(user: current_user).update_all(update_available: true)
       else
-        # If current user is not admin then set snippet to modified
-        # admins don't need modified to be set because they are the admin and they have the definitive version of the snippet
+        # If current user is not admin then set snippet to modified, admins don't need modified to be set because they are the admin and they own the definitive version of the snippet
         @snippet.modified = true
       end
 
       if @snippet.update(snippet_params)
-        @snippets = Snippet.accessible_by(current_ability)
-        authorize! :update, @snippet
         redirect_to snippets_path
       else
         render 'edit'
@@ -144,7 +98,6 @@ class SnippetsController < ApplicationController
       @snippet = Snippet.find(params[:id])
       authorize! :destroy, @snippet
       @snippet.destroy
-      @snippets = Snippet.accessible_by(current_ability)
 
       redirect_to snippets_path
     end
@@ -317,18 +270,72 @@ class SnippetsController < ApplicationController
         users_default_snippets = Snippet.accessible_by(current_ability).where(:default => true)
 
         unowned_snippets = admin_snippets
-
         user_snippets = users_default_snippets.pluck(:default_id).uniq
         if !user_snippets.empty?
           unowned_snippets = unowned_snippets.where('id NOT IN (?)', user_snippets)
         else
           unowned_snippets = admin_snippets
         end
+        unowned_snippets.each do |unowned_snippet|
+          p unowned_snippet.inspect
+        end
         unowned_snippets
       end
 
+      def add_new_implementations
+        languages = Language.accessible_by(current_ability)
+        implemented_languages = @implementations.pluck(:language_id).uniq
+
+        languages.each do |language|
+          if !implemented_languages.include? language.id
+            implementation = Implementation.new()
+            implementation.language_id = language.id
+            # TODO: Get actual code from admin
+            implementation.code = ""
+            implementation.snippet_id = @snippet.id
+            if implementation.save
+              p "Implementation added successfully"
+            else
+              p "Implementation added unsuccessfully"
+            end
+          end
+        end
+
+        # languages = Language.accessible_by(current_ability)
+        #
+        # implementations_ids = @implementations.pluck(:language_id).uniq
+        # languages_ids = languages.pluck(:id).uniq
+        #
+        # # Used to add languages that are new since original creation
+        # if implementations_ids.size < languages_ids.size
+        #   p "Not enough implementations"
+        #   to_add = languages_ids.size - implementations_ids.size
+        #
+        #   for i in 0..(to_add-1)
+        #     if(should_be_new)
+        #       @new_implementation = Implementation.new()
+        #       # Set the language equal to the implementation at the size of the original array + i
+        #       @new_implementation.language_id = languages_ids[(implementations_ids.size) + i]
+        #       @new_implementation.code = ""
+        #       @new_implementation.snippet_id = @snippet.id
+        #       if @new_implementation.save
+        #         p "Implementation added successfully"
+        #       else
+        #         p "Implementation added unsuccessfully"
+        #       end
+        #     else
+        #
+        #     end
+        #   end
+        #   @snippet = Snippet.find(params[:id])
+        # else
+        #   p "Enough implementations"
+        # end
+      end
+
       def snippet_params
-        params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, :category_id, implementations_attributes:[:language_id, :code])
+        # params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, :category_id, implementations_attributes:[:language_id, :code])
+        params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, :active, :category, :category_id, implementations_attributes:[:language_id, :code, :id, :snippet_id, :_destroy])
       end
 
 end
