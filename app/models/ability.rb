@@ -5,5 +5,6 @@ class Ability
     can :manage, Snippet, user_id: user.id
     can :manage, Category, user_id: user.id
     can :manage, Language, user_id: user.id
+    can :manage, Implementation, :snippet => { user_id: user.id }
   end
 end

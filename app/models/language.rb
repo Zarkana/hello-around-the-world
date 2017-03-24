@@ -1,6 +1,5 @@
 class Language < ApplicationRecord
   belongs_to :user
-
   validates_presence_of :user
 
   has_many :implementations, inverse_of: :language, :dependent => :destroy

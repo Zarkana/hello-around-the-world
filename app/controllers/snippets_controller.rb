@@ -2,26 +2,22 @@ class SnippetsController < ApplicationController
     before_filter :authenticate_user!
 
     def index
-      # Organize the snippets alphabetically
-      @snippets = Snippet.accessible_by(current_ability).order('LOWER(title)')
+      # Snippets to list
+      @snippets = Snippet.accessible_by(current_ability).order('created_at')
+      # Snippets to display at bottom of sync list
+      @unowned_snippets = get_unowned_snippets
 
-      admin = User.where('admin = ?', true).first
-      # Get the snippets that should be added
-      @default_admin_snippets = Snippet.where(:default => true).where(:user_id => admin.id)
-      default_user_snippets = Snippet.where(:default => true).where(:user_id => current_user.id)
+      unowned_exists = @unowned_snippets.exists?
+      updated_exists = !Snippet.find_by(:update_available => true).blank?
+      modified_exists = !Snippet.find_by(:modified => true).blank?
 
-      @to_add_snippets = @default_admin_snippets
-
-      user_snippets = default_user_snippets.pluck(:default_id).uniq
-      if !user_snippets.empty?
-        @to_add_snippets = @to_add_snippets.where('id NOT IN (?)', user_snippets)
-      else
-        @to_add_snippets = @default_admin_snippets
+      # color of FAB button
+      @color = "grey"
+      if (updated_exists || unowned_exists) && !current_user.admin
+        @color = "green"
+      elsif modified_exists  && !current_user.admin
+        @color = "blue"
       end
-
-      @add_snippets_exists = @to_add_snippets.exists?
-      @updated_snippets_exists = Snippet.where(:update_available => true).exists?
-      @modified_snippets_exists = Snippet.where(:modified => true).exists?
     end
 
     def show
@@ -168,6 +164,7 @@ class SnippetsController < ApplicationController
       end
     end
 
+    #TODO: Should be moved to private
 
     def update_snippet
       snippet = Snippet.find(params[:id])
@@ -306,14 +303,33 @@ class SnippetsController < ApplicationController
 
     private
 
-      def save_snippet
-        if @snippet.save
-          @snippets = Snippet.accessible_by(current_ability)
-          render :hide_form
+      # def save_snippet
+      #   if @snippet.save
+      #     @snippets = Snippet.accessible_by(current_ability)
+      #     render :hide_form
+      #   else
+      #     render :show_form
+      #   end
+      # end
+
+      # Gets all of the snippets that are owned by the admin but not owned by the user
+      def get_unowned_snippets
+        admin = User.find_by admin: true
+        admin_snippets = Snippet.where(:default => true).where(:user => admin)
+        users_default_snippets = Snippet.accessible_by(current_ability).where(:default => true)
+
+        unowned_snippets = admin_snippets
+
+        user_snippets = users_default_snippets.pluck(:default_id).uniq
+        if !user_snippets.empty?
+          unowned_snippets = unowned_snippets.where('id NOT IN (?)', user_snippets)
         else
-          render :show_form
+          unowned_snippets = admin_snippets
         end
+        unowned_snippets
       end
+
+
 
       def snippet_params
         params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, :active, :category, :category_id, implementations_attributes:[:language_id, :code, :id, :snippet_id, :_destroy])

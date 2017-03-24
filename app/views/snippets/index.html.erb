@@ -33,15 +33,8 @@
   </br>
   <div class="row center">
     <div class="col s12 buttons">
-      <!-- TODO implement FAB -->
       <%= link_to 'New snippet', new_snippet_path, :class => 'btn-large waves-effect waves-light blue' %>
-      <% if (@updated_snippets_exists || @add_snippets_exists) && !current_user.admin %>
-        <a class="sync-button btn-floating btn-large waves-effect waves-light green"><i class="material-icons">loop</i></a>
-      <% elsif @modified_snippets_exists  && !current_user.admin %>
-        <a class="sync-button btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">loop</i></a>
-      <% elsif %>
-        <a class="sync-button btn-floating btn-large waves-effect waves-light grey"><i class="material-icons">loop</i></a>
-      <% end %>
+      <a class="sync-button btn-floating btn-large waves-effect waves-light <%= @color %>"><i class="material-icons">loop</i></a>
     </div>
   </div>
   <div class="row no-margin">
@@ -74,7 +67,7 @@
             </tr>
           <% end %>
         <% end %>
-        <% @to_add_snippets.each do |snippet| %>
+        <% @unowned_snippets.each do |snippet| %>
           <% if snippet.default == true %>
             <tr>
               <td class="snippet-name">
