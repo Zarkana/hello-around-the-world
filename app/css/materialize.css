@@ -9990,10 +9990,10 @@ td.min-width {
 .snippet .snippet-editor-parent .editor-header .languages .no-image .abr {
   display: inline-block;
   position: absolute;
-  top: 8px;
+  top: 7px;
   left: 0px;
   width: 100%;
-  font-size: 36px;
+  font-size: 32px;
   color: #034468;
 }
 /* line 90, ../assets/sass/modules/_snippets.scss */
@@ -10107,9 +10107,18 @@ td.min-width {
 .container.language .languages .name {
   font-size: 22px;
 }
-/* line 52, ../assets/sass/modules/_languages.scss */
+/* line 53, ../assets/sass/modules/_languages.scss */
 .container.language .languages .logo {
   max-width: 32px;
+}
+/* line 55, ../assets/sass/modules/_languages.scss */
+.container.language .languages .logo.has-image {
+  display: none;
+}
+/* line 58, ../assets/sass/modules/_languages.scss */
+.container.language .languages .logo.no-image {
+  font-size: 32px;
+  color: #034468;
 }
 
 /* line 1, ../assets/sass/modules/_categories.scss */
