@@ -6,9 +6,9 @@
       <tr>
         <th>Title</th>
         <!-- TODO: Num Supported Languages -->
-        <th>Runtime Complexity</th>
-        <th>Space Complexity</th>
-        <th># Implemented</th>
+        <th>Category</th>
+        <th>Version</th>
+        <th>Languages</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -16,11 +16,9 @@
     <% @snippets.each do |snippet| %>
       <tr data-id="<%= snippet.id %>">
         <td><%= snippet.title %></td>
-        <td><%= snippet.runtime_complexity %></td>
-        <td><%= snippet.space_complexity %></td>
-        <td>
-          <%= snippet.implementations.length %>
-        </td>
+        <td><%= get_snippet_category(snippet) %></td>
+        <td><%= get_customization_status(snippet) %></td>
+        <td><%= get_implementation_count(snippet) %></td>
         <td class="min-width"><%= link_to 'Show', snippet_path(snippet) %></td>
         <td class="min-width"><%= link_to 'Edit', edit_snippet_path(snippet) %></td>
         <td class="min-width"><%= link_to 'Destroy', snippet_path(snippet),

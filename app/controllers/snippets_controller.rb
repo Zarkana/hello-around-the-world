@@ -13,6 +13,7 @@ class SnippetsController < ApplicationController
       updated_exists = !@snippets.find_by(:update_available => true).blank?
       modified_exists = !@snippets.where(:modified => true).find_by(:default => true).blank?
 
+
       # color of FAB button
       @color = "grey"
       if (updated_exists || unowned_exists) && !current_user.admin
@@ -120,8 +121,6 @@ class SnippetsController < ApplicationController
     def update_snippet
       snippet = Snippet.find(params[:id])
       default_snippet = Snippet.find(snippet.default_id)
-
-      p "CLONING SNIPPET: " + default_snippet.inspect
       cloned_snippet = default_snippet.deep_clone include: [:implementations]
       cloned_snippet.user = current_user
       cloned_snippet.default_id = default_snippet.id
@@ -142,88 +141,58 @@ class SnippetsController < ApplicationController
       # cloned_snippet.category_id = add_category(default_snippet.category_id)
       add_languages
 
-      p "Crossing fingers"
       cloned_snippet.implementations.each do |implementation|
         # Get the id of the language owned by the current user that has a default_id equivalent to the implementations language id
-        # This should properly update it to behave correctly
-        p "Goal is to set the language id to the users language and not the admins"
-        p "pre change implementation language id"
-        p implementation.language_id
+      implementation.language_id = Language.where(user_id: current_user.id).where(default_id: implementation.language_id).first.id
+    end
 
-        implementation.language_id = Language.where(user_id: current_user.id).where(default_id: implementation.language_id).first.id
+    if cloned_snippet.save!
+      p "Snippet updated successfully"
+      snippet.destroy
+      @updated_snippet = cloned_snippet
+      render :json => @updated_snippet
+    else
+      p "Snippet failed to update"
+    end
+  end
 
-        p "pre change implementation language id"
-        p implementation.language_id
-      end
+  def add_snippet
+    default_snippet = Snippet.find(params[:id])
+    cloned_snippet = default_snippet.deep_clone include: [:implementations]
+    cloned_snippet.user = current_user
+    cloned_snippet.default_id = default_snippet.id
 
-      if cloned_snippet.save!
-        p "Snippet updated successfully"
-        snippet.destroy
-        @updated_snippet = cloned_snippet
-        render :json => @updated_snippet
+    # Unless there is no category assigned
+    unless default_snippet.category_id == nil
+      # Unless their already exists a record with the category_id we are going to add
+      unless current_user.categories.where(default_id: default_snippet.category_id).exists?
+        # clone the snippet with category_id
+        cloned_snippet.category_id = add_category(default_snippet.category_id)
       else
-        p "Snippet failed to update"
+        # make it the same id as the original snippet to avoid duplication
+        cloned_snippet.category_id = current_user.categories.where(default_id: default_snippet.category_id).first.id
+        # cloned_snippet.category_id = current_user.categories.find(:id, :conditions => [ "user_name = ?", user_name])
       end
     end
 
-    def add_snippet
-      default_snippet = Snippet.find(params[:id])
+    # cloned_snippet.category_id = add_category(default_snippet.category_id)
+    add_languages
 
-      p "CLONING SNIPPET: " + default_snippet.inspect
-      cloned_snippet = default_snippet.deep_clone include: [:implementations]
-      cloned_snippet.user = current_user
-      cloned_snippet.default_id = default_snippet.id
-
-      # Unless there is no category assigned
-      unless default_snippet.category_id == nil
-        # Unless their already exists a record with the category_id we are going to add
-        unless current_user.categories.where(default_id: default_snippet.category_id).exists?
-          # clone the snippet with category_id
-          cloned_snippet.category_id = add_category(default_snippet.category_id)
-        else
-          # make it the same id as the original snippet to avoid duplication
-          cloned_snippet.category_id = current_user.categories.where(default_id: default_snippet.category_id).first.id
-          # cloned_snippet.category_id = current_user.categories.find(:id, :conditions => [ "user_name = ?", user_name])
-        end
-      end
-
-      # cloned_snippet.category_id = add_category(default_snippet.category_id)
-      add_languages
-
-      p "Crossing fingers"
-      cloned_snippet.implementations.each do |implementation|
-        # Get the id of the language owned by the current user that has a default_id equivalent to the implementations language id
-        # This should properly update it to behave correctly
-        p "Goal is to set the language id to the users language and not the admins"
-        p "pre change implementation language id"
-        p implementation.language_id
-
-        implementation.language_id = Language.where(user_id: current_user.id).where(default_id: implementation.language_id).first.id
-
-        p "pre change implementation language id"
-        p implementation.language_id
-      end
-
-      if cloned_snippet.save!
-        p "Snippet added successfully"
-        @added_snippet = cloned_snippet
-        render :json => @added_snippet
-      else
-        p "Snippet failed to be added"
-      end
+    cloned_snippet.implementations.each do |implementation|
+      # Get the id of the language owned by the current user that has a default_id equivalent to the implementations language id
+      implementation.language_id = Language.where(user_id: current_user.id).where(default_id: implementation.language_id).first.id
     end
 
-    def add_category(id)
-      category = Category.find(id)
-      cloned_category = category.deep_clone
-      cloned_category.user = current_user
-      if cloned_category.save!
-        p "Category saved successfully"
-        cloned_category.id
-      else
-        p "Category failed to save"
-      end
+    if cloned_snippet.save!
+      p "Snippet added successfully"
+      @added_snippet = cloned_snippet
+      render :json => @added_snippet
+    else
+      p "Snippet failed to be added"
     end
+  end
+
+  private
 
     def add_languages
       admin = User.where('admin = ?', true).first
@@ -252,90 +221,60 @@ class SnippetsController < ApplicationController
       end
     end
 
-    private
-
-      # def save_snippet
-      #   if @snippet.save
-      #     @snippets = Snippet.accessible_by(current_ability)
-      #     render :hide_form
-      #   else
-      #     render :show_form
-      #   end
-      # end
-
-      # Gets all of the snippets that are owned by the admin but not owned by the user
-      def get_unowned_snippets
-        admin = User.find_by admin: true
-        admin_snippets = Snippet.where(:default => true).where(:user => admin)
-        users_default_snippets = Snippet.accessible_by(current_ability).where(:default => true)
-
-        unowned_snippets = admin_snippets
-        user_snippets = users_default_snippets.pluck(:default_id).uniq
-        if !user_snippets.empty?
-          unowned_snippets = unowned_snippets.where('id NOT IN (?)', user_snippets)
-        else
-          unowned_snippets = admin_snippets
-        end
-        unowned_snippets.each do |unowned_snippet|
-          p unowned_snippet.inspect
-        end
-        unowned_snippets
+    def add_category(id)
+      category = Category.find(id)
+      cloned_category = category.deep_clone
+      cloned_category.user = current_user
+      if cloned_category.save!
+        p "Category saved successfully"
+        cloned_category.id
+      else
+        p "Category failed to save"
       end
+    end
 
-      def add_new_implementations
-        languages = Language.accessible_by(current_ability)
-        implemented_languages = @implementations.pluck(:language_id).uniq
+    # Gets all of the snippets that are owned by the admin but not owned by the user
+    def get_unowned_snippets
+      admin = User.find_by admin: true
+      admin_snippets = Snippet.where(:default => true).where(:user => admin)
+      users_default_snippets = Snippet.accessible_by(current_ability).where(:default => true)
 
-        languages.each do |language|
-          if !implemented_languages.include? language.id
-            implementation = Implementation.new()
-            implementation.language_id = language.id
-            # TODO: Get actual code from admin
-            implementation.code = ""
-            implementation.snippet_id = @snippet.id
-            if implementation.save
-              p "Implementation added successfully"
-            else
-              p "Implementation added unsuccessfully"
-            end
+      unowned_snippets = admin_snippets
+      user_snippets = users_default_snippets.pluck(:default_id).uniq
+      if !user_snippets.empty?
+        unowned_snippets = unowned_snippets.where('id NOT IN (?)', user_snippets)
+      else
+        unowned_snippets = admin_snippets
+      end
+      unowned_snippets.each do |unowned_snippet|
+        p unowned_snippet.inspect
+      end
+      unowned_snippets
+    end
+
+    def add_new_implementations
+      languages = Language.accessible_by(current_ability)
+      implemented_languages = @implementations.pluck(:language_id).uniq
+
+      languages.each do |language|
+        if !implemented_languages.include? language.id
+          implementation = Implementation.new()
+          implementation.language_id = language.id
+          # TODO: Get actual code from admin
+          implementation.code = ""
+          implementation.snippet_id = @snippet.id
+          if implementation.save
+            p "Implementation added successfully"
+          else
+            p "Implementation added unsuccessfully"
           end
         end
-
-        # languages = Language.accessible_by(current_ability)
-        #
-        # implementations_ids = @implementations.pluck(:language_id).uniq
-        # languages_ids = languages.pluck(:id).uniq
-        #
-        # # Used to add languages that are new since original creation
-        # if implementations_ids.size < languages_ids.size
-        #   p "Not enough implementations"
-        #   to_add = languages_ids.size - implementations_ids.size
-        #
-        #   for i in 0..(to_add-1)
-        #     if(should_be_new)
-        #       @new_implementation = Implementation.new()
-        #       # Set the language equal to the implementation at the size of the original array + i
-        #       @new_implementation.language_id = languages_ids[(implementations_ids.size) + i]
-        #       @new_implementation.code = ""
-        #       @new_implementation.snippet_id = @snippet.id
-        #       if @new_implementation.save
-        #         p "Implementation added successfully"
-        #       else
-        #         p "Implementation added unsuccessfully"
-        #       end
-        #     else
-        #
-        #     end
-        #   end
-        #   @snippet = Snippet.find(params[:id])
-        # else
-        #   p "Enough implementations"
-        # end
       end
+    end
 
-      def snippet_params
-        # params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, :category_id, implementations_attributes:[:language_id, :code])
-        params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, :active, :category, :category_id, implementations_attributes:[:language_id, :code, :id, :snippet_id, :_destroy])
-      end
+    def snippet_params
+      # params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, :category_id, implementations_attributes:[:language_id, :code])
+      params.require(:snippet).permit(:title, :runtime_complexity, :space_complexity, :active, :category, :category_id, implementations_attributes:[:language_id, :code, :id, :snippet_id, :_destroy])
+    end
 
 end

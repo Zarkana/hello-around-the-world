@@ -5,11 +5,8 @@ class Users::RegistrationsController < DeviseController
 
   # GET /resource/sign_up
   def new
-    p "STARTING"
-
     build_resource({})
     yield resource if block_given?
-    p "RESPOND WITH RESOURCE 1"
     respond_with resource
   end
 
@@ -18,7 +15,6 @@ class Users::RegistrationsController < DeviseController
     build_resource(sign_up_params)
 
     resource.save
-    p "RESOURCE SAVED"
     yield resource if block_given?
     if resource.persisted?
       if resource.active_for_authentication?
@@ -26,22 +22,16 @@ class Users::RegistrationsController < DeviseController
         sign_up(resource_name, resource)
 
         # Copy data
-
         initialize_user(resource)
-
-        #
-        p "RESPOND WITH RESOURCE 1"
         respond_with resource, location: after_sign_up_path_for(resource)
       else
         set_flash_message! :notice, :"signed_up_but_#{resource.inactive_message}"
         expire_data_after_sign_in!
-        p "RESPOND WITH RESOURCE 2"
         respond_with resource, location: after_inactive_sign_up_path_for(resource)
       end
     else
       clean_up_passwords resource
       set_minimum_password_length
-      p "RESPOND WITH RESOURCE 3"
       respond_with resource
     end
   end
@@ -160,7 +150,6 @@ class Users::RegistrationsController < DeviseController
   end
 
   def initialize_user(resource)
-    p "INITIALIZING USER"
     if User.exists?(admin: true)
       admin = User.where('admin = ?', true).first
       # admin_snippets = admin.snippets.where(category_id: nil)
@@ -173,7 +162,6 @@ class Users::RegistrationsController < DeviseController
     end
 
     admin_languages.each do |language|
-      p "CLONING LANGUAGE: " + language.inspect
       cloned_language = language.deep_clone
       cloned_language.user = resource
       cloned_language.logo = language.logo
@@ -186,7 +174,6 @@ class Users::RegistrationsController < DeviseController
     end
 
     admin_snippets.each do |snippet|
-      p "CLONING SNIPPET: " + snippet.inspect
       cloned_snippet = snippet.deep_clone include: [:implementations]
       cloned_snippet.user = resource
       cloned_snippet.default_id = snippet.id
