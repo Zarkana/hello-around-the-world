@@ -50,16 +50,21 @@ class QuizzesController < ApplicationController
         p "The Language"
         p selected_language.inspect
 
-        if !@snippet.blank?
+        # if !@snippet.blank?
           # TODO: snippets need answers
           # implementation = Implementation.where(snippet_id: @snippet.id).where(language_id: @languages[f.options[:child_index]].id).first
-          quiz_snippet = snippet.implementations.find_by(:language_id => selected_language.id)
-          unless quiz_snippet.blank?
-            quiz_snippet.answer = quiz_snippet.code
+          p "Snippet not blank"
+
+          p "The selected language id"
+          p selected_language.id
+
+          quiz_implementation = snippet.implementations.find_by(:language_id => selected_language.id)
+          unless quiz_implementation.blank?
+            quiz_snippet.answer = quiz_implementation.code
             p "The Answer"
             p quiz_snippet.answer.inspect
           end
-        end
+        # end
         # quiz_snippet.answer = snippet.implementations.where(language_id: selected_language.id).first.code
 
         quiz_snippet.title = "#{snippet.title} in #{selected_language.name}"
