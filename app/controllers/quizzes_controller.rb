@@ -85,8 +85,22 @@ class QuizzesController < ApplicationController
     else
       p "Quiz saved unsuccessfully"
     end
-    redirect_to action: 'new'
-    return
+    if user_signed_in?
+      @languages = Language.accessible_by(current_ability)
+      @snippets = current_user.snippets.order('category_id')
+    else
+      @admin = User.where('admin = ?', true).first
+
+      @languages = @admin.languages
+      @snippets = @admin.snippets.order('category_id')
+    end
+    # Create the blank quiz_snippets to be available on new view
+    @snippets.each do |snippet|
+      quiz_snippet = @quiz.quiz_snippets.build(:snippet_id => snippet.id)
+    end
+
+    @errors = @quiz.errors
+    render 'new'
   end
 
   def manage

@@ -58,17 +58,28 @@
       </div>
     </nav>
     <main class="section no-pad-bot main-section" id="index-banner">
+      <% if !@errors.nil? && @errors.messages.any?%>
       <!-- Modal Structure -->
-      <% if alert %>
       <div class="modal error-modal">
+        <div class="modal-header">
+          <h3 class="section-header white-text">Aw, shucks!</h3>
+        </div>
         <div class="modal-content">
-          <h4>Aw, shucks!</h4>
+          <b>
+          <%= pluralize(@errors.count, "error") %> prohibited
+          this snippet from being saved.
+          </b>
           <div id="error_explanation">
-            <p class="alert alert-danger"><%= alert %></p>
+            <% @errors.messages.each do |attribute, msg| %>
+              <% msg.each do |val| %>
+                <p class="alert alert-danger"><%= attribute.to_s.camelize %>: <%= val %></p>
+              <% end %>
+            <% end %>
           </div>
         </div>
+
         <div class="modal-footer">
-          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Got It!</a>
+          <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Got It!</a>
         </div>
       </div>
       <% end %>

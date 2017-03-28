@@ -5,36 +5,22 @@
   </div>
 
 <%= form_for @category do |f| %>
-
-  <% if @category.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@category.errors.count, "error") %> prohibited
-        this category from being saved:
-      </h2>
-      <ul>
-        <% @category.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
   <div class="row">
     <div class="section input-field col s8 m6 l4 offset-s1 offset-m1 offset-l2">
       <%= f.label :name %><br>
       <%= f.text_field :name %>
-  </div>
-  <br>
-  <br>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col s10 offset-s1 offset-m1 offset-l2">
+        <%= f.button :class => 'btn-large waves-effect waves-light blue white-text btn btn-flat'%>
+      </div>
+    </div>
+  <% end %>
   <div class="row">
-    <div class="col s10 offset-s1 offset-m1 offset-l2">
-      <%= f.button :class => 'btn-large waves-effect waves-light blue white-text btn btn-flat'%>
+    <div class="col s10  offset-s1 offset-m1 offset-l2">
+      <%= link_to '&larr; Back'.html_safe, categories_path %>
     </div>
   </div>
-<% end %>
-<div class="row">
-  <div class="col s10  offset-s1 offset-m1 offset-l2">
-    <%= link_to '&larr; Back'.html_safe, categories_path %>
-  </div>
-</div>
 </div>

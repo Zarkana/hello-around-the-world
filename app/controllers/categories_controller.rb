@@ -17,6 +17,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     @category.user = current_user
+    @category.default = false
     authorize! :create, @category
 
     if @category.save
@@ -33,6 +34,7 @@ class CategoriesController < ApplicationController
       @categories = Category.accessible_by(current_ability)
       redirect_to categories_path
     else
+      @errors = @category.errors
       render 'new'
     end
   end
@@ -42,6 +44,8 @@ class CategoriesController < ApplicationController
   end
 
   def update
+    # No update options
+    # @errors = @category.errors
     redirect_to categories_path
   end
 

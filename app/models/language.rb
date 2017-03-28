@@ -1,6 +1,8 @@
 class Language < ApplicationRecord
   belongs_to :user
-  validates_presence_of :user
+
+  validates :name, :user, presence: true
+  validates :name, length: { in: 1..20}, uniqueness: { scope: :user_id }
 
   has_many :implementations, inverse_of: :language, :dependent => :destroy
 

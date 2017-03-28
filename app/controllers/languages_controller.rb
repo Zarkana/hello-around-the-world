@@ -17,6 +17,7 @@ class LanguagesController < ApplicationController
   def create
     @language = Language.new(language_params)
     @language.user = current_user
+    @language.default = false
     authorize! :create, @language
 
     if @language.save
@@ -33,6 +34,7 @@ class LanguagesController < ApplicationController
       @languages = Language.accessible_by(current_ability)
       redirect_to languages_path
     else
+      @errors = @language.errors
       render 'new'
     end
   end
@@ -51,6 +53,7 @@ class LanguagesController < ApplicationController
 
       redirect_to languages_path
     else
+      @errors = @language.errors
       render 'edit'
     end
   end

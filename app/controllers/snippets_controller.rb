@@ -13,7 +13,6 @@ class SnippetsController < ApplicationController
       updated_exists = !@snippets.find_by(:update_available => true).blank?
       modified_exists = !@snippets.where(:modified => true).find_by(:default => true).blank?
 
-
       # color of FAB button
       @color = "grey"
       if (updated_exists || unowned_exists) && !current_user.admin
@@ -33,20 +32,14 @@ class SnippetsController < ApplicationController
     def new
       @snippet = Snippet.new
       authorize! :new, @snippet
-      languages = Language.accessible_by(current_ability)
 
-      @implementations = []
-      # Create blank implementations to be used in new view
-      languages.each do |language|
-        implementation = @snippet.implementations.build
-        implementation.language_id = language.id
-        @implementations << implementation
-      end
+      build_implementations
     end
 
     def create
       @snippet = Snippet.new(snippet_params)
       @snippet.user = current_user
+      @snippet.default = false
       authorize! :create, @snippet
 
       if @snippet.save
@@ -57,13 +50,12 @@ class SnippetsController < ApplicationController
             :default => true,
             :default_id => @snippet.id
             )
-        else
-          @snippet.update_attributes(
-            :default => false
-            )
         end
+
         redirect_to snippets_path
       else
+        build_implementations
+        @errors = @snippet.errors
         render 'new'
       end
     end
@@ -91,6 +83,7 @@ class SnippetsController < ApplicationController
       if @snippet.update(snippet_params)
         redirect_to snippets_path
       else
+        @errors = @snippet.errors
         render 'edit'
       end
     end
@@ -193,6 +186,17 @@ class SnippetsController < ApplicationController
   end
 
   private
+    def build_implementations
+      languages = Language.accessible_by(current_ability)
+
+      @implementations = []
+      # Create blank implementations to be used in new view
+      languages.each do |language|
+        implementation = @snippet.implementations.build
+        implementation.language_id = language.id
+        @implementations << implementation
+      end
+    end
 
     def add_languages
       admin = User.where('admin = ?', true).first

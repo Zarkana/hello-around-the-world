@@ -1,7 +1,8 @@
 class Category < ApplicationRecord
   belongs_to :user
 
-  validates_presence_of :user
+  validates :name, :user, presence: true
+  validates :name, length: { in: 1..50}, uniqueness: { scope: :user_id }
 
   has_many :snippets, :dependent => :restrict_with_error
 

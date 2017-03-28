@@ -2,14 +2,19 @@
   position: absolute;
 }
 
-.sync-modal{
+.modal{
   width: 20%;
   min-width: 275px;
-  .section-header{
-    width: 100%;
-    padding: 20px;
-    @extend .blue;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  .modal-header{
+    .section-header{
+      width: 100%;
+      padding: 20px;
+      @extend .blue;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    }
+  }
+  .modal-content{
+    padding: 8px 24px 0 24px;
   }
   .btn{
     min-width: 120px;
