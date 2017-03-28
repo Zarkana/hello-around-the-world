@@ -2,6 +2,7 @@ class LanguagesController < ApplicationController
   before_filter :authenticate_user!
 
   def index
+    authorize! :index, Language
     @languages = Language.accessible_by(current_ability)
   end
 
@@ -12,6 +13,7 @@ class LanguagesController < ApplicationController
 
   def new
     @language = Language.new
+    authorize! :new, @language
   end
 
   def create
@@ -47,10 +49,10 @@ class LanguagesController < ApplicationController
 
   def update
     @language = Language.find(params[:id])
+    authorize! :update, @language
 
     if @language.update(language_params)
       @languages = Language.accessible_by(current_ability)
-      authorize! :update, @language
 
       redirect_to languages_path
     else
@@ -62,27 +64,11 @@ class LanguagesController < ApplicationController
   def destroy
     @language = Language.find(params[:id])
 
-    # Get an array of the ids of the current_users snippets
-    snippet_ids = current_user.snippets.pluck(:id).uniq
-    # Get all the implementations that are for snippets owned by the user and where they share the name of language being destroyed
-    @implementations = Implementation.where(snippet_id: snippet_ids).where(language: @language.name)
-
-    @implementations.each do |implementation|
-      if implementation.destroy
-        p "Successfully destroyed implementation"
-      else
-        p "Unsuccessfully destroyed implementation"
-      end
-    end
-
     if @language.destroy
       p "Successfully destroyed language"
     else
       p "Unsuccessfully destroyed language"
     end
-    @languages = Language.accessible_by(current_ability)
-
-
 
     redirect_to languages_path
   end

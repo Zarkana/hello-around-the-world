@@ -10065,7 +10065,7 @@ td.min-width {
 
 /* line 1, ../assets/sass/modules/_languages.scss */
 .container.language {
-  width: 40%;
+  width: 30%;
   padding-top: 10px;
 }
 @media (max-width: 992px) {
