@@ -29,7 +29,7 @@
       <% @categories.each do |category| %>
         <tr>
           <td><%= category.name %></td>
-          <td class="min-width"><%= link_to 'Destroy', category_path(category),
+          <td class="min-width"><%= link_to 'Remove', category_path(category),
                   method: :delete,
                   data: { confirm: 'Are you sure?' } %></td>
         </tr>
