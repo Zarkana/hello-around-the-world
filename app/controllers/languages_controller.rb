@@ -34,6 +34,7 @@ class LanguagesController < ApplicationController
       @languages = Language.accessible_by(current_ability)
       redirect_to languages_path
     else
+      @language.errors.delete(:logo_file_size)
       @errors = @language.errors
       render 'new'
     end

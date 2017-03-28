@@ -7,5 +7,8 @@ class Language < ApplicationRecord
   has_many :implementations, inverse_of: :language, :dependent => :destroy
 
   has_attached_file :logo, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
-  validates_attachment_content_type :logo, content_type: /\Aimage\/.*\z/
+  validates_attachment :logo, presence: true,
+    :content_type => { :content_type => /\Aimage/ },
+    size: { in: 0..100.kilobytes }
+
 end
