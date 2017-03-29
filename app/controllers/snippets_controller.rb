@@ -32,7 +32,7 @@ class SnippetsController < ApplicationController
     def new
       @snippet = Snippet.new
       authorize! :new, @snippet
-
+      
       build_implementations
     end
 

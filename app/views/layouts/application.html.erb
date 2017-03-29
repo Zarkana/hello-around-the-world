@@ -62,7 +62,11 @@
       <!-- Modal Structure -->
       <div class="modal error-modal">
         <div class="modal-header">
-          <h3 class="section-header white-text">Aw, shucks!</h3>
+          <% if(!@errors.nil? && @errors.messages.any?)%>
+            <h3 class="section-header white-text">Aw, shucks!</h3>
+          <% else %>
+            <h3 class="section-header white-text">Hey, guess what?</h3>
+          <% end %>
         </div>
         <div class="modal-content">
           <% if(!@errors.nil? && @errors.messages.any?)%>
@@ -71,19 +75,17 @@
           this snippet from being saved.
           </b>
           <% end %>
-          <div id="error_explanation">
-            <% if(!@errors.nil? && @errors.messages.any?)%>
-              <% @errors.messages.each do |attribute, msg| %>
-                <% msg.each do |val| %>
-                  <p class="alert alert-danger"><%= attribute.to_s.camelize %>: <%= val %></p>
-                <% end %>
-              <% end %>
-            <% else %>
-              <% flash.each do |key, value| %>
-                <p class="alert alert-danger"><%= value %></p>
+          <% if(!@errors.nil? && @errors.messages.any?)%>
+            <% @errors.messages.each do |attribute, msg| %>
+              <% msg.each do |val| %>
+                <p class="alert alert-danger"><%= attribute.to_s.camelize %>: <%= val %></p>
               <% end %>
             <% end %>
-          </div>
+          <% else %>
+            <% flash.each do |key, value| %>
+              <p class="alert alert-danger"><%= value %></p>
+            <% end %>
+          <% end %>
         </div>
         <div class="modal-footer">
           <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Got It!</a>
@@ -109,6 +111,5 @@
     <!-- <%= javascript_include_tag 'materialize' %>
     <%= javascript_include_tag 'init' %>
     <%= javascript_include_tag 'main' %> -->
-
   </body>
 </html>
