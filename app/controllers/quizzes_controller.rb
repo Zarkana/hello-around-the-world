@@ -32,7 +32,11 @@ class QuizzesController < ApplicationController
       p "Language exists"
     else
       p "Language does not exist"
-      redirect_to action: 'new'
+      build_quiz_snippets
+
+      @errors = @quiz.errors
+      @errors[:language] << "You need to select a language to quiz on."
+      render 'new'
       return
     end
 
@@ -98,6 +102,7 @@ class QuizzesController < ApplicationController
     @snippets.each do |snippet|
       quiz_snippet = @quiz.quiz_snippets.build(:snippet_id => snippet.id)
     end
+    build_quiz_snippets
 
     @errors = @quiz.errors
     render 'new'
@@ -134,6 +139,22 @@ class QuizzesController < ApplicationController
   end
 
   private
+    def build_quiz_snippets
+      if user_signed_in?
+        @languages = Language.accessible_by(current_ability)
+        @snippets = current_user.snippets.order('category_id')
+      else
+        @admin = User.where('admin = ?', true).first
+
+        @languages = @admin.languages
+        @snippets = @admin.snippets.order('category_id')
+      end
+      # Create the blank quiz_snippets to be available on new view
+      @snippets.each do |snippet|
+        quiz_snippet = @quiz.quiz_snippets.build(:snippet_id => snippet.id)
+      end
+    end
+
     def quiz_params
       params.require(:quiz).permit(:language_id, :user_id, :complete, quiz_snippets_attributes:[:attempt, :answer, :title, :quiz_id, :snippet_id, :_destroy])
     end
