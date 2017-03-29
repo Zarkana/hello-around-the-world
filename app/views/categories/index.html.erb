@@ -1,23 +1,6 @@
 <% content_for :title, "Manage Categories" %>
 <div class="container category" id="content">
   <h2 class="section-header center-align">Categories</h2>
-  <!-- Modal Structure -->
-  <% if !flash.empty? %>
-  <!-- <div class="modal error-modal">
-    <div class="modal-content">
-      <h4>Aw, shucks!</h4>
-      <div id="error_explanation">
-        <% flash.each do |key, value| %>
-          <div class="alert alert-<%= key %>"><%= value %></div>
-        <% end %>
-      </div>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Got It!</a>
-    </div>
-  </div> -->
-  <% end %>
-
   <table class="highlight">
     <thead>
       <tr>
@@ -39,7 +22,6 @@
   </br>
   <div class="row center">
     <div class="col s12">
-      <!-- TODO implement FAB -->
       <%= link_to 'New Category', new_category_path, :class => 'btn-large waves-effect waves-light blue' %>
     </div>
   </div>

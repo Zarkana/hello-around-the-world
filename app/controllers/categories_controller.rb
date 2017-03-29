@@ -2,16 +2,17 @@ class CategoriesController < ApplicationController
   before_filter :authenticate_user!
 
   def index
+    authorize! :index, Category
     @categories = Category.accessible_by(current_ability)
   end
 
   def show
-    # @category = Category.find(params[:id])
     redirect_to categories_path
   end
 
   def new
     @category = Category.new
+    authorize! :new, @category
   end
 
   def create
@@ -44,8 +45,6 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    # No update options
-    # @errors = @category.errors
     redirect_to categories_path
   end
 
@@ -55,6 +54,8 @@ class CategoriesController < ApplicationController
       @categories = Category.accessible_by(current_ability)
       redirect_to categories_path
     else
+      # @errors = @category.errors
+      # @errors[:base] << "Categories cannot be destroyed if they are still being used to describe any code snippets."
       respond_to do |format|
         format.html { redirect_to categories_path, alert: "Categories cannot be destroyed if they are still being used to describe any code snippets."}
       end
