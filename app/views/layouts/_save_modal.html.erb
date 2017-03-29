@@ -1,0 +1,18 @@
+<!-- Modal Structure -->
+<div id="save-modal" class="modal">
+  <div class="modal-header">
+    <h3 class="section-header white-text">Good Show!</h3>
+  </div>
+  <div class="modal-content">
+    <p>It seems you've built up the ol "Ctrl + S" muscle.</p>
+    <% unless user_signed_in? %>
+    <p>If you make an account (no monetization) you can add your own snippets of code to practice... and those will actually be saved.</p>
+    <p>Sign up <%= link_to("here", new_user_registration_path, :class => '') %>.</p>
+    <% else %>
+    <p>You can add or customize your user content <%= link_to("here", quizzes_manage_path, :class => '') %>.</p>
+    <% end %>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Got It!</a>
+  </div>
+</div>
