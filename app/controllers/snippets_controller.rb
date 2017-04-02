@@ -32,7 +32,7 @@ class SnippetsController < ApplicationController
     def new
       @snippet = Snippet.new
       authorize! :new, @snippet
-      
+
       build_implementations
     end
 
@@ -138,10 +138,11 @@ class SnippetsController < ApplicationController
         # Get the id of the language owned by the current user that has a default_id equivalent to the implementations language id
       implementation.language_id = Language.where(user_id: current_user.id).where(default_id: implementation.language_id).first.id
     end
-
+    # delete before or else validation will fail for duplicate titles
+    p "destroy"
+    snippet.destroy
     if cloned_snippet.save!
       p "Snippet updated successfully"
-      snippet.destroy
       @updated_snippet = cloned_snippet
       render :json => @updated_snippet
     else
