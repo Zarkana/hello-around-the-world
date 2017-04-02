@@ -31,7 +31,9 @@ $(document).ready(function() {
   function resizeSelect(resizing_select, temp_select)
   {
     //Set the text with the visible selected option
-    var selected_option_text = $(resizing_select + ' .active.selected').text();
+    // var selected_option_text = $(resizing_select + ' .active.selected').text();
+    var selected_option_text = $(".materialize-select.initialized :selected").text();
+
 
     //If still not initialized set the text to the disabled option text
     if(selected_option_text == "")

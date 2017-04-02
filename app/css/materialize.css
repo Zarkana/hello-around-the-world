@@ -7593,6 +7593,7 @@ input[type=range] + .thumb {
   background-color: #42A5F5;
   top: 10px;
   margin-left: -6px;
+  display: none;
   transform-origin: 50% 50%;
   transform: rotate(-45deg);
 }
@@ -9509,30 +9510,89 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 }
 /* line 6, ../assets/sass/modules/_quiz.scss */
 .quiz.container .buttons {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
   position: relative;
 }
-/* line 8, ../assets/sass/modules/_quiz.scss */
-.quiz.container .buttons .manage-button {
+/* line 12, ../assets/sass/modules/_quiz.scss */
+.quiz.container .buttons .options-button {
   position: absolute;
   right: 10px;
   bottom: 0;
 }
-/* line 15, ../assets/sass/modules/_quiz.scss */
+/* line 17, ../assets/sass/modules/_quiz.scss */
+.quiz.container .buttons .btn-medium {
+  width: 48px;
+  height: 48px;
+}
+/* line 20, ../assets/sass/modules/_quiz.scss */
+.quiz.container .buttons .btn-medium i {
+  line-height: 48px;
+}
+/* line 24, ../assets/sass/modules/_quiz.scss */
+.quiz.container .buttons .configurations-button {
+  position: relative;
+}
+/* line 26, ../assets/sass/modules/_quiz.scss */
+.quiz.container .buttons .configurations-button img {
+  position: absolute;
+  left: 26%;
+  top: 26%;
+  width: 48%;
+}
+/* line 41, ../assets/sass/modules/_quiz.scss */
+.quiz.container .buttons ul li {
+  margin-top: 4px;
+}
+/* line 47, ../assets/sass/modules/_quiz.scss */
 .quiz.container .manage-back-link {
   margin-left: 15px;
 }
+/* line 52, ../assets/sass/modules/_quiz.scss */
+.quiz.container #configurations-modal .modal-content {
+  padding: 40px 0 40px 0;
+  width: 80%;
+  margin-left: 10%;
+}
+/* line 56, ../assets/sass/modules/_quiz.scss */
+.quiz.container #configurations-modal .modal-content .range-field {
+  width: 100%;
+  position: relative;
+}
+/* line 59, ../assets/sass/modules/_quiz.scss */
+.quiz.container #configurations-modal .modal-content .range-field .descriptor {
+  position: absolute;
+  top: 0px;
+  width: 53px;
+  color: gray;
+  transition: color .25s;
+}
+/* line 66, ../assets/sass/modules/_quiz.scss */
+.quiz.container #configurations-modal .modal-content .range-field .descriptor.min-descriptor {
+  right: 100%;
+}
+/* line 69, ../assets/sass/modules/_quiz.scss */
+.quiz.container #configurations-modal .modal-content .range-field .descriptor.max-descriptor {
+  left: 101%;
+}
 
-/* line 21, ../assets/sass/modules/_quiz.scss */
+/* line 82, ../assets/sass/modules/_quiz.scss */
 #width_tmp_select {
   width: auto;
 }
 
-/* line 26, ../assets/sass/modules/_quiz.scss */
+/* line 87, ../assets/sass/modules/_quiz.scss */
 .quiz .quiz-editor-parent {
   position: relative;
   height: 500px;
 }
-/* line 29, ../assets/sass/modules/_quiz.scss */
+/* line 90, ../assets/sass/modules/_quiz.scss */
 .quiz .quiz-editor-parent .editor {
   position: absolute;
   top: 0;
@@ -9541,12 +9601,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   width: 100%;
   height: 100%;
 }
-/* line 38, ../assets/sass/modules/_quiz.scss */
+/* line 99, ../assets/sass/modules/_quiz.scss */
 .quiz .answer-editor-parent, .quiz .attempt-editor-parent {
   position: relative;
   height: calc(100% - 48px);
 }
-/* line 41, ../assets/sass/modules/_quiz.scss */
+/* line 102, ../assets/sass/modules/_quiz.scss */
 .quiz .answer-editor-parent .editor, .quiz .attempt-editor-parent .editor {
   position: absolute;
   top: 0;
@@ -9556,144 +9616,144 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   height: 100%;
 }
 @media (max-width: 960px) {
-  /* line 52, ../assets/sass/modules/_quiz.scss */
+  /* line 113, ../assets/sass/modules/_quiz.scss */
   .quiz #editor-parent {
     max-width: 100%;
   }
 }
-/* line 58, ../assets/sass/modules/_quiz.scss */
+/* line 119, ../assets/sass/modules/_quiz.scss */
 .quiz #manage-header .section-header {
   margin-bottom: 10px;
 }
 
-/* line 64, ../assets/sass/modules/_quiz.scss */
+/* line 125, ../assets/sass/modules/_quiz.scss */
 .question, .answer {
   display: none;
 }
-/* line 66, ../assets/sass/modules/_quiz.scss */
+/* line 127, ../assets/sass/modules/_quiz.scss */
 .question:first-of-type, .answer:first-of-type {
   display: block;
 }
-/* line 69, ../assets/sass/modules/_quiz.scss */
+/* line 130, ../assets/sass/modules/_quiz.scss */
 .question .code-field, .answer .code-field {
   display: none;
 }
 
-/* line 74, ../assets/sass/modules/_quiz.scss */
+/* line 135, ../assets/sass/modules/_quiz.scss */
 .question-navigation.buttons {
   text-align: center;
   margin-top: 10px;
 }
-/* line 79, ../assets/sass/modules/_quiz.scss */
+/* line 140, ../assets/sass/modules/_quiz.scss */
 .question-navigation.buttons .pagination .circle {
   border-radius: 20px;
   height: 15px;
   width: 15px;
   margin-top: 7px;
 }
-/* line 93, ../assets/sass/modules/_quiz.scss */
+/* line 154, ../assets/sass/modules/_quiz.scss */
 .question-navigation.buttons .previous-item, .question-navigation.buttons .next-item, .question-navigation.buttons .finish-button {
   min-width: 130px;
 }
-/* line 96, ../assets/sass/modules/_quiz.scss */
+/* line 157, ../assets/sass/modules/_quiz.scss */
 .question-navigation.buttons .finish-button {
   display: none;
 }
 
-/* line 101, ../assets/sass/modules/_quiz.scss */
+/* line 162, ../assets/sass/modules/_quiz.scss */
 #question-answer, #question-attempt {
   height: 450px;
   border: 1px solid #f1edea;
   padding: 0;
 }
-/* line 108, ../assets/sass/modules/_quiz.scss */
+/* line 169, ../assets/sass/modules/_quiz.scss */
 #question-answer .section-header-container, #question-attempt .section-header-container {
   border-bottom: 1px solid #f1edea;
   padding: 0;
 }
-/* line 111, ../assets/sass/modules/_quiz.scss */
+/* line 172, ../assets/sass/modules/_quiz.scss */
 #question-answer .section-header-container .section-header, #question-attempt .section-header-container .section-header {
   margin: 10px 0 10px 0;
 }
-/* line 115, ../assets/sass/modules/_quiz.scss */
+/* line 176, ../assets/sass/modules/_quiz.scss */
 #question-answer .content, #question-attempt .content {
   padding: 10px 25px 10px 25px;
 }
 
-/* line 121, ../assets/sass/modules/_quiz.scss */
+/* line 182, ../assets/sass/modules/_quiz.scss */
 #save-modal {
   width: 25%;
 }
 
-/* line 126, ../assets/sass/modules/_quiz.scss */
+/* line 187, ../assets/sass/modules/_quiz.scss */
 .quiz-list {
   user-select: none;
 }
-/* line 130, ../assets/sass/modules/_quiz.scss */
+/* line 191, ../assets/sass/modules/_quiz.scss */
 .quiz-list .section-header .select-dropdown {
   position: relative;
   left: -5px;
   margin-bottom: 1.25rem;
   font-size: 2.5rem;
 }
-/* line 136, ../assets/sass/modules/_quiz.scss */
+/* line 197, ../assets/sass/modules/_quiz.scss */
 .quiz-list .section-header .dropdown-content {
   min-width: 150px;
 }
-/* line 141, ../assets/sass/modules/_quiz.scss */
+/* line 202, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header {
   border-bottom: none;
   cursor: default;
 }
-/* line 144, ../assets/sass/modules/_quiz.scss */
+/* line 205, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header .arrow-parent {
   width: 16px;
   float: left;
 }
-/* line 147, ../assets/sass/modules/_quiz.scss */
+/* line 208, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header .arrow-parent .arrow {
   transition: transform .2s;
   width: 100%;
   transform: rotate(-90deg);
 }
-/* line 155, ../assets/sass/modules/_quiz.scss */
+/* line 216, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.active .arrow {
   transform: none;
 }
-/* line 161, ../assets/sass/modules/_quiz.scss */
+/* line 222, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.active.disabled .arrow {
   transform: rotate(-90deg);
 }
-/* line 170, ../assets/sass/modules/_quiz.scss */
+/* line 231, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.disabled .arrow {
   opacity: .70;
 }
-/* line 174, ../assets/sass/modules/_quiz.scss */
+/* line 235, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.disabled .switch .lever {
   background-color: #e8e8e8;
 }
-/* line 176, ../assets/sass/modules/_quiz.scss */
+/* line 237, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header.disabled .switch .lever:after {
   background-color: #d4d4d4 !important;
 }
-/* line 182, ../assets/sass/modules/_quiz.scss */
+/* line 243, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsiblez.sub-menu {
   box-shadow: none;
 }
-/* line 186, ../assets/sass/modules/_quiz.scss */
+/* line 247, ../assets/sass/modules/_quiz.scss */
 .quiz-list .collapsible-header:hover {
   cursor: pointer;
 }
-/* line 191, ../assets/sass/modules/_quiz.scss */
+/* line 252, ../assets/sass/modules/_quiz.scss */
 .quiz-list ul.collapsiblez {
   position: relative;
 }
-/* line 199, ../assets/sass/modules/_quiz.scss */
+/* line 260, ../assets/sass/modules/_quiz.scss */
 .quiz-list .sub-menu {
   margin: 0;
   /*@extend .blue, .lighten-4;*/
 }
-/* line 209, ../assets/sass/modules/_quiz.scss */
+/* line 270, ../assets/sass/modules/_quiz.scss */
 .quiz-list .switch {
   display: inline-block;
   position: absolute;

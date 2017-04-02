@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170320030841) do
+ActiveRecord::Schema.define(version: 20170402151716) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20170320030841) do
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.boolean  "complete",    default: false
+    t.float    "difficulty",  default: 0.0
     t.index ["language_id"], name: "index_quizzes_on_language_id"
   end
 
@@ -79,6 +80,15 @@ ActiveRecord::Schema.define(version: 20170320030841) do
     t.boolean  "visible",            default: false
     t.boolean  "update_available",   default: false
     t.index ["category_id"], name: "index_snippets_on_category_id"
+  end
+
+  create_table "user_details", force: :cascade do |t|
+    t.float    "last_difficulty",  default: 0.0
+    t.integer  "last_language_id"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_user_details_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -13,4 +13,5 @@ class User < ApplicationRecord
   has_many :snippets, dependent: :destroy
   has_many :categories, dependent: :destroy
   has_many :languages, dependent: :destroy
+  has_one :user_detail, dependent: :destroy
 end

@@ -5,10 +5,10 @@
       <div id="language-select" class="light-blue-text col s12 m8 offset-m2 center-align">
         <h2 class="section-header">Quizzing yourself in
           <div class="input-field inline">
-            <%= f.collection_select :language_id, @languages, :id, :name, {:include_blank=>'What?'}, {:class=>'materialize-select'} %>
+            <%= f.collection_select :language_id, @languages, :id, :name, {:selected => @last_language_id, :include_blank=>'What?'}, {:class=>'materialize-select'} %>
           </div>
           <select id="width_tmp_select">
-            <option id="width_tmp_option">What?</option>
+            <option id="width_tmp_option"><%= @last_language_name %></option>
           </select>
         </h2>
       </div>
@@ -117,10 +117,59 @@
       <div class="col s12 m8 offset-m2 buttons">
         <%= f.button 'Begin!', :id => 'new-quiz-submit-btn', :class => 'btn-large waves-effect waves-light blue'%>
         <% if user_signed_in? %>
-          <%= link_to(raw("<i class='material-icons'>edit</i>"), quizzes_manage_path, :class => 'manage-button btn-floating btn-large waves-effect waves-light blue') %>
+        <div class="options-button fixed-action-btn horizontal">
+          <a class="btn-floating btn-large blue">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul>
+            <li><a  href="#configurations-modal" class="configurations-button btn-medium btn-floating cyan waves-effect waves-light"><%= image_tag("quiz-configurations.png") %></a></li>
+            <li>
+              <%= link_to(raw("<i class='material-icons'>edit</i>"), quizzes_manage_path, :class => 'manage-button btn-floating btn-medium waves-effect waves-light green') %>
+            </li
+          </ul>
+        </div>
+        <% else %>
+        <div class="options-button fixed-action-btn horizontal">
+          <a href="#configurations-modal" class="configurations-button single-button btn-large btn-floating cyan waves-effect waves-light"><%= image_tag("quiz-configurations.png") %></a>
+        </div>
         <% end %>
       </div>
     </div>
+
+    <!-- Modal Structure -->
+    <div id="configurations-modal" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>Difficulty - <span class="thumb" style=""><span id="difficulty-indicator" class="value">0</span></span>%</h4>
+        <form action="#">
+          <p class="range-field">
+            <span class="descriptor min-descriptor">1 line hidden</span>
+            <input id="slider1" step="5" type="range" name="quiz[difficulty]" min="0" max="100" class="active" oninput="updateTextInput(this.value);" onchange="updateTextInput(this.value);" >
+            <span class="descriptor max-descriptor">All lines hidden</span>
+          </p>
+        </form>
+        <script>
+          $(document).ready(function(){
+            var difficulty = "<%= @difficulty %>"
+            document.getElementById('slider1').value = difficulty;
+            updateTextInput(difficulty);
+          });
+          function updateTextInput(val) {
+            document.getElementById('difficulty-indicator').innerHTML = val;
+            $(".min-descriptor, .max-descriptor").css("color", "gray");
+            if(val == 100)
+            {
+              $(".max-descriptor").css("color", "black");
+            }
+            else if(val == 0) {
+              $(".min-descriptor").css("color", "black");
+            }
+          }
+        </script>
+        <!-- <p>A bunch of text</p> -->
+      </div>
+    </div>
+
+
     <br><br>
     <script>
       $(document).ready(function(){

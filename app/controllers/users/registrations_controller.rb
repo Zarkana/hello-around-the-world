@@ -13,6 +13,15 @@ class Users::RegistrationsController < DeviseController
   # POST /resource
   def create
     build_resource(sign_up_params)
+    # @user_detail = UserDetail.new
+    #
+    # @user_detail.save
+    # p "ABOUT TO SAVE USER "
+    # if @user_detail.save
+    #   p "user detail saved"
+    # end
+    #
+    # resource.user_details_id = @user_detail.id
 
     resource.save
     yield resource if block_given?
@@ -67,6 +76,11 @@ class Users::RegistrationsController < DeviseController
 
   # DELETE /resource
   def destroy
+    # resource_user_details = UserDetail.find_by(user_id: resource.id)
+    # if !resource_user_details.blank?
+    #   resource_user_details.destroy
+    # end
+
     resource.destroy
     Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
     set_flash_message! :notice, :destroyed
@@ -161,6 +175,18 @@ class Users::RegistrationsController < DeviseController
       return
     end
 
+    user_detail = UserDetail.new
+    user_detail.user = resource
+    user_detail.last_difficulty = 0.0
+    user_detail.save
+    p "ABOUT TO SAVE USER "
+    if user_detail.save
+      p "user detail saved"
+    end
+    resource.user_detail = user_detail
+    # resource.user_details_id = @user_detail.id
+
+
     admin_languages.each do |language|
       cloned_language = language.deep_clone
       cloned_language.user = resource
@@ -204,6 +230,10 @@ class Users::RegistrationsController < DeviseController
         p "Snippet failed to save"
       end
     end
+
+
+
+
   end
 
 

@@ -34,7 +34,7 @@ input[type=range] + .thumb {
   background-color: $radio-fill-color;
   top: 10px;
   margin-left: -6px;
-
+  display: none;
   transform-origin: 50% 50%;
   transform: rotate(-45deg);
 

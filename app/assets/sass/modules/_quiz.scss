@@ -4,16 +4,77 @@
   padding-top: 15px;
 
   .buttons{
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
     position: relative;
-    .manage-button{
+    .options-button{
       position: absolute;
       right: 10px;
       bottom: 0;
+    }
+    .btn-medium {
+      width: 48px;
+      height: 48px;
+      i{
+        line-height: 48px;
+      }
+    }
+    .configurations-button{
+      position: relative;
+      img{
+        position: absolute;
+        left: 26%;
+        top: 26%;
+        width: 48%;
+      }
+      // &.single-button img{
+      //   right: 0;
+      // }
+    }
+
+    .manage-button{
+
+    }
+    ul{
+      li{
+        margin-top: 4px;
+      }
     }
   }
 
   .manage-back-link{
     margin-left: 15px;
+  }
+
+  #configurations-modal{
+    .modal-content{
+      padding: 40px 0 40px 0;
+      width: 80%;
+      margin-left: 10%;
+      .range-field{
+        width: 100%;
+        position: relative;
+        .descriptor{
+          position: absolute;
+          top: 0px;
+          width: 53px;
+          color: gray;
+          transition: color .25s;
+
+          &.min-descriptor{
+            right: 100%;
+          }
+          &.max-descriptor{
+            left: 101%;
+          }
+        }
+        input{
+
+        }
+      }
+    }
   }
 
 }

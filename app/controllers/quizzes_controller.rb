@@ -4,14 +4,37 @@ class QuizzesController < ApplicationController
 
   def new
     @quiz = Quiz.new
+
     if user_signed_in?
       @languages = Language.accessible_by(current_ability)
       @snippets = current_user.snippets.order('category_id')
+
+      user_detail = UserDetail.find_by(user_id: current_user.id)
+      if !user_detail.blank?
+        @last_language = Language.find_by_id(current_user.user_detail.last_language_id)
+        if !@last_language.blank?
+          @last_language_id = @last_language.id
+          @last_language_name = @last_language.name
+        else
+          @last_language_id = ""
+          @last_language_name = "What?"          
+        end
+        @difficulty = current_user.user_detail.last_difficulty
+      else
+        @last_language_id = ""
+        @last_language_name = "What?"
+        @difficulty = 0.0
+      end
+
     else
       @admin = User.where('admin = ?', true).first
 
       @languages = @admin.languages
       @snippets = @admin.snippets.order('category_id')
+
+      @last_language_id = ""
+      @last_language_name = "What?"
+      @difficulty = 0.0
     end
     # Create the blank quiz_snippets to be available on new view
     @snippets.each do |snippet|
@@ -23,9 +46,25 @@ class QuizzesController < ApplicationController
     @quiz = Quiz.new(quiz_params)
     if user_signed_in?
       @quiz.user = current_user
+      # update default language and difficulty
+      p "updating user"
+      user_detail = UserDetail.where(user_id: current_user.id).first_or_create(:last_language_id => @quiz.language_id, :last_difficulty => @quiz.difficulty)
+      # current_user.user_detail = user_detail
+      user_detail.update_attributes(
+        :last_language_id => @quiz.language_id,
+        :last_difficulty => @quiz.difficulty
+      )
+      #
+      # current_user.update_attributes(
+      #   :user_detail => user_detail
+      # )
+
     else
       @quiz.user = User.where('admin = ?', true).first
     end
+
+    p "Quiz Difficulty"
+    p @quiz.difficulty
 
     # authorize! :create, @quiz
     if @quiz.language_id
@@ -39,6 +78,8 @@ class QuizzesController < ApplicationController
       render 'new'
       return
     end
+
+
 
     # Set the quiz_snippets answer to the implementations code that has the same name as the selected language
     @quiz.quiz_snippets.each do |quiz_snippet|
@@ -68,6 +109,7 @@ class QuizzesController < ApplicationController
             p "The Answer"
             p quiz_snippet.answer.inspect
           end
+          quiz_snippet.attempt = hint_builder(quiz_snippet)
         # end
         # quiz_snippet.answer = snippet.implementations.where(language_id: selected_language.id).first.code
 
@@ -119,6 +161,7 @@ class QuizzesController < ApplicationController
 
   def update
     @quiz = Quiz.find(params[:id])
+    @quiz.complete = true;
 
     if @quiz.update(quiz_update_params)
       # authorize! :update, @quiz
@@ -139,7 +182,7 @@ class QuizzesController < ApplicationController
   end
 
   private
-    def build_quiz_snippets
+    def build_quiz_snippets(quiz)
       if user_signed_in?
         @languages = Language.accessible_by(current_ability)
         @snippets = current_user.snippets.order('category_id')
@@ -155,8 +198,62 @@ class QuizzesController < ApplicationController
       end
     end
 
+    def hint_builder(quiz_snippet)
+      p "Difficulty Builder"
+      attempt_hint = quiz_snippet.answer
+      total_chars = attempt_hint.size
+      total_chars_to_remove = (@quiz.difficulty / 100 ) * total_chars
+      hint_lines = attempt_hint.split(/\n+/)
+      complete_hint = ""
+      random_order = (0..(hint_lines.length-1)).to_a.shuffle
+
+      random_order.each do |rand_index|
+        line_size = hint_lines[rand_index].size
+        line_white_space = hint_lines[rand_index][/^\s+/]
+        hint_lines[rand_index] = "#{line_white_space}# HIDDEN LINE\n"
+
+        total_chars_to_remove -= line_size
+        break if total_chars_to_remove <= 0
+      end
+
+      hint_lines.each do |hint|
+        complete_hint << hint
+      end
+      complete_hint
+    end
+
+    def update_user
+      # user_detail = UserDetail.where(user_id: current_user.id).first_or_create(:last_language_id => @quiz.language_id, :last_difficulty => @quiz.difficulty)
+      # current_user.user_detail = user_detail
+      # p "user details are ->"
+      # p user_details.inspect
+      # # If no user or current_user is not admin
+      # # if !current_user.admin
+      # #   return
+      # # end
+      # # if current_user.default_language
+      # p "updating user"
+      # p "new last language id"
+      # p @quiz.language_id
+      # user_details.update_attributes(
+      #   :last_language_id => @quiz.language_id
+      # )
+      # # end
+      # # if current_user.default_difficulty
+      # p "new quiz difficulty"
+      # p @quiz.difficulty
+      #
+      # user_details.update_attributes(
+      #   :last_difficulty => @quiz.difficulty
+      # )
+      # p "the error"
+      # p current_user.errors.full_messages.inspect
+
+      # end
+    end
+
     def quiz_params
-      params.require(:quiz).permit(:language_id, :user_id, :complete, quiz_snippets_attributes:[:attempt, :answer, :title, :quiz_id, :snippet_id, :_destroy])
+      params.require(:quiz).permit(:language_id, :user_id, :complete, :difficulty, quiz_snippets_attributes:[:attempt, :answer, :title, :quiz_id, :snippet_id, :_destroy])
     end
     def quiz_update_params
       params.require(:quiz).permit(:language_id, :user_id, :complete, quiz_snippets_attributes:[:id, :attempt, :answer, :title, :quiz_id, :snippet_id, :_destroy])
