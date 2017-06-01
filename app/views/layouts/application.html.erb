@@ -32,7 +32,7 @@
           <!-- <li><%= link_to "Study", study_index_path %></li> -->
           <li><%= link_to "Quiz", quizzes_new_path %></li>
           <li>
-            <a class='dropdown-button' href='#' data-activates='user-dropdown'><strong><%= current_user.email %></strong></a>
+            <a id="nav-dropdown-menu" class='dropdown-button' href='#' data-activates='user-dropdown'><strong><%= current_user.email %></strong></a>
             <ul id='user-dropdown' class='dropdown-content'>
               <li><%= link_to 'Edit Profile', edit_user_registration_path, :id => 'nav-edit-profile', :class => 'dropdown-item' %></li>
               <li class="divider"></li>
@@ -45,7 +45,7 @@
           </li>
         </ul>
         <% else %>
-        <ul class="right hide-on-med-and-down">
+        <ul class="right">
           <li><%= link_to "Quiz", quizzes_new_path, :id => 'nav-quiz' %></li>
           <!--<li><%= link_to "Study", study_index_path %></li> -->
           <li><%= link_to "Login", new_user_session_path, :id => 'nav-login' %></li>
