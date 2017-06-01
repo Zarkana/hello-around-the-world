@@ -33,13 +33,13 @@
           <li>
             <a class='dropdown-button' href='#' data-activates='user-dropdown'><strong><%= current_user.email %></strong></a>
             <ul id='user-dropdown' class='dropdown-content'>
-              <li><%= link_to 'Edit Profile', edit_user_registration_path, :class => 'dropdown-item' %></li>
+              <li><%= link_to 'Edit Profile', edit_user_registration_path, :id => 'nav-edit-profile', :class => 'dropdown-item' %></li>
               <li class="divider"></li>
-              <li><%= link_to 'Manage Snippets', snippets_path, :class => 'dropdown-item'  %></li>
-              <li><%= link_to 'Manage Categories', categories_path, :class => 'dropdown-item'  %></li>
-              <li><%= link_to 'Manage Languages', languages_path, :class => 'dropdown-item'  %></li>
+              <li><%= link_to 'Manage Snippets', snippets_path, :id => 'nav-snippets', :class => 'dropdown-item'  %></li>
+              <li><%= link_to 'Manage Categories', categories_path, :id => 'nav-categories', :class => 'dropdown-item'  %></li>
+              <li><%= link_to 'Manage Languages', languages_path, :id => 'nav-languages', :class => 'dropdown-item'  %></li>
               <li class="divider"></li>
-              <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link dropdown-item'  %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :id => 'nav-logout', :class => 'navbar-link dropdown-item'  %></li>
             </ul>
           </li>
         </ul>
@@ -47,8 +47,8 @@
         <ul class="right hide-on-med-and-down">
           <li><%= link_to "Quiz", quizzes_new_path %></li>
           <!--<li><%= link_to "Study", study_index_path %></li> -->
-          <li><%= link_to "Login", new_user_session_path %></li>
-          <li><%= link_to "Sign up", new_user_registration_path %></li>
+          <li><%= link_to "Login", new_user_session_path, :id => 'nav-login' %></li>
+          <li><%= link_to "Sign up", new_user_registration_path, :id => 'nav-register' %></li>
         </ul>
         <% end %>
         <ul id="nav-mobile" class="side-nav">
