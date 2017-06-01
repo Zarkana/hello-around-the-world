@@ -45,7 +45,7 @@
         </ul>
         <% else %>
         <ul class="right hide-on-med-and-down">
-          <li><%= link_to "Quiz", quizzes_new_path %></li>
+          <li><%= link_to "Quiz", quizzes_new_path, :id => 'nav-quiz' %></li>
           <!--<li><%= link_to "Study", study_index_path %></li> -->
           <li><%= link_to "Login", new_user_session_path, :id => 'nav-login' %></li>
           <li><%= link_to "Sign up", new_user_registration_path, :id => 'nav-register' %></li>
