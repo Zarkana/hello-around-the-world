@@ -42,7 +42,7 @@
   <div class="row">
     <div class="actions col s12 center-align">
     <p>Don't want an account anymore?
-      <%= button_to "Delete Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn-large waves-effect waves-light red white-text btn btn-flat'  %>
+      <%= button_to "Delete Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :id => 'btn-submit-delete-user',  class: 'btn-large waves-effect waves-light red white-text btn btn-flat'  %>
     </p>
     </div>
   </div>
